@@ -1,9 +1,9 @@
 /* eslint-disable no-promise-executor-return */
 
-import { test, expect } from "@jest/globals";
+import { afterAll, test, expect } from "@jest/globals";
 import { createClient } from "redis";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
-import { RedisChatMessageHistory } from "../chat_histories.js";
+import { RedisChatMessageHistory } from "../chat_histories.ts";
 
 afterAll(async () => {
   const client = createClient();

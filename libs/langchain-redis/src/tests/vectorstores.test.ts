@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Buffer } from "node:buffer";
 import { jest, test, expect, describe } from "@jest/globals";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-
-import { RedisVectorStore } from "../vectorstores.js";
+import type { createClient } from "redis";
+import { RedisVectorStore } from "../vectorstores.ts";
+type RedisClientType = ReturnType<typeof createClient>;
 
 const createRedisClientMockup = () => {
   const hSetMock = jest.fn();
@@ -22,12 +24,12 @@ const createRedisClientMockup = () => {
     },
     hSet: hSetMock,
     expire: expireMock,
-    multi: jest.fn<any>().mockImplementation(() => ({
+    multi: jest.fn().mockImplementation(() => ({
       exec: jest.fn(),
       hSet: hSetMock,
       expire: expireMock,
     })),
-  };
+  } as unknown as RedisClientType;
 };
 
 test("RedisVectorStore with external keys", async () => {
@@ -35,7 +37,7 @@ test("RedisVectorStore with external keys", async () => {
   const embeddings = new FakeEmbeddings();
 
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
   });
 
@@ -71,7 +73,7 @@ test("RedisVectorStore with generated keys", async () => {
   const embeddings = new FakeEmbeddings();
 
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
   });
 
@@ -91,7 +93,7 @@ test("RedisVectorStore with TTL", async () => {
   const embeddings = new FakeEmbeddings();
   const ttl = 10;
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
     ttl,
   });
@@ -110,7 +112,7 @@ test("RedisVectorStore with filters", async () => {
   const embeddings = new FakeEmbeddings();
 
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
   });
 
@@ -141,7 +143,7 @@ test("RedisVectorStore with raw filter", async () => {
   const embeddings = new FakeEmbeddings();
 
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
   });
 
@@ -172,7 +174,7 @@ describe("RedisVectorStore dropIndex", () => {
   const embeddings = new FakeEmbeddings();
 
   const store = new RedisVectorStore(embeddings, {
-    redisClient: client as any,
+    redisClient: client,
     indexName: "documents",
   });
 
@@ -210,7 +212,7 @@ describe("RedisVectorStore createIndex when index does not exist", () => {
     const client = createRedisClientMockup();
     const embeddings = new FakeEmbeddings();
     const store = new RedisVectorStore(embeddings, {
-      redisClient: client as any,
+      redisClient: client,
       indexName: "documents",
     });
     store.checkIndexExists = jest.fn<any>().mockResolvedValue(false);
@@ -231,7 +233,7 @@ describe("RedisVectorStore createIndex when index does not exist", () => {
     const client = createRedisClientMockup();
     const embeddings = new FakeEmbeddings();
     const store = new RedisVectorStore(embeddings, {
-      redisClient: client as any,
+      redisClient: client,
       indexName: "documents",
       createIndexOptions: {
         ON: "JSON",

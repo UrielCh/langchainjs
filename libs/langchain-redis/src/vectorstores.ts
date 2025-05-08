@@ -1,13 +1,19 @@
+import { Buffer } from "node:buffer";
 import type {
-  createCluster,
   createClient,
   RediSearchSchema,
-  SearchOptions,
+  FtSearchOptions,
 } from "redis";
-import { SchemaFieldTypes, VectorAlgorithms } from "redis";
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { VectorStore } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
+import { SCHEMA_VECTOR_FIELD_ALGORITHM } from "@redis/search";
+// import type { InfoReply } from "@redis/search/dist/lib/commands/INFO";
+
+type RedisClientType = ReturnType<typeof createClient>;
+// type CreateClusterType = ReturnType<typeof createCluster>;
+
+type TYPE_SCHEMA_VECTOR_FIELD_ALGORITHM = typeof SCHEMA_VECTOR_FIELD_ALGORITHM;
 
 // Adapated from internal redis types which aren't exported
 /**
@@ -15,7 +21,7 @@ import { Document } from "@langchain/core/documents";
  * distance metric, and initial capacity.
  */
 export type CreateSchemaVectorField<
-  T extends VectorAlgorithms,
+  T extends (TYPE_SCHEMA_VECTOR_FIELD_ALGORITHM)[keyof TYPE_SCHEMA_VECTOR_FIELD_ALGORITHM],
   A extends Record<string, unknown>
 > = {
   ALGORITHM: T;
@@ -27,7 +33,7 @@ export type CreateSchemaVectorField<
  * CreateSchemaVectorField with a block size property.
  */
 export type CreateSchemaFlatVectorField = CreateSchemaVectorField<
-  VectorAlgorithms.FLAT,
+  "FLAT",
   {
     BLOCK_SIZE?: number;
   }
@@ -38,7 +44,7 @@ export type CreateSchemaFlatVectorField = CreateSchemaVectorField<
  * properties.
  */
 export type CreateSchemaHNSWVectorField = CreateSchemaVectorField<
-  VectorAlgorithms.HNSW,
+  "HNSW",
   {
     M?: number;
     EF_CONSTRUCTION?: number;
@@ -47,7 +53,7 @@ export type CreateSchemaHNSWVectorField = CreateSchemaVectorField<
 >;
 
 type CreateIndexOptions = NonNullable<
-  Parameters<ReturnType<typeof createClient>["ft"]["create"]>[3]
+  Parameters<RedisClientType["ft"]["create"]>[2]
 >;
 
 export type RedisSearchLanguages = `${NonNullable<
@@ -65,9 +71,7 @@ export type RedisVectorStoreIndexOptions = Omit<
  * metadata key, vector key, filter and ttl.
  */
 export interface RedisVectorStoreConfig {
-  redisClient:
-    | ReturnType<typeof createClient>
-    | ReturnType<typeof createCluster>;
+  redisClient: RedisClientType; // | CreateClusterType;
   indexName: string;
   indexOptions?: CreateSchemaFlatVectorField | CreateSchemaHNSWVectorField;
   createIndexOptions?: Omit<RedisVectorStoreIndexOptions, "PREFIX">; // PREFIX must be set with keyPrefix
@@ -104,9 +108,7 @@ export type RedisVectorStoreFilterType = string[] | string;
 export class RedisVectorStore extends VectorStore {
   declare FilterType: RedisVectorStoreFilterType;
 
-  private redisClient:
-    | ReturnType<typeof createClient>
-    | ReturnType<typeof createCluster>;
+  private redisClient: RedisClientType; //  | CreateClusterType;
 
   indexName: string;
 
@@ -139,7 +141,7 @@ export class RedisVectorStore extends VectorStore {
     this.redisClient = _dbConfig.redisClient;
     this.indexName = _dbConfig.indexName;
     this.indexOptions = _dbConfig.indexOptions ?? {
-      ALGORITHM: VectorAlgorithms.HNSW,
+      ALGORITHM: SCHEMA_VECTOR_FIELD_ALGORITHM.HNSW,
       DISTANCE_METRIC: "COSINE",
     };
     this.keyPrefix = _dbConfig.keyPrefix ?? `doc:${this.indexName}:`;
@@ -192,8 +194,16 @@ export class RedisVectorStore extends VectorStore {
     // check if the index exists and create it if it doesn't
     await this.createIndex(vectors[0].length);
 
-    const info = await this.redisClient.ft.info(this.indexName);
-    const lastKeyCount = parseInt(info.numDocs || info.num_docs, 10) || 0;
+    debugger;
+    const info = (await this.redisClient.ft.info(this.indexName)) as unknown as any;//InfoReply;
+    // import("@redis/search/dist/lib/commands/INFO").InfoReply
+    if (!info) {
+      throw new Error(`Redis index ${this.indexName} not found`);
+    }
+    if (typeof info !== "object") {
+      throw new Error(`Redis index ${this.indexName} not found`);
+    }
+    const lastKeyCount = Number(info.num_docs) || 0;
     const multi = this.redisClient.multi();
 
     vectors.map(async (vector, idx) => {
@@ -244,10 +254,15 @@ export class RedisVectorStore extends VectorStore {
     }
 
     const _filter = filter ?? this.filter;
+
     const results = await this.redisClient.ft.search(
       this.indexName,
       ...this.buildQuery(query, k, _filter)
-    );
+    ) as any;
+    debugger;
+    if (!results) {
+      throw new Error(`Redis search ${this.indexName} failed`);
+    }
     const result: [Document, number][] = [];
 
     if (results.total) {
@@ -285,7 +300,7 @@ export class RedisVectorStore extends VectorStore {
    * @param docsOptions The document options to use.
    * @returns A promise that resolves to a new instance of RedisVectorStore.
    */
-  static fromTexts(
+  static override fromTexts(
     texts: string[],
     metadatas: object[] | object,
     embeddings: EmbeddingsInterface,
@@ -318,7 +333,7 @@ export class RedisVectorStore extends VectorStore {
    * @param docsOptions The document options to use.
    * @returns A promise that resolves to a new instance of RedisVectorStore.
    */
-  static async fromDocuments(
+  static override async fromDocuments(
     docs: Document[],
     embeddings: EmbeddingsInterface,
     dbConfig: RedisVectorStoreConfig,
@@ -363,13 +378,13 @@ export class RedisVectorStore extends VectorStore {
 
     const schema: RediSearchSchema = {
       [this.vectorKey]: {
-        type: SchemaFieldTypes.VECTOR,
+        type: "VECTOR",
         TYPE: "FLOAT32",
         DIM: dimensions,
         ...this.indexOptions,
       },
-      [this.contentKey]: SchemaFieldTypes.TEXT,
-      [this.metadataKey]: SchemaFieldTypes.TEXT,
+      [this.contentKey]: "TEXT",
+      [this.metadataKey]: "TEXT",
     };
 
     await this.redisClient.ft.create(
@@ -400,7 +415,7 @@ export class RedisVectorStore extends VectorStore {
    * @param params The parameters for deleting vectors.
    * @returns A promise that resolves when the vectors have been deleted.
    */
-  async delete(params: { deleteAll: boolean }): Promise<void> {
+  override async delete(params: { deleteAll: boolean }): Promise<void> {
     if (params.deleteAll) {
       await this.dropIndex(true);
     } else {
@@ -412,7 +427,7 @@ export class RedisVectorStore extends VectorStore {
     query: number[],
     k: number,
     filter?: RedisVectorStoreFilterType
-  ): [string, SearchOptions] {
+  ): [string, FtSearchOptions] {
     const vectorScoreField = "vector_score";
 
     let hybridFields = "*";
@@ -426,7 +441,7 @@ export class RedisVectorStore extends VectorStore {
     const baseQuery = `${hybridFields} => [KNN ${k} @${this.vectorKey} $vector AS ${vectorScoreField}]`;
     const returnFields = [this.metadataKey, this.contentKey, vectorScoreField];
 
-    const options: SearchOptions = {
+    const options: FtSearchOptions = {
       PARAMS: {
         vector: this.getFloat32Buffer(query),
       },

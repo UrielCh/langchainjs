@@ -1,3 +1,3 @@
-export * from "./chat_histories.js";
-export * from "./vectorstores.js";
-export * from "./caches.js";
+export * from "./chat_histories.ts";
+export * from "./vectorstores.ts";
+export * from "./caches.ts";

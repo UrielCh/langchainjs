@@ -1,13 +1,16 @@
 /* eslint-disable no-process-env */
 /* eslint-disable no-promise-executor-return */
 
-import { RedisClientType, createClient } from "redis";
+import { createClient } from "redis";
 import { v4 as uuidv4 } from "uuid";
-import { test, expect } from "@jest/globals";
+import { describe, beforeAll, afterAll, test, expect } from "@jest/globals";
 import { faker } from "@faker-js/faker";
 import { Document } from "@langchain/core/documents";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
-import { RedisVectorStore } from "../vectorstores.js";
+import { RedisVectorStore } from "../vectorstores.ts";
+import process from "node:process";
+
+type RedisClientType = ReturnType<typeof createClient>;
 
 describe("RedisVectorStore", () => {
   let vectorStore: RedisVectorStore;
