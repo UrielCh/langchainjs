@@ -1,10 +1,10 @@
 import { test, expect, jest } from "@jest/globals";
 import * as uuid from "uuid";
-import { Serialized } from "../../load/serializable.js";
-import { Document } from "../../documents/document.js";
-import { Run } from "../base.js";
-import { HumanMessage } from "../../messages/index.js";
-import { FakeTracer } from "../../utils/testing/index.js";
+import { Serialized } from "../../load/serializable.ts";
+import { Document } from "../../documents/document.ts";
+import { Run } from "../base.ts";
+import { HumanMessage } from "../../messages/index.ts";
+import { FakeTracer } from "../../utils/testing/index.ts";
 
 const _DATE = 1620000000000;
 

@@ -1,5 +1,5 @@
 import { expect, test, describe } from "@jest/globals";
-import { interpolateFString } from "../template.js";
+import { interpolateFString } from "../template.ts";
 
 describe.each([
   ["{foo}", { foo: "bar" }, "bar"],

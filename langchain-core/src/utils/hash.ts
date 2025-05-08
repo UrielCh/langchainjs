@@ -1,1 +1,1 @@
-export { insecureHash } from "./js-sha1/hash.js";
+export { insecureHash } from "./js-sha1/hash.ts";

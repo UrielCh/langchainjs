@@ -1,13 +1,13 @@
-import { BaseTracer, type Run } from "./base.js";
+import { BaseTracer, type Run } from "./base.ts";
 import {
   BaseCallbackHandler,
   BaseCallbackHandlerInput,
   CallbackHandlerPrefersStreaming,
-} from "../callbacks/base.js";
-import { IterableReadableStream } from "../utils/stream.js";
-import { AIMessageChunk } from "../messages/ai.js";
-import { ChatGeneration, Generation, GenerationChunk } from "../outputs.js";
-import { BaseMessage } from "../messages/base.js";
+} from "../callbacks/base.ts";
+import { IterableReadableStream } from "../utils/stream.ts";
+import { AIMessageChunk } from "../messages/ai.ts";
+import { ChatGeneration, Generation, GenerationChunk } from "../outputs.ts";
+import { BaseMessage } from "../messages/base.ts";
 
 /**
  * Data associated with a StreamEvent.

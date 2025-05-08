@@ -1,8 +1,8 @@
 import { test, expect } from "@jest/globals";
-import { AIMessage } from "../../messages/ai.js";
-import { HumanMessage } from "../../messages/human.js";
-import { SystemMessage } from "../../messages/system.js";
-import { ChatPromptTemplate, HumanMessagePromptTemplate } from "../chat.js";
+import { AIMessage } from "../../messages/ai.ts";
+import { HumanMessage } from "../../messages/human.ts";
+import { SystemMessage } from "../../messages/system.ts";
+import { ChatPromptTemplate, HumanMessagePromptTemplate } from "../chat.ts";
 
 test("Test creating a chat prompt template from role string messages", async () => {
   const template = ChatPromptTemplate.fromMessages(

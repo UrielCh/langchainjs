@@ -9,13 +9,13 @@
  */
 
 import { AsyncLocalStorage } from "node:async_hooks";
-import { AsyncLocalStorageProviderSingleton } from "./singletons/index.js";
+import { AsyncLocalStorageProviderSingleton } from "./singletons/index.ts";
 import {
   getContextVariable,
   setContextVariable,
   type ConfigureHook,
   registerConfigureHook,
-} from "./singletons/async_local_storage/context.js";
+} from "./singletons/async_local_storage/context.ts";
 
 AsyncLocalStorageProviderSingleton.initializeGlobalInstance(
   new AsyncLocalStorage()

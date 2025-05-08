@@ -1,5 +1,5 @@
-import { Document } from "../documents/document.js";
-import { BaseDocumentTransformer } from "../documents/transformers.js";
+import { Document } from "../documents/document.ts";
+import { BaseDocumentTransformer } from "../documents/transformers.ts";
 
 /**
  * Interface that defines the methods for loading and splitting documents.

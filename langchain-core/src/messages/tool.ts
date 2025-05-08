@@ -8,8 +8,8 @@ import {
   _mergeObj,
   _mergeStatus,
   type MessageContentComplex,
-} from "./base.js";
-import type { DataContentBlock } from "./content_blocks.js";
+} from "./base.ts";
+import type { DataContentBlock } from "./content_blocks.ts";
 
 export interface ToolMessageFields extends BaseMessageFields {
   content: string | (MessageContentComplex | DataContentBlock)[];

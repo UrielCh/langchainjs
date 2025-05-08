@@ -4,10 +4,10 @@ import {
   CallbackManagerForRetrieverRun,
   Callbacks,
   parseCallbackConfigArg,
-} from "../callbacks/manager.js";
-import type { DocumentInterface } from "../documents/document.js";
-import { Runnable, type RunnableInterface } from "../runnables/base.js";
-import { RunnableConfig, ensureConfig } from "../runnables/config.js";
+} from "../callbacks/manager.ts";
+import type { DocumentInterface } from "../documents/document.ts";
+import { Runnable, type RunnableInterface } from "../runnables/base.ts";
+import { RunnableConfig, ensureConfig } from "../runnables/config.ts";
 
 /**
  * Input configuration options for initializing a retriever that extends

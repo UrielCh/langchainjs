@@ -1,10 +1,10 @@
 import { describe, test, expect } from "@jest/globals";
-import { StringOutputParser } from "../string.js";
+import { StringOutputParser } from "../string.ts";
 import {
   AIMessage,
   BaseMessage,
   MessageContentComplex,
-} from "../../messages/index.js";
+} from "../../messages/index.ts";
 
 describe("StringOutputParser", () => {
   test("string input", async () => {

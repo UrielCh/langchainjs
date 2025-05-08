@@ -1,4 +1,4 @@
-import { VectorStore } from "../vectorstores.js";
+import { VectorStore } from "../vectorstores.ts";
 
 /**
  * Represents logical AND operator.

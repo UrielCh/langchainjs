@@ -1,5 +1,6 @@
 import pRetry from "p-retry";
 import PQueueMod from "p-queue";
+import { type Queue as PQueueType } from "p-queue";
 
 const STATUS_NO_RETRY = [
   400, // Bad Request
@@ -94,7 +95,7 @@ export class AsyncCaller {
     this.onFailedAttempt =
       params.onFailedAttempt ?? defaultFailedAttemptHandler;
 
-    const PQueue = "default" in PQueueMod ? PQueueMod.default : PQueueMod;
+    const PQueue: PQueueType = "default" in PQueueMod ? PQueueMod.default : PQueueMod;
     this.queue = new PQueue({ concurrency: this.maxConcurrency });
   }
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import PQueueMod from "p-queue";
-import { getGlobalAsyncLocalStorageInstance } from "./async_local_storage/globals.js";
+import { getGlobalAsyncLocalStorageInstance } from "./async_local_storage/globals.ts";
 
 let queue: typeof import("p-queue")["default"]["prototype"];
 

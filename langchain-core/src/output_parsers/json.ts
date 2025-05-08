@@ -1,7 +1,7 @@
-import { BaseCumulativeTransformOutputParser } from "./transform.js";
-import { Operation, compare } from "../utils/json_patch.js";
-import { ChatGeneration, Generation } from "../outputs.js";
-import { parseJsonMarkdown, parsePartialJson } from "../utils/json.js";
+import { BaseCumulativeTransformOutputParser } from "./transform.ts";
+import { Operation, compare } from "../utils/json_patch.ts";
+import { ChatGeneration, Generation } from "../outputs.ts";
+import { parseJsonMarkdown, parsePartialJson } from "../utils/json.ts";
 
 /**
  * Class for parsing the output of an LLM into a JSON object.

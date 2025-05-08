@@ -1,7 +1,7 @@
 import { test, expect, describe } from "@jest/globals";
-import { Document } from "../../documents/document.js";
-import { FunctionalTranslator } from "../functional.js";
-import { Comparators, Visitor } from "../ir.js";
+import { Document } from "../../documents/document.ts";
+import { FunctionalTranslator } from "../functional.ts";
+import { Comparators, Visitor } from "../ir.ts";
 
 describe("FunctionalTranslator", () => {
   const translator = new FunctionalTranslator();

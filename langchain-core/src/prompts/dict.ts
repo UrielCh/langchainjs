@@ -1,7 +1,7 @@
-import { Runnable } from "../runnables/base.js";
-import type { InputValues } from "../utils/types/index.js";
-import { TypedPromptInputValues } from "./base.js";
-import { parseTemplate, renderTemplate, TemplateFormat } from "./template.js";
+import { Runnable } from "../runnables/base.ts";
+import type { InputValues } from "../utils/types/index.ts";
+import { TypedPromptInputValues } from "./base.ts";
+import { parseTemplate, renderTemplate, TemplateFormat } from "./template.ts";
 
 export class DictPromptTemplate<
   RunInput extends InputValues = InputValues,

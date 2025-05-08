@@ -3,14 +3,14 @@ import {
   RunnableLike,
   _coerceToDict,
   _coerceToRunnable,
-} from "./base.js";
+} from "./base.ts";
 import {
   RunnableConfig,
   getCallbackManagerForConfig,
   patchConfig,
-} from "./config.js";
-import { CallbackManagerForChainRun } from "../callbacks/manager.js";
-import { concat } from "../utils/stream.js";
+} from "./config.ts";
+import { CallbackManagerForChainRun } from "../callbacks/manager.ts";
+import { concat } from "../utils/stream.ts";
 
 /**
  * Type for a branch in the RunnableBranch. It consists of a condition

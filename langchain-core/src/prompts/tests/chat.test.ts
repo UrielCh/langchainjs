@@ -8,16 +8,16 @@ import {
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
   MessagesPlaceholder,
-} from "../chat.js";
-import { PromptTemplate } from "../prompt.js";
+} from "../chat.ts";
+import { PromptTemplate } from "../prompt.ts";
 import {
   SystemMessage,
   HumanMessage,
   AIMessage,
   ChatMessage,
   FunctionMessage,
-} from "../../messages/index.js";
-import { Document } from "../../documents/document.js";
+} from "../../messages/index.ts";
+import { Document } from "../../documents/document.ts";
 
 function createChatPromptTemplate() {
   const systemPrompt = new PromptTemplate({

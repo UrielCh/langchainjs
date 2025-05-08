@@ -1,5 +1,5 @@
-import { RunnableConfig } from "../runnables/config.js";
-import { BaseTracer, Run } from "./base.js";
+import { RunnableConfig } from "../runnables/config.ts";
+import { BaseTracer, Run } from "./base.ts";
 
 export class RootListenersTracer extends BaseTracer {
   name = "RootListenersTracer";

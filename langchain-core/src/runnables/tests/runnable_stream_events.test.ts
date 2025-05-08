@@ -9,21 +9,21 @@ import {
   RunnableMap,
   RunnablePassthrough,
   RunnablePick,
-} from "../index.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+} from "../index.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import {
   FakeListChatModel,
   FakeRetriever,
   FakeStreamingLLM,
-} from "../../utils/testing/index.js";
+} from "../../utils/testing/index.ts";
 import {
   AIMessageChunk,
   HumanMessage,
   SystemMessage,
-} from "../../messages/index.js";
-import { ChatGenerationChunk, GenerationChunk } from "../../outputs.js";
-import { DynamicStructuredTool, DynamicTool } from "../../tools/index.js";
-import { Document } from "../../documents/document.js";
+} from "../../messages/index.ts";
+import { ChatGenerationChunk, GenerationChunk } from "../../outputs.ts";
+import { DynamicStructuredTool, DynamicTool } from "../../tools/index.ts";
+import { Document } from "../../documents/document.ts";
 
 function reverse(s: string) {
   // Reverse a string.

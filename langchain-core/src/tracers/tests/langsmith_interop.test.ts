@@ -13,9 +13,9 @@ import {
 import { traceable } from "langsmith/traceable";
 import { Client } from "langsmith";
 
-import { RunnableLambda } from "../../runnables/base.js";
-import { BaseMessage, HumanMessage } from "../../messages/index.js";
-import { setDefaultLangChainClientSingleton } from "../../singletons/tracer.js";
+import { RunnableLambda } from "../../runnables/base.ts";
+import { BaseMessage, HumanMessage } from "../../messages/index.ts";
+import { setDefaultLangChainClientSingleton } from "../../singletons/tracer.ts";
 
 let fetchMock: any;
 

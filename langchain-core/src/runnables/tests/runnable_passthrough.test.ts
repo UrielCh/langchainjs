@@ -1,10 +1,10 @@
 import { test, expect } from "@jest/globals";
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { FakeChatModel } from "../../utils/testing/index.js";
-import { RunnablePassthrough } from "../passthrough.js";
-import { JsonOutputParser } from "../../output_parsers/json.js";
-import { RunnableSequence } from "../base.js";
-import { RunnableConfig } from "../config.js";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { FakeChatModel } from "../../utils/testing/index.ts";
+import { RunnablePassthrough } from "../passthrough.ts";
+import { JsonOutputParser } from "../../output_parsers/json.ts";
+import { RunnableSequence } from "../base.ts";
+import { RunnableConfig } from "../config.ts";
 
 test("RunnablePassthrough can call .assign and pass prev result through", async () => {
   const promptTemplate = PromptTemplate.fromTemplate("{input}");

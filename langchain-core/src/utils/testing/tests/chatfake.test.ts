@@ -1,7 +1,7 @@
 import { describe, test, expect, jest } from "@jest/globals";
-import { HumanMessage } from "../../../messages/index.js";
-import { StringOutputParser } from "../../../output_parsers/string.js";
-import { FakeListChatModel } from "../index.js";
+import { HumanMessage } from "../../../messages/index.ts";
+import { StringOutputParser } from "../../../output_parsers/string.ts";
+import { FakeListChatModel } from "../index.ts";
 
 describe("Test FakeListChatLLM", () => {
   test("Should exist", async () => {

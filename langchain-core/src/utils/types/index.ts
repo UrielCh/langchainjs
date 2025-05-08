@@ -1,4 +1,4 @@
-export * from "./is_zod_schema.js";
+export * from "./is_zod_schema.ts";
 
 /**
  * Represents a string value with autocompleted, but not required, suggestions.

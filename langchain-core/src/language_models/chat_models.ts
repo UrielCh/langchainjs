@@ -14,8 +14,8 @@ import {
   convertToOpenAIImageBlock,
   isURLContentBlock,
   isBase64ContentBlock,
-} from "../messages/index.js";
-import type { BasePromptValueInterface } from "../prompt_values.js";
+} from "../messages/index.ts";
+import type { BasePromptValueInterface } from "../prompt_values.ts";
 import {
   LLMResult,
   RUN_KEY,
@@ -23,7 +23,7 @@ import {
   ChatGenerationChunk,
   type ChatResult,
   type Generation,
-} from "../outputs.js";
+} from "../outputs.ts";
 import {
   BaseLanguageModel,
   type StructuredOutputMethodOptions,
@@ -31,28 +31,28 @@ import {
   type BaseLanguageModelCallOptions,
   type BaseLanguageModelInput,
   type BaseLanguageModelParams,
-} from "./base.js";
+} from "./base.ts";
 import {
   CallbackManager,
   type CallbackManagerForLLMRun,
   type Callbacks,
-} from "../callbacks/manager.js";
-import type { RunnableConfig } from "../runnables/config.js";
-import type { BaseCache } from "../caches/base.js";
+} from "../callbacks/manager.ts";
+import type { RunnableConfig } from "../runnables/config.ts";
+import type { BaseCache } from "../caches/base.ts";
 import {
   StructuredToolInterface,
   StructuredToolParams,
-} from "../tools/index.js";
+} from "../tools/index.ts";
 import {
   Runnable,
   RunnableLambda,
   RunnableSequence,
   RunnableToolLike,
-} from "../runnables/base.js";
-import { concat } from "../utils/stream.js";
-import { RunnablePassthrough } from "../runnables/passthrough.js";
-import { isZodSchema } from "../utils/types/is_zod_schema.js";
-import { callbackHandlerPrefersStreaming } from "../callbacks/base.js";
+} from "../runnables/base.ts";
+import { concat } from "../utils/stream.ts";
+import { RunnablePassthrough } from "../runnables/passthrough.ts";
+import { isZodSchema } from "../utils/types/is_zod_schema.ts";
+import { callbackHandlerPrefersStreaming } from "../callbacks/base.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type ToolChoice = string | Record<string, any> | "auto" | "any";

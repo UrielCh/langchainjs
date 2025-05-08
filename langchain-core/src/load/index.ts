@@ -4,12 +4,12 @@ import {
   SerializedNotImplemented,
   SerializedSecret,
   get_lc_unique_name,
-} from "./serializable.js";
-import { optionalImportEntrypoints as defaultOptionalImportEntrypoints } from "./import_constants.js";
-import * as coreImportMap from "./import_map.js";
-import type { OptionalImportMap, SecretMap } from "./import_type.js";
-import { type SerializedFields, keyFromJson, mapKeys } from "./map_keys.js";
-import { getEnvironmentVariable } from "../utils/env.js";
+} from "./serializable.ts";
+import { optionalImportEntrypoints as defaultOptionalImportEntrypoints } from "./import_constants.ts";
+import * as coreImportMap from "./import_map.ts";
+import type { OptionalImportMap, SecretMap } from "./import_type.ts";
+import { type SerializedFields, keyFromJson, mapKeys } from "./map_keys.ts";
+import { getEnvironmentVariable } from "../utils/env.ts";
 
 function combineAliasesAndInvert(constructor: typeof Serializable) {
   const aliases: { [key: string]: string } = {};

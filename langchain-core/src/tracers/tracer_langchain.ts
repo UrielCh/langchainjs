@@ -8,10 +8,10 @@ import {
   RunUpdate as BaseRunUpdate,
   KVMap,
 } from "langsmith/schemas";
-import { getEnvironmentVariable, getRuntimeEnvironment } from "../utils/env.js";
-import { BaseTracer } from "./base.js";
-import { BaseCallbackHandlerInput } from "../callbacks/base.js";
-import { getDefaultLangChainClientSingleton } from "../singletons/tracer.js";
+import { getEnvironmentVariable, getRuntimeEnvironment } from "../utils/env.ts";
+import { BaseTracer } from "./base.ts";
+import { BaseCallbackHandlerInput } from "../callbacks/base.ts";
+import { getDefaultLangChainClientSingleton } from "../singletons/tracer.ts";
 
 export interface Run extends BaseRun {
   id: string;

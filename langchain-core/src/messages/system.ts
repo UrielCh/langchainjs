@@ -6,8 +6,8 @@ import {
   type MessageType,
   type BaseMessageFields,
   type MessageContentComplex,
-} from "./base.js";
-import type { DataContentBlock } from "./content_blocks.js";
+} from "./base.ts";
+import type { DataContentBlock } from "./content_blocks.ts";
 
 export type SystemMessageFields = BaseMessageFields & {
   content: string | (MessageContentComplex | DataContentBlock)[];

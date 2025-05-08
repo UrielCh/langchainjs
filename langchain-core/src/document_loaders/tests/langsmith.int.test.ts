@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
 import { Client } from "langsmith";
-import { LangSmithLoader } from "../langsmith.js";
+import { LangSmithLoader } from "../langsmith.ts";
 
 const DATASET_NAME = "brace-test-dataset";
 const DATASET_ID = "9a3b36f7-a297-40a5-944d-6613853b6330";

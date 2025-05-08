@@ -1,6 +1,6 @@
-import type { RunnableConfig } from "../runnables/types.js";
-import { AsyncLocalStorageProviderSingleton } from "../singletons/index.js";
-import { pickRunnableConfigKeys } from "./config.js";
+import type { RunnableConfig } from "../runnables/types.ts";
+import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
+import { pickRunnableConfigKeys } from "./config.ts";
 
 export function isIterableIterator(
   thing: unknown

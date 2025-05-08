@@ -1,5 +1,5 @@
 import { test, expect, jest } from "@jest/globals";
-import { AsyncCaller } from "../async_caller.js";
+import { AsyncCaller } from "../async_caller.ts";
 
 test("AsyncCaller passes on arguments and returns return value", async () => {
   const caller = new AsyncCaller({});

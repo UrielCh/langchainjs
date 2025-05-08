@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
-import { RunnableLambda } from "../runnables/base.js";
-import { getContextVariable, setContextVariable } from "../context.js";
+import { RunnableLambda } from "../runnables/base.ts";
+import { getContextVariable, setContextVariable } from "../context.ts";
 
 test("Getting and setting context variables within nested runnables", async () => {
   const nested = RunnableLambda.from(() => {

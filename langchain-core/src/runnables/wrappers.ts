@@ -1,4 +1,4 @@
-import { IterableReadableStream } from "../utils/stream.js";
+import { IterableReadableStream } from "../utils/stream.ts";
 
 export function convertToHttpEventStream(stream: AsyncGenerator) {
   const encoder = new TextEncoder();

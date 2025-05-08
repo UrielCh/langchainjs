@@ -5,13 +5,13 @@ import type {
   InputValues,
   PartialValues,
   StringWithAutocomplete,
-} from "../utils/types/index.js";
-import { type BasePromptValueInterface } from "../prompt_values.js";
-import { BaseOutputParser } from "../output_parsers/index.js";
-import type { SerializedFields } from "../load/map_keys.js";
-import { Runnable } from "../runnables/base.js";
-import { BaseCallbackConfig } from "../callbacks/manager.js";
-import type { SerializedBasePromptTemplate } from "../prompts/serde.js";
+} from "../utils/types/index.ts";
+import { type BasePromptValueInterface } from "../prompt_values.ts";
+import { BaseOutputParser } from "../output_parsers/index.ts";
+import type { SerializedFields } from "../load/map_keys.ts";
+import { Runnable } from "../runnables/base.ts";
+import { BaseCallbackConfig } from "../callbacks/manager.ts";
+import type { SerializedBasePromptTemplate } from "../prompts/serde.ts";
 
 export type TypedPromptInputValues<RunInput> = InputValues<
   StringWithAutocomplete<Extract<keyof RunInput, string>>

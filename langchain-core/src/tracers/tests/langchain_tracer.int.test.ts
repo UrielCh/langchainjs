@@ -2,9 +2,9 @@
 import * as uuid from "uuid";
 import { test, expect } from "@jest/globals";
 
-import { LangChainTracer, Run } from "../tracer_langchain.js";
-import { Serialized } from "../../load/serializable.js";
-import { HumanMessage } from "../../messages/index.js";
+import { LangChainTracer, Run } from "../tracer_langchain.ts";
+import { Serialized } from "../../load/serializable.ts";
+import { HumanMessage } from "../../messages/index.ts";
 
 const serialized: Serialized = {
   lc: 1,

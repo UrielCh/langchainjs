@@ -1,6 +1,6 @@
-import { Runnable, type RunnableBatchOptions } from "./base.js";
-import { IterableReadableStream } from "../utils/stream.js";
-import { ensureConfig, type RunnableConfig } from "./config.js";
+import { Runnable, type RunnableBatchOptions } from "./base.ts";
+import { IterableReadableStream } from "../utils/stream.ts";
+import { ensureConfig, type RunnableConfig } from "./config.ts";
 
 export type RouterInput = {
   key: string;

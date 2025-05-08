@@ -13,11 +13,11 @@ import {
   AIMessageChunk,
   HumanMessage,
   SystemMessage,
-} from "../../messages/index.js";
+} from "../../messages/index.ts";
 
-import { RemoteRunnable } from "../remote.js";
-import { ChatPromptValue } from "../../prompt_values.js";
-import { PromptTemplate } from "../../prompts/prompt.js";
+import { RemoteRunnable } from "../remote.ts";
+import { ChatPromptValue } from "../../prompt_values.ts";
+import { PromptTemplate } from "../../prompts/prompt.ts";
 
 const BASE_URL = "http://my-langserve-endpoint";
 

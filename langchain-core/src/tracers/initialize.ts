@@ -1,5 +1,5 @@
-import { LangChainTracer } from "./tracer_langchain.js";
-import { LangChainTracerV1 } from "./tracer_langchain_v1.js";
+import { LangChainTracer } from "./tracer_langchain.ts";
+import { LangChainTracerV1 } from "./tracer_langchain_v1.ts";
 
 /**
  * @deprecated Use the V2 handler instead.

@@ -1,4 +1,4 @@
-import { getEnvironmentVariable } from "./env.js";
+import { getEnvironmentVariable } from "./env.ts";
 
 export const isTracingEnabled = (tracingEnabled?: boolean): boolean => {
   if (tracingEnabled !== undefined) {

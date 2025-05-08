@@ -1,10 +1,10 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
 
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { FakeLLM } from "../../utils/testing/index.js";
-import { CallbackManager, traceAsGroup, TraceGroup } from "../manager.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { FakeLLM } from "../../utils/testing/index.ts";
+import { CallbackManager, traceAsGroup, TraceGroup } from "../manager.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 
 test("Test grouping traces", async () => {
   process.env.LANGCHAIN_TRACING_V2 = "true";

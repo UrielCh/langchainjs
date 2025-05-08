@@ -2,21 +2,21 @@ import { z } from "zod";
 import {
   CallbackManagerForToolRun,
   type Callbacks,
-} from "../callbacks/manager.js";
+} from "../callbacks/manager.ts";
 import type {
   BaseLangChainParams,
   ToolDefinition,
-} from "../language_models/base.js";
-import type { RunnableConfig } from "../runnables/config.js";
+} from "../language_models/base.ts";
+import type { RunnableConfig } from "../runnables/config.ts";
 import {
   Runnable,
   RunnableToolLike,
   type RunnableInterface,
-} from "../runnables/base.js";
-import type { ToolCall } from "../messages/tool.js";
-import type { MessageContent } from "../messages/base.js";
-import { isZodSchema } from "../utils/types/is_zod_schema.js";
-import { JSONSchema } from "../utils/json_schema.js";
+} from "../runnables/base.ts";
+import type { ToolCall } from "../messages/tool.ts";
+import type { MessageContent } from "../messages/base.ts";
+import { isZodSchema } from "../utils/types/is_zod_schema.ts";
+import { JSONSchema } from "../utils/json_schema.ts";
 
 export type ResponseFormat = "content" | "content_and_artifact" | string;
 

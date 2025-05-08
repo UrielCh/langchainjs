@@ -2,8 +2,8 @@ import {
   type AsyncLocalStorageInterface,
   AsyncLocalStorageProviderSingleton,
   MockAsyncLocalStorage,
-} from "./async_local_storage/index.js";
-import { _CONTEXT_VARIABLES_KEY } from "./async_local_storage/globals.js";
+} from "./async_local_storage/index.ts";
+import { _CONTEXT_VARIABLES_KEY } from "./async_local_storage/globals.ts";
 
 export {
   type AsyncLocalStorageInterface,

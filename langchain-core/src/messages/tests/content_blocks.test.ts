@@ -13,7 +13,7 @@ import {
   type IDContentBlock,
   PlainTextContentBlock,
   convertToProviderContentBlock,
-} from "../content_blocks.js";
+} from "../content_blocks.ts";
 
 describe("isDataContentBlock", () => {
   it("should return true for valid DataContentBlock objects", () => {

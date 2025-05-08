@@ -1,9 +1,9 @@
 /* eslint-disable no-promise-executor-return */
 
 import { test, expect } from "@jest/globals";
-import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.js";
-import { HumanMessagePromptTemplate } from "../../prompts/chat.js";
-import { RunCollectorCallbackHandler } from "../../tracers/run_collector.js";
+import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.ts";
+import { HumanMessagePromptTemplate } from "../../prompts/chat.ts";
+import { RunCollectorCallbackHandler } from "../../tracers/run_collector.ts";
 
 test("Test FakeLLM uses callbacks", async () => {
   const model = new FakeLLM({});

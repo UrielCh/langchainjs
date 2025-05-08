@@ -4,7 +4,7 @@
 // Adapted from https://github.com/gfortaine/fetch-event-source/blob/main/src/parse.ts
 // due to a packaging issue in the original.
 // MIT License
-import { IterableReadableStream } from "./stream.js";
+import { IterableReadableStream } from "./stream.ts";
 
 export const EventStreamContentType = "text/event-stream";
 

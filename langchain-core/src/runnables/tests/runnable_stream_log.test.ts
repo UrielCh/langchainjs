@@ -7,15 +7,15 @@ import {
   HumanMessagePromptTemplate,
   PromptTemplate,
   SystemMessagePromptTemplate,
-} from "../../prompts/index.js";
-import { Document } from "../../documents/document.js";
-import { RunLog } from "../../tracers/log_stream.js";
-import { RunnableSequence, RunnableMap } from "../base.js";
+} from "../../prompts/index.ts";
+import { Document } from "../../documents/document.ts";
+import { RunLog } from "../../tracers/log_stream.ts";
+import { RunnableSequence, RunnableMap } from "../base.ts";
 import {
   FakeLLM,
   FakeChatModel,
   FakeRetriever,
-} from "../../utils/testing/index.js";
+} from "../../utils/testing/index.ts";
 
 test("Runnable streamLog method", async () => {
   const promptTemplate = PromptTemplate.fromTemplate("{input}");

@@ -12,7 +12,7 @@ import {
   BaseOutputParser,
   FormatInstructionsOptions,
   OutputParserException,
-} from "./base.js";
+} from "./base.ts";
 
 export type JsonMarkdownStructuredOutputParserInput = {
   interpolationDepth?: number;
