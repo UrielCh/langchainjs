@@ -2,6 +2,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import "@/jest-shim";
 import { test, expect, afterEach } from "@jest/globals";
 import { z } from "zod";
 import { AsyncLocalStorage } from "node:async_hooks";

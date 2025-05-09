@@ -1,6 +1,6 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { StringOutputParser } from "../../output_parsers/string.ts";
 import { FakeChatModel, FakeStreamingLLM } from "../../utils/testing/index.ts";
 

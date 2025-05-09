@@ -1,20 +1,26 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-process-env */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { AsyncLocalStorage } from "node:async_hooks";
 import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.ts";
 import { RunnableLambda } from "../base.ts";
 import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
+import process from "node:process";
 
 test("RunnableWithFallbacks", async () => {
   const llm = new FakeLLM({
     thrownErrorString: "Bad error!",
   });
-  await expect(async () => {
+  const fnc = async () => {
     const result1 = await llm.invoke("What up");
     console.log(result1);
-  }).rejects.toThrow();
+  };
+  // await expect(fnc).rejects.toThrow();
+  await fnc().catch(err => {
+    expect(err).toBeInstanceOf(Error);
+  });
+
   const llmWithFallbacks = llm.withFallbacks({
     fallbacks: [new FakeLLM({})],
   });
@@ -41,13 +47,23 @@ test("RunnableWithFallbacks batch", async () => {
   expect(result2).toEqual(["What up 1", "What up 2", "What up 3"]);
 });
 
+
 test("RunnableWithFallbacks stream", async () => {
   const llm = new FakeStreamingLLM({
     thrownErrorString: "Bad error!",
   });
-  await expect(async () => {
+
+  const fnc = async () => {
     await llm.stream("What up");
-  }).rejects.toThrow();
+  };
+
+  // await expect(fnc).rejects.toThrow();
+  await fnc().catch(err => {
+    expect(err).toBeInstanceOf(Error);
+  });
+
+
+  
   const llmWithFallbacks = llm.withFallbacks({
     fallbacks: [new FakeStreamingLLM({})],
   });

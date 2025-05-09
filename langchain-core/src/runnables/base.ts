@@ -2056,8 +2056,7 @@ export class RunnableSequence<
             finalOutput = chunk;
           } else {
             try {
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              finalOutput = concat(finalOutput, chunk as any);
+              finalOutput = concat(finalOutput, chunk);
             } catch (e) {
               finalOutput = undefined;
               concatSupported = false;
@@ -2466,7 +2465,7 @@ export class RunnableLambda<
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  protected func: RunnableFunc<
+  protected func!: RunnableFunc<
     RunInput,
     RunOutput | Runnable<RunInput, RunOutput, CallOptions>,
     CallOptions

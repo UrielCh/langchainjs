@@ -136,8 +136,7 @@ export class ImagePromptValue extends BasePromptValue {
 
   imageUrl: ImageContent;
 
-  /** @ignore */
-  value: string;
+  value!: string;
 
   constructor(fields: ImagePromptValueFields);
 

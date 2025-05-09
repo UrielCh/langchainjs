@@ -81,8 +81,14 @@ export interface SerializableInterface {
 }
 
 export abstract class Serializable implements SerializableInterface {
+  /**
+   * Whether the class is serializable.
+   */
   lc_serializable = false;
 
+  /**
+   * The constructor arguments to be serialized.
+   */
   lc_kwargs: SerializedFields;
 
   /**

@@ -1,7 +1,7 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
   ChatPromptTemplate,
   HumanMessagePromptTemplate,
@@ -9,7 +9,7 @@ import {
   SystemMessagePromptTemplate,
 } from "../../prompts/index.ts";
 import { Document } from "../../documents/document.ts";
-import { RunLog } from "../../tracers/log_stream.ts";
+import type { RunLog } from "../../tracers/log_stream.ts";
 import { RunnableSequence, RunnableMap } from "../base.ts";
 import {
   FakeLLM,

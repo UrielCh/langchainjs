@@ -1,7 +1,6 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { RunnableBranch } from "../branch.ts";
 import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import { FakeStreamingLLM } from "../../utils/testing/index.ts";
@@ -57,7 +56,7 @@ test("RunnableBranch handles error", async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   expect(result).toBe("branch passed");
   expect(error).toBeUndefined();
-  await expect(async () => {
+  const fnc = async () => {
     await branch.invoke("alpha", {
       callbacks: [
         {
@@ -67,7 +66,8 @@ test("RunnableBranch handles error", async () => {
         },
       ],
     });
-  }).rejects.toThrow();
+  };
+  await expect(fnc).rejects.toThrow();
   expect(error).toBeDefined();
 });
 

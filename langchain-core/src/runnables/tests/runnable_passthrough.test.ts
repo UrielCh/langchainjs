@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { PromptTemplate } from "../../prompts/prompt.ts";
 import { FakeChatModel } from "../../utils/testing/index.ts";
 import { RunnablePassthrough } from "../passthrough.ts";

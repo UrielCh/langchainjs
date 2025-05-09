@@ -1,13 +1,14 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  jest,
-  test,
-  expect,
-  describe,
-  beforeEach,
-  afterEach,
-} from "@jest/globals";
+import "@/jest-shim";
+// import {
+//   jest,
+//   test,
+//   expect,
+//   describe,
+//   beforeEach,
+//   afterEach,
+// } from "@jest/globals";
 import {
   AIMessage,
   type AIMessageChunk,
@@ -104,6 +105,7 @@ data: {"messages":[{"content":"You are an expert programmer and problem-solver, 
 event: end`;
 
 describe("RemoteRunnable", () => {
+  const oldFetch = globalThis.fetch;
   beforeEach(() => {
     // mock langserve service
     const returnDataByEndpoint: Record<string, BodyInit> = {
@@ -119,20 +121,24 @@ describe("RemoteRunnable", () => {
       "/strange_types/stream": respToStream(strangeTypesResp),
     };
 
-    const oldFetch = global.fetch;
-
-    global.fetch = jest
-      .fn()
-      .mockImplementation(async (url: any, init?: any) => {
-        if (!url.startsWith(BASE_URL)) return await oldFetch(url, init);
-        const { pathname } = new URL(url);
-        const resp: Response = new Response(returnDataByEndpoint[pathname]);
-        return resp;
-      }) as any;
+    globalThis.fetch = async (url: any, init?: any) => {
+      if (!url.startsWith(BASE_URL)) return await oldFetch(url, init);
+      const { pathname } = new URL(url);
+      return new Response(returnDataByEndpoint[pathname]);
+    };
+    // jest
+    //   .fn()
+    //   .mockImplementation(async (url: any, init?: any) => {
+    //     if (!url.startsWith(BASE_URL)) return await oldFetch(url, init);
+    //     const { pathname } = new URL(url);
+    //     const resp: Response = new Response(returnDataByEndpoint[pathname]);
+    //     return resp;
+    //   }) as any;
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    globalThis.fetch = oldFetch;
+    // jest.clearAllMocks();
   });
 
   test("Invoke local langserve", async () => {

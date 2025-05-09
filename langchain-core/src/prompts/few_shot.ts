@@ -114,7 +114,7 @@ export class FewShotPromptTemplate
 
   exampleSelector?: BaseExampleSelector | undefined;
 
-  examplePrompt: PromptTemplate;
+  examplePrompt!: PromptTemplate;
 
   suffix = "";
 

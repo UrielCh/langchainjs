@@ -16,7 +16,7 @@ export class IterableReadableStream<T>
   extends ReadableStream<T>
   implements IterableReadableStreamInterface<T>
 {
-  public reader: ReadableStreamDefaultReader<T>;
+  public reader!: ReadableStreamDefaultReader<T>;
 
   ensureReader() {
     if (!this.reader) {
@@ -196,7 +196,7 @@ export class AsyncGeneratorWithSetup<
 
   public signal?: AbortSignal;
 
-  private firstResult: Promise<IteratorResult<T>>;
+  private firstResult!: Promise<IteratorResult<T>>;
 
   private firstResultUsed = false;
 

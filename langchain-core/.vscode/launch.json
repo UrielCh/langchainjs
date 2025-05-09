@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Deno Test: current file",
+        "type": "pwa-node",
+        "request": "launch",
+        "program": "${file}",
+        "runtimeExecutable": "deno",
+        "runtimeArgs": [
+          "test",
+          "-A",
+          "--inspect-brk",
+          "${file}"
+        ],
+        "attachSimplePort": 9229,
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "skipFiles": [
+          "<node_internals>/**",
+          "**/@std/**"
+        ]
+      }
+    ]
+  }

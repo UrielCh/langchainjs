@@ -938,7 +938,7 @@ export class ChatPromptTemplate<
     };
   }
 
-  promptMessages: Array<BaseMessagePromptTemplate | BaseMessage>;
+  promptMessages!: Array<BaseMessagePromptTemplate | BaseMessage>;
 
   validateTemplate = true;
 

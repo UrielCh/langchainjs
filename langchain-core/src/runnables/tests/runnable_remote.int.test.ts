@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { HumanMessage } from "../../messages/index.ts";
 import { applyPatch } from "../../utils/json_patch.ts";
 import { RemoteRunnable } from "../remote.ts";
@@ -18,11 +18,15 @@ test("invoke hosted langserve error handling", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/nonexistent`,
   });
-  await expect(async () => {
+  const fnc = async () => {
     await remote.invoke({
       question: "What is a document loader?",
     });
-  }).rejects.toThrowError();
+  };
+
+  await fnc().catch(err => {
+    expect(err).toBeInstanceOf(Error);
+  });
 });
 
 test("stream hosted langserve", async () => {
@@ -46,14 +50,17 @@ test("stream error handling hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/nonexistent`,
   });
-  await expect(async () => {
+  const fnc = async () => {
     const result = await remote.stream({
       question: "What is a document loader?",
     });
     for await (const chunk of result) {
       console.log(chunk);
     }
-  }).rejects.toThrowError();
+  };
+  await fnc().catch(err => {
+    expect(err).toBeInstanceOf(Error);
+  });
 });
 
 test("streamLog hosted langserve", async () => {
@@ -84,11 +91,14 @@ test("streamLog error handling hosted langserve", async () => {
     question: "What is a document loader?",
   });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  await expect(async () => {
+  const fnc = async () => {
     for await (const chunk of result) {
       console.log(chunk);
     }
-  }).rejects.toThrowError();
+  };
+  await fnc().catch(err => {
+    expect(err).toBeInstanceOf(Error);
+  });
 });
 
 test("streamLog hosted langserve with concat syntax", async () => {

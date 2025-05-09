@@ -1,9 +1,10 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import "@/jest-shim";
 import { test, describe, expect } from "@jest/globals";
 import {
-  Runnable,
+  type Runnable,
   RunnableLambda,
   RunnableMap,
   RunnablePassthrough,

@@ -68,11 +68,11 @@ export abstract class BasePromptTemplate<
     };
   }
 
-  inputVariables: Array<Extract<keyof RunInput, string>>;
+  inputVariables!: Array<Extract<keyof RunInput, string>>;
 
   outputParser?: BaseOutputParser;
 
-  partialVariables: PartialValues<PartialVariableName>;
+  partialVariables!: PartialValues<PartialVariableName>;
 
   /**
    * Metadata to be used for tracing.

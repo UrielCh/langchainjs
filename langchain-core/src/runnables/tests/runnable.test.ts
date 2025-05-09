@@ -2,11 +2,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { Run } from "langsmith";
+import "@/jest-shim";
+import type { Run } from "langsmith";
 import { v4 as uuidv4 } from "uuid";
-import { jest, test, expect, describe } from "@jest/globals";
+import { jest, test } from "@jest/globals";
 import { createChatMessageChunkEncoderStream } from "../../language_models/chat_models.ts";
-import { BaseMessage, HumanMessage } from "../../messages/index.ts";
+import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
 import { OutputParserException } from "../../output_parsers/base.ts";
 import { StringOutputParser } from "../../output_parsers/string.ts";
 import {
@@ -26,7 +27,7 @@ import {
 } from "../../utils/testing/index.ts";
 import { RunnableSequence, RunnableLambda } from "../base.ts";
 import { RouterRunnable } from "../router.ts";
-import { RunnableConfig } from "../config.ts";
+import type { RunnableConfig } from "../config.ts";
 import { JsonOutputParser } from "../../output_parsers/json.ts";
 
 test("Test batch", async () => {

@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "noImplicitOverride": false,
+    "lib": ["es2022", "dom"]
+  },
   "imports": {
     "langchain/": "npm:/langchain@0.3.2/",
     "@langchain/anthropic": "npm:@langchain/anthropic@0.3.0",

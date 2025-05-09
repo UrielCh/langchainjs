@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { z } from "zod";
-import {
+import type { z } from "zod";
+import type {
   BaseCallbackConfig,
   CallbackManagerForLLMRun,
   CallbackManagerForToolRun,
@@ -15,32 +15,32 @@ import {
 import { Document } from "../../documents/document.ts";
 import {
   BaseChatModel,
-  BaseChatModelCallOptions,
-  BaseChatModelParams,
+  type BaseChatModelCallOptions,
+  type BaseChatModelParams,
 } from "../../language_models/chat_models.ts";
-import { BaseLLMParams, LLM } from "../../language_models/llms.ts";
+import { type BaseLLMParams, LLM } from "../../language_models/llms.ts";
 import {
-  BaseMessage,
+  type BaseMessage,
   AIMessage,
   AIMessageChunk,
   HumanMessage,
 } from "../../messages/index.ts";
 import { BaseOutputParser } from "../../output_parsers/base.ts";
 import {
-  GenerationChunk,
+  type GenerationChunk,
   type ChatResult,
   ChatGenerationChunk,
 } from "../../outputs.ts";
 import { BaseRetriever } from "../../retrievers/index.ts";
 import { Runnable, RunnableLambda } from "../../runnables/base.ts";
-import { StructuredTool, ToolParams } from "../../tools/index.ts";
-import { BaseTracer, Run } from "../../tracers/base.ts";
+import { StructuredTool, type ToolParams } from "../../tools/index.ts";
+import { BaseTracer, type Run } from "../../tracers/base.ts";
 import {
   Embeddings,
-  EmbeddingsInterface,
-  EmbeddingsParams,
+  type EmbeddingsInterface,
+  type EmbeddingsParams,
 } from "../../embeddings.ts";
-import {
+import type {
   StructuredOutputMethodParams,
   BaseLanguageModelInput,
   StructuredOutputMethodOptions,
@@ -723,7 +723,7 @@ export class SyntheticEmbeddings
 }
 
 export class SingleRunExtractor extends BaseTracer {
-  runPromiseResolver: (run: Run) => void;
+  runPromiseResolver!: (run: Run) => void;
 
   runPromise: Promise<Run>;
 

@@ -123,7 +123,7 @@ export class PromptTemplate<
     return "PromptTemplate";
   }
 
-  template: MessageContent;
+  template!: MessageContent;
 
   templateFormat: TemplateFormat = "f-string";
 
@@ -271,8 +271,7 @@ export class PromptTemplate<
 
     return new PromptTemplate({
       // Rely on extracted types
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      inputVariables: [...names] as any[],
+      inputVariables: [...names],
       templateFormat,
       template,
       ...rest,

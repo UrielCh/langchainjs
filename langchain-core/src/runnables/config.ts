@@ -1,10 +1,10 @@
 import { CallbackManager, ensureHandler } from "../callbacks/manager.ts";
 import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
-import { RunnableConfig } from "./types.ts";
+import type { RunnableConfig } from "./types.ts";
 
 export const DEFAULT_RECURSION_LIMIT = 25;
 
-export { type RunnableConfig };
+export type { RunnableConfig };
 
 export async function getCallbackManagerForConfig(config?: RunnableConfig) {
   return CallbackManager._configureSync(

@@ -52,14 +52,17 @@ test("Test fromTemplate with type parameter", async () => {
 
 test("Test fromTemplate with missing variable should raise compiler error", async () => {
   const prompt = PromptTemplate.fromTemplate("{foo}");
-  await expect(async () => {
+  const fnc1 = async () => {
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.format({ unused: "eee" });
-  }).rejects.toThrow();
-  await expect(async () => {
+  };
+  await expect(fnc1).rejects.toThrow();
+
+  const fnc2 = async () => {
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.invoke({ unused: "eee" });
-  }).rejects.toThrow();
+  };
+  await expect(fnc2).rejects.toThrow();
 });
 
 test("Test fromTemplate with extra variable should work", async () => {

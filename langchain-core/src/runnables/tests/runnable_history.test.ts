@@ -1,14 +1,14 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
   AIMessage,
   AIMessageChunk,
-  BaseMessage,
+  type BaseMessage,
   HumanMessage,
 } from "../../messages/index.ts";
 import { RunnableLambda } from "../base.ts";
-import { RunnableConfig } from "../config.ts";
+import type { RunnableConfig } from "../config.ts";
 import { RunnableWithMessageHistory } from "../history.ts";
-import {
+import type {
   BaseChatMessageHistory,
   BaseListChatMessageHistory,
 } from "../../chat_history.ts";

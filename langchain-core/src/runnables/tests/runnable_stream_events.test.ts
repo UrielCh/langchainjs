@@ -2,7 +2,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { test, expect, afterEach } from "@jest/globals";
+import "@/jest-shim";
 import { z } from "zod";
 import {
   RunnableLambda,
@@ -24,6 +24,7 @@ import {
 import { ChatGenerationChunk, GenerationChunk } from "../../outputs.ts";
 import { DynamicStructuredTool, DynamicTool } from "../../tools/index.ts";
 import { Document } from "../../documents/document.ts";
+import process from "node:process";
 
 function reverse(s: string) {
   // Reverse a string.

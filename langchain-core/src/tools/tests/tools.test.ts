@@ -28,10 +28,10 @@ test("Tool should error if responseFormat is content_and_artifact but the functi
       responseFormat: "content_and_artifact",
     }
   );
-
-  await expect(async () => {
+  const fnc = async () => {
     await weatherTool.invoke({ location: "San Francisco" });
-  }).rejects.toThrow();
+  };
+  await expect(fnc).rejects.toThrow();
 });
 
 test("Tool works if responseFormat is content_and_artifact and returns a tuple", async () => {
@@ -297,23 +297,24 @@ test("Tool input typing is enforced", async () => {
       schema: z.string(),
     }
   );
-
-  await expect(async () => {
+  const fnc1 = async () => {
     await weatherTool.invoke({
       // @ts-expect-error Invalid argument
       badval: "someval",
     });
-  }).rejects.toThrow();
+  }
+  await expect(fnc1).rejects.toThrow();
   const res = await weatherTool.invoke({
     location: "somewhere",
   });
   expect(res).toEqual("Sunny");
-  await expect(async () => {
+  const fnc2 = async () => {
     await weatherTool2.invoke({
       // @ts-expect-error Invalid argument
       badval: "someval",
     });
-  }).rejects.toThrow();
+  }
+  await expect(fnc2).rejects.toThrow();
   const res2 = await weatherTool2.invoke({
     location: "someval",
   });

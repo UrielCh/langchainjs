@@ -1,6 +1,7 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import "@/jest-shim";
 import { test, expect } from "@jest/globals";
 import { RunnableLambda } from "../base.ts";
 
@@ -52,9 +53,10 @@ test("RunnableRetry batch with thrown errors", async () => {
   const runnableRetry = runnable.withRetry({
     stopAfterAttempt: 1,
   });
-  await expect(async () => {
+  const fnc = async () => {
     await runnableRetry.batch(["", "", ""]);
-  }).rejects.toThrow();
+  };
+  await expect(fnc).rejects.toThrow();
 });
 
 test("RunnableRetry batch with all returned errors", async () => {

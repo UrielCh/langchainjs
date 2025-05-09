@@ -3,10 +3,14 @@
     "dev": "deno run --watch main.ts"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "@/jest-shim": "./src/utils/tests/jest-shim.ts",
+    "@std/expect": "jsr:@std/expect@^1.0.15",
+    "@std/testing": "jsr:@std/testing@^1.0.11"
   },
   "compilerOptions": {
-    "noImplicitOverride": false
+    "noImplicitOverride": false,
+    "lib": ["es2022", "dom"]
   },
   "name": "@u4/langchain-core",
   "version": "0.1.1",

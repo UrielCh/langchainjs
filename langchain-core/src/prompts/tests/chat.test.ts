@@ -441,11 +441,11 @@ test("Test MessagesPlaceholder shorthand in a chat prompt template with object f
 
 test("Test MessagesPlaceholder with invalid shorthand should throw", async () => {
   const prompt = ChatPromptTemplate.fromMessages([["placeholder", "{foo}"]]);
-  await expect(() =>
+  const fnc = () =>
     prompt.formatMessages({
       foo: [{ badFormatting: true }],
-    })
-  ).rejects.toThrow();
+    });
+  await expect(fnc).rejects.toThrow();
 });
 
 test("Test using partial", async () => {
