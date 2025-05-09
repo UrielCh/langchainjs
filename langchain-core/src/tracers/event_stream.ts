@@ -330,7 +330,7 @@ export class EventStreamCallbackHandler
     }
   }
 
-  async onLLMStart(run: Run): Promise<void> {
+  override async onLLMStart(run: Run): Promise<void> {
     const runName = assignName(run);
     const runType = run.inputs.messages !== undefined ? "chat_model" : "llm";
     const runInfo = {
@@ -357,7 +357,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onLLMNewToken(
+  override async onLLMNewToken(
     run: Run,
     token: string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -405,7 +405,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onLLMEnd(run: Run): Promise<void> {
+  override async onLLMEnd(run: Run): Promise<void> {
     const runInfo = this.runInfoMap.get(run.id);
     this.runInfoMap.delete(run.id);
     let eventName: string;
@@ -456,7 +456,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onChainStart(run: Run): Promise<void> {
+  override async onChainStart(run: Run): Promise<void> {
     const runName = assignName(run);
     const runType = run.run_type ?? "chain";
     const runInfo: RunInfo = {
@@ -491,7 +491,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onChainEnd(run: Run): Promise<void> {
+  override async onChainEnd(run: Run): Promise<void> {
     const runInfo = this.runInfoMap.get(run.id);
     this.runInfoMap.delete(run.id);
     if (runInfo === undefined) {
@@ -521,7 +521,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onToolStart(run: Run): Promise<void> {
+  override async onToolStart(run: Run): Promise<void> {
     const runName = assignName(run);
     const runInfo = {
       tags: run.tags ?? [],
@@ -546,7 +546,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onToolEnd(run: Run): Promise<void> {
+  override async onToolEnd(run: Run): Promise<void> {
     const runInfo = this.runInfoMap.get(run.id);
     this.runInfoMap.delete(run.id);
     if (runInfo === undefined) {
@@ -575,7 +575,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onRetrieverStart(run: Run): Promise<void> {
+  override async onRetrieverStart(run: Run): Promise<void> {
     const runName = assignName(run);
     const runType = "retriever";
     const runInfo = {
@@ -605,7 +605,7 @@ export class EventStreamCallbackHandler
     );
   }
 
-  async onRetrieverEnd(run: Run): Promise<void> {
+  override async onRetrieverEnd(run: Run): Promise<void> {
     const runInfo = this.runInfoMap.get(run.id);
     this.runInfoMap.delete(run.id);
     if (runInfo === undefined) {
@@ -628,7 +628,7 @@ export class EventStreamCallbackHandler
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async handleCustomEvent(eventName: string, data: any, runId: string) {
+  override async handleCustomEvent(eventName: string, data: any, runId: string) {
     const runInfo = this.runInfoMap.get(runId);
     if (runInfo === undefined) {
       throw new Error(

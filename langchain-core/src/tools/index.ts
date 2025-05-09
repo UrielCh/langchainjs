@@ -72,7 +72,7 @@ export abstract class StructuredTool<
   StructuredToolCallInput<SchemaT, SchemaInputT>,
   ToolReturnType
 > {
-  abstract name: string;
+  abstract override name: string;
 
   abstract description: string;
 
@@ -295,7 +295,7 @@ export abstract class Tool extends StructuredTool<
    * @param callbacks Optional callbacks for the tool.
    * @returns A Promise that resolves with a string.
    */
-  call(
+  override call(
     arg: string | undefined | z.input<this["schema"]> | ToolCall,
     callbacks?: Callbacks | RunnableConfig
   ): Promise<ToolReturnType> {
@@ -310,7 +310,7 @@ export abstract class Tool extends StructuredTool<
  * A tool that can be created dynamically from a function, name, and description.
  */
 export class DynamicTool extends Tool {
-  static lc_name() {
+  static override lc_name() {
     return "DynamicTool";
   }
 
@@ -331,7 +331,7 @@ export class DynamicTool extends Tool {
   /**
    * @deprecated Use .invoke() instead. Will be removed in 0.3.0.
    */
-  async call(
+  override async call(
     arg: string | undefined | z.input<this["schema"]> | ToolCall,
     configArg?: ToolRunnableConfig | Callbacks
   ): Promise<ToolReturnType> {
@@ -366,7 +366,7 @@ export class DynamicStructuredTool<
   SchemaOutputT = ToolInputSchemaOutputType<SchemaT>,
   SchemaInputT = ToolInputSchemaInputType<SchemaT>
 > extends StructuredTool<SchemaT, SchemaOutputT, SchemaInputT> {
-  static lc_name() {
+  static override lc_name() {
     return "DynamicStructuredTool";
   }
 
@@ -390,7 +390,7 @@ export class DynamicStructuredTool<
   /**
    * @deprecated Use .invoke() instead. Will be removed in 0.3.0.
    */
-  async call(
+  override async call(
     arg: StructuredToolCallInput<SchemaT, SchemaInputT>,
     configArg?: RunnableConfig | Callbacks,
     /** @deprecated */

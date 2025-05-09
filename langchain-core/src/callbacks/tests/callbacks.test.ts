@@ -49,25 +49,25 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     super(inputs);
   }
 
-  async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
+  override async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
     this.starts += 1;
     this.llmStarts += 1;
   }
 
-  async handleLLMEnd(_output: LLMResult): Promise<void> {
+  override async handleLLMEnd(_output: LLMResult): Promise<void> {
     this.ends += 1;
     this.llmEnds += 1;
   }
 
-  async handleLLMNewToken(_token: string): Promise<void> {
+  override async handleLLMNewToken(_token: string): Promise<void> {
     this.llmStreams += 1;
   }
 
-  async handleLLMError(_err: Error): Promise<void> {
+  override async handleLLMError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleChainStart(
+  override async handleChainStart(
     _chain: Serialized,
     _inputs: ChainValues
   ): Promise<void> {
@@ -75,44 +75,44 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     this.chainStarts += 1;
   }
 
-  async handleChainEnd(_outputs: ChainValues): Promise<void> {
+  override async handleChainEnd(_outputs: ChainValues): Promise<void> {
     this.ends += 1;
     this.chainEnds += 1;
   }
 
-  async handleChainError(_err: Error): Promise<void> {
+  override async handleChainError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleToolStart(_tool: Serialized, _input: string): Promise<void> {
+  override async handleToolStart(_tool: Serialized, _input: string): Promise<void> {
     this.starts += 1;
     this.toolStarts += 1;
   }
 
-  async handleToolEnd(_output: string): Promise<void> {
+  override async handleToolEnd(_output: string): Promise<void> {
     this.ends += 1;
     this.toolEnds += 1;
   }
 
-  async handleToolError(_err: Error): Promise<void> {
+  override async handleToolError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleText(_text: string): Promise<void> {
+  override async handleText(_text: string): Promise<void> {
     this.texts += 1;
   }
 
-  async handleAgentAction(_action: AgentAction): Promise<void> {
+  override async handleAgentAction(_action: AgentAction): Promise<void> {
     this.starts += 1;
     this.toolStarts += 1;
   }
 
-  async handleAgentEnd(_action: AgentFinish): Promise<void> {
+  override async handleAgentEnd(_action: AgentFinish): Promise<void> {
     this.ends += 1;
     this.agentEnds += 1;
   }
 
-  async handleRetrieverStart(
+  override async handleRetrieverStart(
     _retriever: Serialized,
     _query: string
   ): Promise<void> {
@@ -120,18 +120,18 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     this.retrieverStarts += 1;
   }
 
-  async handleRetrieverEnd(
+  override async handleRetrieverEnd(
     _documents: Document<Record<string, unknown>>[]
   ): Promise<void> {
     this.ends += 1;
     this.retrieverEnds += 1;
   }
 
-  async handleRetrieverError(_err: Error): Promise<void> {
+  override async handleRetrieverError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  copy(): FakeCallbackHandler {
+  override copy(): FakeCallbackHandler {
     const newInstance = new FakeCallbackHandler();
     newInstance.name = this.name;
     newInstance.starts = this.starts;
@@ -156,7 +156,7 @@ class FakeCallbackHandler extends BaseCallbackHandler {
 class FakeCallbackHandlerWithChatStart extends FakeCallbackHandler {
   chatModelStarts = 0;
 
-  async handleChatModelStart(
+  override async handleChatModelStart(
     _llm: Serialized,
     _messages: BaseMessage[][]
   ): Promise<void> {
@@ -485,14 +485,14 @@ class FakeCallbackHandlerWithErrors extends FakeCallbackHandler {
     super({ ...input, raiseError: true });
   }
 
-  async handleChainStart(
+  override async handleChainStart(
     _chain: Serialized,
     _inputs: ChainValues
   ): Promise<void> {
     throw Error("error!");
   }
 
-  async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
+  override async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
     throw Error("llm start error!");
   }
 }

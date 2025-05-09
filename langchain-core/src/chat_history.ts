@@ -132,7 +132,7 @@ export class InMemoryChatMessageHistory extends BaseListChatMessageHistory {
    * Method to clear all the messages from the ChatMessageHistory instance.
    * @returns A promise that resolves when all messages have been cleared.
    */
-  async clear() {
+  override async clear() {
     this.messages = [];
   }
 }

@@ -111,7 +111,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The chain run that has started.
    * @returns void
    */
-  onChainStart(run: Run) {
+  override onChainStart(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(
@@ -129,7 +129,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The chain run that has ended.
    * @returns void
    */
-  onChainEnd(run: Run) {
+  override onChainEnd(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.cyan, "[chain/end]")} [${crumbs}] [${elapsed(
@@ -146,7 +146,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The chain run that has errored.
    * @returns void
    */
-  onChainError(run: Run) {
+  override onChainError(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.red, "[chain/error]")} [${crumbs}] [${elapsed(
@@ -163,7 +163,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The LLM run that has started.
    * @returns void
    */
-  onLLMStart(run: Run) {
+  override onLLMStart(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     const inputs =
       "prompts" in run.inputs
@@ -185,7 +185,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The LLM run that has ended.
    * @returns void
    */
-  onLLMEnd(run: Run) {
+  override onLLMEnd(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.cyan, "[llm/end]")} [${crumbs}] [${elapsed(
@@ -202,7 +202,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The LLM run that has errored.
    * @returns void
    */
-  onLLMError(run: Run) {
+  override onLLMError(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.red, "[llm/error]")} [${crumbs}] [${elapsed(
@@ -216,7 +216,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The tool run that has started.
    * @returns void
    */
-  onToolStart(run: Run) {
+  override onToolStart(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(
@@ -233,7 +233,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The tool run that has ended.
    * @returns void
    */
-  onToolEnd(run: Run) {
+  override onToolEnd(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
 
     console.log(
@@ -250,7 +250,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The tool run that has errored.
    * @returns void
    */
-  onToolError(run: Run) {
+  override onToolError(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.red, "[tool/error]")} [${crumbs}] [${elapsed(
@@ -267,7 +267,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The retriever run that has started.
    * @returns void
    */
-  onRetrieverStart(run: Run) {
+  override onRetrieverStart(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(
@@ -285,7 +285,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The retriever run that has ended.
    * @returns void
    */
-  onRetrieverEnd(run: Run) {
+  override onRetrieverEnd(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.cyan, "[retriever/end]")} [${crumbs}] [${elapsed(
@@ -302,7 +302,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The retriever run that has errored.
    * @returns void
    */
-  onRetrieverError(run: Run) {
+  override onRetrieverError(run: Run) {
     const crumbs = this.getBreadcrumbs(run);
     console.log(
       `${wrap(color.red, "[retriever/error]")} [${crumbs}] [${elapsed(
@@ -319,7 +319,7 @@ export class ConsoleCallbackHandler extends BaseTracer {
    * @param run The run in which the agent action occurred.
    * @returns void
    */
-  onAgentAction(run: Run) {
+  override onAgentAction(run: Run) {
     const agentRun = run as AgentRun;
     const crumbs = this.getBreadcrumbs(run);
     console.log(

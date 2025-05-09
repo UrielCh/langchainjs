@@ -47,11 +47,11 @@ class FakeTracer extends LangChainTracer {
 
   updateOperations: { [id: string]: Run } = {};
 
-  async onRunCreate(run: Run): Promise<void> {
+  override async onRunCreate(run: Run): Promise<void> {
     this.createOperations[run.id] = run;
   }
 
-  async onRunUpdate(run: Run): Promise<void> {
+  override async onRunUpdate(run: Run): Promise<void> {
     this.updateOperations[run.id] = run;
   }
 }

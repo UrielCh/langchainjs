@@ -10,7 +10,7 @@ import {
 } from "@jest/globals";
 import {
   AIMessage,
-  AIMessageChunk,
+  type AIMessageChunk,
   HumanMessage,
   SystemMessage,
 } from "../../messages/index.ts";
@@ -18,6 +18,7 @@ import {
 import { RemoteRunnable } from "../remote.ts";
 import { ChatPromptValue } from "../../prompt_values.ts";
 import { PromptTemplate } from "../../prompts/prompt.ts";
+import { Buffer } from "node:buffer";
 
 const BASE_URL = "http://my-langserve-endpoint";
 

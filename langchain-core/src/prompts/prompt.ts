@@ -306,7 +306,7 @@ export class PromptTemplate<
     >(promptDict);
   }
 
-  serialize(): SerializedPromptTemplate {
+  override serialize(): SerializedPromptTemplate {
     if (this.outputParser !== undefined) {
       throw new Error(
         "Cannot serialize a prompt template with an output parser"
@@ -320,7 +320,7 @@ export class PromptTemplate<
     };
   }
 
-  static async deserialize(
+  static override async deserialize(
     data: SerializedPromptTemplate
   ): Promise<PromptTemplate> {
     if (!data.template) {

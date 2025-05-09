@@ -217,9 +217,9 @@ export abstract class BaseMessage
 {
   lc_namespace = ["langchain_core", "messages"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  get lc_aliases(): Record<string, string> {
+  override get lc_aliases(): Record<string, string> {
     // exclude snake case conversion to pascal case
     return {
       additional_kwargs: "additional_kwargs",
@@ -319,7 +319,7 @@ export abstract class BaseMessage
     };
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "BaseMessage";
   }
 

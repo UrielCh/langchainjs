@@ -24,7 +24,7 @@ export abstract class BasePromptValue
   extends Serializable
   implements BasePromptValueInterface
 {
-  abstract toString(): string;
+  abstract override toString(): string;
 
   abstract toChatMessages(): BaseMessage[];
 }
@@ -37,13 +37,13 @@ export class StringPromptValue
   extends BasePromptValue
   implements StringPromptValueInterface
 {
-  static lc_name(): string {
+  static override lc_name(): string {
     return "StringPromptValue";
   }
 
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   value: string;
 
@@ -78,9 +78,9 @@ export class ChatPromptValue
 {
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  static lc_name() {
+  static override lc_name() {
     return "ChatPromptValue";
   }
 
@@ -128,9 +128,9 @@ export interface ImagePromptValueFields {
 export class ImagePromptValue extends BasePromptValue {
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  static lc_name() {
+  static override lc_name() {
     return "ImagePromptValue";
   }
 

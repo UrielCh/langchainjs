@@ -355,7 +355,6 @@
     "npm:ts-morph@^21.0.1": "21.0.1",
     "npm:tsx@^3.12.3": "3.14.0",
     "npm:tsx@^4.16.2": "4.19.4",
-    "npm:turbo@latest": "2.5.3",
     "npm:typedoc-plugin-expand-object-like-types@~0.1.2": "0.1.2_typedoc@0.24.8__typescript@5.1.6_typescript@5.1.6",
     "npm:typedoc-plugin-markdown@next": "4.0.0-next.60_typedoc@0.24.8__typescript@5.1.6_typescript@5.1.6",
     "npm:typedoc@~0.24.4": "0.24.8_typescript@5.1.6",
@@ -22080,18 +22079,6 @@
       "os": ["win32"],
       "cpu": ["arm64"]
     },
-    "turbo@2.5.3": {
-      "integrity": "sha512-iHuaNcq5GZZnr3XDZNuu2LSyCzAOPwDuo5Qt+q64DfsTP1i3T2bKfxJhni2ZQxsvAoxRbuUK5QetJki4qc5aYA==",
-      "optionalDependencies": [
-        "turbo-darwin-64",
-        "turbo-darwin-arm64",
-        "turbo-linux-64",
-        "turbo-linux-arm64",
-        "turbo-windows-64",
-        "turbo-windows-arm64"
-      ],
-      "bin": true
-    },
     "tweetnacl@0.14.5": {
       "integrity": "sha512-KXXFFdAbFXY4geFIwoyNK+f5Z1b7swfXABfL7HXCmoIWMKU3dmS26672A4EeQtDzLKy7SXmfBu51JolvEKwtGA=="
     },
@@ -23621,7 +23608,7 @@
         "npm:lint-staged@^13.1.1",
         "npm:prettier@^2.8.3",
         "npm:semver@^7.5.4",
-        "npm:turbo@latest",
+        "npm:turbo@^1.13.3",
         "npm:typescript@~5.1.6"
       ]
     },
@@ -23845,6 +23832,9 @@
         }
       },
       "langchain-core": {
+        "dependencies": [
+          "jsr:@std/assert@1"
+        ],
         "packageJson": {
           "dependencies": [
             "npm:@cfworker/json-schema@^4.0.2",

@@ -149,7 +149,7 @@ export class FakeStreamingLLM extends LLM {
     return response ?? prompt;
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     input: string,
     _options?: this["ParsedCallOptions"],
     runManager?: CallbackManagerForLLMRun
@@ -168,7 +168,7 @@ export class FakeStreamingLLM extends LLM {
 }
 
 export class FakeChatModel extends BaseChatModel {
-  _combineLLMOutput() {
+  override _combineLLMOutput() {
     return [];
   }
 
@@ -260,7 +260,7 @@ export class FakeStreamingChatModel extends BaseChatModel {
     return generation;
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     messages: BaseMessage[],
     _options: this["ParsedCallOptions"],
     _runManager?: CallbackManagerForLLMRun
@@ -304,7 +304,7 @@ export class FakeRetriever extends BaseRetriever {
     this.output = fields?.output ?? this.output;
   }
 
-  async _getRelevantDocuments(
+  override async _getRelevantDocuments(
     _query: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<Document<Record<string, any>>[]> {
@@ -350,11 +350,11 @@ export interface FakeListChatModelCallOptions extends BaseChatModelCallOptions {
  * ```
  */
 export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "FakeListChatModel";
   }
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   responses: string[];
 
@@ -372,7 +372,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     this.emitCustomEvent = emitCustomEvent ?? this.emitCustomEvent;
   }
 
-  _combineLLMOutput() {
+  override _combineLLMOutput() {
     return [];
   }
 
@@ -417,7 +417,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     };
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     _messages: BaseMessage[],
     options: this["ParsedCallOptions"],
     runManager?: CallbackManagerForLLMRun
@@ -472,7 +472,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     }
   }
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -484,7 +484,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     config?: StructuredOutputMethodOptions<false>
   ): Runnable<BaseLanguageModelInput, RunOutput>;
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -496,7 +496,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     config?: StructuredOutputMethodOptions<true>
   ): Runnable<BaseLanguageModelInput, { raw: BaseMessage; parsed: RunOutput }>;
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -881,7 +881,7 @@ export class FakeVectorStore extends VectorStore {
    * @param dbConfig Optional `FakeVectorStoreArgs` to configure the `FakeVectorStore` instance.
    * @returns Promise that resolves with a new `FakeVectorStore` instance.
    */
-  static async fromTexts(
+  static override async fromTexts(
     texts: string[],
     metadatas: object[] | object,
     embeddings: EmbeddingsInterface,
@@ -907,7 +907,7 @@ export class FakeVectorStore extends VectorStore {
    * @param dbConfig Optional `FakeVectorStoreArgs` to configure the `FakeVectorStore` instance.
    * @returns Promise that resolves with a new `FakeVectorStore` instance.
    */
-  static async fromDocuments(
+  static override async fromDocuments(
     docs: Document[],
     embeddings: EmbeddingsInterface,
     dbConfig?: FakeVectorStoreArgs

@@ -115,7 +115,7 @@ export class AIMessage extends BaseMessage {
    */
   usage_metadata?: UsageMetadata;
 
-  get lc_aliases(): Record<string, string> {
+  override get lc_aliases(): Record<string, string> {
     // exclude snake case conversion to pascal case
     return {
       ...super.lc_aliases,
@@ -182,7 +182,7 @@ export class AIMessage extends BaseMessage {
     this.usage_metadata = initParams.usage_metadata;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "AIMessage";
   }
 
@@ -302,7 +302,7 @@ export class AIMessageChunk extends BaseMessageChunk {
     this.usage_metadata = initParams.usage_metadata;
   }
 
-  get lc_aliases(): Record<string, string> {
+  override get lc_aliases(): Record<string, string> {
     // exclude snake case conversion to pascal case
     return {
       ...super.lc_aliases,
@@ -312,7 +312,7 @@ export class AIMessageChunk extends BaseMessageChunk {
     };
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "AIMessageChunk";
   }
 

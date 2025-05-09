@@ -15,7 +15,7 @@ export class RemoveMessage extends BaseMessage {
   /**
    * The ID of the message to remove.
    */
-  id: string;
+  override id: string;
 
   constructor(fields: RemoveMessageFields) {
     super({

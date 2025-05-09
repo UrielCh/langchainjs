@@ -298,7 +298,7 @@ export class ChatMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends BaseMessageStringPromptTemplate<RunInput> {
-  static lc_name() {
+  static override lc_name() {
     return "ChatMessagePromptTemplate";
   }
 
@@ -404,9 +404,9 @@ class _StringImageMessagePromptTemplate<
   RunInput extends InputValues = any,
   RunOutput extends BaseMessage[] = BaseMessage[]
 > extends BaseMessagePromptTemplate<RunInput, RunOutput> {
-  lc_namespace = ["langchain_core", "prompts", "chat"];
+  override lc_namespace = ["langchain_core", "prompts", "chat"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   inputVariables: Array<Extract<keyof RunInput, string>> = [];
 
@@ -706,11 +706,11 @@ export class HumanMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof HumanMessage {
+  static override _messageClass(): typeof HumanMessage {
     return HumanMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "HumanMessagePromptTemplate";
   }
 }
@@ -723,11 +723,11 @@ export class AIMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof AIMessage {
+  static override _messageClass(): typeof AIMessage {
     return AIMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "AIMessagePromptTemplate";
   }
 }
@@ -750,11 +750,11 @@ export class SystemMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof SystemMessage {
+  static override _messageClass(): typeof SystemMessage {
     return SystemMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessagePromptTemplate";
   }
 }
@@ -928,7 +928,7 @@ export class ChatPromptTemplate<
   extends BaseChatPromptTemplate<RunInput, PartialVariableName>
   implements ChatPromptTemplateInput<RunInput, PartialVariableName>
 {
-  static lc_name() {
+  static override lc_name() {
     return "ChatPromptTemplate";
   }
 

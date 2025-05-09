@@ -416,25 +416,25 @@ export class RemoteRunnable<
     return revive(body.output);
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
@@ -450,7 +450,7 @@ export class RemoteRunnable<
     );
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: Partial<CallOptions>
   ): AsyncGenerator<RunOutput> {
@@ -524,7 +524,7 @@ export class RemoteRunnable<
     await runManager?.handleChainEnd(finalOutput ?? {});
   }
 
-  async *streamLog(
+  override async *streamLog(
     input: RunInput,
     options?: Partial<CallOptions>,
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
@@ -678,13 +678,13 @@ export class RemoteRunnable<
     return generator();
   }
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & { version: "v1" | "v2" },
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<StreamEvent>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";
@@ -693,7 +693,7 @@ export class RemoteRunnable<
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<Uint8Array>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";

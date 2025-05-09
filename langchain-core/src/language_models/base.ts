@@ -170,7 +170,7 @@ export abstract class BaseLangChain<
 
   metadata?: Record<string, unknown>;
 
-  get lc_attributes(): { [key: string]: undefined } | undefined {
+  override get lc_attributes(): { [key: string]: undefined } | undefined {
     return {
       callbacks: undefined,
       verbose: undefined,

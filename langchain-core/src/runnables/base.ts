@@ -1258,13 +1258,13 @@ export class RunnableBinding<
   RunOutput,
   CallOptions extends RunnableConfig = RunnableConfig
 > extends Runnable<RunInput, RunOutput, CallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableBinding";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   bound: Runnable<RunInput, RunOutput, CallOptions>;
 
@@ -1284,7 +1284,7 @@ export class RunnableBinding<
     this.configFactories = fields.configFactories;
   }
 
-  getName(suffix?: string | undefined): string {
+  override getName(suffix?: string | undefined): string {
     return this.bound.getName(suffix);
   }
 
@@ -1304,7 +1304,7 @@ export class RunnableBinding<
     );
   }
 
-  bind(
+  override bind(
     kwargs: Partial<CallOptions>
   ): RunnableBinding<RunInput, RunOutput, CallOptions> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1315,7 +1315,7 @@ export class RunnableBinding<
     });
   }
 
-  withConfig(
+  override withConfig(
     config: RunnableConfig
   ): Runnable<RunInput, RunOutput, CallOptions> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -1326,7 +1326,7 @@ export class RunnableBinding<
     });
   }
 
-  withRetry(fields?: {
+  override withRetry(fields?: {
     stopAfterAttempt?: number;
     onFailedAttempt?: RunnableRetryFailedAttemptHandler;
   }): RunnableRetry<RunInput, RunOutput, CallOptions> {
@@ -1348,25 +1348,25 @@ export class RunnableBinding<
     );
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
@@ -1381,7 +1381,7 @@ export class RunnableBinding<
     return this.bound.batch(inputs, mergedOptions, batchOptions);
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: Partial<CallOptions> | undefined
   ) {
@@ -1391,7 +1391,7 @@ export class RunnableBinding<
     );
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<CallOptions> | undefined
   ): Promise<IterableReadableStream<RunOutput>> {
@@ -1401,7 +1401,7 @@ export class RunnableBinding<
     );
   }
 
-  async *transform(
+  override async *transform(
     generator: AsyncGenerator<RunInput>,
     options?: Partial<CallOptions>
   ): AsyncGenerator<RunOutput> {
@@ -1411,13 +1411,13 @@ export class RunnableBinding<
     );
   }
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & { version: "v1" | "v2" },
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<StreamEvent>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";
@@ -1426,7 +1426,7 @@ export class RunnableBinding<
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<Uint8Array>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";
@@ -1471,7 +1471,7 @@ export class RunnableBinding<
    * @param {(run: Run) => void} params.onEnd - Called after the runnable finishes running, with the Run object.
    * @param {(run: Run) => void} params.onError - Called if the runnable throws an error, with the Run object.
    */
-  withListeners({
+  override withListeners({
     onStart,
     onEnd,
     onError,
@@ -1527,11 +1527,11 @@ export class RunnableEach<
   RunOutputItem,
   CallOptions extends RunnableConfig
 > extends Runnable<RunInputItem[], RunOutputItem[], CallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableEach";
   }
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   lc_namespace = ["langchain_core", "runnables"];
 
@@ -1549,7 +1549,7 @@ export class RunnableEach<
    * @param kwargs The arguments to bind the runnable with.
    * @returns A new instance of the `RunnableEach` class that is bound with the specified arguments.
    */
-  bind(kwargs: Partial<CallOptions>) {
+  override bind(kwargs: Partial<CallOptions>) {
     return new RunnableEach({
       bound: this.bound.bind(kwargs),
     });
@@ -1596,7 +1596,7 @@ export class RunnableEach<
    * @param {(run: Run) => void} params.onEnd - Called after the runnable finishes running, with the Run object.
    * @param {(run: Run) => void} params.onError - Called if the runnable throws an error, with the Run object.
    */
-  withListeners({
+  override withListeners({
     onStart,
     onEnd,
     onError,
@@ -1662,11 +1662,11 @@ export class RunnableRetry<
   RunOutput = any,
   CallOptions extends RunnableConfig = RunnableConfig
 > extends RunnableBinding<RunInput, RunOutput, CallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableRetry";
   }
 
-  lc_namespace = ["langchain_core", "runnables"];
+  override lc_namespace = ["langchain_core", "runnables"];
 
   protected maxAttemptNumber = 3;
 
@@ -1724,7 +1724,7 @@ export class RunnableRetry<
    * @param config The config for the runnable.
    * @returns A promise that resolves to the output of the runnable.
    */
-  async invoke(input: RunInput, config?: CallOptions): Promise<RunOutput> {
+  override async invoke(input: RunInput, config?: CallOptions): Promise<RunOutput> {
     return this._callWithConfig(this._invoke.bind(this), input, config);
   }
 
@@ -1797,25 +1797,25 @@ export class RunnableRetry<
       ) as ReturnExceptions extends false ? RunOutput[] : (RunOutput | Error)[];
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
@@ -1855,7 +1855,7 @@ export class RunnableSequence<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunOutput = any
 > extends Runnable<RunInput, RunOutput> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableSequence";
   }
 
@@ -1868,7 +1868,7 @@ export class RunnableSequence<
 
   omitSequenceTags = false;
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   lc_namespace = ["langchain_core", "runnables"];
 
@@ -1934,25 +1934,25 @@ export class RunnableSequence<
     return finalOutput;
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
@@ -2007,7 +2007,7 @@ export class RunnableSequence<
     return nextStepInputs;
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: RunnableConfig
   ): AsyncGenerator<RunOutput> {
@@ -2072,7 +2072,7 @@ export class RunnableSequence<
     await runManager?.handleChainEnd(_coerceToDict(finalOutput, "output"));
   }
 
-  getGraph(config?: RunnableConfig): Graph {
+  override getGraph(config?: RunnableConfig): Graph {
     const graph = new Graph();
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let currentLastNode: any = null;
@@ -2105,7 +2105,7 @@ export class RunnableSequence<
     return graph;
   }
 
-  pipe<NewRunOutput>(
+  override pipe<NewRunOutput>(
     coerceable: RunnableLike<RunOutput, NewRunOutput>
   ): RunnableSequence<RunInput, Exclude<NewRunOutput, Error>> {
     if (RunnableSequence.isRunnableSequence(coerceable)) {
@@ -2186,13 +2186,13 @@ export class RunnableMap<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunOutput extends Record<string, any> = Record<string, any>
 > extends Runnable<RunInput, RunOutput> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableMap";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   protected steps: Record<string, Runnable<RunInput>>;
 
@@ -2299,7 +2299,7 @@ export class RunnableMap<
     }
   }
 
-  transform(
+  override transform(
     generator: AsyncGenerator<RunInput>,
     options?: Partial<RunnableConfig>
   ): AsyncGenerator<RunOutput> {
@@ -2310,7 +2310,7 @@ export class RunnableMap<
     );
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<RunnableConfig>
   ): Promise<IterableReadableStream<RunOutput>> {
@@ -2337,7 +2337,7 @@ export class RunnableTraceable<RunInput, RunOutput> extends Runnable<
   RunInput,
   RunOutput
 > {
-  lc_serializable = false;
+  override lc_serializable = false;
 
   lc_namespace = ["langchain_core", "runnables"];
 
@@ -2355,7 +2355,7 @@ export class RunnableTraceable<RunInput, RunOutput> extends Runnable<
     this.func = fields.func;
   }
 
-  async invoke(input: RunInput, options?: Partial<RunnableConfig>) {
+  override async invoke(input: RunInput, options?: Partial<RunnableConfig>) {
     const [config] = this._getOptionsList(options ?? {}, 1);
     const callbacks = await getCallbackManagerForConfig(config);
     const promise = this.func(
@@ -2366,7 +2366,7 @@ export class RunnableTraceable<RunInput, RunOutput> extends Runnable<
     return raceWithSignal(promise, config?.signal);
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: Partial<RunnableConfig>
   ): AsyncGenerator<RunOutput> {
@@ -2460,7 +2460,7 @@ export class RunnableLambda<
   RunOutput,
   CallOptions extends RunnableConfig = RunnableConfig
 > extends Runnable<RunInput, RunOutput, CallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableLambda";
   }
 
@@ -2702,7 +2702,7 @@ export class RunnableLambda<
     }
   }
 
-  transform(
+  override transform(
     generator: AsyncGenerator<RunInput>,
     options?: Partial<CallOptions>
   ): AsyncGenerator<RunOutput> {
@@ -2713,7 +2713,7 @@ export class RunnableLambda<
     );
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<CallOptions>
   ): Promise<IterableReadableStream<RunOutput>> {
@@ -2837,13 +2837,13 @@ export class RunnableWithFallbacks<RunInput, RunOutput> extends Runnable<
   RunInput,
   RunOutput
 > {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableWithFallbacks";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   runnable: Runnable<RunInput, RunOutput>;
 
@@ -2910,7 +2910,7 @@ export class RunnableWithFallbacks<RunInput, RunOutput> extends Runnable<
     return res;
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: Partial<RunnableConfig> | undefined
   ): AsyncGenerator<RunOutput> {
@@ -2966,25 +2966,25 @@ export class RunnableWithFallbacks<RunInput, RunOutput> extends Runnable<
     await runManager?.handleChainEnd(_coerceToDict(output, "output"));
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
@@ -3128,13 +3128,13 @@ export class RunnableAssign<
   extends Runnable<RunInput, RunOutput>
   implements RunnableAssignFields<RunInput>
 {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableAssign";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   mapper: RunnableMap<RunInput>;
 
@@ -3197,7 +3197,7 @@ export class RunnableAssign<
     }
   }
 
-  transform(
+  override transform(
     generator: AsyncGenerator<RunInput>,
     options?: Partial<RunnableConfig>
   ): AsyncGenerator<RunOutput> {
@@ -3208,7 +3208,7 @@ export class RunnableAssign<
     );
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<RunnableConfig>
   ): Promise<IterableReadableStream<RunOutput>> {
@@ -3263,13 +3263,13 @@ export class RunnablePick<
   extends Runnable<RunInput, RunOutput>
   implements RunnablePickFields
 {
-  static lc_name() {
+  static override lc_name() {
     return "RunnablePick";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   keys: string | string[];
 
@@ -3289,7 +3289,8 @@ export class RunnablePick<
       const picked = this.keys
         .map((key) => [key, input[key]])
         .filter((v) => v[1] !== undefined);
-      return picked.length === 0 ? undefined : Object.fromEntries(picked);
+      // TODO FIXME: can return undefined here, but that breaks the type inference
+      return picked.length === 0 ? undefined as RunOutput : Object.fromEntries(picked);
     }
   }
 
@@ -3311,7 +3312,7 @@ export class RunnablePick<
     }
   }
 
-  transform(
+  override transform(
     generator: AsyncGenerator<RunInput>,
     options?: Partial<RunnableConfig>
   ): AsyncGenerator<RunOutput> {
@@ -3322,7 +3323,7 @@ export class RunnablePick<
     );
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<RunnableConfig>
   ): Promise<IterableReadableStream<RunOutput>> {
@@ -3356,7 +3357,7 @@ export class RunnableToolLike<
   RunInput extends z.ZodType = z.ZodType,
   RunOutput = unknown
 > extends RunnableBinding<z.infer<RunInput>, RunOutput> {
-  name: string;
+  override name: string;
 
   description?: string;
 
@@ -3394,7 +3395,7 @@ export class RunnableToolLike<
     this.schema = fields.schema;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "RunnableToolLike";
   }
 }

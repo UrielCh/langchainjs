@@ -15,7 +15,7 @@ export interface FunctionMessageFieldsWithName extends BaseMessageFields {
  * Represents a function message in a conversation.
  */
 export class FunctionMessage extends BaseMessage {
-  static lc_name() {
+  static override lc_name() {
     return "FunctionMessage";
   }
 
@@ -49,7 +49,7 @@ export class FunctionMessage extends BaseMessage {
  * with other function message chunks.
  */
 export class FunctionMessageChunk extends BaseMessageChunk {
-  static lc_name() {
+  static override lc_name() {
     return "FunctionMessageChunk";
   }
 

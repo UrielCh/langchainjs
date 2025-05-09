@@ -283,7 +283,7 @@ export class RunnableWithMessageHistory<
     await history.addMessages([...inputMessages, ...outputMessages]);
   }
 
-  async _mergeConfig(...configs: Array<RunnableConfig | undefined>) {
+  override async _mergeConfig(...configs: Array<RunnableConfig | undefined>) {
     const config = await super._mergeConfig(...configs);
     // Extract sessionId
     if (!config.configurable || !config.configurable.sessionId) {

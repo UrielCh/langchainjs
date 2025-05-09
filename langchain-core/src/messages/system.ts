@@ -19,7 +19,7 @@ export type SystemMessageFields = BaseMessageFields & {
 export class SystemMessage extends BaseMessage {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessage";
   }
 
@@ -43,7 +43,7 @@ export class SystemMessage extends BaseMessage {
 export class SystemMessageChunk extends BaseMessageChunk {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessageChunk";
   }
 

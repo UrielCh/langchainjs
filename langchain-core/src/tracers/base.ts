@@ -71,7 +71,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     super(...arguments);
   }
 
-  copy(): this {
+  override copy(): this {
     return this;
   }
 
@@ -201,7 +201,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return this._addRunToRunMap(run);
   }
 
-  async handleLLMStart(
+  override async handleLLMStart(
     llm: Serialized,
     prompts: string[],
     runId: string,
@@ -271,7 +271,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return this._addRunToRunMap(run);
   }
 
-  async handleChatModelStart(
+  override async handleChatModelStart(
     llm: Serialized,
     messages: BaseMessage[][],
     runId: string,
@@ -298,7 +298,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleLLMEnd(
+  override async handleLLMEnd(
     output: LLMResult,
     runId: string,
     _parentRunId?: string,
@@ -321,7 +321,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleLLMError(
+  override async handleLLMError(
     error: unknown,
     runId: string,
     _parentRunId?: string,
@@ -384,7 +384,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return this._addRunToRunMap(run);
   }
 
-  async handleChainStart(
+  override async handleChainStart(
     chain: Serialized,
     inputs: ChainValues,
     runId: string,
@@ -411,7 +411,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleChainEnd(
+  override async handleChainEnd(
     outputs: ChainValues,
     runId: string,
     _parentRunId?: string,
@@ -436,7 +436,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleChainError(
+  override async handleChainError(
     error: unknown,
     runId: string,
     _parentRunId?: string,
@@ -500,7 +500,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return this._addRunToRunMap(run);
   }
 
-  async handleToolStart(
+  override async handleToolStart(
     tool: Serialized,
     input: string,
     runId: string,
@@ -526,7 +526,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  async handleToolEnd(output: any, runId: string): Promise<Run> {
+  override async handleToolEnd(output: any, runId: string): Promise<Run> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "tool") {
       throw new Error("No tool run to end");
@@ -542,7 +542,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleToolError(error: unknown, runId: string): Promise<Run> {
+  override async handleToolError(error: unknown, runId: string): Promise<Run> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "tool") {
       throw new Error("No tool run to end");
@@ -558,7 +558,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleAgentAction(action: AgentAction, runId: string): Promise<void> {
+  override async handleAgentAction(action: AgentAction, runId: string): Promise<void> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "chain") {
       return;
@@ -574,7 +574,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     await this.onAgentAction?.(run as AgentRun);
   }
 
-  async handleAgentEnd(action: AgentFinish, runId: string): Promise<void> {
+  override async handleAgentEnd(action: AgentFinish, runId: string): Promise<void> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "chain") {
       return;
@@ -626,7 +626,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return this._addRunToRunMap(run);
   }
 
-  async handleRetrieverStart(
+  override async handleRetrieverStart(
     retriever: Serialized,
     query: string,
     runId: string,
@@ -651,7 +651,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleRetrieverEnd(
+  override async handleRetrieverEnd(
     documents: Document<Record<string, unknown>>[],
     runId: string
   ): Promise<Run> {
@@ -670,7 +670,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleRetrieverError(error: unknown, runId: string): Promise<Run> {
+  override async handleRetrieverError(error: unknown, runId: string): Promise<Run> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "retriever") {
       throw new Error("No retriever run to end");
@@ -686,7 +686,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     return run;
   }
 
-  async handleText(text: string, runId: string): Promise<void> {
+  override async handleText(text: string, runId: string): Promise<void> {
     const run = this.runMap.get(runId);
     if (!run || run?.run_type !== "chain") {
       return;
@@ -699,7 +699,7 @@ export abstract class BaseTracer extends BaseCallbackHandler {
     await this.onText?.(run);
   }
 
-  async handleLLMNewToken(
+  override async handleLLMNewToken(
     token: string,
     idx: NewTokenIndices,
     runId: string,

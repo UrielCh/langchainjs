@@ -88,7 +88,7 @@ export class ChatGenerationChunk
     this.message = fields.message;
   }
 
-  concat(chunk: ChatGenerationChunk) {
+  override concat(chunk: ChatGenerationChunk) {
     return new ChatGenerationChunk({
       text: this.text + chunk.text,
       generationInfo: {

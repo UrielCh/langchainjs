@@ -195,7 +195,7 @@ export class VectorStoreRetriever<
   extends BaseRetriever
   implements VectorStoreRetrieverInterface
 {
-  static lc_name() {
+  static override lc_name() {
     return "VectorStoreRetriever";
   }
 
@@ -323,7 +323,7 @@ export class VectorStoreRetriever<
    *                 by the vector store.
    * @protected
    */
-  async _getRelevantDocuments(
+  override async _getRelevantDocuments(
     query: string,
     runManager?: CallbackManagerForRetrieverRun
   ): Promise<DocumentInterface[]> {

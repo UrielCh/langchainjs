@@ -86,7 +86,7 @@ export class LangChainTracer
 
   protected async persistRun(_run: Run): Promise<void> {}
 
-  async onRunCreate(run: Run): Promise<void> {
+  override async onRunCreate(run: Run): Promise<void> {
     const persistedRun: RunCreate2 = await this._convertToCreate(
       run,
       this.exampleId
@@ -94,7 +94,7 @@ export class LangChainTracer
     await this.client.createRun(persistedRun);
   }
 
-  async onRunUpdate(run: Run): Promise<void> {
+  override async onRunUpdate(run: Run): Promise<void> {
     const runUpdate: RunUpdate = {
       end_time: run.end_time,
       error: run.error,

@@ -11,7 +11,7 @@ export abstract class ListOutputParser extends BaseTransformOutputParser<
 > {
   re?: RegExp;
 
-  async *_transform(
+  override async *_transform(
     inputGenerator: AsyncGenerator<string | BaseMessage>
   ): AsyncGenerator<string[]> {
     let buffer = "";
@@ -62,13 +62,13 @@ export abstract class ListOutputParser extends BaseTransformOutputParser<
  * @augments ListOutputParser
  */
 export class CommaSeparatedListOutputParser extends ListOutputParser {
-  static lc_name() {
+  static override lc_name() {
     return "CommaSeparatedListOutputParser";
   }
 
   lc_namespace = ["langchain_core", "output_parsers", "list"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   /**
    * Parses the given text into an array of strings, using a comma as the
@@ -157,19 +157,19 @@ export class CustomListOutputParser extends ListOutputParser {
 }
 
 export class NumberedListOutputParser extends ListOutputParser {
-  static lc_name() {
+  static override lc_name() {
     return "NumberedListOutputParser";
   }
 
   lc_namespace = ["langchain_core", "output_parsers", "list"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   getFormatInstructions(): string {
     return `Your response should be a numbered list with each item on a new line. For example: \n\n1. foo\n\n2. bar\n\n3. baz`;
   }
 
-  re = /\d+\.\s([^\n]+)/g;
+  override re = /\d+\.\s([^\n]+)/g;
 
   async parse(text: string): Promise<string[]> {
     return [...(text.matchAll(this.re) ?? [])].map((m) => m[1]);
@@ -177,19 +177,19 @@ export class NumberedListOutputParser extends ListOutputParser {
 }
 
 export class MarkdownListOutputParser extends ListOutputParser {
-  static lc_name() {
+  static override lc_name() {
     return "NumberedListOutputParser";
   }
 
   lc_namespace = ["langchain_core", "output_parsers", "list"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   getFormatInstructions(): string {
     return `Your response should be a numbered list with each item on a new line. For example: \n\n1. foo\n\n2. bar\n\n3. baz`;
   }
 
-  re = /^\s*[-*]\s([^\n]+)$/gm;
+  override re = /^\s*[-*]\s([^\n]+)$/gm;
 
   async parse(text: string): Promise<string[]> {
     return [...(text.matchAll(this.re) ?? [])].map((m) => m[1]);

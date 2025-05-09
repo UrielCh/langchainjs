@@ -42,7 +42,7 @@ export class RootListenersTracer extends BaseTracer {
     return Promise.resolve();
   }
 
-  async onRunCreate(run: Run) {
+  override async onRunCreate(run: Run) {
     if (this.rootId) {
       return;
     }
@@ -54,7 +54,7 @@ export class RootListenersTracer extends BaseTracer {
     }
   }
 
-  async onRunUpdate(run: Run) {
+  override async onRunUpdate(run: Run) {
     if (run.id !== this.rootId) {
       return;
     }

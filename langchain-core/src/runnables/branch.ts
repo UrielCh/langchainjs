@@ -68,13 +68,13 @@ export class RunnableBranch<RunInput = any, RunOutput = any> extends Runnable<
   RunInput,
   RunOutput
 > {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableBranch";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   default: Runnable<RunInput, RunOutput>;
 
@@ -185,7 +185,7 @@ export class RunnableBranch<RunInput = any, RunOutput = any> extends Runnable<
     return this._callWithConfig(this._invoke, input, config);
   }
 
-  async *_streamIterator(input: RunInput, config?: Partial<RunnableConfig>) {
+  override async *_streamIterator(input: RunInput, config?: Partial<RunnableConfig>) {
     const callbackManager_ = await getCallbackManagerForConfig(config);
     const runManager = await callbackManager_?.handleChainStart(
       this.toJSON(),

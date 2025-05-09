@@ -102,7 +102,7 @@ export class RunLog extends RunLogPatch {
     this.state = fields.state;
   }
 
-  concat(other: RunLogPatch) {
+  override concat(other: RunLogPatch) {
     const ops = this.ops.concat(other.ops);
     const states = applyPatch(this.state, other.ops);
     return new RunLog({ ops, state: states[states.length - 1].newDocument });
@@ -335,7 +335,7 @@ export class LogStreamCallbackHandler
     }
   }
 
-  async onRunCreate(run: Run): Promise<void> {
+  override async onRunCreate(run: Run): Promise<void> {
     if (this.rootId === undefined) {
       this.rootId = run.id;
       await this.writer.write(
@@ -400,7 +400,7 @@ export class LogStreamCallbackHandler
     );
   }
 
-  async onRunUpdate(run: Run): Promise<void> {
+  override async onRunUpdate(run: Run): Promise<void> {
     try {
       const runName = this.keyMapByRunId[run.id];
       if (runName === undefined) {
@@ -447,7 +447,7 @@ export class LogStreamCallbackHandler
     }
   }
 
-  async onLLMNewToken(
+  override async onLLMNewToken(
     run: Run,
     token: string,
     kwargs?: HandleLLMNewTokenCallbackFields

@@ -45,13 +45,13 @@ export class RunnablePassthrough<RunInput = any> extends Runnable<
   RunInput,
   RunInput
 > {
-  static lc_name() {
+  static override lc_name() {
     return "RunnablePassthrough";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   func?: RunnablePassthroughFunc<RunInput>;
 
@@ -78,7 +78,7 @@ export class RunnablePassthrough<RunInput = any> extends Runnable<
     );
   }
 
-  async *transform(
+  override async *transform(
     generator: AsyncGenerator<RunInput>,
     options: Partial<RunnableConfig>
   ): AsyncGenerator<RunInput> {

@@ -226,10 +226,7 @@ export function parseBase64DataUrl({
  * @param asTypedArray - Whether to return the data as a typed array.
  * @returns The parsed data and mime type, or undefined if the data URL is invalid.
  */
-export function parseBase64DataUrl({
-  dataUrl,
-  asTypedArray = false,
-}: {
+export function parseBase64DataUrl(args: {
   dataUrl: string;
   asTypedArray?: false;
 }): { data: string; mime_type: string } | undefined;

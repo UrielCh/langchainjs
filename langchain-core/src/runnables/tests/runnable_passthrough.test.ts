@@ -4,7 +4,7 @@ import { FakeChatModel } from "../../utils/testing/index.ts";
 import { RunnablePassthrough } from "../passthrough.ts";
 import { JsonOutputParser } from "../../output_parsers/json.ts";
 import { RunnableSequence } from "../base.ts";
-import { RunnableConfig } from "../config.ts";
+import type { RunnableConfig } from "../config.ts";
 
 test("RunnablePassthrough can call .assign and pass prev result through", async () => {
   const promptTemplate = PromptTemplate.fromTemplate("{input}");
@@ -90,8 +90,8 @@ test("RunnablePassthrough can invoke a function and pass through config", async 
   const addOne = (input: number, config?: RunnableConfig) => {
     wasCalled = true;
     if (
-      !config?.configurable?.number ??
-      Number.isNaN(config?.configurable?.number)
+      config?.configurable?.number === undefined ||
+      Number.isNaN(config.configurable.number)
     ) {
       throw new Error("configurable.number is NaN");
     }

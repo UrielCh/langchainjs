@@ -18,7 +18,7 @@ export class ChatMessage
   extends BaseMessage
   implements ChatMessageFieldsWithRole
 {
-  static lc_name() {
+  static override lc_name() {
     return "ChatMessage";
   }
 
@@ -62,7 +62,7 @@ export class ChatMessage
  * other chat message chunks.
  */
 export class ChatMessageChunk extends BaseMessageChunk {
-  static lc_name() {
+  static override lc_name() {
     return "ChatMessageChunk";
   }
 

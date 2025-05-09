@@ -101,7 +101,7 @@ export abstract class BaseLLM<
     return [runnableConfig, callOptions as this["ParsedCallOptions"]];
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: BaseLanguageModelInput,
     options?: CallOptions
   ): AsyncGenerator<string> {
@@ -590,20 +590,20 @@ export abstract class BaseLLM<
    * Get the identifying parameters of the LLM.
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  _identifyingParams(): Record<string, any> {
+  override _identifyingParams(): Record<string, any> {
     return {};
   }
 
   /**
    * Return the string type key uniquely identifying this class of LLM.
    */
-  abstract _llmType(): string;
+  abstract override _llmType(): string;
 
   /**
    * @deprecated
    * Return a json-like object representing this LLM.
    */
-  serialize(): SerializedLLM {
+  override serialize(): SerializedLLM {
     return {
       ...this._identifyingParams(),
       _type: this._llmType(),
