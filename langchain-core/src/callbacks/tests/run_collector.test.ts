@@ -1,6 +1,6 @@
+import "@/jest-shim";
 import { v4 as uuidv4, validate } from "uuid";
-import { Run } from "langsmith/schemas";
-import { describe, it, expect } from "@jest/globals";
+import type { Run } from "langsmith/schemas";
 import {
   ChatPromptTemplate,
   HumanMessagePromptTemplate,

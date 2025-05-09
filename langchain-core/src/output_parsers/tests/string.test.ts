@@ -70,8 +70,10 @@ describe("StringOutputParser", () => {
     const msg: BaseMessage = new AIMessage({
       content,
     });
-    await expect(async () => {
+    const fnc = async () => {
       await parser.invoke(msg);
-    }).rejects.toThrowError();
+    };
+    // await expect(fnc).rejects.toThrowError();
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
   });
 });

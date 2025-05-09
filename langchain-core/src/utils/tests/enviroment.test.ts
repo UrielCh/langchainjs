@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { getRuntimeEnvironment } from "../env.ts";
 
 test("test getRuntimeEnvironment", async () => {

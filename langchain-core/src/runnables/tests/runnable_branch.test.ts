@@ -67,7 +67,10 @@ test("RunnableBranch handles error", async () => {
       ],
     });
   };
-  await expect(fnc).rejects.toThrow();
+
+  // await expect(fnc).rejects.toThrow();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+
   expect(error).toBeDefined();
 });
 

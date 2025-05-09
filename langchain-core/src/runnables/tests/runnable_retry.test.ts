@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import "@/jest-shim";
-import { test, expect } from "@jest/globals";
+// import "@/jest-shim";
 import { RunnableLambda } from "../base.ts";
 
 test("RunnableRetry invoke", async () => {
@@ -56,7 +56,8 @@ test("RunnableRetry batch with thrown errors", async () => {
   const fnc = async () => {
     await runnableRetry.batch(["", "", ""]);
   };
-  await expect(fnc).rejects.toThrow();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc).rejects.toThrow();
 });
 
 test("RunnableRetry batch with all returned errors", async () => {

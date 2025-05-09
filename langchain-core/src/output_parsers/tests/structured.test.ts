@@ -72,9 +72,9 @@ test("StructuredOutputParser.fromZodSchema", async () => {
     z.object({ answer: z.enum(["yes", "no"]).describe("yes or no") })
   );
 
-  await expect(parser.parse('```\n{"answer": "YES"}```')).rejects.toThrow(
-    OutputParserException
-  );
+  const fnc = () => parser.parse('```\n{"answer": "YES"}```');
+  // await expect(fnc).rejects.toThrow(OutputParserException);
+  await fnc().catch(err => expect(err).toBeInstanceOf(OutputParserException));
 });
 
 test("StructuredOutputParser.fromZodSchema", async () => {

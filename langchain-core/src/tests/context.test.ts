@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { RunnableLambda } from "../runnables/base.ts";
 import { getContextVariable, setContextVariable } from "../context.ts";
 

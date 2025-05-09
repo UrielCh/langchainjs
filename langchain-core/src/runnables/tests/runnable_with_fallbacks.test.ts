@@ -17,9 +17,7 @@ test("RunnableWithFallbacks", async () => {
     console.log(result1);
   };
   // await expect(fnc).rejects.toThrow();
-  await fnc().catch(err => {
-    expect(err).toBeInstanceOf(Error);
-  });
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
 
   const llmWithFallbacks = llm.withFallbacks({
     fallbacks: [new FakeLLM({})],
@@ -32,10 +30,12 @@ test("RunnableWithFallbacks batch", async () => {
   const llm = new FakeLLM({
     thrownErrorString: "Bad error!",
   });
-  await expect(async () => {
+  const fnc = async () => {
     const result1 = await llm.batch(["What up"]);
     console.log(result1);
-  }).rejects.toThrow();
+  };
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc).rejects.toThrow();
   const llmWithFallbacks = llm.withFallbacks({
     fallbacks: [new FakeLLM({})],
   });
@@ -62,8 +62,6 @@ test("RunnableWithFallbacks stream", async () => {
     expect(err).toBeInstanceOf(Error);
   });
 
-
-  
   const llmWithFallbacks = llm.withFallbacks({
     fallbacks: [new FakeStreamingLLM({})],
   });

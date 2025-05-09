@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { castValue, isFloat, isInt, isString, isBoolean } from "../utils.ts";
 
 test("Casting values correctly", () => {

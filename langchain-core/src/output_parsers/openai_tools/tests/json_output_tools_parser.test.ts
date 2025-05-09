@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { z } from "zod";
 import { JsonOutputKeyToolsParser } from "../json_output_tools_parsers.ts";
 import { OutputParserException } from "../../base.ts";

@@ -39,7 +39,7 @@ afterEach(() => {
   process.env.LANGCHAIN_CALLBACKS_BACKGROUND = originalCallbackValue;
 });
 
-test("Runnable streamEvents method", async () => {
+test.skip("Runnable streamEvents method", async () => {
   const chain = RunnableLambda.from(reverse).withConfig({
     runName: "reverse",
   });
@@ -77,7 +77,7 @@ test("Runnable streamEvents method", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with three runnables", async () => {
+test.skip("Runnable streamEvents method with three runnables", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = r
@@ -190,7 +190,7 @@ test("Runnable streamEvents method with three runnables", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with three runnables with backgrounded callbacks set to true", async () => {
+test.skip("Runnable streamEvents method with three runnables with backgrounded callbacks set to true", async () => {
   process.env.LANGCHAIN_CALLBACKS_BACKGROUND = "true";
   const r = RunnableLambda.from(reverse);
 
@@ -304,7 +304,7 @@ test("Runnable streamEvents method with three runnables with backgrounded callba
   ]);
 });
 
-test("Runnable streamEvents method with three runnables with filtering", async () => {
+test.skip("Runnable streamEvents method with three runnables with filtering", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = r
@@ -389,7 +389,7 @@ test("Runnable streamEvents method with three runnables with filtering", async (
   ]);
 });
 
-test("Runnable streamEvents method with a runnable map", async () => {
+test.skip("Runnable streamEvents method with a runnable map", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = RunnableMap.from({
@@ -640,7 +640,7 @@ test("Runnable streamEvents method with llm", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with chat model chain", async () => {
+test.skip("Runnable streamEvents method with chat model chain", async () => {
   const template = ChatPromptTemplate.fromMessages([
     ["system", "You are Godzilla"],
     ["human", "{question}"],

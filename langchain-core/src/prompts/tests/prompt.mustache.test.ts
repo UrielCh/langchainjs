@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { PromptTemplate } from "../prompt.ts";
 import { parseTemplate } from "../template.ts";
 

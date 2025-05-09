@@ -4,7 +4,7 @@ import { applyPatch } from "../../utils/json_patch.ts";
 import { RemoteRunnable } from "../remote.ts";
 import { Buffer } from "node:buffer";
 
-test("invoke hosted langserve", async () => {
+test.skip("invoke hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/chat`,
   });
@@ -14,7 +14,7 @@ test("invoke hosted langserve", async () => {
   console.log(result);
 });
 
-test("invoke hosted langserve error handling", async () => {
+test.skip("invoke hosted langserve error handling", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/nonexistent`,
   });
@@ -29,7 +29,7 @@ test("invoke hosted langserve error handling", async () => {
   });
 });
 
-test("stream hosted langserve", async () => {
+test.skip("stream hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/chat`,
   });
@@ -46,7 +46,7 @@ test("stream hosted langserve", async () => {
   console.log("totalByteSize", totalByteSize);
 });
 
-test("stream error handling hosted langserve", async () => {
+test.skip("stream error handling hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/nonexistent`,
   });
@@ -63,7 +63,7 @@ test("stream error handling hosted langserve", async () => {
   });
 });
 
-test("streamLog hosted langserve", async () => {
+test.skip("streamLog hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/chat`,
   });
@@ -83,7 +83,7 @@ test("streamLog hosted langserve", async () => {
   console.log("totalByteSize", totalByteSize);
 });
 
-test("streamLog error handling hosted langserve", async () => {
+test.skip("streamLog error handling hosted langserve", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/nonexistent`,
   });
@@ -101,7 +101,7 @@ test("streamLog error handling hosted langserve", async () => {
   });
 });
 
-test("streamLog hosted langserve with concat syntax", async () => {
+test.skip("streamLog hosted langserve with concat syntax", async () => {
   const remote = new RemoteRunnable({
     url: `https://chat-langchain-backend.langchain.dev/chat`,
   });

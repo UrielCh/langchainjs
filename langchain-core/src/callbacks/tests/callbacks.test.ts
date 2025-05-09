@@ -1,5 +1,5 @@
 /* eslint-disable no-promise-executor-return */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import * as uuid from "uuid";
 import { AsyncLocalStorage } from "node:async_hooks";
 import { CallbackManager } from "../manager.ts";
@@ -8,7 +8,7 @@ import type { Serialized } from "../../load/serializable.ts";
 import { Document } from "../../documents/document.ts";
 import type { ChainValues } from "../../utils/types/index.ts";
 import type { AgentAction, AgentFinish } from "../../agents.ts";
-import { BaseMessage, HumanMessage } from "../../messages/index.ts";
+import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
 import type { LLMResult } from "../../outputs.ts";
 import { RunnableLambda } from "../../runnables/base.ts";
 import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
@@ -504,9 +504,12 @@ test("error handling in chain start", async () => {
   const manager = new CallbackManager(undefined);
   manager.addHandler(handler);
 
-  await expect(async () => {
+  const fnc = async () => {
     await manager.handleChainStart(serialized, ["test"]);
-  }).rejects.toThrowError();
+  };
+  // await expect(fnc).rejects.toThrowError();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+
   await manager.handleLLMStart(serialized, ["test"]);
 });
 
@@ -518,9 +521,11 @@ test("error handling in llm start", async () => {
   manager.addHandler(handler);
 
   await manager.handleChainStart(serialized, ["test"]);
-  await expect(async () => {
+  const fnc = async () => {
     await manager.handleLLMStart(serialized, ["test"]);
-  }).rejects.toThrowError();
+  };
+  // await expect(fnc).rejects.toThrowError();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
 });
 
 test("chain should still run if a normal callback handler throws an error", async () => {

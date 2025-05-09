@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { Document } from "../documents/document.ts";
 
 test("Document should handle empty pageContent", () => {

@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 
 import { InMemoryCache } from "../caches/base.ts";
 

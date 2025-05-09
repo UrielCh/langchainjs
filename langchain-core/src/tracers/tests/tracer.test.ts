@@ -130,7 +130,8 @@ test("Test Chat Model Run", async () => {
 test("Test LLM Run no start", async () => {
   const tracer = new FakeTracer();
   const runId = uuid.v4();
-  await expect(tracer.handleLLMEnd({ generations: [] }, runId)).rejects.toThrow(
+  const fnc = () => tracer.handleLLMEnd({ generations: [] }, runId);
+  await expect(fnc).rejects.toThrow(
     "No LLM run to end"
   );
 });

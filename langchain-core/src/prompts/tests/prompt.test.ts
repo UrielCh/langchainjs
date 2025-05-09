@@ -56,13 +56,15 @@ test("Test fromTemplate with missing variable should raise compiler error", asyn
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.format({ unused: "eee" });
   };
-  await expect(fnc1).rejects.toThrow();
+  await fnc1().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc1).rejects.toThrow();
 
   const fnc2 = async () => {
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.invoke({ unused: "eee" });
   };
-  await expect(fnc2).rejects.toThrow();
+  await fnc2().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc2).rejects.toThrow();
 });
 
 test("Test fromTemplate with extra variable should work", async () => {

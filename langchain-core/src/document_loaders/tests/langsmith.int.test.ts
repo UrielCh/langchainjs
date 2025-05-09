@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { Client } from "langsmith";
 import { LangSmithLoader } from "../langsmith.ts";
 

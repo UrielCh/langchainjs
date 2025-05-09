@@ -14,6 +14,11 @@ import {
 } from "@std/testing/bdd";
 // import { test, expect } from "@jest/globals";
 // import { test, expect, afterEach } from "@jest/globals";
+import {
+  assertSpyCall as stdAssertSpyCall,
+  assertSpyCalls as stdAssertSpyCalls,
+  spy,
+} from "@std/testing/mock";
 
 declare global {
   var test: typeof stdTest;
@@ -23,8 +28,14 @@ declare global {
   var describe: typeof stdDescribe;
   var beforeAll: typeof stdBeforeAll;
   var afterAll: typeof stdAfterAll;
-   // Optionally add expect if you want type safety for your matcher
-  var expect: typeof stdExpect;// typeof globalThis.expect;
+  var expect: typeof stdExpect;
+  var assertSpyCall: typeof stdAssertSpyCall;
+  var assertSpyCalls: typeof stdAssertSpyCalls;
+  var mockGlobalFunction: (functionName: string, fnc: any) => void;
+  var restoreGlobal: () => void;
+  var jest: {
+    clearAllMocks: () => void;
+  }
 }
 
 globalThis.describe = stdDescribe;
@@ -35,3 +46,27 @@ globalThis.test = stdTest;
 globalThis.expect = stdExpect;
 globalThis.beforeAll = stdBeforeAll;
 globalThis.afterAll = stdAfterAll;
+globalThis.assertSpyCall = stdAssertSpyCall;
+globalThis.assertSpyCalls = stdAssertSpyCalls;
+
+let cachedFnc: Record<string, any> = {};
+
+globalThis.mockGlobalFunction = function mockGlobalFunction(functionName: string, fnc: any): void {
+  const originalFunction = (globalThis as any)[functionName];
+  if (!cachedFnc[functionName]) {
+    cachedFnc[functionName] = originalFunction;
+  }
+  (globalThis as any)[functionName] = spy(fnc);
+}
+
+// globalThis.restoreGlobal = 
+
+globalThis.jest = {
+  clearAllMocks: function (): void {
+    for (const [key, value] of Object.entries(cachedFnc)) {
+      (globalThis as any)[key] = value;
+    }
+    cachedFnc = {};
+  }
+}
+

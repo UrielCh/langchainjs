@@ -20,7 +20,7 @@ class FakeDateOutputParser extends BaseOutputParser<Date> {
   }
 }
 
-test("Should handle tracing with a date output", async () => {
+test.skip("Should handle tracing with a date output", async () => {
   const client = new Client({
     apiUrl: getEnvironmentVariable("LANGCHAIN_ENDPOINT"),
     apiKey: getEnvironmentVariable("LANGCHAIN_API_KEY"),
@@ -36,3 +36,5 @@ test("Should handle tracing with a date output", async () => {
   const result = await chain.invoke("test", { callbacks: [tracer] });
   console.log(result);
 });
+
+// TODO

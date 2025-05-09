@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { AIMessage } from "../../messages/ai.ts";
 import { HumanMessage } from "../../messages/human.ts";
 import { SystemMessage } from "../../messages/system.ts";

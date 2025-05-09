@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { calculateMaxTokens, getModelContextSize } from "../base.ts";
 
 test("properly calculates correct max tokens", async () => {

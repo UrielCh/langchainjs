@@ -1,6 +1,6 @@
 /* eslint-disable no-promise-executor-return */
 
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.ts";
 import { HumanMessagePromptTemplate } from "../../prompts/chat.ts";
 import { RunCollectorCallbackHandler } from "../../tracers/run_collector.ts";

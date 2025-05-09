@@ -1,9 +1,10 @@
 /* eslint-disable no-process-env */
-import { afterEach, beforeAll, expect, test } from "@jest/globals";
+import "@/jest-shim";
 
 import { registerConfigureHook, setContextVariable } from "../../context.ts";
 import { BaseCallbackHandler } from "../base.ts";
 import { CallbackManager } from "../manager.ts";
+import process from "node:process";
 
 class TestHandler extends BaseCallbackHandler {
   name = "TestHandler";

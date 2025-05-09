@@ -1,5 +1,5 @@
-import { test, expect } from "@jest/globals";
-import { MessageContentComplex } from "../../messages/base.ts";
+import "@/jest-shim";
+import type { MessageContentComplex } from "../../messages/base.ts";
 import { InMemoryCache } from "../base.ts";
 
 test("InMemoryCache works", async () => {
