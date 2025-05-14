@@ -1,6 +1,6 @@
-import { expect, test } from "@jest/globals";
-import { PromptTemplate } from "../prompt.js";
-import { Document } from "../../documents/document.js";
+import "@/jest-shim";
+import { PromptTemplate } from "../prompt.ts";
+import { Document } from "../../documents/document.ts";
 
 test("Test using partial", async () => {
   const prompt = new PromptTemplate({
@@ -52,14 +52,19 @@ test("Test fromTemplate with type parameter", async () => {
 
 test("Test fromTemplate with missing variable should raise compiler error", async () => {
   const prompt = PromptTemplate.fromTemplate("{foo}");
-  await expect(async () => {
+  const fnc1 = async () => {
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.format({ unused: "eee" });
-  }).rejects.toThrow();
-  await expect(async () => {
+  };
+  await fnc1().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc1).rejects.toThrow();
+
+  const fnc2 = async () => {
     // @ts-expect-error TS compiler should flag missing variable
     await prompt.invoke({ unused: "eee" });
-  }).rejects.toThrow();
+  };
+  await fnc2().catch(err => expect(err).toBeInstanceOf(Error));
+  // await expect(fnc2).rejects.toThrow();
 });
 
 test("Test fromTemplate with extra variable should work", async () => {

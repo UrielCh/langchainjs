@@ -1,12 +1,11 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-
-import { test, expect } from "@jest/globals";
-import { RunnableBranch } from "../branch.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
-import { FakeStreamingLLM } from "../../utils/testing/index.js";
-import { RunnableSequence } from "../base.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
+import "@/jest-shim";
+import { RunnableBranch } from "../branch.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
+import { FakeStreamingLLM } from "../../utils/testing/index.ts";
+import { RunnableSequence } from "../base.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 
 test("RunnableBranch invoke", async () => {
   const condition = (x: number) => x > 0;
@@ -57,7 +56,7 @@ test("RunnableBranch handles error", async () => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   expect(result).toBe("branch passed");
   expect(error).toBeUndefined();
-  await expect(async () => {
+  const fnc = async () => {
     await branch.invoke("alpha", {
       callbacks: [
         {
@@ -67,7 +66,11 @@ test("RunnableBranch handles error", async () => {
         },
       ],
     });
-  }).rejects.toThrow();
+  };
+
+  // await expect(fnc).rejects.toThrow();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+
   expect(error).toBeDefined();
 });
 

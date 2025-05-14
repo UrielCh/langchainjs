@@ -1,15 +1,15 @@
 /* eslint-disable no-loop-func */
 /* eslint-disable no-promise-executor-return */
 
-import { test, expect } from "@jest/globals";
-import { FakeStreamingLLM } from "../../utils/testing/index.js";
-import { BytesOutputParser } from "../bytes.js";
+import "@/jest-shim";
+import { FakeStreamingLLM } from "../../utils/testing/index.ts";
+import { BytesOutputParser } from "../bytes.ts";
 import {
   CommaSeparatedListOutputParser,
-  ListOutputParser,
+  type ListOutputParser,
   MarkdownListOutputParser,
   NumberedListOutputParser,
-} from "../list.js";
+} from "../list.ts";
 
 test("BytesOutputParser", async () => {
   const llm = new FakeStreamingLLM({});

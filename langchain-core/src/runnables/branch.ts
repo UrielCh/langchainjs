@@ -3,14 +3,14 @@ import {
   RunnableLike,
   _coerceToDict,
   _coerceToRunnable,
-} from "./base.js";
+} from "./base.ts";
 import {
   RunnableConfig,
   getCallbackManagerForConfig,
   patchConfig,
-} from "./config.js";
-import { CallbackManagerForChainRun } from "../callbacks/manager.js";
-import { concat } from "../utils/stream.js";
+} from "./config.ts";
+import { CallbackManagerForChainRun } from "../callbacks/manager.ts";
+import { concat } from "../utils/stream.ts";
 
 /**
  * Type for a branch in the RunnableBranch. It consists of a condition
@@ -68,13 +68,13 @@ export class RunnableBranch<RunInput = any, RunOutput = any> extends Runnable<
   RunInput,
   RunOutput
 > {
-  static lc_name() {
+  static override lc_name() {
     return "RunnableBranch";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   default: Runnable<RunInput, RunOutput>;
 
@@ -185,7 +185,7 @@ export class RunnableBranch<RunInput = any, RunOutput = any> extends Runnable<
     return this._callWithConfig(this._invoke, input, config);
   }
 
-  async *_streamIterator(input: RunInput, config?: Partial<RunnableConfig>) {
+  override async *_streamIterator(input: RunInput, config?: Partial<RunnableConfig>) {
     const callbackManager_ = await getCallbackManagerForConfig(config);
     const runManager = await callbackManager_?.handleChainStart(
       this.toJSON(),

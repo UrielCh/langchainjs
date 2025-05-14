@@ -1,6 +1,6 @@
-import { describe, it, expect } from "@jest/globals";
-import { DictPromptTemplate } from "../dict.js";
-import { load } from "../../load/index.js";
+import "@/jest-shim";
+import { DictPromptTemplate } from "../dict.ts";
+import { load } from "../../load/index.ts";
 
 describe("DictPromptTemplate", () => {
   it("should format dicts with f-string template values", async () => {

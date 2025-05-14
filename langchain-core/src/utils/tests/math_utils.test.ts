@@ -1,4 +1,4 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { Matrix } from "ml-matrix";
 import {
   cosineSimilarity,
@@ -6,7 +6,7 @@ import {
   innerProduct,
   maximalMarginalRelevance,
   normalize,
-} from "../math.js";
+} from "../math.ts";
 
 test("Test cosine similarity zero", async () => {
   const X = Matrix.rand(3, 3).to2DArray();

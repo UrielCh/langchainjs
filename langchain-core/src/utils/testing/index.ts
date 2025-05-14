@@ -2,51 +2,51 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { z } from "zod";
-import {
+import type { z } from "zod";
+import type {
   BaseCallbackConfig,
   CallbackManagerForLLMRun,
   CallbackManagerForToolRun,
-} from "../../callbacks/manager.js";
+} from "../../callbacks/manager.ts";
 import {
   BaseChatMessageHistory,
   BaseListChatMessageHistory,
-} from "../../chat_history.js";
-import { Document } from "../../documents/document.js";
+} from "../../chat_history.ts";
+import { Document } from "../../documents/document.ts";
 import {
   BaseChatModel,
-  BaseChatModelCallOptions,
-  BaseChatModelParams,
-} from "../../language_models/chat_models.js";
-import { BaseLLMParams, LLM } from "../../language_models/llms.js";
+  type BaseChatModelCallOptions,
+  type BaseChatModelParams,
+} from "../../language_models/chat_models.ts";
+import { type BaseLLMParams, LLM } from "../../language_models/llms.ts";
 import {
-  BaseMessage,
+  type BaseMessage,
   AIMessage,
   AIMessageChunk,
   HumanMessage,
-} from "../../messages/index.js";
-import { BaseOutputParser } from "../../output_parsers/base.js";
+} from "../../messages/index.ts";
+import { BaseOutputParser } from "../../output_parsers/base.ts";
 import {
-  GenerationChunk,
+  type GenerationChunk,
   type ChatResult,
   ChatGenerationChunk,
-} from "../../outputs.js";
-import { BaseRetriever } from "../../retrievers/index.js";
-import { Runnable, RunnableLambda } from "../../runnables/base.js";
-import { StructuredTool, ToolParams } from "../../tools/index.js";
-import { BaseTracer, Run } from "../../tracers/base.js";
+} from "../../outputs.ts";
+import { BaseRetriever } from "../../retrievers/index.ts";
+import { Runnable, RunnableLambda } from "../../runnables/base.ts";
+import { StructuredTool, type ToolParams } from "../../tools/index.ts";
+import { BaseTracer, type Run } from "../../tracers/base.ts";
 import {
   Embeddings,
-  EmbeddingsInterface,
-  EmbeddingsParams,
-} from "../../embeddings.js";
-import {
+  type EmbeddingsInterface,
+  type EmbeddingsParams,
+} from "../../embeddings.ts";
+import type {
   StructuredOutputMethodParams,
   BaseLanguageModelInput,
   StructuredOutputMethodOptions,
-} from "../../language_models/base.js";
-import { VectorStore } from "../../vectorstores.js";
-import { cosine } from "../ml-distance/similarities.js";
+} from "../../language_models/base.ts";
+import { VectorStore } from "../../vectorstores.ts";
+import { cosine } from "../ml-distance/similarities.ts";
 
 /**
  * Parser for comma-separated values. It splits the input text by commas
@@ -149,7 +149,7 @@ export class FakeStreamingLLM extends LLM {
     return response ?? prompt;
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     input: string,
     _options?: this["ParsedCallOptions"],
     runManager?: CallbackManagerForLLMRun
@@ -168,7 +168,7 @@ export class FakeStreamingLLM extends LLM {
 }
 
 export class FakeChatModel extends BaseChatModel {
-  _combineLLMOutput() {
+  override _combineLLMOutput() {
     return [];
   }
 
@@ -260,7 +260,7 @@ export class FakeStreamingChatModel extends BaseChatModel {
     return generation;
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     messages: BaseMessage[],
     _options: this["ParsedCallOptions"],
     _runManager?: CallbackManagerForLLMRun
@@ -304,7 +304,7 @@ export class FakeRetriever extends BaseRetriever {
     this.output = fields?.output ?? this.output;
   }
 
-  async _getRelevantDocuments(
+  override async _getRelevantDocuments(
     _query: string
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<Document<Record<string, any>>[]> {
@@ -350,11 +350,11 @@ export interface FakeListChatModelCallOptions extends BaseChatModelCallOptions {
  * ```
  */
 export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOptions> {
-  static lc_name() {
+  static override lc_name() {
     return "FakeListChatModel";
   }
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   responses: string[];
 
@@ -372,7 +372,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     this.emitCustomEvent = emitCustomEvent ?? this.emitCustomEvent;
   }
 
-  _combineLLMOutput() {
+  override _combineLLMOutput() {
     return [];
   }
 
@@ -417,7 +417,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     };
   }
 
-  async *_streamResponseChunks(
+  override async *_streamResponseChunks(
     _messages: BaseMessage[],
     options: this["ParsedCallOptions"],
     runManager?: CallbackManagerForLLMRun
@@ -472,7 +472,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     }
   }
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -484,7 +484,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     config?: StructuredOutputMethodOptions<false>
   ): Runnable<BaseLanguageModelInput, RunOutput>;
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -496,7 +496,7 @@ export class FakeListChatModel extends BaseChatModel<FakeListChatModelCallOption
     config?: StructuredOutputMethodOptions<true>
   ): Runnable<BaseLanguageModelInput, { raw: BaseMessage; parsed: RunOutput }>;
 
-  withStructuredOutput<
+  override withStructuredOutput<
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     RunOutput extends Record<string, any> = Record<string, any>
   >(
@@ -723,7 +723,7 @@ export class SyntheticEmbeddings
 }
 
 export class SingleRunExtractor extends BaseTracer {
-  runPromiseResolver: (run: Run) => void;
+  runPromiseResolver!: (run: Run) => void;
 
   runPromise: Promise<Run>;
 
@@ -881,7 +881,7 @@ export class FakeVectorStore extends VectorStore {
    * @param dbConfig Optional `FakeVectorStoreArgs` to configure the `FakeVectorStore` instance.
    * @returns Promise that resolves with a new `FakeVectorStore` instance.
    */
-  static async fromTexts(
+  static override async fromTexts(
     texts: string[],
     metadatas: object[] | object,
     embeddings: EmbeddingsInterface,
@@ -907,7 +907,7 @@ export class FakeVectorStore extends VectorStore {
    * @param dbConfig Optional `FakeVectorStoreArgs` to configure the `FakeVectorStore` instance.
    * @returns Promise that resolves with a new `FakeVectorStore` instance.
    */
-  static async fromDocuments(
+  static override async fromDocuments(
     docs: Document[],
     embeddings: EmbeddingsInterface,
     dbConfig?: FakeVectorStoreArgs

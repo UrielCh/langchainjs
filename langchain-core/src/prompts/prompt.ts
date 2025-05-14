@@ -1,20 +1,20 @@
 // Default generic "any" values are for backwards compatibility.
 // Replace with "string" when we are comfortable with a breaking change.
 
-import { BaseStringPromptTemplate } from "./string.js";
+import { BaseStringPromptTemplate } from "./string.ts";
 import type {
   BasePromptTemplateInput,
   TypedPromptInputValues,
-} from "./base.js";
+} from "./base.ts";
 import {
   checkValidTemplate,
   parseTemplate,
   renderTemplate,
   type TemplateFormat,
-} from "./template.js";
-import type { SerializedPromptTemplate } from "./serde.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import { MessageContent, MessageContentComplex } from "../messages/index.js";
+} from "./template.ts";
+import type { SerializedPromptTemplate } from "./serde.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import { MessageContent, MessageContentComplex } from "../messages/index.ts";
 
 /**
  * Inputs to create a {@link PromptTemplate}
@@ -123,7 +123,7 @@ export class PromptTemplate<
     return "PromptTemplate";
   }
 
-  template: MessageContent;
+  template!: MessageContent;
 
   templateFormat: TemplateFormat = "f-string";
 
@@ -271,8 +271,7 @@ export class PromptTemplate<
 
     return new PromptTemplate({
       // Rely on extracted types
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      inputVariables: [...names] as any[],
+      inputVariables: [...names],
       templateFormat,
       template,
       ...rest,
@@ -306,7 +305,7 @@ export class PromptTemplate<
     >(promptDict);
   }
 
-  serialize(): SerializedPromptTemplate {
+  override serialize(): SerializedPromptTemplate {
     if (this.outputParser !== undefined) {
       throw new Error(
         "Cannot serialize a prompt template with an output parser"
@@ -320,7 +319,7 @@ export class PromptTemplate<
     };
   }
 
-  static async deserialize(
+  static override async deserialize(
     data: SerializedPromptTemplate
   ): Promise<PromptTemplate> {
     if (!data.template) {

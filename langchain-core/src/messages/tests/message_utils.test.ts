@@ -1,21 +1,21 @@
-import { it, describe, test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { v4 } from "uuid";
 import {
   filterMessages,
   mergeMessageRuns,
   trimMessages,
-} from "../transformers.js";
-import { AIMessage, AIMessageChunk } from "../ai.js";
-import { ChatMessage } from "../chat.js";
-import { HumanMessage } from "../human.js";
-import { SystemMessage } from "../system.js";
-import { ToolMessage } from "../tool.js";
-import { BaseMessage } from "../base.js";
+} from "../transformers.ts";
+import { AIMessage, AIMessageChunk } from "../ai.ts";
+import { ChatMessage } from "../chat.ts";
+import { HumanMessage } from "../human.ts";
+import { SystemMessage } from "../system.ts";
+import { ToolMessage } from "../tool.ts";
+import type { BaseMessage } from "../base.ts";
 import {
   getBufferString,
   mapChatMessagesToStoredMessages,
   mapStoredMessagesToChatMessages,
-} from "../utils.js";
+} from "../utils.ts";
 
 describe("filterMessage", () => {
   const getMessages = () => [

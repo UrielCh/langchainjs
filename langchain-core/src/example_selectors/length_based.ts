@@ -1,6 +1,6 @@
-import { Example } from "../prompts/base.js";
-import { BaseExampleSelector } from "./base.js";
-import { PromptTemplate } from "../prompts/prompt.js";
+import { Example } from "../prompts/base.ts";
+import { BaseExampleSelector } from "./base.ts";
+import { PromptTemplate } from "../prompts/prompt.ts";
 
 /**
  * Calculates the length of a text based on the number of words and lines.

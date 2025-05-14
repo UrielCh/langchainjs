@@ -1,7 +1,7 @@
-import { pickRunnableConfigKeys } from "../runnables/config.js";
-import { AsyncLocalStorageProviderSingleton } from "../singletons/index.js";
-import type { IterableReadableStreamInterface } from "../types/_internal.js";
-import { raceWithSignal } from "./signal.js";
+import { pickRunnableConfigKeys } from "../runnables/config.ts";
+import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
+import type { IterableReadableStreamInterface } from "../types/_internal.ts";
+import { raceWithSignal } from "./signal.ts";
 
 // Re-exported for backwards compatibility
 // Do NOT import this type from this file inside the project. Instead, always import from `types/_internal.js`
@@ -16,7 +16,7 @@ export class IterableReadableStream<T>
   extends ReadableStream<T>
   implements IterableReadableStreamInterface<T>
 {
-  public reader: ReadableStreamDefaultReader<T>;
+  public reader!: ReadableStreamDefaultReader<T>;
 
   ensureReader() {
     if (!this.reader) {
@@ -196,7 +196,7 @@ export class AsyncGeneratorWithSetup<
 
   public signal?: AbortSignal;
 
-  private firstResult: Promise<IteratorResult<T>>;
+  private firstResult!: Promise<IteratorResult<T>>;
 
   private firstResultUsed = false;
 

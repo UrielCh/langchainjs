@@ -1,15 +1,15 @@
-import type { EmbeddingsInterface } from "./embeddings.js";
-import type { DocumentInterface } from "./documents/document.js";
+import type { EmbeddingsInterface } from "./embeddings.ts";
+import type { DocumentInterface } from "./documents/document.ts";
 import {
   BaseRetriever,
   BaseRetrieverInterface,
   type BaseRetrieverInput,
-} from "./retrievers/index.js";
-import { Serializable } from "./load/serializable.js";
+} from "./retrievers/index.ts";
+import { Serializable } from "./load/serializable.ts";
 import {
   CallbackManagerForRetrieverRun,
   Callbacks,
-} from "./callbacks/manager.js";
+} from "./callbacks/manager.ts";
 
 /**
  * Type for options when adding a document to the VectorStore.
@@ -195,7 +195,7 @@ export class VectorStoreRetriever<
   extends BaseRetriever
   implements VectorStoreRetrieverInterface
 {
-  static lc_name() {
+  static override lc_name() {
     return "VectorStoreRetriever";
   }
 
@@ -323,7 +323,7 @@ export class VectorStoreRetriever<
    *                 by the vector store.
    * @protected
    */
-  async _getRelevantDocuments(
+  override async _getRelevantDocuments(
     query: string,
     runManager?: CallbackManagerForRetrieverRun
   ): Promise<DocumentInterface[]> {

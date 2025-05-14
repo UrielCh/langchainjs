@@ -1,4 +1,4 @@
-import { BaseTransformOutputParser } from "./transform.js";
+import { BaseTransformOutputParser } from "./transform.ts";
 
 /**
  * OutputParser that parses LLMResult into the top likely string and

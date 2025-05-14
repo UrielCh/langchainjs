@@ -1,10 +1,10 @@
 import { z } from "zod";
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
   convertToOpenAIFunction,
   convertToOpenAITool,
-} from "../function_calling.js";
-import { FakeTool } from "../testing/index.js";
+} from "../function_calling.ts";
+import { FakeTool } from "../testing/index.ts";
 
 test("Can convert tool to OpenAI Functions format", async () => {
   const tool = new FakeTool({

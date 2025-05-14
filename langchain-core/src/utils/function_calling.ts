@@ -2,10 +2,10 @@ import {
   StructuredToolInterface,
   StructuredToolParams,
   isLangChainTool,
-} from "../tools/types.js";
-import { FunctionDefinition, ToolDefinition } from "../language_models/base.js";
-import { RunnableToolLike } from "../runnables/base.js";
-import { toJsonSchema } from "./json_schema.js";
+} from "../tools/types.ts";
+import { FunctionDefinition, ToolDefinition } from "../language_models/base.ts";
+import { RunnableToolLike } from "../runnables/base.ts";
+import { toJsonSchema } from "./json_schema.ts";
 
 // These utility functions were moved to a more appropriate location,
 // but we still export them here for backwards compatibility.
@@ -14,7 +14,7 @@ export {
   isStructuredToolParams,
   isRunnableToolLike,
   isLangChainTool,
-} from "../tools/types.js";
+} from "../tools/types.ts";
 
 /**
  * Formats a `StructuredTool` or `RunnableToolLike` instance into a format

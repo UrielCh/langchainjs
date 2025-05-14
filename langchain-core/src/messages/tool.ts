@@ -8,8 +8,8 @@ import {
   _mergeObj,
   _mergeStatus,
   type MessageContentComplex,
-} from "./base.js";
-import type { DataContentBlock } from "./content_blocks.js";
+} from "./base.ts";
+import type { DataContentBlock } from "./content_blocks.ts";
 
 export interface ToolMessageFields extends BaseMessageFields {
   content: string | (MessageContentComplex | DataContentBlock)[];
@@ -59,11 +59,11 @@ export function isDirectToolOutput(x: unknown): x is DirectToolOutput {
 export class ToolMessage extends BaseMessage implements DirectToolOutput {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "ToolMessage";
   }
 
-  get lc_aliases(): Record<string, string> {
+  override get lc_aliases(): Record<string, string> {
     // exclude snake case conversion to pascal case
     return { tool_call_id: "tool_call_id" };
   }
@@ -160,7 +160,7 @@ export class ToolMessageChunk extends BaseMessageChunk {
     this.status = fields.status;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "ToolMessageChunk";
   }
 

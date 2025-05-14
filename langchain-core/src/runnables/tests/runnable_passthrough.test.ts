@@ -1,10 +1,10 @@
-import { test, expect } from "@jest/globals";
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { FakeChatModel } from "../../utils/testing/index.js";
-import { RunnablePassthrough } from "../passthrough.js";
-import { JsonOutputParser } from "../../output_parsers/json.js";
-import { RunnableSequence } from "../base.js";
-import { RunnableConfig } from "../config.js";
+import "@/jest-shim";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { FakeChatModel } from "../../utils/testing/index.ts";
+import { RunnablePassthrough } from "../passthrough.ts";
+import { JsonOutputParser } from "../../output_parsers/json.ts";
+import { RunnableSequence } from "../base.ts";
+import type { RunnableConfig } from "../config.ts";
 
 test("RunnablePassthrough can call .assign and pass prev result through", async () => {
   const promptTemplate = PromptTemplate.fromTemplate("{input}");
@@ -90,8 +90,8 @@ test("RunnablePassthrough can invoke a function and pass through config", async 
   const addOne = (input: number, config?: RunnableConfig) => {
     wasCalled = true;
     if (
-      !config?.configurable?.number ??
-      Number.isNaN(config?.configurable?.number)
+      config?.configurable?.number === undefined ||
+      Number.isNaN(config.configurable.number)
     ) {
       throw new Error("configurable.number is NaN");
     }

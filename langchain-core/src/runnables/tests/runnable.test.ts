@@ -2,18 +2,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
-import { Run } from "langsmith";
+import "@/jest-shim";
+import type { Run } from "langsmith";
 import { v4 as uuidv4 } from "uuid";
-import { jest, test, expect, describe } from "@jest/globals";
-import { createChatMessageChunkEncoderStream } from "../../language_models/chat_models.js";
-import { BaseMessage, HumanMessage } from "../../messages/index.js";
-import { OutputParserException } from "../../output_parsers/base.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
+import "@/jest-shim";
+import { createChatMessageChunkEncoderStream } from "../../language_models/chat_models.ts";
+import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
+import { OutputParserException } from "../../output_parsers/base.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 import {
   ChatPromptTemplate,
   SystemMessagePromptTemplate,
-} from "../../prompts/chat.js";
-import { PromptTemplate } from "../../prompts/prompt.js";
+} from "../../prompts/chat.ts";
+import { PromptTemplate } from "../../prompts/prompt.ts";
 import {
   FakeLLM,
   FakeChatModel,
@@ -23,11 +24,11 @@ import {
   FakeListChatModel,
   SingleRunExtractor,
   FakeStreamingChatModel,
-} from "../../utils/testing/index.js";
-import { RunnableSequence, RunnableLambda } from "../base.js";
-import { RouterRunnable } from "../router.js";
-import { RunnableConfig } from "../config.js";
-import { JsonOutputParser } from "../../output_parsers/json.js";
+} from "../../utils/testing/index.ts";
+import { RunnableSequence, RunnableLambda } from "../base.ts";
+import { RouterRunnable } from "../router.ts";
+import type { RunnableConfig } from "../config.ts";
+import { JsonOutputParser } from "../../output_parsers/json.ts";
 
 test("Test batch", async () => {
   const llm = new FakeLLM({});

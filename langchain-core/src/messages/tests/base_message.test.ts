@@ -1,5 +1,5 @@
-import { test, describe, it, expect } from "@jest/globals";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+import "@/jest-shim";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import {
   HumanMessage,
   AIMessage,
@@ -8,9 +8,9 @@ import {
   AIMessageChunk,
   coerceMessageLikeToMessage,
   SystemMessage,
-} from "../index.js";
-import { load } from "../../load/index.js";
-import { concat } from "../../utils/stream.js";
+} from "../index.ts";
+import { load } from "../../load/index.ts";
+import { concat } from "../../utils/stream.ts";
 
 test("Test ChatPromptTemplate can format OpenAI content image messages", async () => {
   const message = new HumanMessage({

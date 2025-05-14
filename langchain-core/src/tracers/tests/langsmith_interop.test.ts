@@ -2,20 +2,14 @@
 /* eslint-disable no-process-env */
 /* eslint-disable no-promise-executor-return */
 
-import {
-  jest,
-  test,
-  beforeEach,
-  afterEach,
-  afterAll,
-  expect,
-} from "@jest/globals";
+import "@/jest-shim";
 import { traceable } from "langsmith/traceable";
 import { Client } from "langsmith";
 
-import { RunnableLambda } from "../../runnables/base.js";
-import { BaseMessage, HumanMessage } from "../../messages/index.js";
-import { setDefaultLangChainClientSingleton } from "../../singletons/tracer.js";
+import { RunnableLambda } from "../../runnables/base.ts";
+import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
+import { setDefaultLangChainClientSingleton } from "../../singletons/tracer.ts";
+import process from "node:process";
 
 let fetchMock: any;
 

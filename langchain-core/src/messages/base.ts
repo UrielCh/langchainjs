@@ -1,9 +1,9 @@
-import { Serializable, SerializedConstructor } from "../load/serializable.js";
-import { StringWithAutocomplete } from "../utils/types/index.js";
+import { Serializable, SerializedConstructor } from "../load/serializable.ts";
+import { StringWithAutocomplete } from "../utils/types/index.ts";
 import {
   type PlainTextContentBlock,
   isDataContentBlock,
-} from "./content_blocks.js";
+} from "./content_blocks.ts";
 
 export interface StoredMessageData {
   content: string;
@@ -217,9 +217,9 @@ export abstract class BaseMessage
 {
   lc_namespace = ["langchain_core", "messages"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  get lc_aliases(): Record<string, string> {
+  override get lc_aliases(): Record<string, string> {
     // exclude snake case conversion to pascal case
     return {
       additional_kwargs: "additional_kwargs",
@@ -319,7 +319,7 @@ export abstract class BaseMessage
     };
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "BaseMessage";
   }
 

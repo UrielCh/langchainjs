@@ -1,6 +1,6 @@
-import { test, expect } from "@jest/globals";
-import { PromptTemplate } from "../prompt.js";
-import { parseTemplate } from "../template.js";
+import "@/jest-shim";
+import { PromptTemplate } from "../prompt.ts";
+import { parseTemplate } from "../template.ts";
 
 test("Single input variable.", async () => {
   const template = "This is a {{foo}} test.";

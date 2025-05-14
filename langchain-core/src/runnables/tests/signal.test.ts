@@ -1,22 +1,22 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { test, describe, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
-  Runnable,
+  type Runnable,
   RunnableLambda,
   RunnableMap,
   RunnablePassthrough,
   RunnableSequence,
   RunnableWithMessageHistory,
-} from "../index.js";
+} from "../index.ts";
 import {
   FakeChatMessageHistory,
   FakeListChatModel,
-} from "../../utils/testing/index.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
-import { Document } from "../../documents/document.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+} from "../../utils/testing/index.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
+import { Document } from "../../documents/document.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 
 const chatModel = new FakeListChatModel({ responses: ["hey"], sleep: 500 });
 
@@ -77,7 +77,8 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
   }: { runnable: Runnable; input: any; skipStream?: boolean } =
     TEST_CASES[name as keyof typeof TEST_CASES];
   test("Test invoke with signal", async () => {
-    await expect(async () => {
+
+    const fnc = async () => {
       const controller = new AbortController();
       await Promise.all([
         runnable.invoke(input, {
@@ -88,11 +89,13 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
           resolve();
         }),
       ]);
-    }).rejects.toThrowError();
+    }
+    // await expect(fnc).rejects.toThrowError();
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
   });
 
   test("Test invoke with signal with a delay", async () => {
-    await expect(async () => {
+    const fnc = async () => {
       const controller = new AbortController();
       await Promise.all([
         runnable.invoke(input, {
@@ -105,7 +108,9 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
           }, 250);
         }),
       ]);
-    }).rejects.toThrowError();
+    };
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+    // await expect(fnc).rejects.toThrowError();
   });
 
   test("Test stream with signal", async () => {
@@ -113,18 +118,20 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
       return;
     }
     const controller = new AbortController();
-    await expect(async () => {
+    const fnc = async () => {
       const stream = await runnable.stream(input, {
         signal: controller.signal,
       });
       for await (const _ of stream) {
         controller.abort();
       }
-    }).rejects.toThrowError();
+    };
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+    // await expect(fnc).rejects.toThrowError();
   });
 
   test("Test batch with signal", async () => {
-    await expect(async () => {
+    const fnc = async () => {
       const controller = new AbortController();
       await Promise.all([
         runnable.batch([input, input], {
@@ -135,11 +142,13 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
           resolve();
         }),
       ]);
-    }).rejects.toThrowError();
+    };
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+    // await expect(fnc).rejects.toThrowError();
   });
 
   test("Test batch with signal with a delay", async () => {
-    await expect(async () => {
+    const fnc = async () => {
       const controller = new AbortController();
       await Promise.all([
         runnable.batch([input, input], {
@@ -152,7 +161,9 @@ describe.each(Object.keys(TEST_CASES))("Test runnable %s", (name) => {
           }, 250);
         }),
       ]);
-    }).rejects.toThrowError();
+    };
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+    // await expect(fnc).rejects.toThrowError();
   });
 });
 

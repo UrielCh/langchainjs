@@ -1,0 +1,41 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "dev": "deno run --watch main.ts"
+  },
+  "imports": {
+    "@/jest-shim": "./src/utils/tests/jest-shim.ts",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/expect": "jsr:@std/expect@^1.0.15",
+    "@std/testing": "jsr:@std/testing@^1.0.11",
+    "@u4/langsmith": "jsr:@u4/langsmith@^0.1.2"
+  },
+  "compilerOptions": {
+    "noImplicitOverride": false,
+    "lib": ["es2022", "dom"]
+  },
+  "name": "@u4/langchain-core",
+  "version": "0.1.1",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./caches": "./src/caches/index.ts",
+    "./callbacks": "./src/callbacks/index.ts",
+    "./document_loaders": "./src/document_loaders/index.ts",
+    "./errors": "./src/errors/index.ts",
+    "./example_selectors": "./src/example_selectors/index.ts",
+    "./indexing": "./src/indexing/index.ts",
+    "./language_models": "./src/language_models/index.ts",
+    "./load": "./src/load/index.ts",
+    "./messages": "./src/messages/index.ts",
+    "./output_parsers": "./src/output_parsers/index.ts",
+    "./retrievers": "./src/retrievers/index.ts",
+    "./runnables": "./src/runnables/index.ts",
+    "./singletons": "./src/singletons/index.ts",
+    "./structured_query": "./src/structured_query/index.ts",
+    "./tools": "./src/tools/index.ts",
+    "./tracers": "./src/tracers/index.ts",
+    "./types": "./src/types/index.ts",
+    "./utils": "./src/utils/index.ts"
+  }
+}

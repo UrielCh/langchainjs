@@ -6,9 +6,9 @@ import {
   type MessageType,
   type BaseMessageFields,
   type MessageContentComplex,
-} from "./base.js";
+} from "./base.ts";
 
-import type { DataContentBlock } from "./content_blocks.js";
+import type { DataContentBlock } from "./content_blocks.ts";
 
 export type HumanMessageFields = BaseMessageFields & {
   content: string | (MessageContentComplex | DataContentBlock)[];
@@ -20,7 +20,7 @@ export type HumanMessageFields = BaseMessageFields & {
 export class HumanMessage extends BaseMessage {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "HumanMessage";
   }
 
@@ -44,7 +44,7 @@ export class HumanMessage extends BaseMessage {
 export class HumanMessageChunk extends BaseMessageChunk {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "HumanMessageChunk";
   }
 

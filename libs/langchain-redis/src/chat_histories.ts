@@ -1,4 +1,4 @@
-import {
+import type {
   RedisClientOptions,
   RedisClientType,
   RedisModules,
@@ -7,11 +7,11 @@ import {
 } from "redis";
 import { BaseListChatMessageHistory } from "@langchain/core/chat_history";
 import {
-  BaseMessage,
+  type BaseMessage,
   mapChatMessagesToStoredMessages,
   mapStoredMessagesToChatMessages,
 } from "@langchain/core/messages";
-import { pool } from "./connections.js";
+import { pool } from "./connections.ts";
 
 /**
  * Type for the input to the `RedisChatMessageHistory` constructor.
@@ -50,7 +50,7 @@ export type RedisChatMessageHistoryInput = {
 export class RedisChatMessageHistory extends BaseListChatMessageHistory {
   lc_namespace = ["langchain", "stores", "message", "redis"];
 
-  get lc_secrets() {
+  override get lc_secrets() {
     return {
       "config.url": "REDIS_URL",
       "config.username": "REDIS_USERNAME",
@@ -122,7 +122,7 @@ export class RedisChatMessageHistory extends BaseListChatMessageHistory {
    * session.
    * @returns Promise resolving when the messages have been deleted.
    */
-  async clear(): Promise<void> {
+  override async clear(): Promise<void> {
     await this.ensureReadiness();
     await this.client.del(this.sessionId);
   }

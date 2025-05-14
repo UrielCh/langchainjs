@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { z } from "zod";
-import { JsonOutputKeyToolsParser } from "../json_output_tools_parsers.js";
-import { OutputParserException } from "../../base.js";
-import { AIMessage, AIMessageChunk } from "../../../messages/ai.js";
-import { RunnableLambda } from "../../../runnables/base.js";
+import { JsonOutputKeyToolsParser } from "../json_output_tools_parsers.ts";
+import { OutputParserException } from "../../base.ts";
+import { AIMessage, AIMessageChunk } from "../../../messages/ai.ts";
+import { RunnableLambda } from "../../../runnables/base.ts";
 
 test("JSONOutputKeyToolsParser invoke", async () => {
   const outputParser = new JsonOutputKeyToolsParser({

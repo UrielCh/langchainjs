@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ZodType, ZodTypeDef } from "zod";
-import { test, expect } from "@jest/globals";
-import {
+import type { ZodType, ZodTypeDef } from "zod";
+import "@/jest-shim";
+import type {
   StructuredOutputMethodParams,
   StructuredOutputMethodOptions,
   BaseLanguageModelInput,
-} from "../../language_models/base.js";
-import { BaseMessage } from "../../messages/index.js";
-import { Runnable, RunnableLambda } from "../../runnables/base.js";
-import { RunnableConfig } from "../../runnables/config.js";
-import { FakeListChatModel } from "../../utils/testing/index.js";
-import { StructuredPrompt } from "../structured.js";
-import { load } from "../../load/index.js";
+} from "../../language_models/base.ts";
+import type { BaseMessage } from "../../messages/index.ts";
+import { type Runnable, RunnableLambda } from "../../runnables/base.ts";
+import type { RunnableConfig } from "../../runnables/config.ts";
+import { FakeListChatModel } from "../../utils/testing/index.ts";
+import { StructuredPrompt } from "../structured.ts";
+import { load } from "../../load/index.ts";
 
 class FakeStructuredChatModel extends FakeListChatModel {
   withStructuredOutput<

@@ -1,14 +1,14 @@
-import { Runnable, RunnableBatchOptions, _coerceToDict } from "./base.js";
-import { getCallbackManagerForConfig, type RunnableConfig } from "./config.js";
-import { Document } from "../documents/index.js";
-import { CallbackManagerForChainRun } from "../callbacks/manager.js";
-import { ChatPromptValue, StringPromptValue } from "../prompt_values.js";
+import { Runnable, RunnableBatchOptions, _coerceToDict } from "./base.ts";
+import { getCallbackManagerForConfig, type RunnableConfig } from "./config.ts";
+import { Document } from "../documents/index.ts";
+import { CallbackManagerForChainRun } from "../callbacks/manager.ts";
+import { ChatPromptValue, StringPromptValue } from "../prompt_values.ts";
 import {
   RunLogPatch,
   type LogStreamCallbackHandlerInput,
   type StreamEvent,
   RunLog,
-} from "../tracers/log_stream.js";
+} from "../tracers/log_stream.ts";
 import {
   AIMessage,
   AIMessageChunk,
@@ -23,10 +23,10 @@ import {
   ToolMessage,
   ToolMessageChunk,
   isBaseMessage,
-} from "../messages/index.js";
-import { GenerationChunk, ChatGenerationChunk, RUN_KEY } from "../outputs.js";
-import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.js";
-import { IterableReadableStream, concat } from "../utils/stream.js";
+} from "../messages/index.ts";
+import { GenerationChunk, ChatGenerationChunk, RUN_KEY } from "../outputs.ts";
+import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.ts";
+import { IterableReadableStream, concat } from "../utils/stream.ts";
 
 type RemoteRunnableOptions = {
   timeout?: number;
@@ -416,25 +416,25 @@ export class RemoteRunnable<
     return revive(body.output);
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<CallOptions> | Partial<CallOptions>[],
     batchOptions?: RunnableBatchOptions
@@ -450,7 +450,7 @@ export class RemoteRunnable<
     );
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: RunInput,
     options?: Partial<CallOptions>
   ): AsyncGenerator<RunOutput> {
@@ -524,7 +524,7 @@ export class RemoteRunnable<
     await runManager?.handleChainEnd(finalOutput ?? {});
   }
 
-  async *streamLog(
+  override async *streamLog(
     input: RunInput,
     options?: Partial<CallOptions>,
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
@@ -678,13 +678,13 @@ export class RemoteRunnable<
     return generator();
   }
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & { version: "v1" | "v2" },
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<StreamEvent>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";
@@ -693,7 +693,7 @@ export class RemoteRunnable<
     streamOptions?: Omit<LogStreamCallbackHandlerInput, "autoClose">
   ): IterableReadableStream<Uint8Array>;
 
-  streamEvents(
+  override streamEvents(
     input: RunInput,
     options: Partial<CallOptions> & {
       version: "v1" | "v2";

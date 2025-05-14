@@ -1,21 +1,21 @@
 import * as uuid from "uuid";
-import type { ChainValues } from "../utils/types/index.js";
-import type { BaseMessage } from "../messages/base.js";
-import type { AgentAction, AgentFinish } from "../agents.js";
+import type { ChainValues } from "../utils/types/index.ts";
+import type { BaseMessage } from "../messages/base.ts";
+import type { AgentAction, AgentFinish } from "../agents.ts";
 import type {
   ChatGenerationChunk,
   GenerationChunk,
   LLMResult,
-} from "../outputs.js";
+} from "../outputs.ts";
 import {
   Serializable,
   Serialized,
   SerializedNotImplemented,
   get_lc_unique_name,
-} from "../load/serializable.js";
-import type { SerializedFields } from "../load/map_keys.js";
-import type { DocumentInterface } from "../documents/document.js";
-import { getEnvironmentVariable } from "../utils/env.js";
+} from "../load/serializable.ts";
+import type { SerializedFields } from "../load/map_keys.ts";
+import type { DocumentInterface } from "../documents/document.ts";
+import { getEnvironmentVariable } from "../utils/env.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Error = any;

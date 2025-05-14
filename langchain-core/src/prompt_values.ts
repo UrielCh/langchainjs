@@ -1,7 +1,7 @@
-import { Serializable } from "./load/serializable.js";
-import { type BaseMessage } from "./messages/base.js";
-import { HumanMessage } from "./messages/human.js";
-import { getBufferString } from "./messages/utils.js";
+import { Serializable } from "./load/serializable.ts";
+import { type BaseMessage } from "./messages/base.ts";
+import { HumanMessage } from "./messages/human.ts";
+import { getBufferString } from "./messages/utils.ts";
 
 export interface BasePromptValueInterface extends Serializable {
   toString(): string;
@@ -24,7 +24,7 @@ export abstract class BasePromptValue
   extends Serializable
   implements BasePromptValueInterface
 {
-  abstract toString(): string;
+  abstract override toString(): string;
 
   abstract toChatMessages(): BaseMessage[];
 }
@@ -37,13 +37,13 @@ export class StringPromptValue
   extends BasePromptValue
   implements StringPromptValueInterface
 {
-  static lc_name(): string {
+  static override lc_name(): string {
     return "StringPromptValue";
   }
 
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   value: string;
 
@@ -78,9 +78,9 @@ export class ChatPromptValue
 {
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  static lc_name() {
+  static override lc_name() {
     return "ChatPromptValue";
   }
 
@@ -128,16 +128,15 @@ export interface ImagePromptValueFields {
 export class ImagePromptValue extends BasePromptValue {
   lc_namespace = ["langchain_core", "prompt_values"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
-  static lc_name() {
+  static override lc_name() {
     return "ImagePromptValue";
   }
 
   imageUrl: ImageContent;
 
-  /** @ignore */
-  value: string;
+  value!: string;
 
   constructor(fields: ImagePromptValueFields);
 

@@ -12,8 +12,8 @@ import {
   _objectKeys,
   escapePathComponent,
   hasOwnProperty,
-} from "./helpers.js";
-import { applyPatch, Operation } from "./core.js";
+} from "./helpers.ts";
+import { applyPatch, Operation } from "./core.ts";
 
 export interface Observer<T> {
   object: T;

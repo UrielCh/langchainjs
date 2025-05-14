@@ -1,7 +1,7 @@
 import {
   type RunnableConfig,
   getCallbackManagerForConfig,
-} from "../../runnables/config.js";
+} from "../../runnables/config.ts";
 
 /**
  * Dispatch a custom event. Requires an explicit config object.

@@ -1,5 +1,5 @@
-import { Serializable } from "../load/serializable.js";
-import type { Example } from "../prompts/base.js";
+import { Serializable } from "../load/serializable.ts";
+import type { Example } from "../prompts/base.ts";
 
 /**
  * Base class for example selectors.

@@ -1,23 +1,23 @@
-import { BaseStringPromptTemplate } from "./string.js";
+import { BaseStringPromptTemplate } from "./string.ts";
 import type {
   BasePromptTemplateInput,
   TypedPromptInputValues,
   Example,
-} from "./base.js";
-import type { BaseExampleSelector } from "../example_selectors/base.js";
+} from "./base.ts";
+import type { BaseExampleSelector } from "../example_selectors/base.ts";
 import {
   type TemplateFormat,
   checkValidTemplate,
   renderTemplate,
-} from "./template.js";
-import { PromptTemplate } from "./prompt.js";
-import type { SerializedFewShotTemplate } from "./serde.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import type { BaseMessage } from "../messages/index.js";
+} from "./template.ts";
+import { PromptTemplate } from "./prompt.ts";
+import type { SerializedFewShotTemplate } from "./serde.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import type { BaseMessage } from "../messages/index.ts";
 import {
   BaseChatPromptTemplate,
   type BaseMessagePromptTemplate,
-} from "./chat.js";
+} from "./chat.ts";
 
 export interface FewShotPromptTemplateInput
   extends BasePromptTemplateInput<InputValues> {
@@ -114,7 +114,7 @@ export class FewShotPromptTemplate
 
   exampleSelector?: BaseExampleSelector | undefined;
 
-  examplePrompt: PromptTemplate;
+  examplePrompt!: PromptTemplate;
 
   suffix = "";
 

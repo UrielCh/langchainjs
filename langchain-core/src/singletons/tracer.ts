@@ -1,5 +1,5 @@
 import { Client } from "langsmith";
-import { getEnvironmentVariable } from "../utils/env.js";
+import { getEnvironmentVariable } from "../utils/env.ts";
 
 let client: Client;
 

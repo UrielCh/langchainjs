@@ -1,4 +1,4 @@
-import { ToolCall } from "../messages/tool.js";
+import { ToolCall } from "../messages/tool.ts";
 
 export function _isToolCall(toolCall?: unknown): toolCall is ToolCall {
   return !!(

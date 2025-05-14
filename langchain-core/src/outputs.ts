@@ -1,4 +1,4 @@
-import { type BaseMessage, type BaseMessageChunk } from "./messages/base.js";
+import { type BaseMessage, type BaseMessageChunk } from "./messages/base.ts";
 
 export const RUN_KEY = "__run";
 
@@ -88,7 +88,7 @@ export class ChatGenerationChunk
     this.message = fields.message;
   }
 
-  concat(chunk: ChatGenerationChunk) {
+  override concat(chunk: ChatGenerationChunk) {
     return new ChatGenerationChunk({
       text: this.text + chunk.text,
       generationInfo: {

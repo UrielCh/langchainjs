@@ -1,10 +1,10 @@
 /* eslint-disable no-process-env */
 import * as uuid from "uuid";
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 
-import { LangChainTracer, Run } from "../tracer_langchain.js";
-import { Serialized } from "../../load/serializable.js";
-import { HumanMessage } from "../../messages/index.js";
+import { LangChainTracer, type Run } from "../tracer_langchain.ts";
+import type { Serialized } from "../../load/serializable.ts";
+import { HumanMessage } from "../../messages/index.ts";
 
 const serialized: Serialized = {
   lc: 1,
@@ -47,11 +47,11 @@ class FakeTracer extends LangChainTracer {
 
   updateOperations: { [id: string]: Run } = {};
 
-  async onRunCreate(run: Run): Promise<void> {
+  override async onRunCreate(run: Run): Promise<void> {
     this.createOperations[run.id] = run;
   }
 
-  async onRunUpdate(run: Run): Promise<void> {
+  override async onRunUpdate(run: Run): Promise<void> {
     this.updateOperations[run.id] = run;
   }
 }

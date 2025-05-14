@@ -2,30 +2,30 @@ import {
   AIMessage,
   type BaseMessage,
   getBufferString,
-} from "../messages/index.js";
-import type { BasePromptValueInterface } from "../prompt_values.js";
+} from "../messages/index.ts";
+import type { BasePromptValueInterface } from "../prompt_values.ts";
 import {
   type LLMResult,
   RUN_KEY,
   type Generation,
   GenerationChunk,
-} from "../outputs.js";
+} from "../outputs.ts";
 import {
   type BaseCallbackConfig,
   CallbackManager,
   type CallbackManagerForLLMRun,
   type Callbacks,
-} from "../callbacks/manager.js";
+} from "../callbacks/manager.ts";
 import {
   BaseLanguageModel,
   type BaseLanguageModelCallOptions,
   type BaseLanguageModelInput,
   type BaseLanguageModelParams,
-} from "./base.js";
-import type { RunnableConfig } from "../runnables/config.js";
-import type { BaseCache } from "../caches/base.js";
-import { concat } from "../utils/stream.js";
-import { callbackHandlerPrefersStreaming } from "../callbacks/base.js";
+} from "./base.ts";
+import type { RunnableConfig } from "../runnables/config.ts";
+import type { BaseCache } from "../caches/base.ts";
+import { concat } from "../utils/stream.ts";
+import { callbackHandlerPrefersStreaming } from "../callbacks/base.ts";
 
 export type SerializedLLM = {
   _model: string;
@@ -101,7 +101,7 @@ export abstract class BaseLLM<
     return [runnableConfig, callOptions as this["ParsedCallOptions"]];
   }
 
-  async *_streamIterator(
+  override async *_streamIterator(
     input: BaseLanguageModelInput,
     options?: CallOptions
   ): AsyncGenerator<string> {
@@ -590,20 +590,20 @@ export abstract class BaseLLM<
    * Get the identifying parameters of the LLM.
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  _identifyingParams(): Record<string, any> {
+  override _identifyingParams(): Record<string, any> {
     return {};
   }
 
   /**
    * Return the string type key uniquely identifying this class of LLM.
    */
-  abstract _llmType(): string;
+  abstract override _llmType(): string;
 
   /**
    * @deprecated
    * Return a json-like object representing this LLM.
    */
-  serialize(): SerializedLLM {
+  override serialize(): SerializedLLM {
     return {
       ...this._identifyingParams(),
       _type: this._llmType(),

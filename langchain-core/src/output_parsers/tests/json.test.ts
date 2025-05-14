@@ -1,9 +1,9 @@
-import { describe, test, expect } from "@jest/globals";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
-import { RunnableSequence } from "../../runnables/base.js";
-import { RunnablePassthrough } from "../../runnables/passthrough.js";
-import { FakeStreamingLLM } from "../../utils/testing/index.js";
-import { JsonOutputParser } from "../json.js";
+import "@/jest-shim";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
+import { RunnableSequence } from "../../runnables/base.ts";
+import { RunnablePassthrough } from "../../runnables/passthrough.ts";
+import { FakeStreamingLLM } from "../../utils/testing/index.ts";
+import { JsonOutputParser } from "../json.ts";
 
 async function acc(iter: AsyncGenerator<object>): Promise<object[]> {
   const acc = [];

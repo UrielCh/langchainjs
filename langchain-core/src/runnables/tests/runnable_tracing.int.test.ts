@@ -1,12 +1,12 @@
+import "@/jest-shim";
 import { Client } from "langsmith";
-import { test } from "@jest/globals";
-import { LangChainTracer } from "../../tracers/tracer_langchain.js";
+import { LangChainTracer } from "../../tracers/tracer_langchain.ts";
 import {
   BaseOutputParser,
-  FormatInstructionsOptions,
-} from "../../output_parsers/base.js";
-import { FakeChatModel } from "../../utils/testing/index.js";
-import { getEnvironmentVariable } from "../../utils/env.js";
+  type FormatInstructionsOptions,
+} from "../../output_parsers/base.ts";
+import { FakeChatModel } from "../../utils/testing/index.ts";
+import { getEnvironmentVariable } from "../../utils/env.ts";
 
 class FakeDateOutputParser extends BaseOutputParser<Date> {
   lc_namespace = ["langchain_core", "output_parsers", "testing"];
@@ -20,7 +20,7 @@ class FakeDateOutputParser extends BaseOutputParser<Date> {
   }
 }
 
-test("Should handle tracing with a date output", async () => {
+test.skip("Should handle tracing with a date output", async () => {
   const client = new Client({
     apiUrl: getEnvironmentVariable("LANGCHAIN_ENDPOINT"),
     apiKey: getEnvironmentVariable("LANGCHAIN_API_KEY"),
@@ -36,3 +36,5 @@ test("Should handle tracing with a date output", async () => {
   const result = await chain.invoke("test", { callbacks: [tracer] });
   console.log(result);
 });
+
+// TODO

@@ -1,13 +1,13 @@
 import { z } from "zod";
-import { ChatGeneration, ChatGenerationChunk } from "../../outputs.js";
-import { OutputParserException } from "../base.js";
-import { parsePartialJson } from "../json.js";
-import { InvalidToolCall, ToolCall } from "../../messages/tool.js";
+import { ChatGeneration, ChatGenerationChunk } from "../../outputs.ts";
+import { OutputParserException } from "../base.ts";
+import { parsePartialJson } from "../json.ts";
+import { InvalidToolCall, ToolCall } from "../../messages/tool.ts";
 import {
   BaseCumulativeTransformOutputParser,
   BaseCumulativeTransformOutputParserInput,
-} from "../transform.js";
-import { isAIMessage } from "../../messages/ai.js";
+} from "../transform.ts";
+import { isAIMessage } from "../../messages/ai.ts";
 
 export type ParsedToolCall = {
   id?: string;

@@ -1,6 +1,6 @@
-import { cosine } from "./ml-distance/similarities.js";
-import { innerProduct as innerProductDistance } from "./ml-distance/distances.js";
-import { euclidean } from "./ml-distance-euclidean/euclidean.js";
+import { cosine } from "./ml-distance/similarities.ts";
+import { innerProduct as innerProductDistance } from "./ml-distance/distances.ts";
+import { euclidean } from "./ml-distance-euclidean/euclidean.ts";
 
 type VectorFunction = (xVector: number[], yVector: number[]) => number;
 

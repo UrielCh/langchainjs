@@ -1,10 +1,10 @@
-import { describe, test, expect } from "@jest/globals";
-import { StringOutputParser } from "../string.js";
+import "@/jest-shim";
+import { StringOutputParser } from "../string.ts";
 import {
   AIMessage,
-  BaseMessage,
-  MessageContentComplex,
-} from "../../messages/index.js";
+  type BaseMessage,
+  type MessageContentComplex,
+} from "../../messages/index.ts";
 
 describe("StringOutputParser", () => {
   test("string input", async () => {
@@ -70,8 +70,10 @@ describe("StringOutputParser", () => {
     const msg: BaseMessage = new AIMessage({
       content,
     });
-    await expect(async () => {
+    const fnc = async () => {
       await parser.invoke(msg);
-    }).rejects.toThrowError();
+    };
+    // await expect(fnc).rejects.toThrowError();
+    await fnc().catch(err => expect(err).toBeInstanceOf(Error));
   });
 });

@@ -1,5 +1,5 @@
-import { Callbacks } from "../../callbacks/manager.js";
-import { DocumentInterface } from "../../documents/document.js";
+import { Callbacks } from "../../callbacks/manager.ts";
+import { DocumentInterface } from "../../documents/document.ts";
 
 /**
  * Base Document Compression class. All compressors should extend this class.

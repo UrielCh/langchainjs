@@ -1,23 +1,23 @@
-export * from "./src/core.js";
-export * from "./src/duplex.js";
+export * from "./src/core.ts";
+export * from "./src/duplex.ts";
 export {
   PatchError as JsonPatchError,
   _deepClone as deepClone,
   escapePathComponent,
   unescapePathComponent,
-} from "./src/helpers.js";
+} from "./src/helpers.ts";
 
 /**
  * Default export for backwards compat
  */
 
-import * as core from "./src/core.js";
+import * as core from "./src/core.ts";
 import {
   PatchError as JsonPatchError,
   _deepClone as deepClone,
   escapePathComponent,
   unescapePathComponent,
-} from "./src/helpers.js";
+} from "./src/helpers.ts";
 
 export default {
   ...core,

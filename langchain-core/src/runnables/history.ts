@@ -1,22 +1,22 @@
 import {
   BaseChatMessageHistory,
   BaseListChatMessageHistory,
-} from "../chat_history.js";
+} from "../chat_history.ts";
 import {
   AIMessage,
   BaseMessage,
   HumanMessage,
   isBaseMessage,
-} from "../messages/index.js";
-import { Run } from "../tracers/base.js";
+} from "../messages/index.ts";
+import { Run } from "../tracers/base.ts";
 import {
   Runnable,
   RunnableBinding,
   type RunnableBindingArgs,
   RunnableLambda,
-} from "./base.js";
-import { RunnableConfig } from "./config.js";
-import { RunnablePassthrough } from "./passthrough.js";
+} from "./base.ts";
+import { RunnableConfig } from "./config.ts";
+import { RunnablePassthrough } from "./passthrough.ts";
 
 type GetSessionHistoryCallable = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -283,7 +283,7 @@ export class RunnableWithMessageHistory<
     await history.addMessages([...inputMessages, ...outputMessages]);
   }
 
-  async _mergeConfig(...configs: Array<RunnableConfig | undefined>) {
+  override async _mergeConfig(...configs: Array<RunnableConfig | undefined>) {
     const config = await super._mergeConfig(...configs);
     // Extract sessionId
     if (!config.configurable || !config.configurable.sessionId) {

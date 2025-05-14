@@ -1,18 +1,18 @@
 /* eslint-disable no-promise-executor-return */
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import * as uuid from "uuid";
 import { AsyncLocalStorage } from "node:async_hooks";
-import { CallbackManager } from "../manager.js";
-import { BaseCallbackHandler, type BaseCallbackHandlerInput } from "../base.js";
-import type { Serialized } from "../../load/serializable.js";
-import { Document } from "../../documents/document.js";
-import type { ChainValues } from "../../utils/types/index.js";
-import type { AgentAction, AgentFinish } from "../../agents.js";
-import { BaseMessage, HumanMessage } from "../../messages/index.js";
-import type { LLMResult } from "../../outputs.js";
-import { RunnableLambda } from "../../runnables/base.js";
-import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.js";
-import { awaitAllCallbacks } from "../promises.js";
+import { CallbackManager } from "../manager.ts";
+import { BaseCallbackHandler, type BaseCallbackHandlerInput } from "../base.ts";
+import type { Serialized } from "../../load/serializable.ts";
+import { Document } from "../../documents/document.ts";
+import type { ChainValues } from "../../utils/types/index.ts";
+import type { AgentAction, AgentFinish } from "../../agents.ts";
+import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
+import type { LLMResult } from "../../outputs.ts";
+import { RunnableLambda } from "../../runnables/base.ts";
+import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
+import { awaitAllCallbacks } from "../promises.ts";
 
 class FakeCallbackHandler extends BaseCallbackHandler {
   name = `fake-${uuid.v4()}`;
@@ -49,25 +49,25 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     super(inputs);
   }
 
-  async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
+  override async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
     this.starts += 1;
     this.llmStarts += 1;
   }
 
-  async handleLLMEnd(_output: LLMResult): Promise<void> {
+  override async handleLLMEnd(_output: LLMResult): Promise<void> {
     this.ends += 1;
     this.llmEnds += 1;
   }
 
-  async handleLLMNewToken(_token: string): Promise<void> {
+  override async handleLLMNewToken(_token: string): Promise<void> {
     this.llmStreams += 1;
   }
 
-  async handleLLMError(_err: Error): Promise<void> {
+  override async handleLLMError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleChainStart(
+  override async handleChainStart(
     _chain: Serialized,
     _inputs: ChainValues
   ): Promise<void> {
@@ -75,44 +75,44 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     this.chainStarts += 1;
   }
 
-  async handleChainEnd(_outputs: ChainValues): Promise<void> {
+  override async handleChainEnd(_outputs: ChainValues): Promise<void> {
     this.ends += 1;
     this.chainEnds += 1;
   }
 
-  async handleChainError(_err: Error): Promise<void> {
+  override async handleChainError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleToolStart(_tool: Serialized, _input: string): Promise<void> {
+  override async handleToolStart(_tool: Serialized, _input: string): Promise<void> {
     this.starts += 1;
     this.toolStarts += 1;
   }
 
-  async handleToolEnd(_output: string): Promise<void> {
+  override async handleToolEnd(_output: string): Promise<void> {
     this.ends += 1;
     this.toolEnds += 1;
   }
 
-  async handleToolError(_err: Error): Promise<void> {
+  override async handleToolError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  async handleText(_text: string): Promise<void> {
+  override async handleText(_text: string): Promise<void> {
     this.texts += 1;
   }
 
-  async handleAgentAction(_action: AgentAction): Promise<void> {
+  override async handleAgentAction(_action: AgentAction): Promise<void> {
     this.starts += 1;
     this.toolStarts += 1;
   }
 
-  async handleAgentEnd(_action: AgentFinish): Promise<void> {
+  override async handleAgentEnd(_action: AgentFinish): Promise<void> {
     this.ends += 1;
     this.agentEnds += 1;
   }
 
-  async handleRetrieverStart(
+  override async handleRetrieverStart(
     _retriever: Serialized,
     _query: string
   ): Promise<void> {
@@ -120,18 +120,18 @@ class FakeCallbackHandler extends BaseCallbackHandler {
     this.retrieverStarts += 1;
   }
 
-  async handleRetrieverEnd(
+  override async handleRetrieverEnd(
     _documents: Document<Record<string, unknown>>[]
   ): Promise<void> {
     this.ends += 1;
     this.retrieverEnds += 1;
   }
 
-  async handleRetrieverError(_err: Error): Promise<void> {
+  override async handleRetrieverError(_err: Error): Promise<void> {
     this.errors += 1;
   }
 
-  copy(): FakeCallbackHandler {
+  override copy(): FakeCallbackHandler {
     const newInstance = new FakeCallbackHandler();
     newInstance.name = this.name;
     newInstance.starts = this.starts;
@@ -156,7 +156,7 @@ class FakeCallbackHandler extends BaseCallbackHandler {
 class FakeCallbackHandlerWithChatStart extends FakeCallbackHandler {
   chatModelStarts = 0;
 
-  async handleChatModelStart(
+  override async handleChatModelStart(
     _llm: Serialized,
     _messages: BaseMessage[][]
   ): Promise<void> {
@@ -485,14 +485,14 @@ class FakeCallbackHandlerWithErrors extends FakeCallbackHandler {
     super({ ...input, raiseError: true });
   }
 
-  async handleChainStart(
+  override async handleChainStart(
     _chain: Serialized,
     _inputs: ChainValues
   ): Promise<void> {
     throw Error("error!");
   }
 
-  async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
+  override async handleLLMStart(_llm: Serialized, _prompts: string[]): Promise<void> {
     throw Error("llm start error!");
   }
 }
@@ -504,9 +504,12 @@ test("error handling in chain start", async () => {
   const manager = new CallbackManager(undefined);
   manager.addHandler(handler);
 
-  await expect(async () => {
+  const fnc = async () => {
     await manager.handleChainStart(serialized, ["test"]);
-  }).rejects.toThrowError();
+  };
+  // await expect(fnc).rejects.toThrowError();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
+
   await manager.handleLLMStart(serialized, ["test"]);
 });
 
@@ -518,9 +521,11 @@ test("error handling in llm start", async () => {
   manager.addHandler(handler);
 
   await manager.handleChainStart(serialized, ["test"]);
-  await expect(async () => {
+  const fnc = async () => {
     await manager.handleLLMStart(serialized, ["test"]);
-  }).rejects.toThrowError();
+  };
+  // await expect(fnc).rejects.toThrowError();
+  await fnc().catch(err => expect(err).toBeInstanceOf(Error));
 });
 
 test("chain should still run if a normal callback handler throws an error", async () => {

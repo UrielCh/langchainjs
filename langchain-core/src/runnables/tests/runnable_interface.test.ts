@@ -1,10 +1,10 @@
 /* eslint-disable no-promise-executor-return */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { test, expect } from "@jest/globals";
-import { StringOutputParser } from "../../output_parsers/string.js";
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { RunnableSequence } from "../base.js";
+import "@/jest-shim";
+import { StringOutputParser } from "../../output_parsers/string.ts";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { RunnableSequence } from "../base.ts";
 
 type RunnableBatchOptionsV0 = {
   maxConcurrency?: number;
@@ -54,7 +54,7 @@ interface RunnableInterfaceV0<RunInput, RunOutput, CallOptions = any> {
 }
 
 class IterableReadableStreamV0<T> extends ReadableStream<T> {
-  public reader: ReadableStreamDefaultReader<T>;
+  public reader!: ReadableStreamDefaultReader<T>;
 
   ensureReader() {
     if (!this.reader) {

@@ -1,5 +1,5 @@
-import { StreamEvent } from "../tracers/event_stream.js";
-import type { RunnableInterface } from "./types.js";
+import { StreamEvent } from "../tracers/event_stream.ts";
+import type { RunnableInterface } from "./types.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function isRunnableInterface(thing: any): thing is RunnableInterface {

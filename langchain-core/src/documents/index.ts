@@ -1,2 +1,2 @@
-export * from "./document.js";
-export * from "./transformers.js";
+export * from "./document.ts";
+export * from "./transformers.ts";

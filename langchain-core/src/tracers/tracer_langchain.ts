@@ -8,10 +8,10 @@ import {
   RunUpdate as BaseRunUpdate,
   KVMap,
 } from "langsmith/schemas";
-import { getEnvironmentVariable, getRuntimeEnvironment } from "../utils/env.js";
-import { BaseTracer } from "./base.js";
-import { BaseCallbackHandlerInput } from "../callbacks/base.js";
-import { getDefaultLangChainClientSingleton } from "../singletons/tracer.js";
+import { getEnvironmentVariable, getRuntimeEnvironment } from "../utils/env.ts";
+import { BaseTracer } from "./base.ts";
+import { BaseCallbackHandlerInput } from "../callbacks/base.ts";
+import { getDefaultLangChainClientSingleton } from "../singletons/tracer.ts";
 
 export interface Run extends BaseRun {
   id: string;
@@ -86,7 +86,7 @@ export class LangChainTracer
 
   protected async persistRun(_run: Run): Promise<void> {}
 
-  async onRunCreate(run: Run): Promise<void> {
+  override async onRunCreate(run: Run): Promise<void> {
     const persistedRun: RunCreate2 = await this._convertToCreate(
       run,
       this.exampleId
@@ -94,7 +94,7 @@ export class LangChainTracer
     await this.client.createRun(persistedRun);
   }
 
-  async onRunUpdate(run: Run): Promise<void> {
+  override async onRunUpdate(run: Run): Promise<void> {
     const runUpdate: RunUpdate = {
       end_time: run.end_time,
       error: run.error,

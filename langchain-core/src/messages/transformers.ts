@@ -1,33 +1,33 @@
-import { BaseDocumentTransformer } from "../documents/transformers.js";
-import { BaseLanguageModel } from "../language_models/base.js";
-import { Runnable, RunnableLambda } from "../runnables/base.js";
-import { AIMessage, AIMessageChunk, AIMessageChunkFields } from "./ai.js";
+import { BaseDocumentTransformer } from "../documents/transformers.ts";
+import { BaseLanguageModel } from "../language_models/base.ts";
+import { Runnable, RunnableLambda } from "../runnables/base.ts";
+import { AIMessage, AIMessageChunk, AIMessageChunkFields } from "./ai.ts";
 import {
   BaseMessage,
   MessageType,
   BaseMessageChunk,
   BaseMessageFields,
   isBaseMessageChunk,
-} from "./base.js";
+} from "./base.ts";
 import {
   ChatMessage,
   ChatMessageChunk,
   ChatMessageFieldsWithRole,
-} from "./chat.js";
+} from "./chat.ts";
 import {
   FunctionMessage,
   FunctionMessageChunk,
   FunctionMessageFieldsWithName,
-} from "./function.js";
-import { HumanMessage, HumanMessageChunk } from "./human.js";
-import { RemoveMessage } from "./modifier.js";
-import { SystemMessage, SystemMessageChunk } from "./system.js";
+} from "./function.ts";
+import { HumanMessage, HumanMessageChunk } from "./human.ts";
+import { RemoveMessage } from "./modifier.ts";
+import { SystemMessage, SystemMessageChunk } from "./system.ts";
 import {
   ToolMessage,
   ToolMessageChunk,
   ToolMessageFieldsWithToolCallId,
-} from "./tool.js";
-import { convertToChunk } from "./utils.js";
+} from "./tool.ts";
+import { convertToChunk } from "./utils.ts";
 
 export type MessageUnion =
   | typeof HumanMessage

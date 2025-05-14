@@ -1,7 +1,7 @@
 // Default generic "any" values are for backwards compatibility.
 // Replace with "string" when we are comfortable with a breaking change.
 
-import type { BaseCallbackConfig } from "../callbacks/manager.js";
+import type { BaseCallbackConfig } from "../callbacks/manager.ts";
 import {
   AIMessage,
   HumanMessage,
@@ -13,34 +13,34 @@ import {
   isBaseMessage,
   MessageContent,
   MessageContentComplex,
-} from "../messages/index.js";
+} from "../messages/index.ts";
 import {
   type ChatPromptValueInterface,
   ChatPromptValue,
-} from "../prompt_values.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import { Runnable } from "../runnables/base.js";
-import { BaseStringPromptTemplate } from "./string.js";
+} from "../prompt_values.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import { Runnable } from "../runnables/base.ts";
+import { BaseStringPromptTemplate } from "./string.ts";
 import {
   BasePromptTemplate,
   type BasePromptTemplateInput,
   type TypedPromptInputValues,
-} from "./base.js";
+} from "./base.ts";
 import {
   PromptTemplate,
   type ParamsFromFString,
   PromptTemplateInput,
   ExtractedFStringParams,
-} from "./prompt.js";
-import { ImagePromptTemplate } from "./image.js";
+} from "./prompt.ts";
+import { ImagePromptTemplate } from "./image.ts";
 import {
   ParsedTemplateNode,
   TemplateFormat,
   parseFString,
   parseMustache,
-} from "./template.js";
-import { addLangChainErrorFields } from "../errors/index.js";
-import { DictPromptTemplate } from "./dict.js";
+} from "./template.ts";
+import { addLangChainErrorFields } from "../errors/index.ts";
+import { DictPromptTemplate } from "./dict.ts";
 
 /**
  * Abstract class that serves as a base for creating message prompt
@@ -298,7 +298,7 @@ export class ChatMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends BaseMessageStringPromptTemplate<RunInput> {
-  static lc_name() {
+  static override lc_name() {
     return "ChatMessagePromptTemplate";
   }
 
@@ -404,9 +404,9 @@ class _StringImageMessagePromptTemplate<
   RunInput extends InputValues = any,
   RunOutput extends BaseMessage[] = BaseMessage[]
 > extends BaseMessagePromptTemplate<RunInput, RunOutput> {
-  lc_namespace = ["langchain_core", "prompts", "chat"];
+  override lc_namespace = ["langchain_core", "prompts", "chat"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   inputVariables: Array<Extract<keyof RunInput, string>> = [];
 
@@ -706,11 +706,11 @@ export class HumanMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof HumanMessage {
+  static override _messageClass(): typeof HumanMessage {
     return HumanMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "HumanMessagePromptTemplate";
   }
 }
@@ -723,11 +723,11 @@ export class AIMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof AIMessage {
+  static override _messageClass(): typeof AIMessage {
     return AIMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "AIMessagePromptTemplate";
   }
 }
@@ -750,11 +750,11 @@ export class SystemMessagePromptTemplate<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   RunInput extends InputValues = any
 > extends _StringImageMessagePromptTemplate<RunInput> {
-  static _messageClass(): typeof SystemMessage {
+  static override _messageClass(): typeof SystemMessage {
     return SystemMessage;
   }
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessagePromptTemplate";
   }
 }
@@ -928,7 +928,7 @@ export class ChatPromptTemplate<
   extends BaseChatPromptTemplate<RunInput, PartialVariableName>
   implements ChatPromptTemplateInput<RunInput, PartialVariableName>
 {
-  static lc_name() {
+  static override lc_name() {
     return "ChatPromptTemplate";
   }
 
@@ -938,7 +938,7 @@ export class ChatPromptTemplate<
     };
   }
 
-  promptMessages: Array<BaseMessagePromptTemplate | BaseMessage>;
+  promptMessages!: Array<BaseMessagePromptTemplate | BaseMessage>;
 
   validateTemplate = true;
 

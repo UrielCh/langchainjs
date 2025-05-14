@@ -1,26 +1,26 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
   AIMessage,
   AIMessageChunk,
-  BaseMessage,
+  type BaseMessage,
   HumanMessage,
-} from "../../messages/index.js";
-import { RunnableLambda } from "../base.js";
-import { RunnableConfig } from "../config.js";
-import { RunnableWithMessageHistory } from "../history.js";
-import {
+} from "../../messages/index.ts";
+import { RunnableLambda } from "../base.ts";
+import type { RunnableConfig } from "../config.ts";
+import { RunnableWithMessageHistory } from "../history.ts";
+import type {
   BaseChatMessageHistory,
   BaseListChatMessageHistory,
-} from "../../chat_history.js";
+} from "../../chat_history.ts";
 import {
   FakeChatMessageHistory,
   FakeLLM,
   FakeListChatMessageHistory,
   FakeListChatModel,
   FakeStreamingLLM,
-} from "../../utils/testing/index.js";
-import { ChatPromptTemplate, MessagesPlaceholder } from "../../prompts/chat.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
+} from "../../utils/testing/index.ts";
+import { ChatPromptTemplate, MessagesPlaceholder } from "../../prompts/chat.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 
 const anyString = expect.any(String) as unknown as string;
 

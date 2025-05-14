@@ -1,7 +1,7 @@
 import mustache from "mustache";
-import { MessageContent } from "../messages/index.js";
-import type { InputValues } from "../utils/types/index.js";
-import { addLangChainErrorFields } from "../errors/index.js";
+import { MessageContent } from "../messages/index.ts";
+import type { InputValues } from "../utils/types/index.ts";
+import { addLangChainErrorFields } from "../errors/index.ts";
 
 function configureMustache() {
   // Use unescaped HTML

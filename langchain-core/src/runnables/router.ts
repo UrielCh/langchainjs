@@ -1,6 +1,6 @@
-import { Runnable, type RunnableBatchOptions } from "./base.js";
-import { IterableReadableStream } from "../utils/stream.js";
-import { ensureConfig, type RunnableConfig } from "./config.js";
+import { Runnable, type RunnableBatchOptions } from "./base.ts";
+import { IterableReadableStream } from "../utils/stream.ts";
+import { ensureConfig, type RunnableConfig } from "./config.ts";
 
 export type RouterInput = {
   key: string;
@@ -40,13 +40,13 @@ export class RouterRunnable<
   RunnableInput,
   RunOutput
 > extends Runnable<RunInput, RunOutput> {
-  static lc_name() {
+  static override lc_name() {
     return "RouterRunnable";
   }
 
   lc_namespace = ["langchain_core", "runnables"];
 
-  lc_serializable = true;
+  override lc_serializable = true;
 
   runnables: Record<string, Runnable<RunnableInput, RunOutput>>;
 
@@ -69,25 +69,25 @@ export class RouterRunnable<
     return runnable.invoke(actualInput, ensureConfig(options));
   }
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions?: false }
   ): Promise<RunOutput[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions & { returnExceptions: true }
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
   ): Promise<(RunOutput | Error)[]>;
 
-  async batch(
+  override async batch(
     inputs: RunInput[],
     options?: Partial<RunnableConfig> | Partial<RunnableConfig>[],
     batchOptions?: RunnableBatchOptions
@@ -117,7 +117,7 @@ export class RouterRunnable<
     return batchResults.flat();
   }
 
-  async stream(
+  override async stream(
     input: RunInput,
     options?: Partial<RunnableConfig>
   ): Promise<IterableReadableStream<RunOutput>> {

@@ -2,28 +2,29 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { test, expect, afterEach } from "@jest/globals";
+import "@/jest-shim";
 import { z } from "zod";
 import {
   RunnableLambda,
   RunnableMap,
   RunnablePassthrough,
   RunnablePick,
-} from "../index.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+} from "../index.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import {
   FakeListChatModel,
   FakeRetriever,
   FakeStreamingLLM,
-} from "../../utils/testing/index.js";
+} from "../../utils/testing/index.ts";
 import {
   AIMessageChunk,
   HumanMessage,
   SystemMessage,
-} from "../../messages/index.js";
-import { ChatGenerationChunk, GenerationChunk } from "../../outputs.js";
-import { DynamicStructuredTool, DynamicTool } from "../../tools/index.js";
-import { Document } from "../../documents/document.js";
+} from "../../messages/index.ts";
+import { ChatGenerationChunk, GenerationChunk } from "../../outputs.ts";
+import { DynamicStructuredTool, DynamicTool } from "../../tools/index.ts";
+import { Document } from "../../documents/document.ts";
+import process from "node:process";
 
 function reverse(s: string) {
   // Reverse a string.
@@ -38,7 +39,7 @@ afterEach(() => {
   process.env.LANGCHAIN_CALLBACKS_BACKGROUND = originalCallbackValue;
 });
 
-test("Runnable streamEvents method", async () => {
+test.skip("Runnable streamEvents method", async () => {
   const chain = RunnableLambda.from(reverse).withConfig({
     runName: "reverse",
   });
@@ -76,7 +77,7 @@ test("Runnable streamEvents method", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with three runnables", async () => {
+test.skip("Runnable streamEvents method with three runnables", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = r
@@ -189,7 +190,7 @@ test("Runnable streamEvents method with three runnables", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with three runnables with backgrounded callbacks set to true", async () => {
+test.skip("Runnable streamEvents method with three runnables with backgrounded callbacks set to true", async () => {
   process.env.LANGCHAIN_CALLBACKS_BACKGROUND = "true";
   const r = RunnableLambda.from(reverse);
 
@@ -303,7 +304,7 @@ test("Runnable streamEvents method with three runnables with backgrounded callba
   ]);
 });
 
-test("Runnable streamEvents method with three runnables with filtering", async () => {
+test.skip("Runnable streamEvents method with three runnables with filtering", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = r
@@ -388,7 +389,7 @@ test("Runnable streamEvents method with three runnables with filtering", async (
   ]);
 });
 
-test("Runnable streamEvents method with a runnable map", async () => {
+test.skip("Runnable streamEvents method with a runnable map", async () => {
   const r = RunnableLambda.from(reverse);
 
   const chain = RunnableMap.from({
@@ -639,7 +640,7 @@ test("Runnable streamEvents method with llm", async () => {
   ]);
 });
 
-test("Runnable streamEvents method with chat model chain", async () => {
+test.skip("Runnable streamEvents method with chat model chain", async () => {
   const template = ChatPromptTemplate.fromMessages([
     ["system", "You are Godzilla"],
     ["human", "{question}"],

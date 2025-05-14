@@ -1,5 +1,5 @@
-import { Serializable } from "./load/serializable.js";
-import { type BaseMessage, HumanMessage, AIMessage } from "./messages/index.js";
+import { Serializable } from "./load/serializable.ts";
+import { type BaseMessage, HumanMessage, AIMessage } from "./messages/index.ts";
 
 // TODO: Combine into one class for 0.2
 
@@ -132,7 +132,7 @@ export class InMemoryChatMessageHistory extends BaseListChatMessageHistory {
    * Method to clear all the messages from the ChatMessageHistory instance.
    * @returns A promise that resolves when all messages have been cleared.
    */
-  async clear() {
+  override async clear() {
     this.messages = [];
   }
 }

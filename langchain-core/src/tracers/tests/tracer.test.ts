@@ -1,10 +1,10 @@
-import { test, expect, jest } from "@jest/globals";
+import "@/jest-shim";
 import * as uuid from "uuid";
-import { Serialized } from "../../load/serializable.js";
-import { Document } from "../../documents/document.js";
-import { Run } from "../base.js";
-import { HumanMessage } from "../../messages/index.js";
-import { FakeTracer } from "../../utils/testing/index.js";
+import type { Serialized } from "../../load/serializable.ts";
+import { Document } from "../../documents/document.ts";
+import type { Run } from "../base.ts";
+import { HumanMessage } from "../../messages/index.ts";
+import { FakeTracer } from "../../utils/testing/index.ts";
 
 const _DATE = 1620000000000;
 
@@ -130,7 +130,8 @@ test("Test Chat Model Run", async () => {
 test("Test LLM Run no start", async () => {
   const tracer = new FakeTracer();
   const runId = uuid.v4();
-  await expect(tracer.handleLLMEnd({ generations: [] }, runId)).rejects.toThrow(
+  const fnc = () => tracer.handleLLMEnd({ generations: [] }, runId);
+  await expect(fnc).rejects.toThrow(
     "No LLM run to end"
   );
 });

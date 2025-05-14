@@ -1,11 +1,11 @@
-import { test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { v4 } from "uuid";
 import { AsyncLocalStorage } from "node:async_hooks";
-import { AsyncLocalStorageProviderSingleton } from "../index.js";
-import { RunnableLambda } from "../../runnables/base.js";
-import { FakeListChatModel } from "../../utils/testing/index.js";
-import { getCallbackManagerForConfig } from "../../runnables/config.js";
-import { BaseCallbackHandler } from "../../callbacks/base.js";
+import { AsyncLocalStorageProviderSingleton } from "../index.ts";
+import { RunnableLambda } from "../../runnables/base.ts";
+import { FakeListChatModel } from "../../utils/testing/index.ts";
+import { getCallbackManagerForConfig } from "../../runnables/config.ts";
+import { BaseCallbackHandler } from "../../callbacks/base.ts";
 
 class FakeCallbackHandler extends BaseCallbackHandler {
   name = `fake-${v4()}`;

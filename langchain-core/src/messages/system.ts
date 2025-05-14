@@ -6,8 +6,8 @@ import {
   type MessageType,
   type BaseMessageFields,
   type MessageContentComplex,
-} from "./base.js";
-import type { DataContentBlock } from "./content_blocks.js";
+} from "./base.ts";
+import type { DataContentBlock } from "./content_blocks.ts";
 
 export type SystemMessageFields = BaseMessageFields & {
   content: string | (MessageContentComplex | DataContentBlock)[];
@@ -19,7 +19,7 @@ export type SystemMessageFields = BaseMessageFields & {
 export class SystemMessage extends BaseMessage {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessage";
   }
 
@@ -43,7 +43,7 @@ export class SystemMessage extends BaseMessage {
 export class SystemMessageChunk extends BaseMessageChunk {
   declare content: string | (MessageContentComplex | DataContentBlock)[];
 
-  static lc_name() {
+  static override lc_name() {
     return "SystemMessageChunk";
   }
 

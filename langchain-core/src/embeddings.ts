@@ -1,4 +1,4 @@
-import { AsyncCaller, AsyncCallerParams } from "./utils/async_caller.js";
+import { AsyncCaller, AsyncCallerParams } from "./utils/async_caller.ts";
 
 /**
  * The parameters required to initialize an instance of the Embeddings

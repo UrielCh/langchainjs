@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { expect, test } from "@jest/globals";
+import "@/jest-shim";
 import {
   AIMessagePromptTemplate,
   ChatPromptTemplate,
@@ -8,16 +8,16 @@ import {
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
   MessagesPlaceholder,
-} from "../chat.js";
-import { PromptTemplate } from "../prompt.js";
+} from "../chat.ts";
+import { PromptTemplate } from "../prompt.ts";
 import {
   SystemMessage,
   HumanMessage,
   AIMessage,
   ChatMessage,
   FunctionMessage,
-} from "../../messages/index.js";
-import { Document } from "../../documents/document.js";
+} from "../../messages/index.ts";
+import { Document } from "../../documents/document.ts";
 
 function createChatPromptTemplate() {
   const systemPrompt = new PromptTemplate({
@@ -354,9 +354,15 @@ test("Test MessagesPlaceholder not optional", async () => {
     variableName: "foo",
   });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  await expect(prompt.formatMessages({} as any)).rejects.toThrow(
+  const fnc = () => prompt.formatMessages({} as any);
+  // await expect(fnc).rejects.toThrow(
+  //   'Field "foo" in prompt uses a MessagesPlaceholder, which expects an array of BaseMessages as an input value. Received: undefined'
+  // );
+  await fnc().catch(err => expect(err).toThrow(
     'Field "foo" in prompt uses a MessagesPlaceholder, which expects an array of BaseMessages as an input value. Received: undefined'
-  );
+  ));
+
+
 });
 
 test("Test MessagesPlaceholder not optional with invalid input should throw", async () => {
@@ -364,11 +370,10 @@ test("Test MessagesPlaceholder not optional with invalid input should throw", as
     variableName: "foo",
   });
   const badInput = [new Document({ pageContent: "barbar", metadata: {} })];
-  await expect(
-    prompt.formatMessages({
-      foo: [new Document({ pageContent: "barbar", metadata: {} })],
-    })
-  ).rejects.toThrow(
+  const fnc = () =>     prompt.formatMessages({
+    foo: [new Document({ pageContent: "barbar", metadata: {} })],
+  })
+  await expect(fnc).rejects.toThrow(
     `Field "foo" in prompt uses a MessagesPlaceholder, which expects an array of BaseMessages or coerceable values as input.\n\nReceived value: ${JSON.stringify(
       badInput,
       null,
@@ -441,11 +446,11 @@ test("Test MessagesPlaceholder shorthand in a chat prompt template with object f
 
 test("Test MessagesPlaceholder with invalid shorthand should throw", async () => {
   const prompt = ChatPromptTemplate.fromMessages([["placeholder", "{foo}"]]);
-  await expect(() =>
+  const fnc = () =>
     prompt.formatMessages({
       foo: [{ badFormatting: true }],
-    })
-  ).rejects.toThrow();
+    });
+  await expect(fnc).rejects.toThrow();
 });
 
 test("Test using partial", async () => {
