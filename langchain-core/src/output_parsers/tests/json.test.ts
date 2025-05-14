@@ -1,4 +1,4 @@
-import { describe, test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import { RunnableSequence } from "../../runnables/base.ts";
 import { RunnablePassthrough } from "../../runnables/passthrough.ts";

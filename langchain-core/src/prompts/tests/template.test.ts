@@ -1,4 +1,4 @@
-import { expect, test, describe } from "@jest/globals";
+import "@/jest-shim";
 import { interpolateFString } from "../template.ts";
 
 describe.each([

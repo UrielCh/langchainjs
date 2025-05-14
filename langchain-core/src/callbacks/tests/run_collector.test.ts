@@ -1,6 +1,8 @@
 import "@/jest-shim";
 import { v4 as uuidv4, validate } from "uuid";
-import type { Run } from "langsmith/schemas";
+// import * as langsmith from "jsr:@u4/langsmith";
+// import type { Run } from "jsr:@u4/langsmith/schemas";
+import type { Run } from "langsmith";
 import {
   ChatPromptTemplate,
   HumanMessagePromptTemplate,

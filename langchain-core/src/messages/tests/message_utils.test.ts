@@ -1,4 +1,4 @@
-import { it, describe, test, expect } from "@jest/globals";
+import "@/jest-shim";
 import { v4 } from "uuid";
 import {
   filterMessages,
@@ -10,7 +10,7 @@ import { ChatMessage } from "../chat.ts";
 import { HumanMessage } from "../human.ts";
 import { SystemMessage } from "../system.ts";
 import { ToolMessage } from "../tool.ts";
-import { BaseMessage } from "../base.ts";
+import type { BaseMessage } from "../base.ts";
 import {
   getBufferString,
   mapChatMessagesToStoredMessages,

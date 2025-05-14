@@ -1,4 +1,4 @@
-import { describe, it, expect } from "@jest/globals";
+import "@/jest-shim";
 import { DictPromptTemplate } from "../dict.ts";
 import { load } from "../../load/index.ts";
 

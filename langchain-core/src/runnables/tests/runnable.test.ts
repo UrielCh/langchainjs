@@ -5,7 +5,7 @@
 import "@/jest-shim";
 import type { Run } from "langsmith";
 import { v4 as uuidv4 } from "uuid";
-import { jest, test } from "@jest/globals";
+import "@/jest-shim";
 import { createChatMessageChunkEncoderStream } from "../../language_models/chat_models.ts";
 import { type BaseMessage, HumanMessage } from "../../messages/index.ts";
 import { OutputParserException } from "../../output_parsers/base.ts";

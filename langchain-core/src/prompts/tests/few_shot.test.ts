@@ -1,4 +1,4 @@
-import { expect, describe, test } from "@jest/globals";
+import "@/jest-shim";
 import {
   FewShotChatMessagePromptTemplate,
   FewShotPromptTemplate,

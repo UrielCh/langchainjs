@@ -1,15 +1,15 @@
-import { test, expect, describe } from "@jest/globals";
+import "@/jest-shim";
 import { z } from "zod";
 
 import {
   DynamicStructuredTool,
-  StructuredToolParams,
+  type StructuredToolParams,
   ToolInputParsingException,
   isStructuredToolParams,
   tool,
 } from "../index.ts";
 import { ToolMessage } from "../../messages/tool.ts";
-import { RunnableConfig } from "../../runnables/types.ts";
+import type { RunnableConfig } from "../../runnables/types.ts";
 
 test("Tool should error if responseFormat is content_and_artifact but the function doesn't return a tuple", async () => {
   const weatherSchema = z.object({

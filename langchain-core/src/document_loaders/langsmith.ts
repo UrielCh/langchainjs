@@ -1,7 +1,8 @@
-import { KVMap } from "langsmith/schemas";
+// import { KVMap } from "langsmith/schemas";
+import type { KVMap } from "jsr:@u4/langsmith/schemas";
 import { Client } from "langsmith";
-import { Document, DocumentInterface } from "../documents/document.ts";
-import { AsyncCallerParams } from "../utils/async_caller.ts";
+import type { Document, DocumentInterface } from "../documents/document.ts";
+import type { AsyncCallerParams } from "../utils/async_caller.ts";
 import { BaseDocumentLoader } from "./base.ts";
 
 // TODO: Replace with import from `langsmith` once exposed.

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { expect, test } from "@jest/globals";
+import "@/jest-shim";
 
 import { OutputParserException } from "../base.ts";
 import { StructuredOutputParser } from "../structured.ts";

@@ -1,4 +1,4 @@
-import { test, describe, it, expect } from "@jest/globals";
+import "@/jest-shim";
 import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import {
   HumanMessage,

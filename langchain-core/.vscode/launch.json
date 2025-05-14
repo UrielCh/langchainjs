@@ -10,6 +10,7 @@
         "runtimeArgs": [
           "test",
           "-A",
+          "--unsafely-ignore-certificate-errors=chat-langchain-backend.langchain.dev",
           "--inspect-brk",
           "${file}"
         ],
@@ -18,7 +19,8 @@
         "console": "integratedTerminal",
         "skipFiles": [
           "<node_internals>/**",
-          "**/@std/**"
+          "**/@std/**",
+          "**/deno_node/**"
         ]
       }
     ]

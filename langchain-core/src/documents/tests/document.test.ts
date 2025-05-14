@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import "@/jest-shim";
 import { Document } from "../document.ts";
 
 describe("Document", () => {

@@ -1,4 +1,4 @@
-import { describe, test, expect, jest } from "@jest/globals";
+import "@/jest-shim";
 import { HumanMessage } from "../../../messages/index.ts";
 import { StringOutputParser } from "../../../output_parsers/string.ts";
 import { FakeListChatModel } from "../index.ts";

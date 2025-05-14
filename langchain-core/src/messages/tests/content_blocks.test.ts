@@ -1,4 +1,4 @@
-import { describe, it, expect } from "@jest/globals";
+import "@/jest-shim";
 import {
   isDataContentBlock,
   convertToOpenAIImageBlock,
@@ -11,7 +11,7 @@ import {
   type StandardAudioBlock,
   type StandardFileBlock,
   type IDContentBlock,
-  PlainTextContentBlock,
+  type PlainTextContentBlock,
   convertToProviderContentBlock,
 } from "../content_blocks.ts";
 

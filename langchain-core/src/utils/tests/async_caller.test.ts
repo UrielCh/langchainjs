@@ -1,4 +1,4 @@
-import { test, expect, jest } from "@jest/globals";
+import "@/jest-shim";
 import { AsyncCaller } from "../async_caller.ts";
 
 test("AsyncCaller passes on arguments and returns return value", async () => {

@@ -1,5 +1,7 @@
 // jest-shim.ts
 // Map Jest globals to Deno test equivalents
+// import {  describe, expect, test } from "@jest/globals";
+
 /// <reference lib="deno.ns" />
 
 import { expect as stdExpect } from "@std/expect";
@@ -12,6 +14,7 @@ import {
   test as stdTest,
   describe as stdDescribe,
 } from "@std/testing/bdd";
+// import { test, expect } from "@jest/globals";
 // import { test, expect, afterEach } from "@jest/globals";
 import {
   assertSpyCall as stdAssertSpyCall,
