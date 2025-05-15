@@ -8,7 +8,7 @@ import {
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import { concat } from "@langchain/core/utils/stream";
-import { ChatGroq } from "../chat_models.js";
+import { ChatGroq } from "../chat_models.ts";
 
 test("invoke", async () => {
   const chat = new ChatGroq({

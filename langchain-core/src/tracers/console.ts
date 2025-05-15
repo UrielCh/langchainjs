@@ -1,6 +1,6 @@
 import type { CSPair } from "ansi-styles";
 import styles from "ansi-styles";
-import { BaseTracer, type AgentRun, type Run } from "./base.js";
+import { BaseTracer, type AgentRun, type Run } from "./base.ts";
 
 function wrap(style: CSPair, text: string) {
   return `${style.open}${text}${style.close}`;

@@ -10,8 +10,8 @@ import { concat } from "@langchain/core/utils/stream";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { ChatOpenAI } from "@langchain/openai";
-import { BedrockChat as BedrockChatWeb } from "../bedrock/web.js";
-import { TavilySearchResults } from "../../tools/tavily_search.js";
+import { BedrockChat as BedrockChatWeb } from "../bedrock/web.ts";
+import { TavilySearchResults } from "../../tools/tavily_search.ts";
 
 void testChatModel(
   "Test Bedrock chat model Generating search queries: Command-r",

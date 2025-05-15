@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import { Cluster } from "couchbase";
-import { CouchbaseDocumentLoader } from "../web/couchbase.js";
+import { CouchbaseDocumentLoader } from "../web/couchbase.ts";
 
 test("Test Couchbase Cluster connection ", async () => {
   const connectionString = "<enter-valid-couchbase-connection-string>";

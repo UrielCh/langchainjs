@@ -1,5 +1,5 @@
 import { describe, test, expect } from "@jest/globals";
-import { PremEmbeddings } from "../premai.js";
+import { PremEmbeddings } from "../premai.ts";
 
 describe("EmbeddingsPrem", () => {
   test.skip("Test embedQuery", async () => {

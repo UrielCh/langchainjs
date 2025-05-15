@@ -35,8 +35,8 @@ import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
-import { ChatGoogle, ChatGoogleInput } from "../chat_models.js";
-import { BlobStoreAIStudioFile } from "../media.js";
+import { ChatGoogle, ChatGoogleInput } from "../chat_models.ts";
+import { BlobStoreAIStudioFile } from "../media.ts";
 import MockedFunction = jest.MockedFunction;
 
 class WeatherTool extends StructuredTool {

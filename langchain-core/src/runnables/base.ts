@@ -10,31 +10,31 @@ import type {
   RunnableInterface,
   RunnableBatchOptions,
   RunnableConfig,
-} from "./types.js";
-import { CallbackManagerForChainRun } from "../callbacks/manager.js";
+} from "./types.ts";
+import { CallbackManagerForChainRun } from "../callbacks/manager.ts";
 import {
   LogStreamCallbackHandler,
   LogStreamCallbackHandlerInput,
   RunLog,
   RunLogPatch,
   isLogStreamHandler,
-} from "../tracers/log_stream.js";
+} from "../tracers/log_stream.ts";
 import {
   EventStreamCallbackHandler,
   EventStreamCallbackHandlerInput,
   StreamEvent,
   StreamEventData,
   isStreamEventsHandler,
-} from "../tracers/event_stream.js";
-import { Serializable } from "../load/serializable.js";
+} from "../tracers/event_stream.ts";
+import { Serializable } from "../load/serializable.ts";
 import {
   IterableReadableStream,
   concat,
   atee,
   pipeGeneratorWithSetup,
   AsyncGeneratorWithSetup,
-} from "../utils/stream.js";
-import { raceWithSignal } from "../utils/signal.js";
+} from "../utils/stream.ts";
+import { raceWithSignal } from "../utils/signal.ts";
 import {
   DEFAULT_RECURSION_LIMIT,
   ensureConfig,
@@ -42,23 +42,23 @@ import {
   mergeConfigs,
   patchConfig,
   pickRunnableConfigKeys,
-} from "./config.js";
-import { AsyncCaller } from "../utils/async_caller.js";
-import { Run } from "../tracers/base.js";
-import { RootListenersTracer } from "../tracers/root_listener.js";
-import { _RootEventFilter, isRunnableInterface } from "./utils.js";
-import { AsyncLocalStorageProviderSingleton } from "../singletons/index.js";
-import { Graph } from "./graph.js";
-import { convertToHttpEventStream } from "./wrappers.js";
+} from "./config.ts";
+import { AsyncCaller } from "../utils/async_caller.ts";
+import { Run } from "../tracers/base.ts";
+import { RootListenersTracer } from "../tracers/root_listener.ts";
+import { _RootEventFilter, isRunnableInterface } from "./utils.ts";
+import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
+import { Graph } from "./graph.ts";
+import { convertToHttpEventStream } from "./wrappers.ts";
 import {
   consumeAsyncIterableInContext,
   consumeIteratorInContext,
   isAsyncIterable,
   isIterableIterator,
   isIterator,
-} from "./iter.js";
-import { _isToolCall, ToolInputParsingException } from "../tools/utils.js";
-import { ToolCall } from "../messages/tool.js";
+} from "./iter.ts";
+import { _isToolCall, ToolInputParsingException } from "../tools/utils.ts";
+import { ToolCall } from "../messages/tool.ts";
 
 export { type RunnableInterface, RunnableBatchOptions };
 

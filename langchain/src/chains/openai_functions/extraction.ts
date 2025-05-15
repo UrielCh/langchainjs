@@ -6,8 +6,8 @@ import { PromptTemplate } from "@langchain/core/prompts";
 import {
   FunctionParameters,
   JsonKeyOutputFunctionsParser,
-} from "../../output_parsers/openai_functions.js";
-import { LLMChain } from "../llm_chain.js";
+} from "../../output_parsers/openai_functions.ts";
+import { LLMChain } from "../llm_chain.ts";
 
 /**
  * Function that returns an array of extraction functions. These functions

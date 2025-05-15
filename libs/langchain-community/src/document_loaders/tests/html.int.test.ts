@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { HTMLWebBaseLoader } from "../web/html.js";
+import { HTMLWebBaseLoader } from "../web/html.ts";
 
 test("Test HTML web scraper loader", async () => {
   const loader = new HTMLWebBaseLoader(

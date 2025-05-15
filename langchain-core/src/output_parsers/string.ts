@@ -1,9 +1,9 @@
-import { BaseTransformOutputParser } from "./transform.js";
+import { BaseTransformOutputParser } from "./transform.ts";
 import {
   MessageContentComplex,
   MessageContentImageUrl,
   MessageContentText,
-} from "../messages/index.js";
+} from "../messages/index.ts";
 
 /**
  * OutputParser that parses LLMResult into the top likely string.

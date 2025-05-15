@@ -6,7 +6,7 @@ import { faker } from "@faker-js/faker";
 import { Document } from "@langchain/core/documents";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
 import { v4 } from "uuid";
-import { QdrantVectorStore } from "../vectorstores.js";
+import { QdrantVectorStore } from "../vectorstores.ts";
 
 describe("QdrantVectorStore testcase", () => {
   test("base usage", async () => {

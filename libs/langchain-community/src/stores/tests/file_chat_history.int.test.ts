@@ -7,7 +7,7 @@ import { v4 as uuid } from "uuid";
 import {
   FILE_HISTORY_DEFAULT_FILE_PATH,
   FileSystemChatMessageHistory,
-} from "../message/file_system.js";
+} from "../message/file_system.ts";
 
 afterAll(async () => {
   try {

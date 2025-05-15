@@ -1,6 +1,6 @@
 import type { CheerioAPI } from "cheerio";
 import { Document } from "@langchain/core/documents";
-import { CheerioWebBaseLoader } from "./cheerio.js";
+import { CheerioWebBaseLoader } from "./cheerio.ts";
 
 /**
  * Interface representing the parameters for configuring the

@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { DallEAPIWrapper } from "../dalle.js";
+import { DallEAPIWrapper } from "../dalle.ts";
 
 test.skip("Dalle can generate images", async () => {
   const dalle = new DallEAPIWrapper();

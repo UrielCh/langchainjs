@@ -2,17 +2,17 @@
 import { test, expect } from "@jest/globals";
 import * as uuid from "uuid";
 import { AsyncLocalStorage } from "node:async_hooks";
-import { CallbackManager } from "../manager.js";
-import { BaseCallbackHandler, type BaseCallbackHandlerInput } from "../base.js";
-import type { Serialized } from "../../load/serializable.js";
-import { Document } from "../../documents/document.js";
-import type { ChainValues } from "../../utils/types/index.js";
-import type { AgentAction, AgentFinish } from "../../agents.js";
-import { BaseMessage, HumanMessage } from "../../messages/index.js";
-import type { LLMResult } from "../../outputs.js";
-import { RunnableLambda } from "../../runnables/base.js";
-import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.js";
-import { awaitAllCallbacks } from "../promises.js";
+import { CallbackManager } from "../manager.ts";
+import { BaseCallbackHandler, type BaseCallbackHandlerInput } from "../base.ts";
+import type { Serialized } from "../../load/serializable.ts";
+import { Document } from "../../documents/document.ts";
+import type { ChainValues } from "../../utils/types/index.ts";
+import type { AgentAction, AgentFinish } from "../../agents.ts";
+import { BaseMessage, HumanMessage } from "../../messages/index.ts";
+import type { LLMResult } from "../../outputs.ts";
+import { RunnableLambda } from "../../runnables/base.ts";
+import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
+import { awaitAllCallbacks } from "../promises.ts";
 
 class FakeCallbackHandler extends BaseCallbackHandler {
   name = `fake-${uuid.v4()}`;

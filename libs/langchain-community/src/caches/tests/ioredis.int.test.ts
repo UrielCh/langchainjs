@@ -2,7 +2,7 @@ import { Redis } from "ioredis";
 import { test, expect } from "@jest/globals";
 
 import { OpenAI, ChatOpenAI } from "@langchain/openai";
-import { RedisCache } from "../ioredis.js";
+import { RedisCache } from "../ioredis.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let client: any;

@@ -2,18 +2,18 @@ export type {
   ExtractDepth,
   TavilyExtractAPIRetrieverFields,
   TavilyExtractInput,
-} from "./tavily-extract.js";
+} from "./tavily-extract.ts";
 
-export { TavilyExtract } from "./tavily-extract.js";
+export { TavilyExtract } from "./tavily-extract.ts";
 
 export type {
   SearchDepth,
   TavilySearchAPIRetrieverFields,
   TimeRange,
   TopicType,
-} from "./tavily-search.js";
+} from "./tavily-search.ts";
 
-export { TavilySearch } from "./tavily-search.js";
+export { TavilySearch } from "./tavily-search.ts";
 
 export type {
   TavilyBaseSearchResponse,
@@ -25,6 +25,6 @@ export type {
   TavilyExtractResponse,
   TavilyExtractResult,
   TavilyFailedResult,
-} from "./utils.js";
+} from "./utils.ts";
 
-export { TavilySearchAPIWrapper, TavilyExtractAPIWrapper } from "./utils.js";
+export { TavilySearchAPIWrapper, TavilyExtractAPIWrapper } from "./utils.ts";

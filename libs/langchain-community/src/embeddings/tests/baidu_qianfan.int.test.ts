@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { BaiduQianfanEmbeddings } from "../baidu_qianfan.js";
+import { BaiduQianfanEmbeddings } from "../baidu_qianfan.ts";
 
 test.skip("Test BaiduQianfanEmbeddings.embedQuery", async () => {
   const embeddings = new BaiduQianfanEmbeddings();

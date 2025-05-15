@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
-import { NomicEmbeddings } from "../embeddings.js";
+import { NomicEmbeddings } from "../embeddings.ts";
 
 test("NomicEmbeddings can embed docs", async () => {
   const nomicEmbeddings = new NomicEmbeddings();

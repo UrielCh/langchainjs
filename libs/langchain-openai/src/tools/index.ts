@@ -1,1 +1,1 @@
-export * from "./dalle.js";
+export * from "./dalle.ts";

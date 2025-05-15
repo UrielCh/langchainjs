@@ -6,13 +6,13 @@ import { RunnableSequence } from "@langchain/core/runnables";
 import { OutputParserException } from "@langchain/core/output_parsers";
 import { AIMessage } from "@langchain/core/messages";
 import { AgentStep } from "@langchain/core/agents";
-import { ChatMessageHistory } from "../../stores/message/in_memory.js";
-import { AgentExecutor, ZeroShotAgent } from "../index.js";
-import { SerpAPI } from "../../util/testing/tools/serpapi.js";
-import { Calculator } from "../../util/testing/tools/calculator.js";
-import { initializeAgentExecutorWithOptions } from "../initialize.js";
-import { WebBrowser } from "../../tools/webbrowser.js";
-import { BufferMemory } from "../../memory/buffer_memory.js";
+import { ChatMessageHistory } from "../../stores/message/in_memory.ts";
+import { AgentExecutor, ZeroShotAgent } from "../index.ts";
+import { SerpAPI } from "../../util/testing/tools/serpapi.ts";
+import { Calculator } from "../../util/testing/tools/calculator.ts";
+import { initializeAgentExecutorWithOptions } from "../initialize.ts";
+import { WebBrowser } from "../../tools/webbrowser.ts";
+import { BufferMemory } from "../../memory/buffer_memory.ts";
 
 test("Pass runnable to agent executor", async () => {
   const model = new ChatOpenAI({ temperature: 0, modelName: "gpt-3.5-turbo" });

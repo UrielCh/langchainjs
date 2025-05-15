@@ -6,12 +6,12 @@ import {
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
 import type { AgentStep } from "@langchain/core/agents";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { Optional } from "../../types/type-utils.js";
-import { Agent, AgentArgs, OutputParserArgs } from "../agent.js";
-import { AgentInput } from "../types.js";
-import { ChatAgentOutputParser } from "./outputParser.js";
-import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { Optional } from "../../types/type-utils.ts";
+import { Agent, AgentArgs, OutputParserArgs } from "../agent.ts";
+import { AgentInput } from "../types.ts";
+import { ChatAgentOutputParser } from "./outputParser.ts";
+import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.ts";
 
 const DEFAULT_HUMAN_MESSAGE_TEMPLATE = "{input}\n\n{agent_scratchpad}";
 

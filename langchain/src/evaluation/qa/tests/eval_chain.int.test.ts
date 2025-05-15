@@ -1,7 +1,7 @@
 import { test } from "@jest/globals";
 import { OpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { QAEvalChain } from "../eval_chain.js";
+import { QAEvalChain } from "../eval_chain.ts";
 
 test("Test QAEvalChain", async () => {
   const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

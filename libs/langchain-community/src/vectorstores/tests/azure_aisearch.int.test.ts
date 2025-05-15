@@ -10,7 +10,7 @@ import {
   AzureAISearchVectorStore,
   AzureAISearchQueryType,
   AzureAISearchDocumentMetadata,
-} from "../azure_aisearch.js";
+} from "../azure_aisearch.ts";
 
 const INDEX_NAME = "vectorsearch";
 const DOCUMENT_IDS: string[] = ["1", "2", "3", "4"];

@@ -5,7 +5,7 @@ import { MediaBlob } from "@langchain/google-common/experimental/utils/media_cor
 import {
   BlobStoreGoogleCloudStorage,
   BlobStoreGoogleCloudStorageParams,
-} from "../media.js";
+} from "../media.ts";
 
 describe("GAuth GCS store", () => {
   test("save text no-metadata", async () => {

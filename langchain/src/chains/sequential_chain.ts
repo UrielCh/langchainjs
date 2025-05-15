@@ -1,12 +1,12 @@
 import { ChainValues } from "@langchain/core/utils/types";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "./base.js";
+import { BaseChain, ChainInputs } from "./base.ts";
 import {
   SerializedBaseChain,
   SerializedSequentialChain,
   SerializedSimpleSequentialChain,
-} from "./serde.js";
-import { intersection, union, difference } from "../util/set.js";
+} from "./serde.ts";
+import { intersection, union, difference } from "../util/set.ts";
 
 function formatSet(input: Set<string>) {
   return Array.from(input)

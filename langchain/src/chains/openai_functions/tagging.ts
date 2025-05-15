@@ -6,8 +6,8 @@ import { PromptTemplate } from "@langchain/core/prompts";
 import {
   FunctionParameters,
   JsonOutputFunctionsParser,
-} from "../../output_parsers/openai_functions.js";
-import { LLMChain, LLMChainInput } from "../llm_chain.js";
+} from "../../output_parsers/openai_functions.ts";
+import { LLMChain, LLMChainInput } from "../llm_chain.ts";
 
 /**
  * Type representing the options for creating a tagging chain.

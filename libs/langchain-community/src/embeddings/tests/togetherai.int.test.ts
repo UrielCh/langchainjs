@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { TogetherAIEmbeddings } from "../togetherai.js";
+import { TogetherAIEmbeddings } from "../togetherai.ts";
 
 test.skip("Test TogetherAIEmbeddings.embedQuery", async () => {
   const embeddings = new TogetherAIEmbeddings();

@@ -3,8 +3,8 @@
 
 import { z } from "zod";
 import { StructuredTool } from "@langchain/core/tools";
-import { AgentExecutor } from "../../../agents/executor.js";
-import { OpenAIAssistantRunnable } from "../index.js";
+import { AgentExecutor } from "../../../agents/executor.ts";
+import { OpenAIAssistantRunnable } from "../index.ts";
 
 function getCurrentWeather(location: string, _unit = "fahrenheit") {
   if (location.toLowerCase().includes("tokyo")) {

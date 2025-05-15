@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
-import { VertexAI } from "../llms.js";
+import { VertexAI } from "../llms.ts";
 
 test("Serialization", () => {
   const model = new VertexAI({

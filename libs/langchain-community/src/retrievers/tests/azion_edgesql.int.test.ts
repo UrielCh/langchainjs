@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { jest, test, expect } from "@jest/globals";
-import { AzionRetriever } from "../azion_edgesql.js";
+import { AzionRetriever } from "../azion_edgesql.ts";
 
 // Increase timeout to 30 seconds
 jest.setTimeout(30000);

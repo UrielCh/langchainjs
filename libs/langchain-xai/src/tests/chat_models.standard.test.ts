@@ -2,7 +2,7 @@
 import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { ChatXAI, ChatXAICallOptions } from "../chat_models.js";
+import { ChatXAI, ChatXAICallOptions } from "../chat_models.ts";
 
 class ChatXAIStandardUnitTests extends ChatModelUnitTests<
   ChatXAICallOptions,

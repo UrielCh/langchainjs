@@ -27,13 +27,13 @@ import { isZodSchema } from "@langchain/core/utils/types";
 import { z } from "zod";
 
 import { isLangChainTool } from "@langchain/core/utils/function_calling";
-import { AnthropicToolsOutputParser } from "./output_parsers.js";
-import { handleToolChoice } from "./utils/tools.js";
-import { _convertMessagesToAnthropicPayload } from "./utils/message_inputs.js";
+import { AnthropicToolsOutputParser } from "./output_parsers.ts";
+import { handleToolChoice } from "./utils/tools.ts";
+import { _convertMessagesToAnthropicPayload } from "./utils/message_inputs.ts";
 import {
   _makeMessageChunkFromAnthropicEvent,
   anthropicResponseToChatMessages,
-} from "./utils/message_outputs.js";
+} from "./utils/message_outputs.ts";
 import {
   AnthropicMessageCreateParams,
   AnthropicMessageStreamEvent,
@@ -42,8 +42,8 @@ import {
   AnthropicThinkingConfigParam,
   AnthropicToolChoice,
   ChatAnthropicToolType,
-} from "./types.js";
-import { wrapAnthropicClientError } from "./utils/errors.js";
+} from "./types.ts";
+import { wrapAnthropicClientError } from "./utils/errors.ts";
 
 export interface ChatAnthropicCallOptions
   extends BaseChatModelCallOptions,

@@ -2,7 +2,7 @@
 import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { ChatFireworks, ChatFireworksCallOptions } from "../fireworks.js";
+import { ChatFireworks, ChatFireworksCallOptions } from "../fireworks.ts";
 
 class ChatFireworksStandardUnitTests extends ChatModelUnitTests<
   ChatFireworksCallOptions,

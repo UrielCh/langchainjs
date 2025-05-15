@@ -1,7 +1,7 @@
 import { PromptTemplate } from "@langchain/core/prompts";
-import { LLMChain, LLMChainInput } from "./llm_chain.js";
-import { BufferMemory } from "../memory/buffer_memory.js";
-import { Optional } from "../types/type-utils.js";
+import { LLMChain, LLMChainInput } from "./llm_chain.ts";
+import { BufferMemory } from "../memory/buffer_memory.ts";
+import { Optional } from "../types/type-utils.ts";
 
 export const DEFAULT_TEMPLATE = `The following is a friendly conversation between a human and an AI. The AI is talkative and provides lots of specific details from its context. If the AI does not know the answer to a question, it truthfully says it does not know.
 

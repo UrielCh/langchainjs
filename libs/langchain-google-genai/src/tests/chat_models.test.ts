@@ -8,12 +8,12 @@ import {
   SystemMessage,
   ToolMessage,
 } from "@langchain/core/messages";
-import { ChatGoogleGenerativeAI } from "../chat_models.js";
-import { removeAdditionalProperties } from "../utils/zod_to_genai_parameters.js";
+import { ChatGoogleGenerativeAI } from "../chat_models.ts";
+import { removeAdditionalProperties } from "../utils/zod_to_genai_parameters.ts";
 import {
   convertBaseMessagesToContent,
   convertMessageContentToParts,
-} from "../utils/common.js";
+} from "../utils/common.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function extractKeys(obj: Record<string, any>, keys: string[] = []) {

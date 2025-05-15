@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { WatsonxRerank, WatsonxInputRerank } from "../ibm.js";
+import { WatsonxRerank, WatsonxInputRerank } from "../ibm.ts";
 
 function getKey<K>(key: K): K {
   return key;

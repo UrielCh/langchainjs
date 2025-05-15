@@ -1,5 +1,5 @@
 import { test, describe, expect } from "@jest/globals";
-import { AI21 } from "../ai21.js";
+import { AI21 } from "../ai21.ts";
 
 describe.skip("AI21", () => {
   test("test call", async () => {

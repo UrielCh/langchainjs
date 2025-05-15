@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test, expect } from "@jest/globals";
 
-import { TavilySearchAPIRetriever } from "../tavily_search_api.js";
+import { TavilySearchAPIRetriever } from "../tavily_search_api.ts";
 
 test.skip("TavilySearchAPIRetriever", async () => {
   const retriever = new TavilySearchAPIRetriever({

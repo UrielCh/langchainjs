@@ -1,4 +1,4 @@
-import { HandlebarsPromptTemplate } from "../handlebars.js";
+import { HandlebarsPromptTemplate } from "../handlebars.ts";
 
 describe.each([
   ["{{foo}}", { foo: "bar" }, "bar"],

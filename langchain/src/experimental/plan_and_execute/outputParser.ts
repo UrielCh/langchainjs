@@ -1,7 +1,7 @@
 import { BaseOutputParser } from "@langchain/core/output_parsers";
-import { Plan } from "./base.js";
+import { Plan } from "./base.ts";
 
-import { PLANNER_SYSTEM_PROMPT_MESSAGE_TEMPLATE } from "./prompt.js";
+import { PLANNER_SYSTEM_PROMPT_MESSAGE_TEMPLATE } from "./prompt.ts";
 
 /**
  * Specific implementation of the `BaseOutputParser` class designed to

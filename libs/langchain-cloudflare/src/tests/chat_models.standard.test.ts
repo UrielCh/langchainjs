@@ -6,7 +6,7 @@ import { LangSmithParams } from "@langchain/core/language_models/chat_models";
 import {
   ChatCloudflareWorkersAI,
   ChatCloudflareWorkersAICallOptions,
-} from "../chat_models.js";
+} from "../chat_models.ts";
 
 class ChatCloudflareWorkersAIStandardUnitTests extends ChatModelUnitTests<
   ChatCloudflareWorkersAICallOptions,

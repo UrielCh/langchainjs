@@ -15,15 +15,15 @@ import { LengthBasedExampleSelector } from "@langchain/core/example_selectors";
 import { Serializable } from "@langchain/core/load/serializable";
 import { ConsoleCallbackHandler } from "@langchain/core/tracers/console";
 import { CommaSeparatedListOutputParser } from "@langchain/core/output_parsers";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { initializeAgentExecutorWithOptions } from "../../agents/initialize.js";
-import { Calculator } from "../../util/testing/tools/calculator.js";
-import { RequestsGetTool } from "../../tools/requests.js";
-import { JsonListKeysTool, JsonSpec } from "../../tools/json.js";
-import { AgentExecutor } from "../../agents/executor.js";
-import { StructuredOutputParser } from "../../output_parsers/structured.js";
-import { RegexParser } from "../../output_parsers/regex.js";
-import { load } from "../index.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { initializeAgentExecutorWithOptions } from "../../agents/initialize.ts";
+import { Calculator } from "../../util/testing/tools/calculator.ts";
+import { RequestsGetTool } from "../../tools/requests.ts";
+import { JsonListKeysTool, JsonSpec } from "../../tools/json.ts";
+import { AgentExecutor } from "../../agents/executor.ts";
+import { StructuredOutputParser } from "../../output_parsers/structured.ts";
+import { RegexParser } from "../../output_parsers/regex.ts";
+import { load } from "../index.ts";
 
 test("serialize + deserialize custom classes", async () => {
   class Person extends Serializable {

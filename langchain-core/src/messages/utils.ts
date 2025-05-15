@@ -1,7 +1,7 @@
-import { addLangChainErrorFields } from "../errors/index.js";
-import { SerializedConstructor } from "../load/serializable.js";
-import { _isToolCall } from "../tools/utils.js";
-import { AIMessage, AIMessageChunk, AIMessageChunkFields } from "./ai.js";
+import { addLangChainErrorFields } from "../errors/index.ts";
+import { SerializedConstructor } from "../load/serializable.ts";
+import { _isToolCall } from "../tools/utils.ts";
+import { AIMessage, AIMessageChunk, AIMessageChunkFields } from "./ai.ts";
 import {
   BaseMessageLike,
   BaseMessage,
@@ -10,24 +10,24 @@ import {
   StoredMessageV1,
   BaseMessageFields,
   _isMessageFieldWithRole,
-} from "./base.js";
+} from "./base.ts";
 import {
   ChatMessage,
   ChatMessageFieldsWithRole,
   ChatMessageChunk,
-} from "./chat.js";
+} from "./chat.ts";
 import {
   FunctionMessage,
   FunctionMessageFieldsWithName,
   FunctionMessageChunk,
-} from "./function.js";
-import { HumanMessage, HumanMessageChunk } from "./human.js";
-import { SystemMessage, SystemMessageChunk } from "./system.js";
+} from "./function.ts";
+import { HumanMessage, HumanMessageChunk } from "./human.ts";
+import { SystemMessage, SystemMessageChunk } from "./system.ts";
 import {
   ToolCall,
   ToolMessage,
   ToolMessageFieldsWithToolCallId,
-} from "./tool.js";
+} from "./tool.ts";
 
 function _coerceToolCall(
   toolCall: ToolCall | Record<string, unknown>

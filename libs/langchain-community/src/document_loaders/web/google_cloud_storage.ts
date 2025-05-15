@@ -7,7 +7,7 @@ import { Document } from "@langchain/core/documents";
 import {
   UnstructuredLoaderOptions,
   UnstructuredLoader,
-} from "../fs/unstructured.js";
+} from "../fs/unstructured.ts";
 
 /**
  * Represents the parameters for the GoogleCloudStorageLoader class. It includes

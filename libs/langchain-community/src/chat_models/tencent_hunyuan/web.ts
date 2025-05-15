@@ -1,9 +1,9 @@
 import { type BaseChatModelParams } from "@langchain/core/language_models/chat_models";
-import { sign } from "../../utils/tencent_hunyuan/web.js";
+import { sign } from "../../utils/tencent_hunyuan/web.ts";
 import {
   ChatTencentHunyuan as BaseChatTencentHunyuan,
   TencentHunyuanChatInput,
-} from "./base.js";
+} from "./base.ts";
 
 /**
  * Wrapper around Tencent Hunyuan large language models that use the Chat endpoint.
@@ -40,4 +40,4 @@ export class ChatTencentHunyuan extends BaseChatTencentHunyuan {
     super({ ...fields, sign } ?? { sign });
   }
 }
-export { TencentHunyuanChatInput } from "./base.js";
+export { TencentHunyuanChatInput } from "./base.ts";

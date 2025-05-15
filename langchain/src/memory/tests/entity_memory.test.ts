@@ -5,7 +5,7 @@ import { LLMResult } from "@langchain/core/outputs";
 import { BaseLLM } from "@langchain/core/language_models/llms";
 
 import { InMemoryChatMessageHistory as ChatMessageHistory } from "@langchain/core/chat_history";
-import { EntityMemory } from "../entity_memory.js";
+import { EntityMemory } from "../entity_memory.ts";
 
 class FakeLLM extends BaseLLM {
   _llmType(): string {

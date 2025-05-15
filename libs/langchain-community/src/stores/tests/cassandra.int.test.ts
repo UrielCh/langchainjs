@@ -3,8 +3,8 @@
 
 // import { test, expect, describe } from "@jest/globals";
 // import { AIMessage, HumanMessage } from "@langchain/core/messages";
-// import { CassandraClientFactory } from "../../utils/cassandra.js";
-// import { CassandraChatMessageHistory } from "../message/cassandra.js";
+// import { CassandraClientFactory } from "../../utils/cassandra.ts";
+// import { CassandraChatMessageHistory } from "../message/cassandra.ts";
 
 test("Empty test to prevent runner from complaining", async () => {});
 

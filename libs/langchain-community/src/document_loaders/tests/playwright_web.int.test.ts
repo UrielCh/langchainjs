@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { PlaywrightWebBaseLoader } from "../web/playwright.js";
+import { PlaywrightWebBaseLoader } from "../web/playwright.ts";
 
 test("Test playwright web scraper loader", async () => {
   const loader = new PlaywrightWebBaseLoader("https://www.google.com/");

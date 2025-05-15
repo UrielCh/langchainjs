@@ -12,8 +12,8 @@ import {
   StartExecutionAWSSfnTool,
   DescribeExecutionAWSSfnTool,
   SendTaskSuccessAWSSfnTool,
-} from "../../tools/aws_sfn.js";
-import { Toolkit } from "./base.js";
+} from "../../tools/aws_sfn.ts";
+import { Toolkit } from "./base.ts";
 
 /**
  * Interface for the arguments required to create an AWS Step Functions

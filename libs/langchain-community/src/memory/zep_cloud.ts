@@ -15,7 +15,7 @@ import {
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 // Extract Summary and Facts from Zep memory, if present and compose a system prompt
 export const zepMemoryContextToSystemPrompt = (memory: Memory) => {

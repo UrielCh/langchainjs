@@ -1,12 +1,12 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import type { VectorStoreInterface } from "@langchain/core/vectorstores";
 import { ToolInterface, BaseToolkit } from "@langchain/core/tools";
-import { VectorStoreQATool } from "../../../tools/vectorstore.js";
-import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.js";
-import { VECTOR_PREFIX, VECTOR_ROUTER_PREFIX } from "./prompt.js";
-import { SUFFIX } from "../../mrkl/prompt.js";
-import { LLMChain } from "../../../chains/llm_chain.js";
-import { AgentExecutor } from "../../executor.js";
+import { VectorStoreQATool } from "../../../tools/vectorstore.ts";
+import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.ts";
+import { VECTOR_PREFIX, VECTOR_ROUTER_PREFIX } from "./prompt.ts";
+import { SUFFIX } from "../../mrkl/prompt.ts";
+import { LLMChain } from "../../../chains/llm_chain.ts";
+import { AgentExecutor } from "../../executor.ts";
 
 /**
  * Interface that defines the information about a vector store, including

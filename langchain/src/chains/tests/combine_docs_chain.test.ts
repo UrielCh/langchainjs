@@ -2,8 +2,8 @@ import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { BaseLLM } from "@langchain/core/language_models/llms";
 import { LLMResult } from "@langchain/core/outputs";
-import { loadQAMapReduceChain } from "../question_answering/load.js";
-import { loadSummarizationChain } from "../index.js";
+import { loadQAMapReduceChain } from "../question_answering/load.ts";
+import { loadSummarizationChain } from "../index.ts";
 
 class FakeLLM extends BaseLLM {
   nrMapCalls = 0;

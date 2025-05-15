@@ -4,7 +4,7 @@ import { ChatResult, ChatGeneration } from "@langchain/core/outputs";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
-import { YandexGPTInputs } from "../llms/yandex.js";
+import { YandexGPTInputs } from "../llms/yandex.ts";
 
 const apiUrl = "https://llm.api.cloud.yandex.net/llm/v1alpha/chat";
 

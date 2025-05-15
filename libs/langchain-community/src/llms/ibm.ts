@@ -9,7 +9,7 @@ import {
   TextGenParameters,
   TextTokenizationParams,
   TextTokenizeParameters,
-} from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.js";
+} from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.ts";
 import {
   Generation,
   LLMResult,
@@ -17,7 +17,7 @@ import {
 } from "@langchain/core/outputs";
 import { BaseLanguageModelCallOptions } from "@langchain/core/language_models/base";
 import { AsyncCaller } from "@langchain/core/utils/async_caller";
-import { authenticateAndSetInstance } from "../utils/ibm.js";
+import { authenticateAndSetInstance } from "../utils/ibm.ts";
 import {
   GenerationInfo,
   Neverify,
@@ -26,7 +26,7 @@ import {
   WatsonxAuth,
   WatsonxDeployedParams,
   WatsonxParams,
-} from "../types/ibm.js";
+} from "../types/ibm.ts";
 
 /**
  * Input to LLM class.

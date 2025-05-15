@@ -4,7 +4,7 @@ import { test, expect } from "@jest/globals";
 
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
 import admin from "firebase-admin";
-import { FirestoreChatMessageHistory } from "../message/firestore.js";
+import { FirestoreChatMessageHistory } from "../message/firestore.ts";
 
 const sessionId = Date.now().toString();
 

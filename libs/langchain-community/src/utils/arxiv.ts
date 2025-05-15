@@ -2,7 +2,7 @@
 import { Document } from "@langchain/core/documents";
 import { XMLParser } from "fast-xml-parser";
 
-import { PDFLoader } from "../document_loaders/fs/pdf.js";
+import { PDFLoader } from "../document_loaders/fs/pdf.ts";
 
 // Interface for processed arXiv entry
 interface ArxivEntry {

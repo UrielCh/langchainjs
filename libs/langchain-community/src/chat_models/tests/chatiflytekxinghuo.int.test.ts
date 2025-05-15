@@ -1,5 +1,5 @@
 import { HumanMessage } from "@langchain/core/messages";
-import { ChatIflytekXinghuo } from "../iflytek_xinghuo/index.js";
+import { ChatIflytekXinghuo } from "../iflytek_xinghuo/index.ts";
 
 test.skip("Iflytek Xinghuo Call", async () => {
   const model = new ChatIflytekXinghuo({

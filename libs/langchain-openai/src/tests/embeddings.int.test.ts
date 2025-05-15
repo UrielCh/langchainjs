@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { OpenAIEmbeddings } from "../embeddings.js";
+import { OpenAIEmbeddings } from "../embeddings.ts";
 
 test("Test OpenAIEmbeddings.embedQuery", async () => {
   const embeddings = new OpenAIEmbeddings();

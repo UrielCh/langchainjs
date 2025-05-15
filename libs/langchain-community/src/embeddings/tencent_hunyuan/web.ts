@@ -1,8 +1,8 @@
-import { sign } from "../../utils/tencent_hunyuan/web.js";
+import { sign } from "../../utils/tencent_hunyuan/web.ts";
 import {
   TencentHunyuanEmbeddings as BaseTencentHunyuanEmbeddings,
   TencentHunyuanEmbeddingsParams,
-} from "./base.js";
+} from "./base.ts";
 
 /**
  * Class for generating embeddings using the Tencent Hunyuan API.
@@ -13,4 +13,4 @@ export class TencentHunyuanEmbeddings extends BaseTencentHunyuanEmbeddings {
   }
 }
 
-export { type TencentHunyuanEmbeddingsParams } from "./base.js";
+export { type TencentHunyuanEmbeddingsParams } from "./base.ts";

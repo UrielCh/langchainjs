@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
-import { ChatXAI } from "../chat_models.js";
+import { ChatXAI } from "../chat_models.ts";
 
 beforeEach(() => {
   process.env.XAI_API_KEY = "foo";

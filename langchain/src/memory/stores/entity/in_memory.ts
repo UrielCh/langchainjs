@@ -1,4 +1,4 @@
-import { BaseEntityStore } from "./base.js";
+import { BaseEntityStore } from "./base.ts";
 
 /**
  * An entity store that keeps data in memory. It extends from the

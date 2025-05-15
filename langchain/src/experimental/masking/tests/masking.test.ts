@@ -6,7 +6,7 @@ import {
   MaskingParser,
   RegexMaskingTransformer,
   MaskingTransformer,
-} from "../index.js";
+} from "../index.ts";
 
 describe("MaskingParser and PIIMaskingTransformer", () => {
   describe("Masking with Static Identifiers", () => {

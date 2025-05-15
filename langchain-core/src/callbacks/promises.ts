@@ -1,3 +1,3 @@
-import { awaitAllCallbacks, consumeCallback } from "../singletons/callbacks.js";
+import { awaitAllCallbacks, consumeCallback } from "../singletons/callbacks.ts";
 
 export { awaitAllCallbacks, consumeCallback };

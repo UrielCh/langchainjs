@@ -1,6 +1,6 @@
-import { Runnable } from "../runnables/base.js";
-import type { BaseCallbackConfig } from "../callbacks/manager.js";
-import type { DocumentInterface } from "./document.js";
+import { Runnable } from "../runnables/base.ts";
+import type { BaseCallbackConfig } from "../callbacks/manager.ts";
+import type { DocumentInterface } from "./document.ts";
 
 /**
  * Abstract base class for document transformation systems.

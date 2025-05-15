@@ -1,8 +1,8 @@
 import { expect, test } from "@jest/globals";
 
-import { CombiningOutputParser } from "../combining.js";
-import { StructuredOutputParser } from "../structured.js";
-import { RegexParser } from "../regex.js";
+import { CombiningOutputParser } from "../combining.ts";
+import { StructuredOutputParser } from "../structured.ts";
+import { RegexParser } from "../regex.ts";
 
 test("CombiningOutputParser", async () => {
   const parser = new CombiningOutputParser(

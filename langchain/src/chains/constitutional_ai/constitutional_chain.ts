@@ -1,14 +1,14 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { ChainValues } from "@langchain/core/utils/types";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "../base.js";
-import { LLMChain } from "../llm_chain.js";
-import { SerializedBaseChain } from "../serde.js";
+import { BaseChain, ChainInputs } from "../base.ts";
+import { LLMChain } from "../llm_chain.ts";
+import { SerializedBaseChain } from "../serde.ts";
 import {
   ConstitutionalPrinciple,
   PRINCIPLES,
-} from "./constitutional_principle.js";
-import { CRITIQUE_PROMPT, REVISION_PROMPT } from "./constitutional_prompts.js";
+} from "./constitutional_principle.ts";
+import { CRITIQUE_PROMPT, REVISION_PROMPT } from "./constitutional_prompts.ts";
 
 /**
  * Interface for the input of a ConstitutionalChain. Extends ChainInputs.

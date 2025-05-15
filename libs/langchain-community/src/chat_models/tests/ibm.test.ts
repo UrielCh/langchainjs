@@ -1,13 +1,13 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import WatsonxAiMlVml_v1 from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.js";
+import WatsonxAiMlVml_v1 from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.ts";
 import {
   ChatWatsonx,
   ChatWatsonxConstructor,
   ChatWatsonxInput,
   WatsonxCallParams,
-} from "../ibm.js";
-import { authenticateAndSetInstance } from "../../utils/ibm.js";
+} from "../ibm.ts";
+import { authenticateAndSetInstance } from "../../utils/ibm.ts";
 
 const fakeAuthProp = {
   watsonxAIAuthType: "iam",

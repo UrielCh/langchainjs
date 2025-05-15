@@ -8,17 +8,17 @@ import {
   PostgreSqlContainer,
   StartedPostgreSqlContainer,
 } from "@testcontainers/postgresql";
-import PostgresEngine, { Column, VectorStoreTableArgs } from "../engine.js";
+import PostgresEngine, { Column, VectorStoreTableArgs } from "../engine.ts";
 import PostgresVectorStore, {
   PostgresVectorStoreArgs,
   dbConfigArgs,
-} from "../vectorstore.js";
+} from "../vectorstore.ts";
 import {
   DEFAULT_INDEX_NAME_SUFFIX,
   DistanceStrategy,
   HNSWIndex,
   IVFFlatIndex,
-} from "../indexes.js";
+} from "../indexes.ts";
 
 const CUSTOM_TABLE = "test_table_custom";
 const VECTOR_SIZE = 768;

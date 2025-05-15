@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
-import { SpiderLoader } from "../web/spider.js";
+import { SpiderLoader } from "../web/spider.ts";
 
 test("Test SpiderLoader load method with scrape mode", async () => {
   const loader = new SpiderLoader({

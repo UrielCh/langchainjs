@@ -1,7 +1,7 @@
 import type { z } from "zod";
 import { type JsonSchema7Type, zodToJsonSchema } from "zod-to-json-schema";
 import { dereference, type Schema } from "@cfworker/json-schema";
-import { isZodSchema } from "./types/is_zod_schema.js";
+import { isZodSchema } from "./types/is_zod_schema.ts";
 
 export type JSONSchema = JsonSchema7Type;
 

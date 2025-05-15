@@ -7,8 +7,8 @@ import {
   TYPE_2_FILTERING_TEST_CASES,
   TYPE_3_FILTERING_TEST_CASES,
   TYPE_4_FILTERING_TEST_CASES,
-} from "./neo4j_vector.fixtures.js";
-import { Neo4jVectorStore } from "../neo4j_vector.js";
+} from "./neo4j_vector.fixtures.ts";
+import { Neo4jVectorStore } from "../neo4j_vector.ts";
 
 const OS_TOKEN_COUNT = 1536;
 

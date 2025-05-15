@@ -16,8 +16,8 @@ import {
   LLMEvalChainInput,
   LLMTrajectoryEvaluatorArgs,
   type ExtractLLMCallOptions,
-} from "../base.js";
-import { EVAL_CHAT_PROMPT, TOOL_FREE_EVAL_CHAT_PROMPT } from "./prompt.js";
+} from "../base.ts";
+import { EVAL_CHAT_PROMPT, TOOL_FREE_EVAL_CHAT_PROMPT } from "./prompt.ts";
 
 /**
  * A parser for the output of the TrajectoryEvalChain.

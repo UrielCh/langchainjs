@@ -7,9 +7,9 @@ import {
   RunnablePassthrough,
   RunnableSequence,
 } from "@langchain/core/runnables";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { createHistoryAwareRetriever } from "../history_aware_retriever.js";
-import { createRetrievalChain } from "../retrieval.js";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { createHistoryAwareRetriever } from "../history_aware_retriever.ts";
+import { createRetrievalChain } from "../retrieval.ts";
 
 const QUESTION_GEN_TEMPLATE = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
 

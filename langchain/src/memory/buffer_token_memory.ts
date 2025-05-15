@@ -5,7 +5,7 @@ import {
   OutputValues,
 } from "@langchain/core/memory";
 import { getBufferString } from "@langchain/core/messages";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface for the input parameters of the `BufferTokenMemory` class.

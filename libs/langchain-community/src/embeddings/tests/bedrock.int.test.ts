@@ -3,8 +3,8 @@
 import { expect, test } from "@jest/globals";
 import { BedrockRuntimeClient } from "@aws-sdk/client-bedrock-runtime";
 
-import { HNSWLib } from "../../vectorstores/hnswlib.js";
-import { BedrockEmbeddings } from "../bedrock.js";
+import { HNSWLib } from "../../vectorstores/hnswlib.ts";
+import { BedrockEmbeddings } from "../bedrock.ts";
 
 const getClient = () => {
   if (

@@ -5,7 +5,7 @@ import {
   loadQAMapReduceChain,
   loadQARefineChain,
   loadQAStuffChain,
-} from "../load.js";
+} from "../load.ts";
 
 test("Test loadQAStuffChain", async () => {
   const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

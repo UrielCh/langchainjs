@@ -6,8 +6,8 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings, OpenAI } from "@langchain/openai";
 import { AttributeInfo } from "langchain/chains/query_constructor";
 import { SelfQueryRetriever } from "langchain/retrievers/self_query";
-import { PineconeStore } from "../vectorstores.js";
-import { PineconeTranslator } from "../translator.js";
+import { PineconeStore } from "../vectorstores.ts";
+import { PineconeTranslator } from "../translator.ts";
 
 describe("Pinecone self query", () => {
   const testIndexName = process.env.PINECONE_INDEX!;

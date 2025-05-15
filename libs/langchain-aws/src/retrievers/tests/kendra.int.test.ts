@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test } from "@jest/globals";
-import { AmazonKendraRetriever } from "../kendra.js";
+import { AmazonKendraRetriever } from "../kendra.ts";
 
 test.skip("AmazonKendraRetriever", async () => {
   if (

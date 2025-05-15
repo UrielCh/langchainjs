@@ -4,7 +4,7 @@ import { GenerationChunk } from "@langchain/core/outputs";
 import type { StringWithAutocomplete } from "@langchain/core/utils/types";
 import { LLM, type BaseLLMParams } from "@langchain/core/language_models/llms";
 
-import { createOllamaGenerateStream, OllamaInput } from "../utils/ollama.js";
+import { createOllamaGenerateStream, OllamaInput } from "../utils/ollama.ts";
 
 export { type OllamaInput };
 

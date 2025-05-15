@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { MinimaxEmbeddings } from "../minimax.js";
+import { MinimaxEmbeddings } from "../minimax.ts";
 
 test.skip("Test MinimaxEmbeddings.embedQuery", async () => {
   const embeddings = new MinimaxEmbeddings();

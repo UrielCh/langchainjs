@@ -1,6 +1,6 @@
 import { Document } from "@langchain/core/documents";
 import { BaseStoreInterface } from "@langchain/core/stores";
-import { Docstore } from "./base.js";
+import { Docstore } from "./base.ts";
 
 /**
  * Class for storing and retrieving documents in memory asynchronously.

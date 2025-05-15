@@ -1,22 +1,22 @@
-export { Tool, type ToolParams, StructuredTool } from "./base.js";
+export { Tool, type ToolParams, StructuredTool } from "./base.ts";
 export {
   DynamicTool,
   type DynamicToolInput,
   DynamicStructuredTool,
   type DynamicStructuredToolInput,
-} from "./dynamic.js";
-export { ChainTool, type ChainToolInput } from "./chain.js";
+} from "./dynamic.ts";
+export { ChainTool, type ChainToolInput } from "./chain.ts";
 export {
   JsonSpec,
   JsonListKeysTool,
   JsonGetValueTool,
   type JsonObject,
   type Json,
-} from "./json.js";
-export { RequestsGetTool, RequestsPostTool } from "./requests.js";
-export { VectorStoreQATool } from "./vectorstore.js";
-export { ReadFileTool, WriteFileTool } from "./fs.js";
+} from "./json.ts";
+export { RequestsGetTool, RequestsPostTool } from "./requests.ts";
+export { VectorStoreQATool } from "./vectorstore.ts";
+export { ReadFileTool, WriteFileTool } from "./fs.ts";
 export {
   formatToOpenAIFunction,
   formatToOpenAITool,
-} from "./convert_to_openai.js";
+} from "./convert_to_openai.ts";

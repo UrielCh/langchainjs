@@ -10,9 +10,9 @@ import {
   MemoryVariables,
   OutputValues,
 } from "@langchain/core/memory";
-import { LLMChain } from "../chains/llm_chain.js";
-import { SUMMARY_PROMPT } from "./prompt.js";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { LLMChain } from "../chains/llm_chain.ts";
+import { SUMMARY_PROMPT } from "./prompt.ts";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface for the input parameters of the ConversationSummaryMemory

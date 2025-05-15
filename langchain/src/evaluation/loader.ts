@@ -6,19 +6,19 @@ import {
   CriteriaLike,
   CriteriaEvalChain,
   LabeledCriteriaEvalChain,
-} from "./criteria/index.js";
-import type { EvaluatorType } from "./types.js";
-import { LLMEvalChainInput } from "./base.js";
+} from "./criteria/index.ts";
+import type { EvaluatorType } from "./types.ts";
+import { LLMEvalChainInput } from "./base.ts";
 import {
   LabeledPairwiseStringEvalChain,
   PairwiseStringEvalChain,
-} from "./comparison/index.js";
+} from "./comparison/index.ts";
 import {
   EmbeddingDistanceEvalChain,
   EmbeddingDistanceEvalChainInput,
   PairwiseEmbeddingDistanceEvalChain,
-} from "./embedding_distance/index.js";
-import { TrajectoryEvalChain } from "./agents/index.js";
+} from "./embedding_distance/index.ts";
+import { TrajectoryEvalChain } from "./agents/index.ts";
 
 export type LoadEvaluatorOptions = EmbeddingDistanceEvalChainInput & {
   llm?: BaseLanguageModelInterface;

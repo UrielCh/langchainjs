@@ -1,21 +1,21 @@
 export {
   createExtractionChain,
   createExtractionChainFromZod,
-} from "./extraction.js";
+} from "./extraction.ts";
 export {
   type TaggingChainOptions,
   createTaggingChain,
   createTaggingChainFromZod,
-} from "./tagging.js";
-export { type OpenAPIChainOptions, createOpenAPIChain } from "./openapi.js";
+} from "./tagging.ts";
+export { type OpenAPIChainOptions, createOpenAPIChain } from "./openapi.ts";
 export {
   type StructuredOutputChainInput,
   createStructuredOutputChain,
   createStructuredOutputChainFromZod,
-} from "./structured_output.js";
+} from "./structured_output.ts";
 export {
   type CreateStructuredOutputRunnableConfig,
   createStructuredOutputRunnable,
   type CreateOpenAIFnRunnableConfig,
   createOpenAIFnRunnable,
-} from "./base.js";
+} from "./base.ts";

@@ -1,4 +1,4 @@
-import { PineconeEmbeddings } from "../embeddings.js";
+import { PineconeEmbeddings } from "../embeddings.ts";
 
 describe("Integration tests for Pinecone embeddings", () => {
   test("Happy path: defaults for both embedDocuments and embedQuery", async () => {

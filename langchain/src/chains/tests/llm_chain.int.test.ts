@@ -5,8 +5,8 @@ import {
   HumanMessagePromptTemplate,
   PromptTemplate,
 } from "@langchain/core/prompts";
-import { LLMChain } from "../llm_chain.js";
-import { BufferMemory } from "../../memory/buffer_memory.js";
+import { LLMChain } from "../llm_chain.ts";
+import { BufferMemory } from "../../memory/buffer_memory.ts";
 
 test("Test OpenAI", async () => {
   const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

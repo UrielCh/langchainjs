@@ -4,8 +4,8 @@ import {
   getPromptTemplateFromDataSource,
   verifyIgnoreTablesExistInDatabase,
   verifyIncludeTablesExistInDatabase,
-} from "../sql_utils.js";
-import { SQL_SQLITE_PROMPT } from "../../chains/sql_db/sql_db_prompt.js";
+} from "../sql_utils.ts";
+import { SQL_SQLITE_PROMPT } from "../../chains/sql_db/sql_db_prompt.ts";
 
 test("Find include tables when there are there", () => {
   const includeTables = ["user", "score"];

@@ -1,6 +1,6 @@
 // TODO: Fix for Node environments
 
-// import { ChatWebLLM, WebLLMInputs } from "../webllm.js";
+// import { ChatWebLLM, WebLLMInputs } from "../webllm.ts";
 // import * as webllm from "@mlc-ai/web-llm";
 
 // jest.mock("@mlc-ai/web-llm", () => ({

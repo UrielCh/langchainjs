@@ -4,7 +4,7 @@ import { jest } from "@jest/globals";
 import { FakeEmbeddings, FakeLLM } from "@langchain/core/utils/testing";
 import { Document } from "@langchain/core/documents";
 import { MongoClient } from "mongodb";
-import { AzureCosmosDBMongoDBSemanticCache } from "../../index.js";
+import { AzureCosmosDBMongoDBSemanticCache } from "../../index.ts";
 
 const createMockClient = () => ({
   db: jest.fn<any>().mockReturnValue({

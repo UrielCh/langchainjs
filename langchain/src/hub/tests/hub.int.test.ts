@@ -8,8 +8,8 @@ import {
 } from "@langchain/core/messages";
 import { ChatPromptValue } from "@langchain/core/prompt_values";
 import { ChatAnthropic } from "@langchain/anthropic";
-import * as hub from "../index.js";
-import { pull as nodePull } from "../node.js";
+import * as hub from "../index.ts";
+import { pull as nodePull } from "../node.ts";
 
 test("Test LangChain Hub client pushing a new repo", async () => {
   const prompt = PromptTemplate.fromTemplate(

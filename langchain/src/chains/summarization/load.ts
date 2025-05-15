@@ -1,14 +1,14 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { BasePromptTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../llm_chain.js";
+import { LLMChain } from "../llm_chain.ts";
 import {
   StuffDocumentsChain,
   MapReduceDocumentsChain,
   RefineDocumentsChain,
   MapReduceDocumentsChainInput,
-} from "../combine_docs_chain.js";
-import { DEFAULT_PROMPT } from "./stuff_prompts.js";
-import { REFINE_PROMPT } from "./refine_prompts.js";
+} from "../combine_docs_chain.ts";
+import { DEFAULT_PROMPT } from "./stuff_prompts.ts";
+import { REFINE_PROMPT } from "./refine_prompts.ts";
 
 /**
  * Type for the base parameters that can be used to configure a

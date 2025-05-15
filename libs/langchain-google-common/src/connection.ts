@@ -20,18 +20,18 @@ import type {
   GoogleAIAPIConfig,
   AnthropicAPIConfig,
   GeminiAPIConfig,
-} from "./types.js";
+} from "./types.ts";
 import {
   GoogleAbstractedClient,
   GoogleAbstractedClientOps,
   GoogleAbstractedClientOpsMethod,
-} from "./auth.js";
+} from "./auth.ts";
 import {
   getGeminiAPI,
   modelToFamily,
   modelToPublisher,
-} from "./utils/index.js";
-import { getAnthropicAPI } from "./utils/anthropic.js";
+} from "./utils/index.ts";
+import { getAnthropicAPI } from "./utils/anthropic.ts";
 
 export abstract class GoogleConnection<
   CallOptions extends AsyncCallerCallOptions,

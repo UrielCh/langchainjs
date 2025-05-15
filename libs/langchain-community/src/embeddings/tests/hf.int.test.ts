@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
-import { HuggingFaceInferenceEmbeddings } from "../hf.js";
-import { HNSWLib } from "../../vectorstores/hnswlib.js";
+import { HuggingFaceInferenceEmbeddings } from "../hf.ts";
+import { HNSWLib } from "../../vectorstores/hnswlib.ts";
 
 test("HuggingFaceInferenceEmbeddings", async () => {
   const embeddings = new HuggingFaceInferenceEmbeddings();

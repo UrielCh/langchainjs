@@ -37,7 +37,7 @@ import { z } from "zod";
 import {
   convertToCerebrasMessageParams,
   formatToCerebrasToolChoice,
-} from "./utils.js";
+} from "./utils.ts";
 
 /**
  * Input to chat model class.

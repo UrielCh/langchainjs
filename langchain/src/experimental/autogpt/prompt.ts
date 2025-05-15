@@ -9,8 +9,8 @@ import {
   SystemMessage,
 } from "@langchain/core/messages";
 import { PartialValues } from "@langchain/core/utils/types";
-import { getPrompt } from "./prompt_generator.js";
-import { ObjectTool } from "./schema.js";
+import { getPrompt } from "./prompt_generator.ts";
+import { ObjectTool } from "./schema.ts";
 
 /**
  * Interface for the input parameters of the AutoGPTPrompt class.

@@ -13,7 +13,7 @@ import {
   AzureCosmosDBMongoDBConfig,
   AzureCosmosDBMongoDBVectorStore,
   AzureCosmosDBMongoDBSimilarityType,
-} from "../azure_cosmosdb_mongodb.js";
+} from "../azure_cosmosdb_mongodb.ts";
 
 /**
  * Represents a Semantic Cache that uses CosmosDB MongoDB backend as the underlying

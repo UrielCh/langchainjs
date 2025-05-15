@@ -1,5 +1,5 @@
 import { AIMessage, BaseMessage, ToolMessage } from "@langchain/core/messages";
-import { ToolsAgentStep } from "../tool_calling/output_parser.js";
+import { ToolsAgentStep } from "../tool_calling/output_parser.ts";
 
 /**
  * Convert agent action and observation into a function message.

@@ -5,13 +5,13 @@ import {
   StructuredOutputMethodParams,
   StructuredOutputMethodOptions,
   BaseLanguageModelInput,
-} from "../../language_models/base.js";
-import { BaseMessage } from "../../messages/index.js";
-import { Runnable, RunnableLambda } from "../../runnables/base.js";
-import { RunnableConfig } from "../../runnables/config.js";
-import { FakeListChatModel } from "../../utils/testing/index.js";
-import { StructuredPrompt } from "../structured.js";
-import { load } from "../../load/index.js";
+} from "../../language_models/base.ts";
+import { BaseMessage } from "../../messages/index.ts";
+import { Runnable, RunnableLambda } from "../../runnables/base.ts";
+import { RunnableConfig } from "../../runnables/config.ts";
+import { FakeListChatModel } from "../../utils/testing/index.ts";
+import { StructuredPrompt } from "../structured.ts";
+import { load } from "../../load/index.ts";
 
 class FakeStructuredChatModel extends FakeListChatModel {
   withStructuredOutput<

@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { GoogleGenerativeAIEmbeddings } from "../embeddings.js";
+import { GoogleGenerativeAIEmbeddings } from "../embeddings.ts";
 
 test("Test GooglePalmEmbeddings.embedQuery", async () => {
   const embeddings = new GoogleGenerativeAIEmbeddings({

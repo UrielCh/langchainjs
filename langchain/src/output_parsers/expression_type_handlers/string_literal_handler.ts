@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { StringLiteralType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { StringLiteralType } from "./types.ts";
 
 /**
  * Handler for string literal nodes in the LangChain Expression Language.

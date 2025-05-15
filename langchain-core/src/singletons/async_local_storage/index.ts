@@ -5,9 +5,9 @@ import {
   getGlobalAsyncLocalStorageInstance,
   setGlobalAsyncLocalStorageInstance,
   _CONTEXT_VARIABLES_KEY,
-} from "./globals.js";
-import { CallbackManager } from "../../callbacks/manager.js";
-import { LangChainTracer } from "../../tracers/tracer_langchain.js";
+} from "./globals.ts";
+import { CallbackManager } from "../../callbacks/manager.ts";
+import { LangChainTracer } from "../../tracers/tracer_langchain.ts";
 
 export class MockAsyncLocalStorage implements AsyncLocalStorageInterface {
   getStore(): any {

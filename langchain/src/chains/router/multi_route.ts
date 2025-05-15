@@ -3,7 +3,7 @@ import {
   CallbackManagerForChainRun,
   Callbacks,
 } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "../../chains/base.js";
+import { BaseChain, ChainInputs } from "../../chains/base.ts";
 
 /**
  * A type that represents the inputs for the MultiRouteChain. It is a

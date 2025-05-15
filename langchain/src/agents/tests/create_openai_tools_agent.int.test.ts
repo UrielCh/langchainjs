@@ -7,9 +7,9 @@ import { AsyncLocalStorageProviderSingleton } from "@langchain/core/singletons";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import { AsyncLocalStorage } from "async_hooks";
-import { TavilySearchResults } from "../../util/testing/tools/tavily_search.js";
-import { pull } from "../../hub/index.js";
-import { AgentExecutor, createOpenAIToolsAgent } from "../index.js";
+import { TavilySearchResults } from "../../util/testing/tools/tavily_search.ts";
+import { pull } from "../../hub/index.ts";
+import { AgentExecutor, createOpenAIToolsAgent } from "../index.ts";
 
 const tools = [new TavilySearchResults({ maxResults: 1 })];
 

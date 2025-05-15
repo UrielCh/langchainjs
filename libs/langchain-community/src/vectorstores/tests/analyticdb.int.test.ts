@@ -4,7 +4,7 @@ import { test } from "@jest/globals";
 
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { AnalyticDBVectorStore } from "../analyticdb.js";
+import { AnalyticDBVectorStore } from "../analyticdb.ts";
 
 const connectionOptions = {
   host: process.env.ANALYTICDB_HOST || "localhost",

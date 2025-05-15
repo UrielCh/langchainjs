@@ -1,9 +1,9 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import type { ToolInterface } from "@langchain/core/tools";
-import { Agent } from "./agent.js";
-import { loadFromHub } from "../util/hub.js";
-import { FileLoader, loadFromFile } from "../util/load.js";
-import { parseFileConfig } from "../util/parse.js";
+import { Agent } from "./agent.ts";
+import { loadFromHub } from "../util/hub.ts";
+import { FileLoader, loadFromFile } from "../util/load.ts";
+import { parseFileConfig } from "../util/parse.ts";
 
 /** @deprecated */
 const loadAgentFromFile: FileLoader<Agent> = async (

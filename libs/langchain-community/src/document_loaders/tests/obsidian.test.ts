@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import * as url from "node:url";
 import * as path from "node:path";
 import { Document } from "@langchain/core/documents";
-import { ObsidianLoader } from "../fs/obsidian.js";
+import { ObsidianLoader } from "../fs/obsidian.ts";
 
 const STANDARD_METADATA_FIELDS = [
   "created",

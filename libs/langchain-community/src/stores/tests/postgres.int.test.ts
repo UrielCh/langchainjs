@@ -1,6 +1,6 @@
 import pg from "pg";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
-import { PostgresChatMessageHistory } from "../message/postgres.js";
+import { PostgresChatMessageHistory } from "../message/postgres.ts";
 
 describe.skip("Postgres Chat History", () => {
   let chatHistory: PostgresChatMessageHistory;

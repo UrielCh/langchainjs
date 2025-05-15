@@ -4,8 +4,8 @@ import { SonixSpeechRecognitionService } from "sonix-speech-recognition";
 import {
   SpeechToTextRequest,
   SpeechToTextResponse,
-} from "sonix-speech-recognition/lib/types.js";
-import { SonixAudioTranscriptionLoader } from "../web/sonix_audio.js";
+} from "sonix-speech-recognition/lib/types.ts";
+import { SonixAudioTranscriptionLoader } from "../web/sonix_audio.ts";
 
 jest.mock("sonix-speech-recognition");
 

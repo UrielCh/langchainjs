@@ -4,11 +4,11 @@ import { LLMResult } from "@langchain/core/outputs";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { VectorStoreRetriever } from "@langchain/core/vectorstores";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { LLMChain } from "../llm_chain.js";
-import { SimpleSequentialChain } from "../sequential_chain.js";
-import { AnalyzeDocumentChain } from "../analyze_documents_chain.js";
-import { ConversationalRetrievalQAChain } from "../conversational_retrieval_chain.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
+import { LLMChain } from "../llm_chain.ts";
+import { SimpleSequentialChain } from "../sequential_chain.ts";
+import { AnalyzeDocumentChain } from "../analyze_documents_chain.ts";
+import { ConversationalRetrievalQAChain } from "../conversational_retrieval_chain.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
 
 class FakeLLM1 extends BaseLLM {
   nrMapCalls = 0;

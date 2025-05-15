@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { GmailBaseTool, GmailBaseToolParams } from "./base.js";
-import { CREATE_DRAFT_DESCRIPTION } from "./descriptions.js";
+import { GmailBaseTool, GmailBaseToolParams } from "./base.ts";
+import { CREATE_DRAFT_DESCRIPTION } from "./descriptions.ts";
 
 export class GmailCreateDraft extends GmailBaseTool {
   name = "create_gmail_draft";

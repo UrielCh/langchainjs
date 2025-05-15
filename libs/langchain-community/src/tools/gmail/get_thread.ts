@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { GmailBaseTool, GmailBaseToolParams } from "./base.js";
-import { GET_THREAD_DESCRIPTION } from "./descriptions.js";
+import { GmailBaseTool, GmailBaseToolParams } from "./base.ts";
+import { GET_THREAD_DESCRIPTION } from "./descriptions.ts";
 
 export class GmailGetThread extends GmailBaseTool {
   name = "gmail_get_thread";

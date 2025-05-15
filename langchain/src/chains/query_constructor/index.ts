@@ -6,22 +6,22 @@ import {
   FewShotPromptTemplate,
 } from "@langchain/core/prompts";
 import { InputValues } from "@langchain/core/utils/types";
-import { QueryTransformer, TraverseType } from "./parser.js";
+import { QueryTransformer, TraverseType } from "./parser.ts";
 import {
   Comparator,
   Comparators,
   Operator,
   Operators,
   StructuredQuery,
-} from "./ir.js";
+} from "./ir.ts";
 import {
   DEFAULT_EXAMPLES,
   DEFAULT_PREFIX,
   DEFAULT_SCHEMA,
   DEFAULT_SUFFIX,
   EXAMPLE_PROMPT,
-} from "./prompt.js";
-import { AsymmetricStructuredOutputParser } from "../../output_parsers/structured.js";
+} from "./prompt.ts";
+import { AsymmetricStructuredOutputParser } from "../../output_parsers/structured.ts";
 
 /**
  * A simple data structure that holds information about an attribute. It

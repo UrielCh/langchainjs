@@ -3,7 +3,7 @@ import {
   convertUtilityToolToWatsonxTool,
   WatsonXAI,
 } from "@ibm-cloud/watsonx-ai";
-import { WatsonxTool, WatsonxToolkit } from "../ibm.js";
+import { WatsonxTool, WatsonxToolkit } from "../ibm.ts";
 
 const serviceUrl = process.env.WATSONX_AI_SERVICE_URL as string;
 describe("Tool class tests", () => {

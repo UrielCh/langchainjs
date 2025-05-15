@@ -2,11 +2,11 @@ import { expect, describe, test } from "@jest/globals";
 import {
   FewShotChatMessagePromptTemplate,
   FewShotPromptTemplate,
-} from "../few_shot.js";
-import { ChatPromptTemplate } from "../index.js";
-import { PromptTemplate } from "../prompt.js";
-import { LengthBasedExampleSelector } from "../../example_selectors/length_based.js";
-import { AIMessage, HumanMessage } from "../../messages/index.js";
+} from "../few_shot.ts";
+import { ChatPromptTemplate } from "../index.ts";
+import { PromptTemplate } from "../prompt.ts";
+import { LengthBasedExampleSelector } from "../../example_selectors/length_based.ts";
+import { AIMessage, HumanMessage } from "../../messages/index.ts";
 
 describe("FewShotPromptTemplate", () => {
   test("Test using partial", async () => {

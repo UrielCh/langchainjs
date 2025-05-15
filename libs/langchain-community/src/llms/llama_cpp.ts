@@ -23,7 +23,7 @@ import {
   createLlamaSession,
   createLlamaJsonSchemaGrammar,
   createCustomGrammar,
-} from "../utils/llama_cpp.js";
+} from "../utils/llama_cpp.ts";
 
 /**
  * Note that the modelPath is the only required parameter. For testing you

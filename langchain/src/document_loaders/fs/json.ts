@@ -1,5 +1,5 @@
 import jsonpointer from "jsonpointer";
-import { TextLoader } from "./text.js";
+import { TextLoader } from "./text.ts";
 
 /**
  * Class that extends the `TextLoader` class. It represents a document

@@ -1,1 +1,1 @@
-export type { LangChainConfig } from "./types.js";
+export type { LangChainConfig } from "./types.ts";

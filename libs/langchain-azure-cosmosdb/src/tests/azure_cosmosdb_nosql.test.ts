@@ -3,7 +3,7 @@ import { jest, test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 
-import { AzureCosmosDBNoSQLVectorStore } from "../azure_cosmosdb_nosql.js";
+import { AzureCosmosDBNoSQLVectorStore } from "../azure_cosmosdb_nosql.ts";
 
 const embedMock = jest.spyOn(FakeEmbeddings.prototype, "embedDocuments");
 

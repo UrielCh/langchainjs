@@ -1,8 +1,8 @@
 import pRetry from "p-retry";
 
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { FileLoader, LoadValues } from "./load.js";
-import { extname } from "./extname.js";
+import { FileLoader, LoadValues } from "./load.ts";
+import { extname } from "./extname.ts";
 
 const fetchWithTimeout = async (
   url: string,

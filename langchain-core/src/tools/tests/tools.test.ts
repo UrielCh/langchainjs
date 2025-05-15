@@ -7,9 +7,9 @@ import {
   ToolInputParsingException,
   isStructuredToolParams,
   tool,
-} from "../index.js";
-import { ToolMessage } from "../../messages/tool.js";
-import { RunnableConfig } from "../../runnables/types.js";
+} from "../index.ts";
+import { ToolMessage } from "../../messages/tool.ts";
+import { RunnableConfig } from "../../runnables/types.ts";
 
 test("Tool should error if responseFormat is content_and_artifact but the function doesn't return a tuple", async () => {
   const weatherSchema = z.object({

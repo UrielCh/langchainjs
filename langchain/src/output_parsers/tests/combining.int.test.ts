@@ -6,7 +6,7 @@ import {
   StructuredOutputParser,
   RegexParser,
   CombiningOutputParser,
-} from "../index.js";
+} from "../index.ts";
 
 test("CombiningOutputParser", async () => {
   const answerParser = StructuredOutputParser.fromNamesAndDescriptions({

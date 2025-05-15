@@ -1,8 +1,8 @@
 import { CallbackManagerForToolRun } from "@langchain/core/callbacks/manager";
 
-import { GoogleCalendarBase, GoogleCalendarAgentParams } from "./base.js";
-import { VIEW_TOOL_DESCRIPTION } from "./descriptions.js";
-import { runViewEvents } from "./commands/run-view-events.js";
+import { GoogleCalendarBase, GoogleCalendarAgentParams } from "./base.ts";
+import { VIEW_TOOL_DESCRIPTION } from "./descriptions.ts";
+import { runViewEvents } from "./commands/run-view-events.ts";
 
 /**
  * @example

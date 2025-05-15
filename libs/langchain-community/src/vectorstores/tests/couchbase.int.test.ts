@@ -7,7 +7,7 @@ import { Document } from "@langchain/core/documents";
 import {
   CouchbaseVectorStore,
   CouchbaseVectorStoreArgs,
-} from "../couchbase.js";
+} from "../couchbase.ts";
 
 describe.skip("Couchbase vector store", () => {
   const connectionString =

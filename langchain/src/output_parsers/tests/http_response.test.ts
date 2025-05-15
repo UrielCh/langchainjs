@@ -1,5 +1,5 @@
 import { FakeStreamingLLM } from "@langchain/core/utils/testing";
-import { HttpResponseOutputParser } from "../http_response.js";
+import { HttpResponseOutputParser } from "../http_response.ts";
 
 test("text/plain stream", async () => {
   const llm = new FakeStreamingLLM({});

@@ -1,5 +1,5 @@
 import { expect, test } from "@jest/globals";
-import { loadEvaluator } from "../../loader.js";
+import { loadEvaluator } from "../../loader.ts";
 
 test("Test PairwiseStringEvalChain", async () => {
   const chain = await loadEvaluator("pairwise_string", {

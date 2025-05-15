@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { NumericLiteralType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { NumericLiteralType } from "./types.ts";
 
 /**
  * Handler for numeric literal nodes in an abstract syntax tree (AST).

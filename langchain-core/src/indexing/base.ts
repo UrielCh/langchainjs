@@ -1,9 +1,9 @@
 import { v5 as uuidv5 } from "uuid";
-import { VectorStore } from "../vectorstores.js";
-import { RecordManagerInterface, UUIDV5_NAMESPACE } from "./record_manager.js";
-import { insecureHash } from "../utils/hash.js";
-import { DocumentInterface, Document } from "../documents/document.js";
-import { BaseDocumentLoader } from "../document_loaders/base.js";
+import { VectorStore } from "../vectorstores.ts";
+import { RecordManagerInterface, UUIDV5_NAMESPACE } from "./record_manager.ts";
+import { insecureHash } from "../utils/hash.ts";
+import { DocumentInterface, Document } from "../documents/document.ts";
+import { BaseDocumentLoader } from "../document_loaders/base.ts";
 
 type Metadata = Record<string, unknown>;
 

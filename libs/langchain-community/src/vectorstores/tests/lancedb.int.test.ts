@@ -7,7 +7,7 @@ import { connect, Table } from "@lancedb/lancedb";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
 
-import { LanceDB } from "../lancedb.js";
+import { LanceDB } from "../lancedb.ts";
 
 describe("LanceDB", () => {
   let lanceDBTable: Table;

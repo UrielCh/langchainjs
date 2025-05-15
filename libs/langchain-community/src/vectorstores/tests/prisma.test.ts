@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 import { jest, test, expect } from "@jest/globals";
-import { PrismaVectorStore } from "../prisma.js";
+import { PrismaVectorStore } from "../prisma.ts";
 
 class Sql {
   strings: string[];

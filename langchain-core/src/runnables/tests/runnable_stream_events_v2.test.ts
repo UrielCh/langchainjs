@@ -10,28 +10,28 @@ import {
   RunnableMap,
   RunnablePassthrough,
   RunnablePick,
-} from "../index.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+} from "../index.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 import {
   FakeChatModel,
   FakeLLM,
   FakeListChatModel,
   FakeRetriever,
   FakeStreamingLLM,
-} from "../../utils/testing/index.js";
+} from "../../utils/testing/index.ts";
 import {
   AIMessage,
   AIMessageChunk,
   HumanMessage,
   SystemMessage,
-} from "../../messages/index.js";
-import { DynamicStructuredTool, DynamicTool, tool } from "../../tools/index.js";
-import { Document } from "../../documents/document.js";
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { GenerationChunk } from "../../outputs.js";
+} from "../../messages/index.ts";
+import { DynamicStructuredTool, DynamicTool, tool } from "../../tools/index.ts";
+import { Document } from "../../documents/document.ts";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { GenerationChunk } from "../../outputs.ts";
 // Import from web to avoid top-level side-effects from AsyncLocalStorage
-import { dispatchCustomEvent } from "../../callbacks/dispatch/web.js";
-import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.js";
+import { dispatchCustomEvent } from "../../callbacks/dispatch/web.ts";
+import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
 
 function reverse(s: string) {
   // Reverse a string.

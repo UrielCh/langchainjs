@@ -1,6 +1,6 @@
 import { isOpenAITool } from "@langchain/core/language_models/base";
 import { isLangChainTool } from "@langchain/core/utils/function_calling";
-import { isModelGemini, isModelGemma, validateGeminiParams } from "./gemini.js";
+import { isModelGemini, isModelGemma, validateGeminiParams } from "./gemini.ts";
 import {
   GeminiFunctionDeclaration,
   GeminiFunctionSchema,
@@ -11,12 +11,12 @@ import {
   GoogleAIModelRequestParams,
   GoogleAIToolType,
   VertexModelFamily,
-} from "../types.js";
+} from "../types.ts";
 import {
   jsonSchemaToGeminiParameters,
   schemaToGeminiParameters,
-} from "./zod_to_gemini_parameters.js";
-import { isModelClaude, validateClaudeParams } from "./anthropic.js";
+} from "./zod_to_gemini_parameters.ts";
+import { isModelClaude, validateClaudeParams } from "./anthropic.ts";
 
 export function copyAIModelParams(
   params: GoogleAIModelParams | undefined,

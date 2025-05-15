@@ -5,7 +5,7 @@ import {
 } from "@langchain/core/retrievers";
 import type { DocumentInterface } from "@langchain/core/documents";
 import { CallbackManagerForRetrieverRun } from "@langchain/core/callbacks/manager";
-import { BaseDocumentCompressor } from "./document_compressors/index.js";
+import { BaseDocumentCompressor } from "./document_compressors/index.ts";
 
 /**
  * Interface for the arguments required to construct a

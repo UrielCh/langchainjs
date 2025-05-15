@@ -4,7 +4,7 @@ import { InMemoryStore } from "@langchain/core/stores";
 import { SerializedConstructor } from "@langchain/core/load/serializable";
 import { load } from "@langchain/core/load";
 import { z } from "zod";
-import { schemaToGeminiParameters } from "../utils/zod_to_gemini_parameters.js";
+import { schemaToGeminiParameters } from "../utils/zod_to_gemini_parameters.ts";
 import {
   BackedBlobStore,
   BlobStore,
@@ -12,12 +12,12 @@ import {
   MediaManager,
   ReadThroughBlobStore,
   SimpleWebBlobStore,
-} from "../experimental/utils/media_core.js";
+} from "../experimental/utils/media_core.ts";
 import {
   ReadableJsonStream,
   ReadableSseJsonStream,
   ReadableSseStream,
-} from "../utils/stream.js";
+} from "../utils/stream.ts";
 
 describe("schemaToGeminiParameters", () => {
   test("can convert zod schema to gemini schema", () => {

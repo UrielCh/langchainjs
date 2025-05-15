@@ -1,21 +1,21 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { BasePromptTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../llm_chain.js";
+import { LLMChain } from "../llm_chain.ts";
 import {
   StuffDocumentsChain,
   MapReduceDocumentsChain,
   RefineDocumentsChain,
   MapReduceDocumentsChainInput,
-} from "../combine_docs_chain.js";
-import { QA_PROMPT_SELECTOR } from "./stuff_prompts.js";
+} from "../combine_docs_chain.ts";
+import { QA_PROMPT_SELECTOR } from "./stuff_prompts.ts";
 import {
   COMBINE_PROMPT_SELECTOR,
   COMBINE_QA_PROMPT_SELECTOR,
-} from "./map_reduce_prompts.js";
+} from "./map_reduce_prompts.ts";
 import {
   QUESTION_PROMPT_SELECTOR,
   REFINE_PROMPT_SELECTOR,
-} from "./refine_prompts.js";
+} from "./refine_prompts.ts";
 
 /**
  * Represents the parameters for creating a QAChain. It can be of three

@@ -82,18 +82,18 @@ import {
   type OpenAICoreRequestOptions,
   type ChatOpenAIResponseFormat,
   ChatOpenAIReasoningSummary,
-} from "./types.js";
-import { type OpenAIEndpointConfig, getEndpoint } from "./utils/azure.js";
+} from "./types.ts";
+import { type OpenAIEndpointConfig, getEndpoint } from "./utils/azure.ts";
 import {
   OpenAIToolChoice,
   formatToOpenAIToolChoice,
   wrapOpenAIClientError,
-} from "./utils/openai.js";
+} from "./utils/openai.ts";
 import {
   FunctionDef,
   formatFunctionDefinitions,
-} from "./utils/openai-format-fndef.js";
-import { _convertToOpenAITool } from "./utils/tools.js";
+} from "./utils/openai-format-fndef.ts";
+import { _convertToOpenAITool } from "./utils/tools.ts";
 
 export type { OpenAICallOptions, OpenAIChatInput };
 

@@ -19,7 +19,7 @@ import {
 } from "@langchain/core/outputs";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 
-import { PortkeySession, getPortkeySession } from "../llms/portkey.js";
+import { PortkeySession, getPortkeySession } from "../llms/portkey.ts";
 
 interface Message {
   role?: string;

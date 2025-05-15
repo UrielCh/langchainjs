@@ -1,2 +1,2 @@
-export * from "./vectorstores.js";
-export * from "./translator.js";
+export * from "./vectorstores.ts";
+export * from "./translator.ts";

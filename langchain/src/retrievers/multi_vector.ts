@@ -5,7 +5,7 @@ import {
 import type { VectorStoreInterface } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
 import { BaseStore, type BaseStoreInterface } from "@langchain/core/stores";
-import { createDocumentStoreFromByteStore } from "../storage/encoder_backed.js";
+import { createDocumentStoreFromByteStore } from "../storage/encoder_backed.ts";
 
 /**
  * Arguments for the MultiVectorRetriever class.

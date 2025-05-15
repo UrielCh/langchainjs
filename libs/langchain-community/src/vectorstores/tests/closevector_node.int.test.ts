@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { CloseVectorNode } from "../closevector/node.js";
+import { CloseVectorNode } from "../closevector/node.ts";
 
 test.skip("Test CloseVectorNode.fromTexts + addVectors", async () => {
   const key = getEnvironmentVariable("CLOSEVECTOR_API_KEY");

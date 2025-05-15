@@ -1,4 +1,4 @@
-import { VectorStore } from "../vectorstores.js";
+import { VectorStore } from "../vectorstores.ts";
 import {
   Comparator,
   Comparators,
@@ -12,8 +12,8 @@ import {
   VisitorOperationResult,
   VisitorResult,
   VisitorStructuredQueryResult,
-} from "./ir.js";
-import { isFilterEmpty, castValue } from "./utils.js";
+} from "./ir.ts";
+import { isFilterEmpty, castValue } from "./utils.ts";
 
 /**
  * Options object for the BasicTranslator class. Specifies the allowed

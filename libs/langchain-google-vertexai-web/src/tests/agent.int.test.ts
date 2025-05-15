@@ -3,7 +3,7 @@
 // import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 // import { AgentExecutor, createToolCallingAgent } from "langchain/agents";
 // import { Calculator } from "@langchain/community/tools/calculator";
-// import { ChatVertexAI } from "../index.js";
+// import { ChatVertexAI } from "../index.ts";
 
 // const tools = [new TavilySearchResults({ maxResults: 1 }), new Calculator()];
 

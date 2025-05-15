@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test } from "@jest/globals";
 import { HumanMessage } from "@langchain/core/messages";
-import { OllamaFunctions } from "../ollama_functions.js";
+import { OllamaFunctions } from "../ollama_functions.ts";
 
 test.skip("Test OllamaFunctions", async () => {
   const chat = new OllamaFunctions({ model: "mistral" });

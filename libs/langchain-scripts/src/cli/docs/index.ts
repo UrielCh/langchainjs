@@ -2,15 +2,15 @@
 // CLI for creating integration docs.
 // ---------------------------------------------
 import { Command } from "commander";
-import { fillChatIntegrationDocTemplate } from "./chat.js";
-import { fillDocLoaderIntegrationDocTemplate } from "./document_loaders.js";
-import { fillLLMIntegrationDocTemplate } from "./llms.js";
-import { fillRetrieverIntegrationDocTemplate } from "./retrievers.js";
-import { fillEmbeddingsIntegrationDocTemplate } from "./embeddings.js";
-import { fillToolkitIntegrationDocTemplate } from "./toolkits.js";
-import { fillToolIntegrationDocTemplate } from "./tools.js";
-import { fillKVStoreIntegrationDocTemplate } from "./kv_store.js";
-import { fillVectorStoreIntegrationDocTemplate } from "./vectorstores.js";
+import { fillChatIntegrationDocTemplate } from "./chat.ts";
+import { fillDocLoaderIntegrationDocTemplate } from "./document_loaders.ts";
+import { fillLLMIntegrationDocTemplate } from "./llms.ts";
+import { fillRetrieverIntegrationDocTemplate } from "./retrievers.ts";
+import { fillEmbeddingsIntegrationDocTemplate } from "./embeddings.ts";
+import { fillToolkitIntegrationDocTemplate } from "./toolkits.ts";
+import { fillToolIntegrationDocTemplate } from "./tools.ts";
+import { fillKVStoreIntegrationDocTemplate } from "./kv_store.ts";
+import { fillVectorStoreIntegrationDocTemplate } from "./vectorstores.ts";
 
 type CLIInput = {
   type: string;

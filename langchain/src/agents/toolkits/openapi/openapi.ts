@@ -1,21 +1,21 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import type { ToolInterface } from "@langchain/core/tools";
 import { DynamicTool, BaseToolkit } from "@langchain/core/tools";
-import { JsonSpec } from "../../../tools/json.js";
-import { AgentExecutor } from "../../executor.js";
+import { JsonSpec } from "../../../tools/json.ts";
+import { AgentExecutor } from "../../executor.ts";
 import {
   OPENAPI_PREFIX,
   OPENAPI_SUFFIX,
   JSON_EXPLORER_DESCRIPTION,
-} from "./prompt.js";
-import { LLMChain } from "../../../chains/llm_chain.js";
-import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.js";
+} from "./prompt.ts";
+import { LLMChain } from "../../../chains/llm_chain.ts";
+import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.ts";
 import {
   Headers,
   RequestsGetTool,
   RequestsPostTool,
-} from "../../../tools/requests.js";
-import { createJsonAgent, JsonToolkit } from "../json/json.js";
+} from "../../../tools/requests.ts";
+import { createJsonAgent, JsonToolkit } from "../json/json.ts";
 
 /**
  * Represents a toolkit for making HTTP requests. It initializes the

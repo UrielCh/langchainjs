@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { Friendli } from "../friendli.js";
+import { Friendli } from "../friendli.ts";
 
 describe.skip("Friendli", () => {
   test("call", async () => {

@@ -2,7 +2,7 @@ import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
 import { Embeddings, type EmbeddingsParams } from "@langchain/core/embeddings";
 
-import { encodeApiKey } from "../utils/zhipuai.js";
+import { encodeApiKey } from "../utils/zhipuai.ts";
 
 /**
  * Interface that extends EmbeddingsParams and defines additional

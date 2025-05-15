@@ -5,7 +5,7 @@ import {
   MessageContentComplex,
 } from "@langchain/core/messages";
 import { ChatPromptValue } from "@langchain/core/prompt_values";
-import { GoogleBaseLLM, GoogleBaseLLMInput } from "../llms.js";
+import { GoogleBaseLLM, GoogleBaseLLMInput } from "../llms.ts";
 import {
   authOptions,
   MockClient,
@@ -13,9 +13,9 @@ import {
   MockClientError,
   mockFile,
   mockId,
-} from "./mock.js";
-import { GoogleAISafetyError } from "../utils/safety.js";
-import { MessageGeminiSafetyHandler } from "../utils/gemini.js";
+} from "./mock.ts";
+import { GoogleAISafetyError } from "../utils/safety.ts";
+import { MessageGeminiSafetyHandler } from "../utils/gemini.ts";
 
 class GoogleLLM extends GoogleBaseLLM<MockClientAuthInfo> {
   constructor(fields?: GoogleBaseLLMInput<MockClientAuthInfo>) {

@@ -1,4 +1,4 @@
-import { Edge, Node } from "./types.js";
+import { Edge, Node } from "./types.ts";
 
 function _escapeNodeLabel(nodeLabel: string): string {
   // Escapes the node label for Mermaid syntax.

@@ -1,16 +1,16 @@
-import { ChatPromptValueInterface } from "../prompt_values.js";
+import { ChatPromptValueInterface } from "../prompt_values.ts";
 import {
   RunnableLike,
   Runnable,
   type RunnableBinding,
-} from "../runnables/base.js";
-import { RunnableConfig } from "../runnables/config.js";
-import { InputValues } from "../utils/types/index.js";
+} from "../runnables/base.ts";
+import { RunnableConfig } from "../runnables/config.ts";
+import { InputValues } from "../utils/types/index.ts";
 import {
   BaseMessagePromptTemplateLike,
   ChatPromptTemplate,
   ChatPromptTemplateInput,
-} from "./chat.js";
+} from "./chat.ts";
 
 function isWithStructuredOutput(
   x: unknown

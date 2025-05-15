@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { Writer } from "../writer.js";
+import { Writer } from "../writer.ts";
 
 test.skip("Test Writer", async () => {
   const model = new Writer({ maxTokens: 20 });

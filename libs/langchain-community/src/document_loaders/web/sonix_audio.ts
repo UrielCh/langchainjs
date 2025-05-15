@@ -1,5 +1,5 @@
 import { SonixSpeechRecognitionService } from "sonix-speech-recognition";
-import { SpeechToTextRequest } from "sonix-speech-recognition/lib/types.js";
+import { SpeechToTextRequest } from "sonix-speech-recognition/lib/types.ts";
 import { Document } from "@langchain/core/documents";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 

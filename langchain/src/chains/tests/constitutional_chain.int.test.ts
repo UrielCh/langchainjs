@@ -1,9 +1,9 @@
 import { test } from "@jest/globals";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { OpenAI } from "@langchain/openai";
-import { ConstitutionalChain } from "../constitutional_ai/constitutional_chain.js";
-import { ConstitutionalPrinciple } from "../constitutional_ai/constitutional_principle.js";
-import { LLMChain } from "../llm_chain.js";
+import { ConstitutionalChain } from "../constitutional_ai/constitutional_chain.ts";
+import { ConstitutionalPrinciple } from "../constitutional_ai/constitutional_principle.ts";
+import { LLMChain } from "../llm_chain.ts";
 
 test("Test ConstitutionalChain", async () => {
   const llm = new OpenAI();

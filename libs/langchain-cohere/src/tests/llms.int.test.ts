@@ -1,7 +1,7 @@
 /* eslint-disable no-promise-executor-return, no-process-env */
 
 import { test } from "@jest/globals";
-import { Cohere } from "../llms.js";
+import { Cohere } from "../llms.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

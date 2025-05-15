@@ -7,7 +7,7 @@ import { test, expect } from "@jest/globals";
 import { faker } from "@faker-js/faker";
 import { Document } from "@langchain/core/documents";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
-import { RedisVectorStore } from "../vectorstores.js";
+import { RedisVectorStore } from "../vectorstores.ts";
 
 describe("RedisVectorStore", () => {
   let vectorStore: RedisVectorStore;

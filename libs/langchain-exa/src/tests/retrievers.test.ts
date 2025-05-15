@@ -1,6 +1,6 @@
 import { it, expect } from "@jest/globals";
 import { SearchResult, TextContentsOptions } from "exa-js";
-import { _getMetadata } from "../retrievers.js";
+import { _getMetadata } from "../retrievers.ts";
 
 it("should exclude the text field from metadata", () => {
   const dummyResult: SearchResult<{ text: TextContentsOptions }> = {

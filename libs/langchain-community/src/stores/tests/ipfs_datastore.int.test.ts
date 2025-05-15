@@ -4,7 +4,7 @@ import { test, expect } from "@jest/globals";
 
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
 import { MemoryDatastore } from "datastore-core";
-import { IPFSDatastoreChatMessageHistory } from "../message/ipfs_datastore.js";
+import { IPFSDatastoreChatMessageHistory } from "../message/ipfs_datastore.ts";
 
 describe.skip("IPFSDatastoreChatMessageHistory", () => {
   const datastore = new MemoryDatastore();

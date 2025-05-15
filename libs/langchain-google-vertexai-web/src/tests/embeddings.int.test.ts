@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { VertexAIEmbeddings } from "../embeddings.js";
+import { VertexAIEmbeddings } from "../embeddings.ts";
 
 test("Test VertexAIEmbeddings.embedQuery", async () => {
   const embeddings = new VertexAIEmbeddings({

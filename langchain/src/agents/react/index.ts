@@ -6,10 +6,10 @@ import type {
 } from "@langchain/core/language_models/base";
 import { RunnablePassthrough } from "@langchain/core/runnables";
 import { AgentStep } from "@langchain/core/agents";
-import { renderTextDescription } from "../../tools/render.js";
-import { formatLogToString } from "../format_scratchpad/log.js";
-import { ReActSingleInputOutputParser } from "./output_parser.js";
-import { AgentRunnableSequence } from "../agent.js";
+import { renderTextDescription } from "../../tools/render.ts";
+import { formatLogToString } from "../format_scratchpad/log.ts";
+import { ReActSingleInputOutputParser } from "./output_parser.ts";
+import { AgentRunnableSequence } from "../agent.ts";
 
 /**
  * Params used by the createXmlAgent function.

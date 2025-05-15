@@ -2,8 +2,8 @@ import { jest, test } from "@jest/globals";
 import { AIMessage, HumanMessage, ToolMessage } from "@langchain/core/messages";
 import { z } from "zod";
 import { OutputParserException } from "@langchain/core/output_parsers";
-import { ChatAnthropic } from "../chat_models.js";
-import { _convertMessagesToAnthropicPayload } from "../utils/message_inputs.js";
+import { ChatAnthropic } from "../chat_models.ts";
+import { _convertMessagesToAnthropicPayload } from "../utils/message_inputs.ts";
 
 test("withStructuredOutput with output validation", async () => {
   const model = new ChatAnthropic({

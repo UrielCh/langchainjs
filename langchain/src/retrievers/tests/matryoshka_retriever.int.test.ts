@@ -4,8 +4,8 @@ import { faker } from "@faker-js/faker";
 import { Document } from "@langchain/core/documents";
 import { v4 as uuidV4 } from "uuid";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
-import { MatryoshkaRetriever } from "../matryoshka_retriever.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
+import { MatryoshkaRetriever } from "../matryoshka_retriever.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
 
 test("MatryoshkaRetriever can retrieve", async () => {
   const smallEmbeddings = new OpenAIEmbeddings({

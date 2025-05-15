@@ -2,8 +2,8 @@
 import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { AzureChatOpenAI } from "../../azure/chat_models.js";
-import { ChatOpenAICallOptions } from "../../chat_models.js";
+import { AzureChatOpenAI } from "../../azure/chat_models.ts";
+import { ChatOpenAICallOptions } from "../../chat_models.ts";
 
 class AzureChatOpenAIStandardUnitTests extends ChatModelUnitTests<
   ChatOpenAICallOptions,

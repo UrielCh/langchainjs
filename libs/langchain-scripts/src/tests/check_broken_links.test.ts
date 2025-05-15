@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { extractLinks } from "../check_broken_links.js";
+import { extractLinks } from "../check_broken_links.ts";
 
 test("Regex can find links in md files", () => {
   const link1 =

@@ -5,7 +5,7 @@ import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { BaseMessageChunk, HumanMessage } from "@langchain/core/messages";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import { ChatAnthropicTools } from "../tool_calling.js";
+import { ChatAnthropicTools } from "../tool_calling.ts";
 
 test.skip("Test ChatAnthropicTools", async () => {
   const chat = new ChatAnthropicTools({

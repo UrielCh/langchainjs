@@ -1,7 +1,7 @@
 import { test } from "@jest/globals";
 
 import { HumanMessage } from "@langchain/core/messages";
-import { ChatBaiduQianfan } from "../chat_models.js";
+import { ChatBaiduQianfan } from "../chat_models.ts";
 
 test("invoke", async () => {
   const chat = new ChatBaiduQianfan({

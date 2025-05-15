@@ -6,7 +6,7 @@ import {
   BlobStoreAIStudioFileBaseParams,
 } from "@langchain/google-common/experimental/media";
 import { GoogleAuthOptions } from "google-auth-library";
-import { GAuthClient } from "./auth.js";
+import { GAuthClient } from "./auth.ts";
 
 export interface BlobStoreGoogleCloudStorageParams
   extends BlobStoreGoogleCloudStorageBaseParams<GoogleAuthOptions> {}

@@ -3,7 +3,7 @@ import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
 import { LangSmithParams } from "@langchain/core/language_models/chat_models";
-import { ChatMistralAI, ChatMistralAICallOptions } from "../chat_models.js";
+import { ChatMistralAI, ChatMistralAICallOptions } from "../chat_models.ts";
 
 class ChatMistralAIStandardUnitTests extends ChatModelUnitTests<
   ChatMistralAICallOptions,

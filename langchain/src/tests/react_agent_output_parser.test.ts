@@ -1,8 +1,8 @@
 import { test, expect } from "@jest/globals";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import { AgentAction, AgentFinish } from "@langchain/core/agents.js";
-import { ReActSingleInputOutputParser } from "../agents/react/output_parser.js";
+import { AgentAction, AgentFinish } from "@langchain/core/agents.ts";
+import { ReActSingleInputOutputParser } from "../agents/react/output_parser.ts";
 
 test("React agent output parser", async () => {
   const toolName = "AnyTool";

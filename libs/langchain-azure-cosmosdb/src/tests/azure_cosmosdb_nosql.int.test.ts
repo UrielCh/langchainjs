@@ -6,7 +6,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { CosmosClient } from "@azure/cosmos";
 
 import { DefaultAzureCredential } from "@azure/identity";
-import { AzureCosmosDBNoSQLVectorStore } from "../azure_cosmosdb_nosql.js";
+import { AzureCosmosDBNoSQLVectorStore } from "../azure_cosmosdb_nosql.ts";
 
 const DATABASE_NAME = "langchainTestDB";
 const CONTAINER_NAME = "testContainer";

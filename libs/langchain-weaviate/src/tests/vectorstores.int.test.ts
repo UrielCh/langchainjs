@@ -3,7 +3,7 @@ import { test, expect } from "@jest/globals";
 import weaviate, { ApiKey } from "weaviate-ts-client";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { WeaviateStore } from "../vectorstores.js";
+import { WeaviateStore } from "../vectorstores.ts";
 
 test("WeaviateStore", async () => {
   // Something wrong with the weaviate-ts-client types, so we need to disable

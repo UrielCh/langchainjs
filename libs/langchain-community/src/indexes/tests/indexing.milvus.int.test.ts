@@ -3,9 +3,9 @@ import { index } from "@langchain/core/indexing";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { InMemoryRecordManager } from "../memory.js";
-import { sleep } from "../../utils/time.js";
-import { Milvus } from "../../vectorstores/milvus.js";
+import { InMemoryRecordManager } from "../memory.ts";
+import { sleep } from "../../utils/time.ts";
+import { Milvus } from "../../vectorstores/milvus.ts";
 
 let collectionName: string;
 let embeddings: OpenAIEmbeddings;

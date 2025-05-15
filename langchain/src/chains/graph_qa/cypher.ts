@@ -2,10 +2,10 @@ import type { BaseLanguageModelInterface } from "@langchain/core/language_models
 import { ChainValues } from "@langchain/core/utils/types";
 import { BasePromptTemplate } from "@langchain/core/prompts";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { LLMChain } from "../llm_chain.js";
-import { BaseChain, ChainInputs } from "../base.js";
-import { CYPHER_GENERATION_PROMPT, CYPHER_QA_PROMPT } from "./prompts.js";
-import { logVersion020MigrationWarning } from "../../util/entrypoint_deprecation.js";
+import { LLMChain } from "../llm_chain.ts";
+import { BaseChain, ChainInputs } from "../base.ts";
+import { CYPHER_GENERATION_PROMPT, CYPHER_QA_PROMPT } from "./prompts.ts";
+import { logVersion020MigrationWarning } from "../../util/entrypoint_deprecation.ts";
 
 /* #__PURE__ */ logVersion020MigrationWarning({
   oldEntrypointName: "chains/graph_qa/cypher",

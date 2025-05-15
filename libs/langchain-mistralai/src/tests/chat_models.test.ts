@@ -1,9 +1,9 @@
-import { ChatMistralAI } from "../chat_models.js";
+import { ChatMistralAI } from "../chat_models.ts";
 import {
   _isValidMistralToolCallId,
   _convertToolCallIdToMistralCompatible,
   _mistralContentChunkToMessageContentComplex,
-} from "../utils.js";
+} from "../utils.ts";
 
 describe("Mistral Tool Call ID Conversion", () => {
   test("valid and invalid Mistral tool call IDs", () => {

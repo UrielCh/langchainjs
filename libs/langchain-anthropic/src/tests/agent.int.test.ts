@@ -2,7 +2,7 @@
 // import { ChatPromptTemplate } from "@langchain/core/prompts";
 // import { TavilySearchResults } from "@langchain/community/tools/tavily_search";
 // import { AgentExecutor, createToolCallingAgent } from "langchain/agents";
-// import { ChatAnthropic } from "../index.js";
+// import { ChatAnthropic } from "../index.ts";
 
 // const tools = [new TavilySearchResults({ maxResults: 1 })];
 

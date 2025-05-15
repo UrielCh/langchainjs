@@ -10,8 +10,8 @@ import {
   VectaraLibArgs,
   VectaraStore,
   VectaraSummary,
-} from "../vectara.js";
-import { VectaraSummaryRetriever } from "../../retrievers/vectara_summary.js";
+} from "../vectara.ts";
+import { VectaraSummaryRetriever } from "../../retrievers/vectara_summary.ts";
 
 const getDocs = (): Document[] => {
   // Some text from Lord of the Rings

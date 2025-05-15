@@ -1,12 +1,12 @@
 import { Document } from "@langchain/core/documents";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
-import PostgresEngine from "./engine.js";
+import PostgresEngine from "./engine.ts";
 import {
   textFormatter,
   csvFormatter,
   yamlFormatter,
   jsonFormatter,
-} from "./utils/utils.js";
+} from "./utils/utils.ts";
 
 const DEFAULT_METADATA_COL = "langchain_metadata";
 type Row = { [key: string]: string };

@@ -11,10 +11,10 @@ import {
   PairwiseStringEvaluatorArgs,
   StringEvaluator,
   StringEvaluatorArgs,
-} from "../base.js";
-import { cosine } from "../../util/ml-distance/similarities.js";
-import { chebyshev, manhattan } from "../../util/ml-distance/distances.js";
-import { euclidean } from "../../util/ml-distance-euclidean/euclidean.js";
+} from "../base.ts";
+import { cosine } from "../../util/ml-distance/similarities.ts";
+import { chebyshev, manhattan } from "../../util/ml-distance/distances.ts";
+import { euclidean } from "../../util/ml-distance-euclidean/euclidean.ts";
 
 /**
  *

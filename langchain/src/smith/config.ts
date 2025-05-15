@@ -5,9 +5,9 @@ import { EvaluationResult, RunEvaluator } from "langsmith/evaluation";
 import {
   Criteria as CriteriaType,
   type EmbeddingDistanceEvalChainInput,
-} from "../evaluation/index.js";
-import { LoadEvaluatorOptions } from "../evaluation/loader.js";
-import { EvaluatorType } from "../evaluation/types.js";
+} from "../evaluation/index.ts";
+import { LoadEvaluatorOptions } from "../evaluation/loader.ts";
+import { EvaluatorType } from "../evaluation/types.ts";
 
 export type EvaluatorInputs = {
   input?: string | unknown;

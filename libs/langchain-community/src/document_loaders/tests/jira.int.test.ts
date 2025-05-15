@@ -7,7 +7,7 @@ import {
   JiraIssue,
   JiraProjectLoader,
   JiraProjectLoaderParams,
-} from "../web/jira.js";
+} from "../web/jira.ts";
 
 describe("JiraProjectLoader Integration Tests", () => {
   const JIRA_HOST = requireEnvVar("JIRA_HOST");

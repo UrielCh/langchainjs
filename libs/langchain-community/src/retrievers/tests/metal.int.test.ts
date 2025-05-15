@@ -3,7 +3,7 @@
 import { test, expect } from "@jest/globals";
 import Metal from "@getmetal/metal-sdk";
 
-import { MetalRetriever } from "../metal.js";
+import { MetalRetriever } from "../metal.ts";
 
 test("MetalRetriever", async () => {
   const MetalSDK = Metal;

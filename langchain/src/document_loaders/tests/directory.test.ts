@@ -1,9 +1,9 @@
 import * as url from "node:url";
 import * as path from "node:path";
 import { test, expect } from "@jest/globals";
-import { DirectoryLoader, UnknownHandling } from "../fs/directory.js";
-import { TextLoader } from "../fs/text.js";
-import { JSONLoader } from "../fs/json.js";
+import { DirectoryLoader, UnknownHandling } from "../fs/directory.ts";
+import { TextLoader } from "../fs/text.ts";
+import { JSONLoader } from "../fs/json.ts";
 
 test("Test Directory loader", async () => {
   const directoryPath = path.resolve(

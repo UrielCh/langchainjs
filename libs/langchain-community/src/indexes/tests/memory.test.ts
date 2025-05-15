@@ -1,5 +1,5 @@
 import { describe, expect, test, jest } from "@jest/globals";
-import { InMemoryRecordManager } from "../memory.js";
+import { InMemoryRecordManager } from "../memory.ts";
 
 describe("MemoryRecordmanagerTest", () => {
   let recordManager: InMemoryRecordManager;

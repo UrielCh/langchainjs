@@ -9,7 +9,7 @@ import {
   isFullDatabase,
 } from "@notionhq/client";
 import { NotionToMarkdown } from "notion-to-md";
-import { getBlockChildren } from "notion-to-md/build/utils/notion.js";
+import { getBlockChildren } from "notion-to-md/build/utils/notion.ts";
 import type {
   ListBlockChildrenResponseResults,
   MdBlock,

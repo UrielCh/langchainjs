@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { SearchApi } from "../searchapi.js";
+import { SearchApi } from "../searchapi.ts";
 
 describe("SearchApi test suite", () => {
   class SearchApiUrlTester extends SearchApi {

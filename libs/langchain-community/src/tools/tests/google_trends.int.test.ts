@@ -1,5 +1,5 @@
 import { expect, describe } from "@jest/globals";
-import { SERPGoogleTrendsTool } from "../google_trends.js";
+import { SERPGoogleTrendsTool } from "../google_trends.ts";
 
 describe("SERPGoogleTrendsTool", () => {
   test("should be setup with correct parameters", async () => {

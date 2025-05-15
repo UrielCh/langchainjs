@@ -3,7 +3,7 @@ export {
   type SqlDatabaseChainInput,
   type CreateSqlQueryChainFields,
   createSqlQueryChain,
-} from "./sql_db_chain.js";
+} from "./sql_db_chain.ts";
 export {
   DEFAULT_SQL_DATABASE_PROMPT,
   SQL_POSTGRES_PROMPT,
@@ -12,4 +12,4 @@ export {
   SQL_MYSQL_PROMPT,
   SQL_SAP_HANA_PROMPT,
   SQL_PROMPTS_MAP,
-} from "./sql_db_prompt.js";
+} from "./sql_db_prompt.ts";

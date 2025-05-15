@@ -5,7 +5,7 @@ import type { Client, InStatement } from "@libsql/client";
 import {
   SqliteWhereBuilder,
   WhereCondition,
-} from "../utils/sqlite_where_builder.js";
+} from "../utils/sqlite_where_builder.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type MetadataDefault = Record<string, any>;

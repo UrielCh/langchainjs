@@ -4,7 +4,7 @@ import { BaseLLM } from "@langchain/core/language_models/llms";
 import { LLMResult } from "@langchain/core/outputs";
 import { Document } from "@langchain/core/documents";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { MultiRetrievalQAChain } from "../multi_retrieval_qa.js";
+import { MultiRetrievalQAChain } from "../multi_retrieval_qa.ts";
 
 class FakeRetrievers extends BaseRetriever {
   lc_namespace: string[] = [];

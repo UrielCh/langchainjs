@@ -3,10 +3,10 @@ import { test, expect, jest } from "@jest/globals";
 import { LLM } from "@langchain/core/language_models/llms";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { ChainTool } from "../chain.js";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { VectorDBQAChain } from "../../chains/vector_db_qa.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
+import { ChainTool } from "../chain.ts";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { VectorDBQAChain } from "../../chains/vector_db_qa.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
 
 class FakeLLM extends LLM {
   _llmType() {

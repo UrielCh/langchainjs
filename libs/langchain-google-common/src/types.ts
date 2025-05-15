@@ -9,14 +9,14 @@ import {
   MessageContent,
 } from "@langchain/core/messages";
 import { ChatGenerationChunk, ChatResult } from "@langchain/core/outputs";
-import type { JsonStream } from "./utils/stream.js";
-import { MediaManager } from "./experimental/utils/media_core.js";
+import type { JsonStream } from "./utils/stream.ts";
+import { MediaManager } from "./experimental/utils/media_core.ts";
 import {
   AnthropicResponseData,
   AnthropicAPIConfig,
-} from "./types-anthropic.js";
+} from "./types-anthropic.ts";
 
-export * from "./types-anthropic.js";
+export * from "./types-anthropic.ts";
 
 /**
  * Parameters needed to setup the client connection.

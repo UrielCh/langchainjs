@@ -2,8 +2,8 @@
 
 import { test, expect } from "@jest/globals";
 import { CallbackManager } from "@langchain/core/callbacks/manager";
-import { HTTPClient } from "@mistralai/mistralai/lib/http.js";
-import { MistralAI } from "../llms.js";
+import { HTTPClient } from "@mistralai/mistralai/lib/http.ts";
+import { MistralAI } from "../llms.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

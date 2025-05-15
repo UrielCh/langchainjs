@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
-import { HuggingFaceTransformersEmbeddings } from "../huggingface_transformers.js";
-import { HNSWLib } from "../../vectorstores/hnswlib.js";
+import { HuggingFaceTransformersEmbeddings } from "../huggingface_transformers.ts";
+import { HNSWLib } from "../../vectorstores/hnswlib.ts";
 
 test("HuggingFaceTransformersEmbeddings", async () => {
   const embeddings = new HuggingFaceTransformersEmbeddings();

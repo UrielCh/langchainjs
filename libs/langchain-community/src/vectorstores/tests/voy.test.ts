@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { VoyVectorStore, VoyClient } from "../voy.js";
+import { VoyVectorStore, VoyClient } from "../voy.ts";
 
 const fakeClient: VoyClient = {
   index: ({ embeddings }) => embeddings.map((i) => i.id).join(","),

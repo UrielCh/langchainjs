@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import "@tensorflow/tfjs-backend-cpu";
-import { TensorFlowEmbeddings } from "../tensorflow.js";
-import { HNSWLib } from "../../vectorstores/hnswlib.js";
+import { TensorFlowEmbeddings } from "../tensorflow.ts";
+import { HNSWLib } from "../../vectorstores/hnswlib.ts";
 
 test("TensorflowEmbeddings", async () => {
   const embeddings = new TensorFlowEmbeddings();

@@ -1,7 +1,7 @@
 import { load as coreLoad } from "@langchain/core/load";
-import { optionalImportEntrypoints } from "./import_constants.js";
-import * as importMap from "./import_map.js";
-import { OptionalImportMap } from "./import_type.js";
+import { optionalImportEntrypoints } from "./import_constants.ts";
+import * as importMap from "./import_map.ts";
+import { OptionalImportMap } from "./import_type.ts";
 
 /**
  * Load a LangChain module from a serialized text representation.

@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { GoogleCustomSearch } from "../google_custom_search.js";
+import { GoogleCustomSearch } from "../google_custom_search.ts";
 
 test.skip("GoogleCustomSearchTool", async () => {
   const tool = new GoogleCustomSearch();

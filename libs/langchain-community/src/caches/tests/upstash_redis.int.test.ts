@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { ChatOpenAI } from "@langchain/openai";
-import { UpstashRedisCache } from "../upstash_redis.js";
+import { UpstashRedisCache } from "../upstash_redis.ts";
 
 /**
  * This test is a result of the `lookup` method trying to parse an

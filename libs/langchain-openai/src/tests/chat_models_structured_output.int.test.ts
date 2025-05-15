@@ -4,7 +4,7 @@ import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { AIMessage, AIMessageChunk } from "@langchain/core/messages";
 import { test, expect, describe, it } from "@jest/globals";
 import { concat } from "@langchain/core/utils/stream";
-import { ChatOpenAI } from "../chat_models.js";
+import { ChatOpenAI } from "../chat_models.ts";
 
 test("withStructuredOutput zod schema function calling", async () => {
   const model = new ChatOpenAI({

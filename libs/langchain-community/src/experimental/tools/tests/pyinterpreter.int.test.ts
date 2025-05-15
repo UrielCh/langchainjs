@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { OpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { PythonInterpreterTool } from "../pyinterpreter.js";
+import { PythonInterpreterTool } from "../pyinterpreter.ts";
 
 describe("Python Interpreter testsuite", () => {
   test("hello langchain", async () => {

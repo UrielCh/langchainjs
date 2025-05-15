@@ -1,8 +1,8 @@
 import { test } from "@jest/globals";
 import { OpenAI, ChatOpenAI } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../llm_chain.js";
-import { SequentialChain } from "../sequential_chain.js";
+import { LLMChain } from "../llm_chain.ts";
+import { SequentialChain } from "../sequential_chain.ts";
 
 test("Test SequentialChain example usage", async () => {
   // This is an LLMChain to write a synopsis given a title of a play and the era it is set in.

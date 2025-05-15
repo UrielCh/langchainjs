@@ -1,5 +1,5 @@
-import { ReadableJsonStream } from "./utils/stream.js";
-import { GooglePlatformType } from "./types.js";
+import { ReadableJsonStream } from "./utils/stream.ts";
+import { GooglePlatformType } from "./types.ts";
 
 export type GoogleAbstractedClientOpsMethod = "GET" | "POST" | "DELETE";
 

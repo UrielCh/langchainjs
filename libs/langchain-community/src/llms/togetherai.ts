@@ -6,7 +6,7 @@ import {
 } from "@langchain/core/language_models/llms";
 import { GenerationChunk } from "@langchain/core/outputs";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.js";
+import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.ts";
 
 interface TogetherAIInferenceResult {
   object: string;

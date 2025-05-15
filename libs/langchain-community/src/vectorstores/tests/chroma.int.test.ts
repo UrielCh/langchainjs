@@ -6,7 +6,7 @@ import { faker } from "@faker-js/faker";
 import * as uuid from "uuid";
 import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { Chroma } from "../chroma.js";
+import { Chroma } from "../chroma.ts";
 
 describe.skip("Chroma", () => {
   let chromaStore: Chroma;

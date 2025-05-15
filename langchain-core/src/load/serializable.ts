@@ -1,4 +1,4 @@
-import { type SerializedFields, keyToJson, mapKeys } from "./map_keys.js";
+import { type SerializedFields, keyToJson, mapKeys } from "./map_keys.ts";
 
 export interface BaseSerialized<T extends string> {
   lc: number;

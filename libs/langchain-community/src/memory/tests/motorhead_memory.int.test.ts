@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test, expect } from "@jest/globals";
-import { MotorheadMemory } from "../motorhead_memory.js";
+import { MotorheadMemory } from "../motorhead_memory.ts";
 
 test("Test managed motörhead memory", async () => {
   const memory = new MotorheadMemory({

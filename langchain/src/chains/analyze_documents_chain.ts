@@ -1,11 +1,11 @@
 import { ChainValues } from "@langchain/core/utils/types";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "./base.js";
+import { BaseChain, ChainInputs } from "./base.ts";
 import {
   TextSplitter,
   RecursiveCharacterTextSplitter,
-} from "../text_splitter.js";
-import { SerializedAnalyzeDocumentChain } from "./serde.js";
+} from "../text_splitter.ts";
+import { SerializedAnalyzeDocumentChain } from "./serde.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type LoadValues = Record<string, any>;

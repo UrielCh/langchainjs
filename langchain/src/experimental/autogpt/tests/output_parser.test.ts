@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { preprocessJsonInput } from "../output_parser.js";
+import { preprocessJsonInput } from "../output_parser.ts";
 
 test("should parse outputs correctly", () => {
   expect(preprocessJsonInput("{'escaped':'\\a'}")).toBe("{'escaped':'\\\\a'}");

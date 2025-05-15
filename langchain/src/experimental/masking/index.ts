@@ -1,8 +1,8 @@
-export { MaskingParser } from "./parser.js";
-export { RegexMaskingTransformer } from "./regex_masking_transformer.js";
-export { MaskingTransformer } from "./transformer.js";
+export { MaskingParser } from "./parser.ts";
+export { RegexMaskingTransformer } from "./regex_masking_transformer.ts";
+export { MaskingTransformer } from "./transformer.ts";
 export {
   type MaskingParserConfig,
   type HashFunction,
   type HookFunction,
-} from "./types.js";
+} from "./types.ts";

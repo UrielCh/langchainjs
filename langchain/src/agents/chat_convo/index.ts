@@ -13,17 +13,17 @@ import {
   HumanMessage,
   AIMessage,
 } from "@langchain/core/messages";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { Optional } from "../../types/type-utils.js";
-import { Agent, AgentArgs, OutputParserArgs } from "../agent.js";
-import { AgentActionOutputParser, AgentInput } from "../types.js";
-import { ChatConversationalAgentOutputParserWithRetries } from "./outputParser.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { Optional } from "../../types/type-utils.ts";
+import { Agent, AgentArgs, OutputParserArgs } from "../agent.ts";
+import { AgentActionOutputParser, AgentInput } from "../types.ts";
+import { ChatConversationalAgentOutputParserWithRetries } from "./outputParser.ts";
 import {
   PREFIX_END,
   DEFAULT_PREFIX,
   DEFAULT_SUFFIX,
   TEMPLATE_TOOL_RESPONSE,
-} from "./prompt.js";
+} from "./prompt.ts";
 
 /**
  * Interface defining the structure of arguments used to create a prompt

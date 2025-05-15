@@ -1,7 +1,7 @@
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
-import { MemoryVectorStore } from "../../../vectorstores/memory.js";
-import { ViolationOfExpectationsChain } from "../violation_of_expectations/violation_of_expectations_chain.js";
+import { MemoryVectorStore } from "../../../vectorstores/memory.ts";
+import { ViolationOfExpectationsChain } from "../violation_of_expectations/violation_of_expectations_chain.ts";
 
 const dummyMessages = [
   new HumanMessage(

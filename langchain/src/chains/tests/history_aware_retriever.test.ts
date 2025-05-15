@@ -2,8 +2,8 @@ import { test } from "@jest/globals";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { FakeRetriever } from "@langchain/core/utils/testing";
 import { Document } from "@langchain/core/documents";
-import { FakeListLLM } from "../../util/testing/llms/fake.js";
-import { createHistoryAwareRetriever } from "../history_aware_retriever.js";
+import { FakeListLLM } from "../../util/testing/llms/fake.ts";
+import { createHistoryAwareRetriever } from "../history_aware_retriever.ts";
 
 test("createHistoryAwareRetriever", async () => {
   const answer = "I know the answer!";

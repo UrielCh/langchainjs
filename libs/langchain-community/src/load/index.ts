@@ -1,7 +1,7 @@
 import { load as coreLoad } from "@langchain/core/load";
-import { type OptionalImportMap, type SecretMap } from "./import_type.js";
-import * as importMap from "./import_map.js";
-import { optionalImportEntrypoints } from "./import_constants.js";
+import { type OptionalImportMap, type SecretMap } from "./import_type.ts";
+import * as importMap from "./import_map.ts";
+import { optionalImportEntrypoints } from "./import_constants.ts";
 
 export {
   optionalImportEntrypoints,

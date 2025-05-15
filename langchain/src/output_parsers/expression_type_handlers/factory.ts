@@ -1,14 +1,14 @@
-import { NodeHandler } from "./base.js";
-import { ArrayLiteralExpressionHandler } from "./array_literal_expression_handler.js";
-import { BooleanLiteralHandler } from "./boolean_literal_handler.js";
-import { CallExpressionHandler } from "./call_expression_handler.js";
-import { NumericLiteralHandler } from "./numeric_literal_handler.js";
-import { ObjectLiteralExpressionHandler } from "./object_literal_expression_handler.js";
-import { PropertyAssignmentHandler } from "./property_assignment_handler.js";
-import { StringLiteralHandler } from "./string_literal_handler.js";
-import { IdentifierHandler } from "./identifier_handler.js";
-import { MemberExpressionHandler } from "./member_expression_handler.js";
-import { ParsedType } from "./types.js";
+import { NodeHandler } from "./base.ts";
+import { ArrayLiteralExpressionHandler } from "./array_literal_expression_handler.ts";
+import { BooleanLiteralHandler } from "./boolean_literal_handler.ts";
+import { CallExpressionHandler } from "./call_expression_handler.ts";
+import { NumericLiteralHandler } from "./numeric_literal_handler.ts";
+import { ObjectLiteralExpressionHandler } from "./object_literal_expression_handler.ts";
+import { PropertyAssignmentHandler } from "./property_assignment_handler.ts";
+import { StringLiteralHandler } from "./string_literal_handler.ts";
+import { IdentifierHandler } from "./identifier_handler.ts";
+import { MemberExpressionHandler } from "./member_expression_handler.ts";
+import { ParsedType } from "./types.ts";
 
 const handlers = [
   ArrayLiteralExpressionHandler,

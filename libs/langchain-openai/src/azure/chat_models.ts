@@ -11,13 +11,13 @@ import { z } from "zod";
 import {
   ChatOpenAI,
   ChatOpenAIStructuredOutputMethodOptions,
-} from "../chat_models.js";
-import { OpenAIEndpointConfig, getEndpoint } from "../utils/azure.js";
+} from "../chat_models.ts";
+import { OpenAIEndpointConfig, getEndpoint } from "../utils/azure.ts";
 import {
   AzureOpenAIInput,
   OpenAIChatInput,
   OpenAICoreRequestOptions,
-} from "../types.js";
+} from "../types.ts";
 
 export type { AzureOpenAIInput };
 

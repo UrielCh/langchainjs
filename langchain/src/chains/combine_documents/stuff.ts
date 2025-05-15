@@ -15,7 +15,7 @@ import {
   DEFAULT_DOCUMENT_SEPARATOR,
   DOCUMENTS_KEY,
   formatDocuments,
-} from "./base.js";
+} from "./base.ts";
 
 /**
  * Create a chain that passes a list of documents to a model.

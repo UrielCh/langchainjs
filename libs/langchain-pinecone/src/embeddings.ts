@@ -6,7 +6,7 @@ import {
   Pinecone,
   PineconeConfiguration,
 } from "@pinecone-database/pinecone";
-import { getPineconeClient } from "./client.js";
+import { getPineconeClient } from "./client.ts";
 
 /* PineconeEmbeddingsParams holds the optional fields a user can pass to a Pinecone embedding model.
  * @param model - Model to use to generate embeddings. Default is "multilingual-e5-large".

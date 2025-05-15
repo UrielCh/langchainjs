@@ -4,8 +4,8 @@ import { BaseLanguageModel } from "@langchain/core/language_models/base";
 import { CallbackManagerForToolRun } from "@langchain/core/callbacks/manager";
 import { z } from "zod";
 
-import { VIEW_EVENTS_PROMPT } from "../prompts/index.js";
-import { getTimezoneOffsetInHours } from "../utils/get-timezone-offset-in-hours.js";
+import { VIEW_EVENTS_PROMPT } from "../prompts/index.ts";
+import { getTimezoneOffsetInHours } from "../utils/get-timezone-offset-in-hours.ts";
 
 const eventSchema = z.object({
   time_min: z.string(),

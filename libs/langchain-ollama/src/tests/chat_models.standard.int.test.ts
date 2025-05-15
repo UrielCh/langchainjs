@@ -5,7 +5,7 @@ import { AIMessageChunk } from "@langchain/core/messages";
 import { RunnableLambda } from "@langchain/core/runnables";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
-import { ChatOllama, ChatOllamaCallOptions } from "../chat_models.js";
+import { ChatOllama, ChatOllamaCallOptions } from "../chat_models.ts";
 
 const currentWeatherName = "get_current_weather";
 const currentWeatherDescription =

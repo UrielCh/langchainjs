@@ -13,8 +13,8 @@ import { ChatGenerationChunk } from "@langchain/core/outputs";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 
-import type { CloudflareWorkersAIInput } from "./llms.js";
-import { convertEventStreamToIterableReadableDataStream } from "./utils/event_source_parse.js";
+import type { CloudflareWorkersAIInput } from "./llms.ts";
+import { convertEventStreamToIterableReadableDataStream } from "./utils/event_source_parse.ts";
 
 /**
  * An interface defining the options for a Cloudflare Workers AI call. It extends

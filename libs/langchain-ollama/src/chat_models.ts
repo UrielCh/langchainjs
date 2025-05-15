@@ -41,8 +41,8 @@ import { zodToJsonSchema } from "zod-to-json-schema";
 import {
   convertOllamaMessagesToLangChain,
   convertToOllamaMessages,
-} from "./utils.js";
-import { OllamaCamelCaseOptions } from "./types.js";
+} from "./utils.ts";
+import { OllamaCamelCaseOptions } from "./types.ts";
 
 export interface ChatOllamaCallOptions extends BaseChatModelCallOptions {
   /**

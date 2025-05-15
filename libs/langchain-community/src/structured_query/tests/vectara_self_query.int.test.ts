@@ -5,8 +5,8 @@ import { OpenAI } from "@langchain/openai";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 import { AttributeInfo } from "langchain/chains/query_constructor";
 import { SelfQueryRetriever } from "langchain/retrievers/self_query";
-import { VectaraStore } from "../../vectorstores/vectara.js";
-import { VectaraTranslator } from "../vectara.js";
+import { VectaraStore } from "../../vectorstores/vectara.ts";
+import { VectaraTranslator } from "../vectara.ts";
 
 test.skip("Vectara Self Query Retriever Test", async () => {
   const docs = [

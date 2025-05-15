@@ -1,7 +1,7 @@
 import { test, expect, describe } from "@jest/globals";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
-import { WebBrowser } from "../webbrowser.js";
-import fetchAdapter from "../../util/axios-fetch-adapter.js";
+import { WebBrowser } from "../webbrowser.ts";
+import fetchAdapter from "../../util/axios-fetch-adapter.ts";
 
 describe("webbrowser Test suite", () => {
   test("get word of the day", async () => {

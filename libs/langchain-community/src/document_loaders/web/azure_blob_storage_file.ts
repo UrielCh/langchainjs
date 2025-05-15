@@ -6,7 +6,7 @@ import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 import {
   UnstructuredLoader,
   UnstructuredLoaderOptions,
-} from "../fs/unstructured.js";
+} from "../fs/unstructured.ts";
 
 /**
  * Interface representing the configuration for accessing a specific file

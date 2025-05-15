@@ -7,7 +7,7 @@ import {
   MemoryVariables,
   OutputValues,
 } from "@langchain/core/memory";
-import { formatDocumentsAsString } from "../util/document.js";
+import { formatDocumentsAsString } from "../util/document.ts";
 
 type Metadata = Record<string, unknown>;
 type MetadataFunction = (

@@ -3,8 +3,8 @@ import { test, expect } from "@jest/globals";
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { DynamicStructuredTool } from "@langchain/core/tools";
-import { TavilySearchResults } from "../../util/testing/tools/tavily_search.js";
-import { AgentExecutor, createToolCallingAgent } from "../index.js";
+import { TavilySearchResults } from "../../util/testing/tools/tavily_search.ts";
+import { AgentExecutor, createToolCallingAgent } from "../index.ts";
 
 const syntaxErrorTool = new DynamicStructuredTool({
   name: "query",

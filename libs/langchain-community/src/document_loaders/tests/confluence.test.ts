@@ -2,7 +2,7 @@ import { test, jest, expect } from "@jest/globals";
 import {
   ConfluencePagesLoader,
   ConfluenceAPIResponse,
-} from "../web/confluence.js";
+} from "../web/confluence.ts";
 
 type TestConfluencePagesLoaderType = ConfluencePagesLoader & {
   fetchConfluenceData: (url: string) => Promise<ConfluenceAPIResponse>;

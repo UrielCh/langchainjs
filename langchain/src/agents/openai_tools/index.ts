@@ -8,12 +8,12 @@ import { RunnablePassthrough } from "@langchain/core/runnables";
 import { OpenAIClient } from "@langchain/openai";
 import { convertToOpenAITool } from "@langchain/core/utils/function_calling";
 import { ToolDefinition } from "@langchain/core/language_models/base";
-import { formatToOpenAIToolMessages } from "../format_scratchpad/openai_tools.js";
+import { formatToOpenAIToolMessages } from "../format_scratchpad/openai_tools.ts";
 import {
   OpenAIToolsAgentOutputParser,
   type ToolsAgentStep,
-} from "./output_parser.js";
-import { AgentRunnableSequence } from "../agent.js";
+} from "./output_parser.ts";
+import { AgentRunnableSequence } from "../agent.ts";
 
 export { OpenAIToolsAgentOutputParser, type ToolsAgentStep };
 

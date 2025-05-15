@@ -1,25 +1,25 @@
 import type { Tiktoken, TiktokenModel } from "js-tiktoken/lite";
 
 import { z } from "zod";
-import { type BaseCache, InMemoryCache } from "../caches/base.js";
+import { type BaseCache, InMemoryCache } from "../caches/base.ts";
 import {
   type BasePromptValueInterface,
   StringPromptValue,
   ChatPromptValue,
-} from "../prompt_values.js";
+} from "../prompt_values.ts";
 import {
   type BaseMessage,
   type BaseMessageLike,
   type MessageContent,
-} from "../messages/base.js";
-import { coerceMessageLikeToMessage } from "../messages/utils.js";
-import { type LLMResult } from "../outputs.js";
-import { CallbackManager, Callbacks } from "../callbacks/manager.js";
-import { AsyncCaller, AsyncCallerParams } from "../utils/async_caller.js";
-import { encodingForModel } from "../utils/tiktoken.js";
-import { Runnable, type RunnableInterface } from "../runnables/base.js";
-import { RunnableConfig } from "../runnables/config.js";
-import { JSONSchema } from "../utils/json_schema.js";
+} from "../messages/base.ts";
+import { coerceMessageLikeToMessage } from "../messages/utils.ts";
+import { type LLMResult } from "../outputs.ts";
+import { CallbackManager, Callbacks } from "../callbacks/manager.ts";
+import { AsyncCaller, AsyncCallerParams } from "../utils/async_caller.ts";
+import { encodingForModel } from "../utils/tiktoken.ts";
+import { Runnable, type RunnableInterface } from "../runnables/base.ts";
+import { RunnableConfig } from "../runnables/config.ts";
+import { JSONSchema } from "../utils/json_schema.ts";
 
 // https://www.npmjs.com/package/js-tiktoken
 

@@ -8,9 +8,9 @@ import { RunLogPatch, StreamEvent } from "@langchain/core/tracers/log_stream";
 import { AIMessageChunk } from "@langchain/core/messages";
 import { concat } from "@langchain/core/utils/stream";
 import { awaitAllCallbacks } from "@langchain/core/callbacks/promises";
-import { AgentExecutor, createReactAgent } from "../../agents/index.js";
-import { pull } from "../../hub/index.js";
-import { initChatModel } from "../universal.js";
+import { AgentExecutor, createReactAgent } from "../../agents/index.ts";
+import { pull } from "../../hub/index.ts";
+import { initChatModel } from "../universal.ts";
 
 // Make copies of API keys and remove them from the environment to avoid conflicts.
 

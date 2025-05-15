@@ -8,8 +8,8 @@ import { SelfQueryRetriever } from "langchain/retrievers/self_query";
 import {
   SupabaseFilter,
   SupabaseVectorStore,
-} from "../../vectorstores/supabase.js";
-import { SupabaseTranslator } from "../supabase.js";
+} from "../../vectorstores/supabase.ts";
+import { SupabaseTranslator } from "../supabase.ts";
 
 test("Supabase Store Self Query Retriever Test", async () => {
   const docs = [

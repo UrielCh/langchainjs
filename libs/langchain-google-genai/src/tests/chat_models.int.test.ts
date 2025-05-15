@@ -24,7 +24,7 @@ import {
   GoogleSearchRetrievalTool,
 } from "@google/generative-ai";
 import { concat } from "@langchain/core/utils/stream";
-import { ChatGoogleGenerativeAI } from "../chat_models.js";
+import { ChatGoogleGenerativeAI } from "../chat_models.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

@@ -11,7 +11,7 @@ import {
   BaseCallbackHandlerInput,
 } from "@langchain/core/callbacks/base";
 
-import { Serialized } from "../../load/serializable.js";
+import { Serialized } from "../../load/serializable.ts";
 
 type Role = "user" | "ai" | "system" | "function" | "tool";
 

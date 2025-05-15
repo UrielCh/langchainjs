@@ -8,7 +8,7 @@ import { Pinecone } from "@pinecone-database/pinecone";
 import * as uuid from "uuid";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
 import { Document } from "@langchain/core/documents";
-import { PineconeStoreParams, PineconeStore } from "../vectorstores.js";
+import { PineconeStoreParams, PineconeStore } from "../vectorstores.ts";
 
 const PINECONE_SLEEP_LENGTH = 40000;
 

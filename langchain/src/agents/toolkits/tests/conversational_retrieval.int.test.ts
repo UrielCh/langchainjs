@@ -1,8 +1,8 @@
 import { test } from "@jest/globals";
 import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai";
-import { MemoryVectorStore } from "../../../vectorstores/memory.js";
-import { createConversationalRetrievalAgent } from "../conversational_retrieval/openai_functions.js";
-import { createRetrieverTool } from "../conversational_retrieval/tool.js";
+import { MemoryVectorStore } from "../../../vectorstores/memory.ts";
+import { createConversationalRetrievalAgent } from "../conversational_retrieval/openai_functions.ts";
+import { createRetrieverTool } from "../conversational_retrieval/tool.ts";
 
 test("Test ConversationalRetrievalAgent", async () => {
   const vectorStore = await MemoryVectorStore.fromTexts(

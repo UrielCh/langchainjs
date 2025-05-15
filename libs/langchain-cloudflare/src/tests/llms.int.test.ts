@@ -2,7 +2,7 @@
 
 import { test } from "@jest/globals";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { CloudflareWorkersAI } from "../llms.js";
+import { CloudflareWorkersAI } from "../llms.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

@@ -1,2 +1,2 @@
-export * from "./bedrock.js";
-export * from "./kendra.js";
+export * from "./bedrock.ts";
+export * from "./kendra.ts";

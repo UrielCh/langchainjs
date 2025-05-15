@@ -4,7 +4,7 @@ import {
   GoogleBaseLLMInput,
 } from "@langchain/google-common";
 import { GoogleAuthOptions } from "google-auth-library";
-import { GAuthClient } from "./auth.js";
+import { GAuthClient } from "./auth.ts";
 
 /**
  * Input to LLM class.

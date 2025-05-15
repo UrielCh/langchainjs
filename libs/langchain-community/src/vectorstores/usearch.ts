@@ -3,7 +3,7 @@ import * as uuid from "uuid";
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { SaveableVectorStore } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
-import { SynchronousInMemoryDocstore } from "../stores/doc/in_memory.js";
+import { SynchronousInMemoryDocstore } from "../stores/doc/in_memory.ts";
 
 /**
  * Interface that defines the arguments that can be passed to the

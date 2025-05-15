@@ -1,7 +1,7 @@
 import { BaseOutputParser } from "@langchain/core/output_parsers";
-import { MasterHandler } from "./expression_type_handlers/factory.js";
-import { ParsedType } from "./expression_type_handlers/types.js";
-import { ASTParser } from "./expression_type_handlers/base.js";
+import { MasterHandler } from "./expression_type_handlers/factory.ts";
+import { ParsedType } from "./expression_type_handlers/types.ts";
+import { ASTParser } from "./expression_type_handlers/base.ts";
 
 /**
  * We need to be able to handle the following cases:
@@ -80,6 +80,6 @@ export class ExpressionParser extends BaseOutputParser<ParsedType> {
   }
 }
 
-export * from "./expression_type_handlers/types.js";
+export * from "./expression_type_handlers/types.ts";
 
-export { MasterHandler } from "./expression_type_handlers/factory.js";
+export { MasterHandler } from "./expression_type_handlers/factory.ts";

@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test } from "@jest/globals";
-import { FigmaFileLoader } from "../web/figma.js";
+import { FigmaFileLoader } from "../web/figma.ts";
 
 test.skip("Test FigmaFileLoader", async () => {
   const loader = new FigmaFileLoader({

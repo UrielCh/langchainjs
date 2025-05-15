@@ -11,7 +11,7 @@ import {
   mapChatMessagesToStoredMessages,
   mapStoredMessagesToChatMessages,
 } from "@langchain/core/messages";
-import { pool } from "./connections.js";
+import { pool } from "./connections.ts";
 
 /**
  * Type for the input to the `RedisChatMessageHistory` constructor.

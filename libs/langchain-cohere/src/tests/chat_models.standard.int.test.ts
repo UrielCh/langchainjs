@@ -6,7 +6,7 @@ import {
   ChatCohere,
   ChatCohereCallOptions,
   ChatCohereInput,
-} from "../chat_models.js";
+} from "../chat_models.ts";
 
 class ChatCohereStandardIntegrationTests extends ChatModelIntegrationTests<
   ChatCohereCallOptions,

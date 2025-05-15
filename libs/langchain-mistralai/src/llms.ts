@@ -2,18 +2,18 @@ import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 import { BaseLLMParams, LLM } from "@langchain/core/language_models/llms";
 import { type BaseLanguageModelCallOptions } from "@langchain/core/language_models/base";
 import { GenerationChunk, LLMResult } from "@langchain/core/outputs";
-import { FIMCompletionRequest as MistralAIFIMCompletionRequest } from "@mistralai/mistralai/models/components/fimcompletionrequest.js";
-import { FIMCompletionStreamRequest as MistralAIFIMCompletionStreamRequest } from "@mistralai/mistralai/models/components/fimcompletionstreamrequest.js";
-import { FIMCompletionResponse as MistralAIFIMCompletionResponse } from "@mistralai/mistralai/models/components/fimcompletionresponse.js";
-import { ChatCompletionChoice as MistralAIChatCompletionChoice } from "@mistralai/mistralai/models/components/chatcompletionchoice.js";
-import { CompletionEvent as MistralAIChatCompletionEvent } from "@mistralai/mistralai/models/components/completionevent.js";
-import { CompletionChunk as MistralAICompetionChunk } from "@mistralai/mistralai/models/components/completionchunk.js";
+import { FIMCompletionRequest as MistralAIFIMCompletionRequest } from "@mistralai/mistralai/models/components/fimcompletionrequest.ts";
+import { FIMCompletionStreamRequest as MistralAIFIMCompletionStreamRequest } from "@mistralai/mistralai/models/components/fimcompletionstreamrequest.ts";
+import { FIMCompletionResponse as MistralAIFIMCompletionResponse } from "@mistralai/mistralai/models/components/fimcompletionresponse.ts";
+import { ChatCompletionChoice as MistralAIChatCompletionChoice } from "@mistralai/mistralai/models/components/chatcompletionchoice.ts";
+import { CompletionEvent as MistralAIChatCompletionEvent } from "@mistralai/mistralai/models/components/completionevent.ts";
+import { CompletionChunk as MistralAICompetionChunk } from "@mistralai/mistralai/models/components/completionchunk.ts";
 import {
   BeforeRequestHook,
   RequestErrorHook,
   ResponseHook,
   HTTPClient as MistralAIHTTPClient,
-} from "@mistralai/mistralai/lib/http.js";
+} from "@mistralai/mistralai/lib/http.ts";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { chunkArray } from "@langchain/core/utils/chunk_array";
 import { AsyncCaller } from "@langchain/core/utils/async_caller";

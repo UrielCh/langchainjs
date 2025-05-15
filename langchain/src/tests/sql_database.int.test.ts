@@ -1,6 +1,6 @@
 import { test, expect, beforeEach, afterEach } from "@jest/globals";
 import { DataSource } from "typeorm";
-import { SqlDatabase } from "../sql_db.js";
+import { SqlDatabase } from "../sql_db.ts";
 
 let datasource: DataSource;
 

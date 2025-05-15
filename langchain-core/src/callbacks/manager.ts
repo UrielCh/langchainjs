@@ -1,31 +1,31 @@
 import { v4 as uuidv4 } from "uuid";
-import { AgentAction, AgentFinish } from "../agents.js";
-import type { ChainValues } from "../utils/types/index.js";
-import { LLMResult } from "../outputs.js";
+import { AgentAction, AgentFinish } from "../agents.ts";
+import type { ChainValues } from "../utils/types/index.ts";
+import { LLMResult } from "../outputs.ts";
 import {
   BaseCallbackHandler,
   CallbackHandlerMethods,
   HandleLLMNewTokenCallbackFields,
   isBaseCallbackHandler,
   NewTokenIndices,
-} from "./base.js";
-import { ConsoleCallbackHandler } from "../tracers/console.js";
-import { type BaseMessage } from "../messages/base.js";
-import { getBufferString } from "../messages/utils.js";
-import { getEnvironmentVariable } from "../utils/env.js";
+} from "./base.ts";
+import { ConsoleCallbackHandler } from "../tracers/console.ts";
+import { type BaseMessage } from "../messages/base.ts";
+import { getBufferString } from "../messages/utils.ts";
+import { getEnvironmentVariable } from "../utils/env.ts";
 import {
   LangChainTracer,
   LangChainTracerFields,
-} from "../tracers/tracer_langchain.js";
-import { consumeCallback } from "./promises.js";
-import { Serialized } from "../load/serializable.js";
-import type { DocumentInterface } from "../documents/document.js";
-import { isTracingEnabled } from "../utils/callbacks.js";
-import { isBaseTracer } from "../tracers/base.js";
+} from "../tracers/tracer_langchain.ts";
+import { consumeCallback } from "./promises.ts";
+import { Serialized } from "../load/serializable.ts";
+import type { DocumentInterface } from "../documents/document.ts";
+import { isTracingEnabled } from "../utils/callbacks.ts";
+import { isBaseTracer } from "../tracers/base.ts";
 import {
   getContextVariable,
   _getConfigureHooks,
-} from "../singletons/async_local_storage/context.js";
+} from "../singletons/async_local_storage/context.ts";
 
 type BaseCallbackManagerMethods = {
   [K in keyof CallbackHandlerMethods]?: (

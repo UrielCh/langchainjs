@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test, expect } from "@jest/globals";
 
-import { VespaRetriever } from "../vespa.js";
+import { VespaRetriever } from "../vespa.ts";
 
 test.skip("VespaRetriever", async () => {
   const url = process.env.VESPA_URL!;

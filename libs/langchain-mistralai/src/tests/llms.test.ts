@@ -1,4 +1,4 @@
-import { MistralAI } from "../llms.js";
+import { MistralAI } from "../llms.ts";
 
 test("Serialization", () => {
   const model = new MistralAI({

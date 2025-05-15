@@ -1,4 +1,4 @@
-import { BaseMessage, BaseMessageFields, MessageType } from "./base.js";
+import { BaseMessage, BaseMessageFields, MessageType } from "./base.ts";
 
 export interface RemoveMessageFields
   extends Omit<BaseMessageFields, "content"> {

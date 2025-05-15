@@ -1,6 +1,6 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { PropertyAssignmentHandler } from "./property_assignment_handler.js";
-import { ObjectLiteralType, PropertyAssignmentType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { PropertyAssignmentHandler } from "./property_assignment_handler.ts";
+import { ObjectLiteralType, PropertyAssignmentType } from "./types.ts";
 
 /**
  * Handles object literal expressions in the LangChain Expression

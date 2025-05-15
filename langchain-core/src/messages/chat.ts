@@ -5,7 +5,7 @@ import {
   mergeContent,
   _mergeDicts,
   type MessageType,
-} from "./base.js";
+} from "./base.ts";
 
 export interface ChatMessageFieldsWithRole extends BaseMessageFields {
   role: string;

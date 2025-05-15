@@ -1,7 +1,7 @@
 import * as path from "node:path";
 import * as fs from "node:fs";
-import { boldText, getUserInput, greenText } from "../utils/get-input.js";
-import { fetchURLStatus } from "../utils/fetch-url-status.js";
+import { boldText, getUserInput, greenText } from "../utils/get-input.ts";
+import { fetchURLStatus } from "../utils/fetch-url-status.ts";
 import {
   SIDEBAR_LABEL_PLACEHOLDER,
   MODULE_NAME_PLACEHOLDER,
@@ -11,7 +11,7 @@ import {
   PYTHON_DOC_URL_PLACEHOLDER,
   API_REF_MODULE_PLACEHOLDER,
   API_REF_PACKAGE_PLACEHOLDER,
-} from "../constants.js";
+} from "../constants.ts";
 
 const TEMPLATE_PATH = path.resolve(
   "./src/cli/docs/templates/vectorstores.ipynb"

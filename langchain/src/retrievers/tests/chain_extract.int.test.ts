@@ -1,12 +1,12 @@
 import { test, expect } from "@jest/globals";
 import { OpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { StuffDocumentsChain } from "../../chains/combine_docs_chain.js";
-import { ConversationalRetrievalQAChain } from "../../chains/conversational_retrieval_chain.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { ContextualCompressionRetriever } from "../contextual_compression.js";
-import { LLMChainExtractor } from "../document_compressors/chain_extract.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { StuffDocumentsChain } from "../../chains/combine_docs_chain.ts";
+import { ConversationalRetrievalQAChain } from "../../chains/conversational_retrieval_chain.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { ContextualCompressionRetriever } from "../contextual_compression.ts";
+import { LLMChainExtractor } from "../document_compressors/chain_extract.ts";
 
 test("Test LLMChainExtractor", async () => {
   const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

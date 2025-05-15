@@ -8,7 +8,7 @@ import { BaseMessage, MessageContent } from "@langchain/core/messages";
 import { GenerationChunk } from "@langchain/core/outputs";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
-import { AbstractGoogleLLMConnection } from "./connection.js";
+import { AbstractGoogleLLMConnection } from "./connection.ts";
 import {
   GoogleAIBaseLLMInput,
   GoogleAIModelParams,
@@ -16,16 +16,16 @@ import {
   GooglePlatformType,
   GeminiContent,
   GoogleAIResponseMimeType,
-} from "./types.js";
+} from "./types.ts";
 import {
   copyAIModelParams,
   copyAndValidateModelParamsInto,
-} from "./utils/common.js";
-import { DefaultGeminiSafetyHandler } from "./utils/gemini.js";
-import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.js";
-import { ensureParams } from "./utils/failed_handler.js";
-import { ChatGoogleBase } from "./chat_models.js";
-import type { GoogleBaseLLMInput, GoogleAISafetyHandler } from "./types.js";
+} from "./utils/common.ts";
+import { DefaultGeminiSafetyHandler } from "./utils/gemini.ts";
+import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.ts";
+import { ensureParams } from "./utils/failed_handler.ts";
+import { ChatGoogleBase } from "./chat_models.ts";
+import type { GoogleBaseLLMInput, GoogleAISafetyHandler } from "./types.ts";
 
 export { GoogleBaseLLMInput };
 

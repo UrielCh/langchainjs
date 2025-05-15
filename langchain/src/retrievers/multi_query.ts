@@ -8,8 +8,8 @@ import { Document } from "@langchain/core/documents";
 import { BaseOutputParser } from "@langchain/core/output_parsers";
 import { PromptTemplate, BasePromptTemplate } from "@langchain/core/prompts";
 import { CallbackManagerForRetrieverRun } from "@langchain/core/callbacks/manager";
-import { LLMChain } from "../chains/llm_chain.js";
-import type { BaseDocumentCompressor } from "./document_compressors/index.js";
+import { LLMChain } from "../chains/llm_chain.ts";
+import type { BaseDocumentCompressor } from "./document_compressors/index.ts";
 
 interface LineList {
   lines: string[];

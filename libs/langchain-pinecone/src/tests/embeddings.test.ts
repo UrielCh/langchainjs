@@ -1,4 +1,4 @@
-import { PineconeEmbeddings } from "../embeddings.js";
+import { PineconeEmbeddings } from "../embeddings.ts";
 
 beforeAll(() => {
   // eslint-disable-next-line no-process-env

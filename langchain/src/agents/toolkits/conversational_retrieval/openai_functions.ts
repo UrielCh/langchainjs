@@ -1,8 +1,8 @@
 import { StructuredToolInterface } from "@langchain/core/tools";
 import { ChatOpenAI } from "@langchain/openai";
-import { ConversationSummaryBufferMemory } from "../../../memory/summary_buffer.js";
-import { initializeAgentExecutorWithOptions } from "../../initialize.js";
-import { OpenAIAgentTokenBufferMemory } from "./token_buffer_memory.js";
+import { ConversationSummaryBufferMemory } from "../../../memory/summary_buffer.ts";
+import { initializeAgentExecutorWithOptions } from "../../initialize.ts";
+import { OpenAIAgentTokenBufferMemory } from "./token_buffer_memory.ts";
 
 export type ConversationalRetrievalAgentOptions = {
   rememberIntermediateSteps?: boolean;

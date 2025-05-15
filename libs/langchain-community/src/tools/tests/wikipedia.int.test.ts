@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { WikipediaQueryRun } from "../wikipedia_query_run.js";
+import { WikipediaQueryRun } from "../wikipedia_query_run.ts";
 
 test.skip("WikipediaQueryRunTool returns a string for valid query", async () => {
   const tool = new WikipediaQueryRun();

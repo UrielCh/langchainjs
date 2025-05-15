@@ -1,12 +1,12 @@
 import { test } from "@jest/globals";
 import { OpenAI } from "@langchain/openai";
-import { LLMChain } from "../llm_chain.js";
-import { APIChain, APIChainInput } from "../api/api_chain.js";
+import { LLMChain } from "../llm_chain.ts";
+import { APIChain, APIChainInput } from "../api/api_chain.ts";
 import {
   API_URL_PROMPT_TEMPLATE,
   API_RESPONSE_PROMPT_TEMPLATE,
-} from "../api/prompts.js";
-import { OPEN_METEO_DOCS } from "./example_data/open_meteo_docs.js";
+} from "../api/prompts.ts";
+import { OPEN_METEO_DOCS } from "./example_data/open_meteo_docs.ts";
 
 const test_api_docs = `
 This API endpoint will search the notes for a user.

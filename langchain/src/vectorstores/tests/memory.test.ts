@@ -3,8 +3,8 @@ import { test, expect } from "@jest/globals";
 import { Document, DocumentInterface } from "@langchain/core/documents";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
 import { Embeddings } from "@langchain/core/embeddings";
-import { MemoryVectorStore } from "../memory.js";
-import { cosine } from "../../util/ml-distance/similarities.js";
+import { MemoryVectorStore } from "../memory.ts";
+import { cosine } from "../../util/ml-distance/similarities.ts";
 
 test("MemoryVectorStore with external ids", async () => {
   const embeddings = new SyntheticEmbeddings({

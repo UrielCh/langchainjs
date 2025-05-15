@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { ChatYandexGPT } from "../chat_models.js";
+import { ChatYandexGPT } from "../chat_models.ts";
 
 test("Test YandexGPT generation", async () => {
   const model = new ChatYandexGPT({});

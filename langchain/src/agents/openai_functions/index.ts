@@ -29,15 +29,15 @@ import {
   BasePromptTemplate,
 } from "@langchain/core/prompts";
 import { CallbackManager } from "@langchain/core/callbacks/manager";
-import { Agent, AgentArgs, AgentRunnableSequence } from "../agent.js";
-import { AgentInput } from "../types.js";
-import { PREFIX } from "./prompt.js";
-import { LLMChain } from "../../chains/llm_chain.js";
+import { Agent, AgentArgs, AgentRunnableSequence } from "../agent.ts";
+import { AgentInput } from "../types.ts";
+import { PREFIX } from "./prompt.ts";
+import { LLMChain } from "../../chains/llm_chain.ts";
 import {
   FunctionsAgentAction,
   OpenAIFunctionsAgentOutputParser,
-} from "../openai/output_parser.js";
-import { formatToOpenAIFunctionMessages } from "../format_scratchpad/openai_functions.js";
+} from "../openai/output_parser.ts";
+import { formatToOpenAIFunctionMessages } from "../format_scratchpad/openai_functions.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type CallOptionsIfAvailable<T> = T extends { CallOptions: infer CO } ? CO : any;

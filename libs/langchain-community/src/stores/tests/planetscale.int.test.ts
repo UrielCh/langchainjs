@@ -5,7 +5,7 @@
 import { test, expect } from "@jest/globals";
 
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
-import { PlanetScaleChatMessageHistory } from "../message/planetscale.js";
+import { PlanetScaleChatMessageHistory } from "../message/planetscale.ts";
 
 const config = {
   url: process.env.PLANETSCALE_DATABASE_URL!,

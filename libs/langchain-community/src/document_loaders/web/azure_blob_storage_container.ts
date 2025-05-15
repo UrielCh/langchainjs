@@ -1,8 +1,8 @@
 import { BlobServiceClient } from "@azure/storage-blob";
 import { Document } from "@langchain/core/documents";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
-import { AzureBlobStorageFileLoader } from "./azure_blob_storage_file.js";
-import { UnstructuredLoaderOptions } from "../fs/unstructured.js";
+import { AzureBlobStorageFileLoader } from "./azure_blob_storage_file.ts";
+import { UnstructuredLoaderOptions } from "../fs/unstructured.ts";
 
 /**
  * Interface representing the configuration for accessing an Azure Blob

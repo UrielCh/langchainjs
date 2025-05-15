@@ -6,8 +6,8 @@ import {
 } from "@langchain/core/output_parsers";
 import { BasePromptTemplate } from "@langchain/core/prompts";
 import { Runnable } from "@langchain/core/runnables";
-import { LLMChain } from "../chains/llm_chain.js";
-import { NAIVE_FIX_PROMPT } from "./prompts.js";
+import { LLMChain } from "../chains/llm_chain.ts";
+import { NAIVE_FIX_PROMPT } from "./prompts.ts";
 
 interface OutputFixingParserRetryInput {
   instructions: string;

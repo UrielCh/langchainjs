@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { concat } from "@langchain/core/utils/stream";
 import { BaseLanguageModelInput } from "@langchain/core/language_models/base";
-import { ChatOpenAI, ChatOpenAICallOptions } from "../chat_models.js";
+import { ChatOpenAI, ChatOpenAICallOptions } from "../chat_models.ts";
 
 const REPO_ROOT_DIR = process.cwd();
 

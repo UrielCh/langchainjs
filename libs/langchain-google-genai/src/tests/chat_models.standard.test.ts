@@ -5,7 +5,7 @@ import { AIMessageChunk } from "@langchain/core/messages";
 import {
   ChatGoogleGenerativeAI,
   GoogleGenerativeAIChatCallOptions,
-} from "../chat_models.js";
+} from "../chat_models.ts";
 
 class ChatGoogleGenerativeAIStandardUnitTests extends ChatModelUnitTests<
   GoogleGenerativeAIChatCallOptions,

@@ -4,7 +4,7 @@ import {
   LLMStringEvaluator,
   PairwiseStringEvaluator,
   StringEvaluator,
-} from "./base.js";
+} from "./base.ts";
 
 export interface EvaluatorType {
   /**

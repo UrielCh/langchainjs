@@ -16,8 +16,8 @@ import { describe, expect, test } from "@jest/globals";
 import {
   convertToConverseMessages,
   handleConverseStreamContentBlockDelta,
-} from "../common.js";
-import { ChatBedrockConverse } from "../chat_models.js";
+} from "../common.ts";
+import { ChatBedrockConverse } from "../chat_models.ts";
 
 describe("convertToConverseMessages", () => {
   const testCases: {

@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { CollegeConfidentialLoader } from "../web/college_confidential.js";
+import { CollegeConfidentialLoader } from "../web/college_confidential.ts";
 
 test("Test College confidential loader", async () => {
   const loader = new CollegeConfidentialLoader(

@@ -19,9 +19,9 @@ import {
   Callbacks,
 } from "@langchain/core/callbacks/manager";
 import { Runnable, type RunnableInterface } from "@langchain/core/runnables";
-import { BaseChain, ChainInputs } from "./base.js";
-import { SerializedLLMChain } from "./serde.js";
-import { NoOpOutputParser } from "../output_parsers/noop.js";
+import { BaseChain, ChainInputs } from "./base.ts";
+import { SerializedLLMChain } from "./serde.ts";
+import { NoOpOutputParser } from "../output_parsers/noop.ts";
 
 type LLMType =
   | BaseLanguageModelInterface

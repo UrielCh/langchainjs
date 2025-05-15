@@ -4,7 +4,7 @@ import {
   GoogleAbstractedClient,
   GoogleBaseLLMInput,
 } from "@langchain/google-common";
-import { WebGoogleAuth, WebGoogleAuthOptions } from "./auth.js";
+import { WebGoogleAuth, WebGoogleAuthOptions } from "./auth.ts";
 
 /**
  * Input to chat model class.

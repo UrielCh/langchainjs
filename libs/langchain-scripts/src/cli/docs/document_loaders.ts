@@ -5,8 +5,8 @@ import {
   getUserInput,
   greenText,
   redBackground,
-} from "../utils/get-input.js";
-import { fetchURLStatus } from "../utils/fetch-url-status.js";
+} from "../utils/get-input.ts";
+import { fetchURLStatus } from "../utils/fetch-url-status.ts";
 import {
   SIDEBAR_LABEL_PLACEHOLDER,
   MODULE_NAME_PLACEHOLDER,
@@ -19,7 +19,7 @@ import {
   LOCAL_PLACEHOLDER,
   SERIALIZABLE_PLACEHOLDER,
   PY_SUPPORT_PLACEHOLDER,
-} from "../constants.js";
+} from "../constants.ts";
 
 const NODE_SUPPORT_PLACEHOLDER = "__fs_support__";
 const NODE_ONLY_SIDEBAR_BADGE_PLACEHOLDER = "__node_only_sidebar__";

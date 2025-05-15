@@ -4,7 +4,7 @@ import { BaseClient } from "@xata.io/client";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
 
-import { XataVectorSearch } from "../xata.js";
+import { XataVectorSearch } from "../xata.ts";
 
 // Tests require a DB with a table called "docs" with:
 // * a column name content of type Text

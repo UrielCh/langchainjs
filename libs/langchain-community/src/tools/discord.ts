@@ -4,7 +4,7 @@ import {
   GatewayIntentBits,
   Message,
   ChannelType,
-} from "discord.js";
+} from "discord.ts";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { Tool } from "@langchain/core/tools";
 

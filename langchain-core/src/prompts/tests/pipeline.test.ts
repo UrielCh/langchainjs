@@ -1,12 +1,12 @@
 import { expect, test } from "@jest/globals";
-import { PromptTemplate } from "../prompt.js";
+import { PromptTemplate } from "../prompt.ts";
 import {
   ChatPromptTemplate,
   HumanMessagePromptTemplate,
   MessagesPlaceholder,
   SystemMessagePromptTemplate,
-} from "../chat.js";
-import { PipelinePromptTemplate } from "../pipeline.js";
+} from "../chat.ts";
+import { PipelinePromptTemplate } from "../pipeline.ts";
 
 test("Test pipeline input variables", async () => {
   const prompt = new PipelinePromptTemplate({

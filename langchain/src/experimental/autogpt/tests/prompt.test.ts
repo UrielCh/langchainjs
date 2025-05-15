@@ -1,5 +1,5 @@
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
-import { AutoGPTPrompt } from "../prompt.js";
+import { AutoGPTPrompt } from "../prompt.ts";
 
 // Mock token counter function
 const mockTokenCounter = async (text: string): Promise<number> => text.length;

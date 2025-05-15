@@ -5,7 +5,7 @@ import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 import { BaseMessage, MessageType } from "@langchain/core/messages";
 import { ChatGeneration, ChatResult } from "@langchain/core/outputs";
-import { ArcjetRedact } from "../arcjet.js";
+import { ArcjetRedact } from "../arcjet.ts";
 
 class MockChatModel extends BaseChatModel {
   callback?: (input: BaseMessage[]) => ChatGeneration[];

@@ -1,16 +1,16 @@
 import { JsonSchema7ObjectType } from "zod-to-json-schema";
-import { Optional } from "../../types/type-utils.js";
-import { Generation, ChatGeneration } from "../../outputs.js";
-import { BaseLLMOutputParser } from "../base.js";
-import { parsePartialJson } from "../json.js";
+import { Optional } from "../../types/type-utils.ts";
+import { Generation, ChatGeneration } from "../../outputs.ts";
+import { BaseLLMOutputParser } from "../base.ts";
+import { parsePartialJson } from "../json.ts";
 import {
   BaseCumulativeTransformOutputParser,
   BaseCumulativeTransformOutputParserInput,
-} from "../transform.js";
+} from "../transform.ts";
 import {
   compare,
   type Operation as JSONPatchOperation,
-} from "../../utils/json_patch.js";
+} from "../../utils/json_patch.ts";
 
 /**
  * Represents optional parameters for a function in a JSON Schema.

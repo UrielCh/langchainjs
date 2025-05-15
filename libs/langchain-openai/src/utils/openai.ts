@@ -11,7 +11,7 @@ import {
 import { ToolDefinition } from "@langchain/core/language_models/base";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { isZodSchema } from "@langchain/core/utils/types";
-import { addLangChainErrorFields } from "./errors.js";
+import { addLangChainErrorFields } from "./errors.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function wrapOpenAIClientError(e: any) {

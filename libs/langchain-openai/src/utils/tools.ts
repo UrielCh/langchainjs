@@ -3,7 +3,7 @@ import { OpenAI as OpenAIClient } from "openai";
 import { ToolDefinition } from "@langchain/core/language_models/base";
 import { BindToolsInput } from "@langchain/core/language_models/chat_models";
 import { isLangChainTool } from "@langchain/core/utils/function_calling";
-import { formatToOpenAITool } from "./openai.js";
+import { formatToOpenAITool } from "./openai.ts";
 
 /**
  * Formats a tool in either OpenAI format, or LangChain structured tool format

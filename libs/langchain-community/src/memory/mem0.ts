@@ -16,7 +16,7 @@ import {
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Extracts and formats memory content into a system prompt

@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { HuggingFaceInference } from "../hf.js";
+import { HuggingFaceInference } from "../hf.ts";
 
 test.skip("Test HuggingFace", async () => {
   const model = new HuggingFaceInference({ temperature: 0.1, topP: 0.5 });

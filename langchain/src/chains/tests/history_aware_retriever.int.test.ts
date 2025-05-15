@@ -1,8 +1,8 @@
 import { test } from "@jest/globals";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { createHistoryAwareRetriever } from "../history_aware_retriever.js";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { createHistoryAwareRetriever } from "../history_aware_retriever.ts";
 
 const QUESTION_GEN_TEMPLATE = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question.
 

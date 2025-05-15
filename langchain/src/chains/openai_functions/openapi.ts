@@ -16,11 +16,11 @@ import {
   BasePromptTemplate,
 } from "@langchain/core/prompts";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { OpenAPISpec } from "../../util/openapi.js";
-import { BaseChain } from "../base.js";
-import { LLMChain, LLMChainInput } from "../llm_chain.js";
-import { SequentialChain } from "../sequential_chain.js";
-import { JsonOutputFunctionsParser } from "../../output_parsers/openai_functions.js";
+import { OpenAPISpec } from "../../util/openapi.ts";
+import { BaseChain } from "../base.ts";
+import { LLMChain, LLMChainInput } from "../llm_chain.ts";
+import { SequentialChain } from "../sequential_chain.ts";
+import { JsonOutputFunctionsParser } from "../../output_parsers/openai_functions.ts";
 
 /**
  * Type representing a function for executing OpenAPI requests.

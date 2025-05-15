@@ -1,4 +1,4 @@
-export { PlanAndExecuteAgentExecutor } from "./agent_executor.js";
+export { PlanAndExecuteAgentExecutor } from "./agent_executor.ts";
 export {
   BasePlanner,
   BaseStepContainer,
@@ -10,5 +10,5 @@ export {
   ListStepContainer,
   LLMPlanner,
   ChainStepExecutor,
-} from "./base.js";
-export { PlanOutputParser } from "./outputParser.js";
+} from "./base.ts";
+export { PlanOutputParser } from "./outputParser.ts";

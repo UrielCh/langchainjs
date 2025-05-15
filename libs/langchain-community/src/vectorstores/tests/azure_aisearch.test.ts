@@ -5,7 +5,7 @@ import { FakeEmbeddings } from "@langchain/core/utils/testing";
 import {
   AzureAISearchQueryType,
   AzureAISearchVectorStore,
-} from "../azure_aisearch.js";
+} from "../azure_aisearch.ts";
 
 const embedMock = jest.spyOn(FakeEmbeddings.prototype, "embedDocuments");
 const uploadDocumentsMock = jest.spyOn(

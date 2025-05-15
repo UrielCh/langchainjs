@@ -2,8 +2,8 @@ import { test } from "@jest/globals";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { FakeRetriever } from "@langchain/core/utils/testing";
 import { Document } from "@langchain/core/documents";
-import { createRetrievalChain } from "../retrieval.js";
-import { FakeListLLM } from "../../util/testing/llms/fake.js";
+import { createRetrievalChain } from "../retrieval.ts";
+import { FakeListLLM } from "../../util/testing/llms/fake.ts";
 
 test("createRetrievalChain", async () => {
   const answer = "I know the answer!";

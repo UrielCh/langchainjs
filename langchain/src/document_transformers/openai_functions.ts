@@ -9,11 +9,11 @@ import {
   MappingDocumentTransformer,
 } from "@langchain/core/documents";
 import { ChatOpenAI } from "@langchain/openai";
-import { BaseChain } from "../chains/base.js";
+import { BaseChain } from "../chains/base.ts";
 import {
   TaggingChainOptions,
   createTaggingChain,
-} from "../chains/openai_functions/index.js";
+} from "../chains/openai_functions/index.ts";
 
 /**
  * A transformer that tags metadata to a document using a tagging chain.

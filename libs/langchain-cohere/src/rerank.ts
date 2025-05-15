@@ -1,7 +1,7 @@
 import { DocumentInterface } from "@langchain/core/documents";
 import { BaseDocumentCompressor } from "@langchain/core/retrievers/document_compressors";
 import { CohereClient } from "cohere-ai";
-import { CohereClientOptions, getCohereClient } from "./client.js";
+import { CohereClientOptions, getCohereClient } from "./client.ts";
 
 export interface BaseCohereRerankArgs {
   /**

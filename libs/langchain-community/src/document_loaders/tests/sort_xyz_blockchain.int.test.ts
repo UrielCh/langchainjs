@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { SortXYZBlockchainLoader } from "../web/sort_xyz_blockchain.js";
+import { SortXYZBlockchainLoader } from "../web/sort_xyz_blockchain.ts";
 
 const SORT_XYZ_DEMO_API_KEY = "dd46a0ae-5a1a-4c6f-8328-46618c4a73d4";
 const contractAddress =

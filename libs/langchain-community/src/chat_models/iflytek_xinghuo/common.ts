@@ -10,7 +10,7 @@ import {
 import {
   BaseWebSocketStream,
   WebSocketStreamOptions,
-} from "../../utils/iflytek_websocket_stream.js";
+} from "../../utils/iflytek_websocket_stream.ts";
 
 /**
  * Type representing the role of a message in the Xinghuo chat model.

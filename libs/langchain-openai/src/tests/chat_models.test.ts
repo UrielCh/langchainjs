@@ -2,7 +2,7 @@
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { it, expect, describe, beforeAll, afterAll, jest } from "@jest/globals";
-import { ChatOpenAI } from "../chat_models.js";
+import { ChatOpenAI } from "../chat_models.ts";
 
 describe("strict tool calling", () => {
   const weatherTool = {

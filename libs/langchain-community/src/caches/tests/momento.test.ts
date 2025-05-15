@@ -56,7 +56,7 @@ import {
 } from "@gomomento/sdk-core";
 import { Generation } from "@langchain/core/outputs";
 
-import { MomentoCache } from "../momento.js";
+import { MomentoCache } from "../momento.ts";
 
 class MockClient implements ICacheClient {
   private _cache: Map<string, string>;

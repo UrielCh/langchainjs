@@ -14,11 +14,11 @@ import {
   LLMPairwiseStringEvaluator,
   LLMPairwiseStringEvaluatorArgs,
   type ExtractLLMCallOptions,
-} from "../base.js";
+} from "../base.ts";
 
-import { PROMPT, PROMPT_WITH_REFERENCES } from "./prompt.js";
-import { ConstitutionalPrinciple } from "../../chains/index.js";
-import { Criteria, CriteriaLike } from "../criteria/criteria.js";
+import { PROMPT, PROMPT_WITH_REFERENCES } from "./prompt.ts";
+import { ConstitutionalPrinciple } from "../../chains/index.ts";
+import { Criteria, CriteriaLike } from "../criteria/criteria.ts";
 
 const SUPPORTED_CRITERIA: Record<Criteria, string> = {
   conciseness: "Is the submission concise and to the point?",

@@ -18,11 +18,11 @@ import type {
   SupabaseFilterRPCCall,
   SupabaseMetadata,
   SupabaseVectorStore,
-} from "../vectorstores/supabase.js";
+} from "../vectorstores/supabase.ts";
 import {
   ProxyParamsDuplicator,
   convertObjectFilterToStructuredQuery,
-} from "./supabase_utils.js";
+} from "./supabase_utils.ts";
 
 /**
  * Represents the possible values that can be used in a comparison in a

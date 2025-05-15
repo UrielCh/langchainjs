@@ -1,4 +1,4 @@
-import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.js";
+import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.ts";
 import { MessageContentComplex } from "@langchain/core/messages";
 
 // Mistral enforces a specific pattern for tool call IDs

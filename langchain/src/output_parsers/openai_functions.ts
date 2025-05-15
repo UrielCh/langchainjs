@@ -12,7 +12,7 @@ import {
   OutputParserException,
 } from "@langchain/core/output_parsers";
 import { parsePartialJson } from "@langchain/core/output_parsers";
-import { Optional } from "../types/type-utils.js";
+import { Optional } from "../types/type-utils.ts";
 
 /**
  * Represents optional parameters for a function in a JSON Schema.

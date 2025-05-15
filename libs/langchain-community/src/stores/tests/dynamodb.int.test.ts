@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test, expect, beforeEach, afterEach } from "@jest/globals";
 import { HumanMessage, AIMessage } from "@langchain/core/messages";
-import { DynamoDBChatMessageHistory } from "../message/dynamodb.js";
+import { DynamoDBChatMessageHistory } from "../message/dynamodb.ts";
 
 describe("DynamoDB message history store", () => {
   let messageHistory: DynamoDBChatMessageHistory;

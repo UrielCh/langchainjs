@@ -1,5 +1,5 @@
 import { BaseRun, Run } from "langsmith/schemas";
-import { BaseTracer } from "./base.js";
+import { BaseTracer } from "./base.ts";
 
 /**
  * A callback handler that collects traced runs and makes it easy to fetch the traced run object from calls through any langchain object.

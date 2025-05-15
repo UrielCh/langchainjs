@@ -2,7 +2,7 @@ import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 import { AIMessage } from "@langchain/core/messages";
-import { ChatXAI } from "../chat_models.js";
+import { ChatXAI } from "../chat_models.ts";
 
 test("withStructuredOutput zod schema function calling", async () => {
   const model = new ChatXAI({

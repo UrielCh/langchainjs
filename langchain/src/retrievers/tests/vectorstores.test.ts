@@ -1,6 +1,6 @@
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
 
 test("Test Memory Retriever with Callback", async () => {
   const pageContent = "Hello world";

@@ -4,7 +4,7 @@ import {
   ListKeyOptions,
   RecordManagerInterface,
   UpdateOptions,
-} from "./base.js";
+} from "./base.ts";
 
 interface TimeRow {
   epoch: number;

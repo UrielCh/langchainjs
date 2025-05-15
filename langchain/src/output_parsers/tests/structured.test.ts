@@ -1,6 +1,6 @@
 import { expect, test } from "@jest/globals";
 import { z } from "zod";
-import { StructuredOutputParser } from "../structured.js";
+import { StructuredOutputParser } from "../structured.ts";
 
 test("StructuredOutputParser handles valid JSON wrapped in triple backticks", async () => {
   const parser = StructuredOutputParser.fromZodSchema(

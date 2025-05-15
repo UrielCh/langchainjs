@@ -5,7 +5,7 @@ import { BufferMemory } from "langchain/memory";
 import { ChatOpenAI } from "@langchain/openai";
 import { ConversationChain } from "langchain/chains";
 import { ConvexChatMessageHistory } from "@langchain/community/stores/message/convex";
-import { action } from "./_generated/server.js";
+import { action } from "./_generated/server.ts";
 
 export const ask = action({
   args: { sessionId: v.string() },

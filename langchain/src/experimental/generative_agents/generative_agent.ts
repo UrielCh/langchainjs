@@ -5,9 +5,9 @@ import {
   CallbackManagerForChainRun,
   Callbacks,
 } from "@langchain/core/callbacks/manager";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { GenerativeAgentMemory } from "./generative_agent_memory.js";
-import { BaseChain } from "../../chains/base.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { GenerativeAgentMemory } from "./generative_agent_memory.ts";
+import { BaseChain } from "../../chains/base.ts";
 
 /**
  * Configuration for the GenerativeAgent class. Defines the character's

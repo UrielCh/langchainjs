@@ -3,7 +3,7 @@ import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import {
   GoogleCalendarCreateTool,
   GoogleCalendarViewTool,
-} from "../google_calendar/index.js";
+} from "../google_calendar/index.ts";
 
 jest.mock("googleapis", () => ({
   google: {

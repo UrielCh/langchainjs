@@ -14,7 +14,7 @@ const interpreter = await PythonInterpreterTool.initialize({
 });
 
 // Note: In Deno, it may be easier to initialize the interpreter yourself:
-// import pyodideModule from "npm:pyodide/pyodide.js";
+// import pyodideModule from "npm:pyodide/pyodide.ts";
 // import { PythonInterpreterTool } from "npm:@langchain/community/experimental/tools/pyinterpreter";
 
 // const pyodide = await pyodideModule.loadPyodide();

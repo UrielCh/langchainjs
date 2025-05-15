@@ -1,14 +1,14 @@
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { Embeddings, type EmbeddingsParams } from "@langchain/core/embeddings";
 import { chunkArray } from "@langchain/core/utils/chunk_array";
-import { EmbeddingRequest as MistralAIEmbeddingsRequest } from "@mistralai/mistralai/src/models/components/embeddingrequest.js";
-import { EmbeddingResponse as MistralAIEmbeddingsResponse } from "@mistralai/mistralai/src/models/components/embeddingresponse.js";
+import { EmbeddingRequest as MistralAIEmbeddingsRequest } from "@mistralai/mistralai/src/models/components/embeddingrequest.ts";
+import { EmbeddingResponse as MistralAIEmbeddingsResponse } from "@mistralai/mistralai/src/models/components/embeddingresponse.ts";
 import {
   BeforeRequestHook,
   RequestErrorHook,
   ResponseHook,
   HTTPClient as MistralAIHTTPClient,
-} from "@mistralai/mistralai/lib/http.js";
+} from "@mistralai/mistralai/lib/http.ts";
 
 /**
  * Interface for MistralAIEmbeddings parameters. Extends EmbeddingsParams and

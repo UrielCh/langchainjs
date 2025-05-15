@@ -1,8 +1,8 @@
 import { expect, test } from "@jest/globals";
 import pg, { PoolConfig } from "pg";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { PGVectorStore, PGVectorStoreArgs } from "../../pgvector.js";
-// import { BedrockEmbeddings } from "../../../embeddings/bedrock.js";
+import { PGVectorStore, PGVectorStoreArgs } from "../../pgvector.ts";
+// import { BedrockEmbeddings } from "../../../embeddings/bedrock.ts";
 
 const embeddingsEngine = new OpenAIEmbeddings();
 

@@ -1,5 +1,5 @@
-import { MaskingTransformer } from "./transformer.js";
-import type { MaskingParserConfig } from "./types.js";
+import { MaskingTransformer } from "./transformer.ts";
+import type { MaskingParserConfig } from "./types.ts";
 
 /**
  * MaskingParser class for handling the masking and rehydrating of messages.

@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 import { ChatOpenAI } from "@langchain/openai";
 import { createClient } from "@vercel/kv";
-import { VercelKVCache } from "../vercel_kv.js";
+import { VercelKVCache } from "../vercel_kv.ts";
 
 test("VercelKVCache works with ChatOpenAI", async () => {
   if (

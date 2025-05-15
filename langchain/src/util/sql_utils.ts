@@ -8,7 +8,7 @@ import {
   SQL_POSTGRES_PROMPT,
   SQL_SQLITE_PROMPT,
   SQL_ORACLE_PROMPT,
-} from "../chains/sql_db/sql_db_prompt.js";
+} from "../chains/sql_db/sql_db_prompt.ts";
 
 interface RawResultTableAndColumn {
   table_name: string;

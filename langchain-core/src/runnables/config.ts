@@ -1,6 +1,6 @@
-import { CallbackManager, ensureHandler } from "../callbacks/manager.js";
-import { AsyncLocalStorageProviderSingleton } from "../singletons/index.js";
-import { RunnableConfig } from "./types.js";
+import { CallbackManager, ensureHandler } from "../callbacks/manager.ts";
+import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
+import { RunnableConfig } from "./types.ts";
 
 export const DEFAULT_RECURSION_LIMIT = 25;
 

@@ -9,7 +9,7 @@
  */
 
 // import all entrypoints to test, do not do this in your own app
-import "./entrypoints.js";
+import "./entrypoints.ts";
 
 // Import a few things we'll use to test the exports
 import { ChatOpenAI } from "@langchain/openai";

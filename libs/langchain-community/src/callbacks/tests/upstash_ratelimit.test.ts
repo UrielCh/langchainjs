@@ -8,7 +8,7 @@ import { Serialized } from "@langchain/core/load/serializable";
 import {
   UpstashRatelimitHandler,
   UpstashRatelimitError,
-} from "../handlers/upstash_ratelimit.js";
+} from "../handlers/upstash_ratelimit.ts";
 
 // Mocked Ratelimit class
 jest.mock("@upstash/ratelimit");

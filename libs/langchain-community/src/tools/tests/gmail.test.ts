@@ -1,5 +1,5 @@
 import { jest, expect, describe } from "@jest/globals";
-import { GmailGetMessage } from "../gmail/index.js";
+import { GmailGetMessage } from "../gmail/index.ts";
 
 jest.mock("googleapis", () => ({
   google: {

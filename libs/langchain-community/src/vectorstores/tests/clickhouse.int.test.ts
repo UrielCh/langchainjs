@@ -2,9 +2,9 @@
 import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 
-import { ClickHouseStore } from "../clickhouse.js";
+import { ClickHouseStore } from "../clickhouse.ts";
 // Import OpenAIEmbeddings if you have a valid OpenAI API key
-import { HuggingFaceInferenceEmbeddings } from "../../embeddings/hf.js";
+import { HuggingFaceInferenceEmbeddings } from "../../embeddings/hf.ts";
 
 test.skip("ClickHouseStore.fromText", async () => {
   const vectorStore = await ClickHouseStore.fromTexts(

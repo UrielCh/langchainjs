@@ -1,6 +1,6 @@
-import sha256 from "crypto-js/sha256.js";
-import hmacSha256 from "crypto-js/hmac-sha256.js";
-import { getDate, service, signedHeaders } from "./common.js";
+import sha256 from "crypto-js/sha256.ts";
+import hmacSha256 from "crypto-js/hmac-sha256.ts";
+import { getDate, service, signedHeaders } from "./common.ts";
 
 /**
  * Method that calculate Tencent Cloud API v3 signature

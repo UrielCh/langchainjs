@@ -10,11 +10,11 @@ import {
   ChatPromptTemplate,
   MessagesPlaceholder,
 } from "@langchain/core/prompts";
-import { createRetrieverTool } from "../toolkits/index.js";
-import { RecursiveCharacterTextSplitter } from "../../text_splitter.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { AgentExecutor } from "../executor.js";
-import { formatForOpenAIFunctions } from "../format_scratchpad/openai_functions.js";
+import { createRetrieverTool } from "../toolkits/index.ts";
+import { RecursiveCharacterTextSplitter } from "../../text_splitter.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { AgentExecutor } from "../executor.ts";
+import { formatForOpenAIFunctions } from "../format_scratchpad/openai_functions.ts";
 
 /** Define a custom structured output parser. */
 const structuredOutputParser = (

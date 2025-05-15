@@ -1,6 +1,6 @@
 import { isZodSchema } from "@langchain/core/utils/types";
 import { zodToJsonSchema, type JsonSchema7Type } from "zod-to-json-schema";
-import { ObjectTool, FINISH_NAME } from "./schema.js";
+import { ObjectTool, FINISH_NAME } from "./schema.ts";
 
 /**
  * Class that generates prompts for generative agents. It maintains a list

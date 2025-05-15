@@ -1,5 +1,5 @@
 import type { MessageCreateParams } from "@anthropic-ai/sdk/resources/index.mjs";
-import { AnthropicToolChoice } from "../types.js";
+import { AnthropicToolChoice } from "../types.ts";
 
 export function handleToolChoice(
   toolChoice?: AnthropicToolChoice

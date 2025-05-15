@@ -4,7 +4,7 @@ import { z } from "zod";
 import {
   TavilyExtractAPIWrapper,
   type TavilyExtractResponse,
-} from "./utils.js";
+} from "./utils.ts";
 
 export type ExtractDepth = "basic" | "advanced";
 

@@ -1,9 +1,9 @@
-import { Serializable, SerializedConstructor } from "../load/serializable.js";
-import { StringWithAutocomplete } from "../utils/types/index.js";
+import { Serializable, SerializedConstructor } from "../load/serializable.ts";
+import { StringWithAutocomplete } from "../utils/types/index.ts";
 import {
   type PlainTextContentBlock,
   isDataContentBlock,
-} from "./content_blocks.js";
+} from "./content_blocks.ts";
 
 export interface StoredMessageData {
   content: string;

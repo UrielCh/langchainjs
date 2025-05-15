@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { difference, intersection, union } from "../set.js";
+import { difference, intersection, union } from "../set.ts";
 
 test("difference", () => {
   const set1 = new Set(["a", "b"]);

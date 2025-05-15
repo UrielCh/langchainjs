@@ -7,7 +7,7 @@ import {
   BytesOutputParser,
   StringOutputParser,
 } from "@langchain/core/output_parsers";
-import { Ollama } from "../llms.js";
+import { Ollama } from "../llms.ts";
 
 test("test call", async () => {
   const ollama = new Ollama({});

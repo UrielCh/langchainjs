@@ -6,7 +6,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { ConvexKVStore } from "@langchain/community/storage/convex";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { ConvexVectorStore } from "@langchain/community/vectorstores/convex";
-import { action } from "./_generated/server.js";
+import { action } from "./_generated/server.ts";
 
 export const ask = action({
   args: {},

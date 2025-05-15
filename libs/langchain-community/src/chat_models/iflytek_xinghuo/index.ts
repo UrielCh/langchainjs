@@ -1,9 +1,9 @@
 import WebSocket from "ws";
-import { BaseChatIflytekXinghuo } from "./common.js";
+import { BaseChatIflytekXinghuo } from "./common.ts";
 import {
   BaseWebSocketStream,
   WebSocketStreamOptions,
-} from "../../utils/iflytek_websocket_stream.js";
+} from "../../utils/iflytek_websocket_stream.ts";
 
 class WebSocketStream extends BaseWebSocketStream {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -16,7 +16,7 @@ import {
 import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { IterableReadableStream } from "@langchain/core/utils/stream";
-import { sign } from "../../utils/tencent_hunyuan/common.js";
+import { sign } from "../../utils/tencent_hunyuan/common.ts";
 
 /**
  * Type representing the role of a message in the Hunyuan chat model.

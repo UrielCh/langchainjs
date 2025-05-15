@@ -1,8 +1,8 @@
 import { extname, resolve } from "node:path";
 import { stat } from "node:fs/promises";
 import { Document } from "@langchain/core/documents";
-import { BaseDocumentLoader } from "../base.js";
-import { type LoadersMapping, UnknownHandling } from "./directory.js";
+import { BaseDocumentLoader } from "../base.ts";
+import { type LoadersMapping, UnknownHandling } from "./directory.ts";
 
 /**
  * A document loader that loads documents from multiple files. It extends the

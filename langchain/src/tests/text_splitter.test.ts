@@ -6,7 +6,7 @@ import {
   MarkdownTextSplitter,
   RecursiveCharacterTextSplitter,
   TokenTextSplitter,
-} from "../text_splitter.js";
+} from "../text_splitter.ts";
 
 function textLineGenerator(char: string, length: number) {
   const line = new Array(length).join(char);

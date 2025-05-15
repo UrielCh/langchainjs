@@ -6,7 +6,7 @@ import {
   MessageContentComplex,
 } from "@langchain/core/messages";
 import { ChatPromptValue } from "@langchain/core/prompt_values";
-import { VertexAI } from "../llms.js";
+import { VertexAI } from "../llms.ts";
 
 const imgData = {
   blueSquare:

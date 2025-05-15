@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { CohereEmbeddings } from "../embeddings.js";
+import { CohereEmbeddings } from "../embeddings.ts";
 
 test("Test CohereEmbeddings.embedQuery", async () => {
   const embeddings = new CohereEmbeddings({ model: "small" });

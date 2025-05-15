@@ -1,5 +1,5 @@
 import { test, expect, jest, describe } from "@jest/globals";
-import { TavilySearch } from "../tavily-search.js";
+import { TavilySearch } from "../tavily-search.ts";
 import {
   TavilySearchAPIWrapper,
   TavilySearchResponse,
@@ -8,7 +8,7 @@ import {
   TavilySearchParamsWithImageDescriptions,
   TavilySearchResponseWithSimpleImages,
   TavilySearchResponseWithImageDescriptions,
-} from "../utils.js";
+} from "../utils.ts";
 
 /**
  * A test implementation of TavilySearchAPIWrapper that doesn't need API keys

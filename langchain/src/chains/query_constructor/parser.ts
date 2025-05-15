@@ -6,12 +6,12 @@ import {
   Operation,
   Operator,
   Operators,
-} from "./ir.js";
+} from "./ir.ts";
 import {
   CallExpressionType,
   ExpressionParser,
   ParsedType,
-} from "../../output_parsers/expression.js";
+} from "../../output_parsers/expression.ts";
 
 /**
  * A type representing the possible types that can be traversed in an

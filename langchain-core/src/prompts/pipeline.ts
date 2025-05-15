@@ -1,7 +1,7 @@
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import type { SerializedBasePromptTemplate } from "./serde.js";
-import { BasePromptTemplate, type BasePromptTemplateInput } from "./base.js";
-import { ChatPromptTemplate } from "./chat.js";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import type { SerializedBasePromptTemplate } from "./serde.ts";
+import { BasePromptTemplate, type BasePromptTemplateInput } from "./base.ts";
+import { ChatPromptTemplate } from "./chat.ts";
 
 /**
  * Type that includes the name of the prompt and the prompt itself.

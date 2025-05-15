@@ -3,11 +3,11 @@ import {
   LLM,
   type BaseLLMCallOptions,
 } from "@langchain/core/language_models/llms";
-import { GuardrailResponse } from "@layerup/layerup-security/types.js";
+import { GuardrailResponse } from "@layerup/layerup-security/types.ts";
 import {
   LayerupSecurity,
   LayerupSecurityOptions,
-} from "../layerup_security.js";
+} from "../layerup_security.ts";
 
 // Mock LLM for testing purposes
 export class MockLLM extends LLM {

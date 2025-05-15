@@ -7,7 +7,7 @@ import {
   AIMessage,
   HumanMessage,
 } from "@langchain/core/messages";
-import { ChatLlamaCpp } from "../llama_cpp.js";
+import { ChatLlamaCpp } from "../llama_cpp.ts";
 
 const llamaPath = getEnvironmentVariable("LLAMA_PATH")!;
 

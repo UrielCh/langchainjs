@@ -4,14 +4,14 @@ import type {
   ToolInterface,
 } from "@langchain/core/tools";
 import { CallbackManager } from "@langchain/core/callbacks/manager";
-import { BufferMemory } from "../memory/buffer_memory.js";
-import { ChatAgent } from "./chat/index.js";
-import { ChatConversationalAgent } from "./chat_convo/index.js";
-import { StructuredChatAgent } from "./structured_chat/index.js";
-import { AgentExecutor, AgentExecutorInput } from "./executor.js";
-import { ZeroShotAgent } from "./mrkl/index.js";
-import { OpenAIAgent } from "./openai_functions/index.js";
-import { XMLAgent } from "./xml/index.js";
+import { BufferMemory } from "../memory/buffer_memory.ts";
+import { ChatAgent } from "./chat/index.ts";
+import { ChatConversationalAgent } from "./chat_convo/index.ts";
+import { StructuredChatAgent } from "./structured_chat/index.ts";
+import { AgentExecutor, AgentExecutorInput } from "./executor.ts";
+import { ZeroShotAgent } from "./mrkl/index.ts";
+import { OpenAIAgent } from "./openai_functions/index.ts";
+import { XMLAgent } from "./xml/index.ts";
 
 /**
  * Represents the type of an agent in LangChain. It can be

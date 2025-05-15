@@ -1,16 +1,16 @@
-import { MessageContent, MessageContentComplex } from "../messages/index.js";
-import { ImagePromptValue, ImageContent } from "../prompt_values.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
+import { MessageContent, MessageContentComplex } from "../messages/index.ts";
+import { ImagePromptValue, ImageContent } from "../prompt_values.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
 import {
   BasePromptTemplate,
   BasePromptTemplateInput,
   TypedPromptInputValues,
-} from "./base.js";
+} from "./base.ts";
 import {
   TemplateFormat,
   checkValidTemplate,
   renderTemplate,
-} from "./template.js";
+} from "./template.ts";
 
 /**
  * Inputs to create a {@link ImagePromptTemplate}

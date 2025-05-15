@@ -1,1 +1,1 @@
-export * from "./embeddings.js";
+export * from "./embeddings.ts";

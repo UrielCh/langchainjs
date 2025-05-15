@@ -1,9 +1,9 @@
 import type { Client } from "typesense";
-import type { MultiSearchRequestSchema } from "typesense/lib/Typesense/MultiSearch.js";
+import type { MultiSearchRequestSchema } from "typesense/lib/Typesense/MultiSearch.ts";
 import type {
   SearchResponseHit,
   DocumentSchema,
-} from "typesense/lib/Typesense/Documents.js";
+} from "typesense/lib/Typesense/Documents.ts";
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { VectorStore } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";

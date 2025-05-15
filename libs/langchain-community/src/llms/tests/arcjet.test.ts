@@ -3,7 +3,7 @@ import {
   LLM,
   type BaseLLMCallOptions,
 } from "@langchain/core/language_models/llms";
-import { ArcjetRedact } from "../arcjet.js";
+import { ArcjetRedact } from "../arcjet.ts";
 
 // Mock LLM for testing purposes
 export class MockLLM extends LLM {

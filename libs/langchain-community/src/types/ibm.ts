@@ -1,4 +1,4 @@
-import { RequestCallbacks } from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.js";
+import { RequestCallbacks } from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.ts";
 
 export interface TokenUsage {
   generated_token_count: number;

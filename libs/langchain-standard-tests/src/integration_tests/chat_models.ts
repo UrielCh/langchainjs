@@ -26,7 +26,7 @@ import {
   BaseChatModelsTests,
   BaseChatModelsTestsFields,
   RecordStringAny,
-} from "../base.js";
+} from "../base.ts";
 
 // Placeholder data for content block tests
 const TEST_IMAGE_URL =

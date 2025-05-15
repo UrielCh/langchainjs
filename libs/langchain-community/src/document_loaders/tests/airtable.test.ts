@@ -2,7 +2,7 @@
 /* eslint-disable no-process-env */
 import { Document } from "@langchain/core/documents";
 import { expect, jest } from "@jest/globals";
-import { AirtableLoader } from "../web/airtable.js";
+import { AirtableLoader } from "../web/airtable.ts";
 
 // Mock the global fetch function
 (global as any).fetch = jest.fn();

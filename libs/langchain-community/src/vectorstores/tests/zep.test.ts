@@ -11,7 +11,7 @@ import {
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { IZepConfig, ZepVectorStore } from "../zep.js";
+import { IZepConfig, ZepVectorStore } from "../zep.ts";
 
 jest.mock("@getzep/zep-js");
 

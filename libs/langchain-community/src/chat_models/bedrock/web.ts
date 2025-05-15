@@ -37,16 +37,16 @@ import {
 } from "@langchain/core/utils/function_calling";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { isZodSchema } from "@langchain/core/utils/types";
-import type { SerializedFields } from "../../load/map_keys.js";
+import type { SerializedFields } from "../../load/map_keys.ts";
 import {
   BaseBedrockInput,
   BedrockLLMInputOutputAdapter,
   type CredentialType,
-} from "../../utils/bedrock/index.js";
+} from "../../utils/bedrock/index.ts";
 import {
   _toolsInParams,
   isAnthropicTool,
-} from "../../utils/bedrock/anthropic.js";
+} from "../../utils/bedrock/anthropic.ts";
 
 type AnthropicTool = Record<string, unknown>;
 

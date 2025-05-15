@@ -4,11 +4,11 @@ import {
   JsonGetValueTool,
   JsonListKeysTool,
   JsonSpec,
-} from "../../../tools/json.js";
-import { JSON_PREFIX, JSON_SUFFIX } from "./prompt.js";
-import { LLMChain } from "../../../chains/llm_chain.js";
-import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.js";
-import { AgentExecutor } from "../../executor.js";
+} from "../../../tools/json.ts";
+import { JSON_PREFIX, JSON_SUFFIX } from "./prompt.ts";
+import { LLMChain } from "../../../chains/llm_chain.ts";
+import { ZeroShotCreatePromptArgs, ZeroShotAgent } from "../../mrkl/index.ts";
+import { AgentExecutor } from "../../executor.ts";
 
 /**
  * Represents a toolkit for working with JSON data. It initializes the

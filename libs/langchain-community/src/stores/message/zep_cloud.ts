@@ -10,7 +10,7 @@ import {
 import {
   condenseZepMemoryIntoHumanMessage,
   zepMemoryToMessages,
-} from "../../memory/zep_cloud.js";
+} from "../../memory/zep_cloud.ts";
 
 export const getZepMessageRoleType = (role: MessageType): RoleType => {
   switch (role) {

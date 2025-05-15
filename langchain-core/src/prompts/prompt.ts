@@ -1,20 +1,20 @@
 // Default generic "any" values are for backwards compatibility.
 // Replace with "string" when we are comfortable with a breaking change.
 
-import { BaseStringPromptTemplate } from "./string.js";
+import { BaseStringPromptTemplate } from "./string.ts";
 import type {
   BasePromptTemplateInput,
   TypedPromptInputValues,
-} from "./base.js";
+} from "./base.ts";
 import {
   checkValidTemplate,
   parseTemplate,
   renderTemplate,
   type TemplateFormat,
-} from "./template.js";
-import type { SerializedPromptTemplate } from "./serde.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import { MessageContent, MessageContentComplex } from "../messages/index.js";
+} from "./template.ts";
+import type { SerializedPromptTemplate } from "./serde.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import { MessageContent, MessageContentComplex } from "../messages/index.ts";
 
 /**
  * Inputs to create a {@link PromptTemplate}

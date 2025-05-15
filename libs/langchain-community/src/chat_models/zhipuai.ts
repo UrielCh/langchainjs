@@ -12,8 +12,8 @@ import { ChatGenerationChunk, type ChatResult } from "@langchain/core/outputs";
 import { type CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
-import { encodeApiKey } from "../utils/zhipuai.js";
-import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.js";
+import { encodeApiKey } from "../utils/zhipuai.ts";
+import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.ts";
 
 export type ZhipuMessageRole = "system" | "assistant" | "user";
 

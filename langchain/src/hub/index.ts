@@ -1,12 +1,12 @@
 import { Runnable } from "@langchain/core/runnables";
 import type { BaseLanguageModel } from "@langchain/core/language_models/base";
-import { load } from "../load/index.js";
+import { load } from "../load/index.ts";
 import {
   basePush,
   basePull,
   generateModelImportMap,
   generateOptionalImportMap,
-} from "./base.js";
+} from "./base.ts";
 
 export { basePush as push };
 

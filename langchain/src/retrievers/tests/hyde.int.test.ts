@@ -1,8 +1,8 @@
 import { expect, test } from "@jest/globals";
 import { OpenAIEmbeddings, OpenAI } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { HydeRetriever } from "../hyde.js";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { HydeRetriever } from "../hyde.ts";
 
 test("Hyde retriever", async () => {
   const embeddings = new OpenAIEmbeddings();

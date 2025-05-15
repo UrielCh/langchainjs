@@ -3,7 +3,7 @@ import { describe, test, expect } from "@jest/globals";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import { z } from "zod";
 
-import { ChatPerplexity } from "../perplexity.js";
+import { ChatPerplexity } from "../perplexity.ts";
 
 describe("ChatPerplexity", () => {
   test("should call ChatPerplexity", async () => {

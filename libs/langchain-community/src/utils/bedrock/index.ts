@@ -13,7 +13,7 @@ import {
   extractToolUseContent,
   extractToolCalls,
   formatMessagesForAnthropic,
-} from "./anthropic.js";
+} from "./anthropic.ts";
 
 export type CredentialType =
   | AwsCredentialIdentity

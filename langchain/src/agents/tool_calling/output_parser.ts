@@ -7,7 +7,7 @@ import {
 import { OutputParserException } from "@langchain/core/output_parsers";
 import { ChatGeneration } from "@langchain/core/outputs";
 import { ToolCall } from "@langchain/core/messages/tool";
-import { AgentMultiActionOutputParser } from "../types.js";
+import { AgentMultiActionOutputParser } from "../types.ts";
 
 /**
  * Type that represents an agent action with an optional message log.

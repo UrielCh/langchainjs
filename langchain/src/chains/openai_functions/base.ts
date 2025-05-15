@@ -11,7 +11,7 @@ import type {
 import { isZodSchema, type InputValues } from "@langchain/core/utils/types";
 import type { BaseMessage } from "@langchain/core/messages";
 import { zodToJsonSchema, type JsonSchema7Type } from "zod-to-json-schema";
-import { JsonOutputFunctionsParser } from "../../output_parsers/openai_functions.js";
+import { JsonOutputFunctionsParser } from "../../output_parsers/openai_functions.ts";
 
 /**
  * Configuration params for the createOpenAIFnRunnable method.

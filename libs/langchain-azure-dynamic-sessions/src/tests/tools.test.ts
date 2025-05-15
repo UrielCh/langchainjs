@@ -1,6 +1,6 @@
 import { test, jest, describe, beforeEach } from "@jest/globals";
 import { DefaultAzureCredential } from "@azure/identity";
-import { SessionsPythonREPLTool } from "../index.js";
+import { SessionsPythonREPLTool } from "../index.ts";
 
 describe("SessionsPythonREPLTool", () => {
   describe("Default access token provider", () => {

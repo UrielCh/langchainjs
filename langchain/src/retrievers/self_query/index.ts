@@ -15,7 +15,7 @@ import { CallbackManagerForRetrieverRun } from "@langchain/core/callbacks/manage
 import {
   loadQueryConstructorRunnable,
   QueryConstructorRunnableOptions,
-} from "../../chains/query_constructor/index.js";
+} from "../../chains/query_constructor/index.ts";
 
 export { BaseTranslator, BasicTranslator, FunctionalTranslator };
 

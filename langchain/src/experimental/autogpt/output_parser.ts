@@ -1,5 +1,5 @@
 import { BaseOutputParser } from "@langchain/core/output_parsers";
-import { AutoGPTAction } from "./schema.js";
+import { AutoGPTAction } from "./schema.ts";
 
 /**
  * Utility function used to preprocess a string to be parsed as JSON.

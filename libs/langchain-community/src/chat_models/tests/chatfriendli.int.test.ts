@@ -1,6 +1,6 @@
 import { test } from "@jest/globals";
 import { HumanMessage } from "@langchain/core/messages";
-import { ChatFriendli } from "../friendli.js";
+import { ChatFriendli } from "../friendli.ts";
 
 describe.skip("ChatFriendli", () => {
   test("call", async () => {

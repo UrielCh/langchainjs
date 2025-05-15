@@ -4,7 +4,7 @@ import * as os from "node:os";
 import { Readable } from "node:stream";
 import { S3Client, GetObjectCommand, S3ClientConfig } from "@aws-sdk/client-s3";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
-import { UnstructuredLoader as UnstructuredLoaderDefault } from "../fs/unstructured.js";
+import { UnstructuredLoader as UnstructuredLoaderDefault } from "../fs/unstructured.ts";
 
 /**
  * Represents the configuration options for the S3 client. It extends the

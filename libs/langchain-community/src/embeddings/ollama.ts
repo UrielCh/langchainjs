@@ -1,5 +1,5 @@
 import { Embeddings, EmbeddingsParams } from "@langchain/core/embeddings";
-import { OllamaInput, OllamaRequestParams } from "../utils/ollama.js";
+import { OllamaInput, OllamaRequestParams } from "../utils/ollama.ts";
 
 type CamelCasedRequestOptions = Omit<
   OllamaInput,

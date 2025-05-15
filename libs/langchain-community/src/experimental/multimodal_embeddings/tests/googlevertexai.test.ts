@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import {
   GoogleVertexAIMultimodalEmbeddings,
   GoogleVertexAIMedia,
-} from "../googlevertexai.js";
+} from "../googlevertexai.ts";
 
 test("mediaToInstance text", async () => {
   const e = new GoogleVertexAIMultimodalEmbeddings();

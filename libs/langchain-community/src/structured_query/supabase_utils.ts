@@ -9,7 +9,7 @@ import type {
   SupabaseFilter,
   SupabaseFilterRPCCall,
   SupabaseMetadata,
-} from "../vectorstores/supabase.js";
+} from "../vectorstores/supabase.ts";
 
 type SupabaseFilterProps = keyof SupabaseFilter;
 

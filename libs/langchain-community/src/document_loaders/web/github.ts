@@ -9,7 +9,7 @@ import {
 } from "@langchain/core/utils/async_caller";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 import { UnknownHandling } from "langchain/document_loaders/fs/directory";
-import { extname } from "../../utils/extname.js";
+import { extname } from "../../utils/extname.ts";
 
 const extensions = /* #__PURE__ */ new Set(binaryExtensions);
 

@@ -51,12 +51,12 @@ import {
   AzureOpenAIInput,
   OpenAIChatInput,
   OpenAIChatCallOptions,
-} from "./types.js";
+} from "./types.ts";
 import {
   FunctionDef,
   formatFunctionDefinitions,
-} from "./utils/openai-format-fndef.js";
-import { USER_AGENT_PREFIX } from "./constants.js";
+} from "./utils/openai-format-fndef.ts";
+import { USER_AGENT_PREFIX } from "./constants.ts";
 
 function _convertDeltaToMessageChunk(
   delta: ChatResponseMessage,

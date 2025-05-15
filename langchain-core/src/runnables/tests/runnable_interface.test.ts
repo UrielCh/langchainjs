@@ -2,9 +2,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { test, expect } from "@jest/globals";
-import { StringOutputParser } from "../../output_parsers/string.js";
-import { PromptTemplate } from "../../prompts/prompt.js";
-import { RunnableSequence } from "../base.js";
+import { StringOutputParser } from "../../output_parsers/string.ts";
+import { PromptTemplate } from "../../prompts/prompt.ts";
+import { RunnableSequence } from "../base.ts";
 
 type RunnableBatchOptionsV0 = {
   maxConcurrency?: number;

@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { ExpressionParser } from "../expression.js";
+import { ExpressionParser } from "../expression.ts";
 
 const correctExps = [
   { type: "call_expression", funcCall: "hello", args: [] },

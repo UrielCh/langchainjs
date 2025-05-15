@@ -5,7 +5,7 @@ import {
   Column,
   Filter,
   CassandraTable,
-} from "../utils/cassandra.js";
+} from "../utils/cassandra.ts";
 
 /**
  * Configuration options for initializing a CassandraKVStore.

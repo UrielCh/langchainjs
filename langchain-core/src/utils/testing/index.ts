@@ -7,46 +7,46 @@ import {
   BaseCallbackConfig,
   CallbackManagerForLLMRun,
   CallbackManagerForToolRun,
-} from "../../callbacks/manager.js";
+} from "../../callbacks/manager.ts";
 import {
   BaseChatMessageHistory,
   BaseListChatMessageHistory,
-} from "../../chat_history.js";
-import { Document } from "../../documents/document.js";
+} from "../../chat_history.ts";
+import { Document } from "../../documents/document.ts";
 import {
   BaseChatModel,
   BaseChatModelCallOptions,
   BaseChatModelParams,
-} from "../../language_models/chat_models.js";
-import { BaseLLMParams, LLM } from "../../language_models/llms.js";
+} from "../../language_models/chat_models.ts";
+import { BaseLLMParams, LLM } from "../../language_models/llms.ts";
 import {
   BaseMessage,
   AIMessage,
   AIMessageChunk,
   HumanMessage,
-} from "../../messages/index.js";
-import { BaseOutputParser } from "../../output_parsers/base.js";
+} from "../../messages/index.ts";
+import { BaseOutputParser } from "../../output_parsers/base.ts";
 import {
   GenerationChunk,
   type ChatResult,
   ChatGenerationChunk,
-} from "../../outputs.js";
-import { BaseRetriever } from "../../retrievers/index.js";
-import { Runnable, RunnableLambda } from "../../runnables/base.js";
-import { StructuredTool, ToolParams } from "../../tools/index.js";
-import { BaseTracer, Run } from "../../tracers/base.js";
+} from "../../outputs.ts";
+import { BaseRetriever } from "../../retrievers/index.ts";
+import { Runnable, RunnableLambda } from "../../runnables/base.ts";
+import { StructuredTool, ToolParams } from "../../tools/index.ts";
+import { BaseTracer, Run } from "../../tracers/base.ts";
 import {
   Embeddings,
   EmbeddingsInterface,
   EmbeddingsParams,
-} from "../../embeddings.js";
+} from "../../embeddings.ts";
 import {
   StructuredOutputMethodParams,
   BaseLanguageModelInput,
   StructuredOutputMethodOptions,
-} from "../../language_models/base.js";
-import { VectorStore } from "../../vectorstores.js";
-import { cosine } from "../ml-distance/similarities.js";
+} from "../../language_models/base.ts";
+import { VectorStore } from "../../vectorstores.ts";
+import { cosine } from "../ml-distance/similarities.ts";
 
 /**
  * Parser for comma-separated values. It splits the input text by commas

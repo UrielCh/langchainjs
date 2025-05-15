@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 import { v4 as uuidv4 } from "uuid";
 import { MongoClient, ServerApiVersion } from "mongodb";
-import { MongoDBStore } from "../storage.js";
+import { MongoDBStore } from "../storage.ts";
 
 test("MongoDBStore can set and retrieve", async () => {
   expect(process.env.MONGODB_ATLAS_URI).toBeDefined();

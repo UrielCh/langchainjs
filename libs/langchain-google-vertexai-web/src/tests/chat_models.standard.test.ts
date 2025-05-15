@@ -3,7 +3,7 @@ import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
 import { GoogleAIBaseLanguageModelCallOptions } from "@langchain/google-common";
-import { ChatVertexAI } from "../chat_models.js";
+import { ChatVertexAI } from "../chat_models.ts";
 
 class ChatVertexAIStandardUnitTests extends ChatModelUnitTests<
   GoogleAIBaseLanguageModelCallOptions,

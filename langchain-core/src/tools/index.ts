@@ -8,19 +8,19 @@ import {
   CallbackManagerForToolRun,
   Callbacks,
   parseCallbackConfigArg,
-} from "../callbacks/manager.js";
-import { BaseLangChain } from "../language_models/base.js";
+} from "../callbacks/manager.ts";
+import { BaseLangChain } from "../language_models/base.ts";
 import {
   ensureConfig,
   patchConfig,
   pickRunnableConfigKeys,
   type RunnableConfig,
-} from "../runnables/config.js";
-import type { RunnableFunc } from "../runnables/base.js";
-import { isDirectToolOutput, ToolCall, ToolMessage } from "../messages/tool.js";
-import { AsyncLocalStorageProviderSingleton } from "../singletons/index.js";
-import { _isToolCall, ToolInputParsingException } from "./utils.js";
-import { isZodSchema } from "../utils/types/is_zod_schema.js";
+} from "../runnables/config.ts";
+import type { RunnableFunc } from "../runnables/base.ts";
+import { isDirectToolOutput, ToolCall, ToolMessage } from "../messages/tool.ts";
+import { AsyncLocalStorageProviderSingleton } from "../singletons/index.ts";
+import { _isToolCall, ToolInputParsingException } from "./utils.ts";
+import { isZodSchema } from "../utils/types/is_zod_schema.ts";
 import type {
   StructuredToolCallInput,
   ToolInputSchemaBase,
@@ -34,8 +34,8 @@ import type {
   DynamicToolInput,
   DynamicStructuredToolInput,
   ZodObjectAny,
-} from "./types.js";
-import { type JSONSchema, validatesOnlyStrings } from "../utils/json_schema.js";
+} from "./types.ts";
+import { type JSONSchema, validatesOnlyStrings } from "../utils/json_schema.ts";
 
 export type {
   BaseDynamicToolInput,
@@ -51,14 +51,14 @@ export type {
   ToolReturnType,
   ToolRunnableConfig,
   ToolInputSchemaBase as ToolSchemaBase,
-} from "./types.js";
+} from "./types.ts";
 
 export {
   isLangChainTool,
   isRunnableToolLike,
   isStructuredTool,
   isStructuredToolParams,
-} from "./types.js";
+} from "./types.ts";
 
 export { ToolInputParsingException };
 /**

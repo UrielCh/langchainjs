@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { IdentifierType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { IdentifierType } from "./types.ts";
 
 /**
  * Handles identifiers in the LangChain Expression Language. Extends the

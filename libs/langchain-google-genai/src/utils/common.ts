@@ -34,8 +34,8 @@ import { v4 as uuidv4 } from "uuid";
 import {
   jsonSchemaToGeminiParameters,
   schemaToGenerativeAIParameters,
-} from "./zod_to_genai_parameters.js";
-import { GoogleGenerativeAIToolType } from "../types.js";
+} from "./zod_to_genai_parameters.ts";
+import { GoogleGenerativeAIToolType } from "../types.ts";
 
 export function getMessageAuthor(message: BaseMessage) {
   const type = message._getType();

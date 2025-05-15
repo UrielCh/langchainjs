@@ -2,7 +2,7 @@
 
 import { ConvexVectorStore } from "@langchain/community/vectorstores/convex";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { action } from "./_generated/server.js";
+import { action } from "./_generated/server.ts";
 
 export const ingest = action({
   args: {},

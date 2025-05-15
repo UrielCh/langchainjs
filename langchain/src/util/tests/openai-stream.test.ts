@@ -1,6 +1,6 @@
 import { describe, it, expect, jest } from "@jest/globals";
 import { AxiosResponse } from "axios";
-import fetchAdapter from "../axios-fetch-adapter.js";
+import fetchAdapter from "../axios-fetch-adapter.ts";
 
 const mockFetchForOpenAIStream = async ({
   chunks,

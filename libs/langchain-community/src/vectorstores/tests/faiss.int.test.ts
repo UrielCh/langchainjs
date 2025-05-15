@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { FaissStore } from "../faiss.js";
+import { FaissStore } from "../faiss.ts";
 
 test.skip("Test FaissStore.fromTexts", async () => {
   const vectorStore = await FaissStore.fromTexts(

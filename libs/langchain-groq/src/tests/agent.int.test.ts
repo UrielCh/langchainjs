@@ -2,7 +2,7 @@
 // import { ChatPromptTemplate } from "@langchain/core/prompts";
 // import { DynamicStructuredTool } from "@langchain/core/tools";
 // import { z } from "zod";
-// import { ChatGroq } from "../chat_models.js";
+// import { ChatGroq } from "../chat_models.ts";
 
 // TODO: This test breaks CI build due to dependencies. Figure out a way around it.
 test.skip("Model is compatible with OpenAI tools agent and Agent Executor", async () => {

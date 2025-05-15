@@ -3,7 +3,7 @@ import { HumanMessage } from "@langchain/core/messages";
 import * as fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import * as path from "node:path";
-import { ChatOpenAI } from "../chat_models.js";
+import { ChatOpenAI } from "../chat_models.ts";
 
 test("Test ChatOpenAI with a file", async () => {
   const __filename = fileURLToPath(import.meta.url);

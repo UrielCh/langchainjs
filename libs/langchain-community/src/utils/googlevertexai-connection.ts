@@ -14,7 +14,7 @@ import type {
   GoogleAbstractedClient,
   GoogleAbstractedClientOps,
   GoogleAbstractedClientOpsMethod,
-} from "../types/googlevertexai-types.js";
+} from "../types/googlevertexai-types.ts";
 
 export abstract class GoogleConnection<
   CallOptions extends AsyncCallerCallOptions,

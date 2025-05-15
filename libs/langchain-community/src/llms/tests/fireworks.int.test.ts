@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { Fireworks } from "../fireworks.js";
+import { Fireworks } from "../fireworks.ts";
 
 describe("Fireworks", () => {
   test("call", async () => {

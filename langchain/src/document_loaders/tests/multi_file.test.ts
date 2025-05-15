@@ -1,10 +1,10 @@
 import * as url from "node:url";
 import * as path from "node:path";
 import { test, expect } from "@jest/globals";
-import { MultiFileLoader } from "../fs/multi_file.js";
-import { TextLoader } from "../fs/text.js";
-import { JSONLoader } from "../fs/json.js";
-import { UnknownHandling } from "../fs/directory.js";
+import { MultiFileLoader } from "../fs/multi_file.ts";
+import { TextLoader } from "../fs/text.ts";
+import { JSONLoader } from "../fs/json.ts";
+import { UnknownHandling } from "../fs/directory.ts";
 
 test("Test MultiFileLoader", async () => {
   const baseDirectory = path.resolve(

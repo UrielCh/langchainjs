@@ -13,10 +13,10 @@ import {
 import { convertToOpenAIFunction } from "@langchain/core/utils/function_calling";
 import { AgentStep } from "@langchain/core/agents";
 import { RunnableSequence } from "@langchain/core/runnables";
-import { AgentExecutor } from "../executor.js";
-import { SerpAPI } from "../../util/testing/tools/serpapi.js";
-import { Calculator } from "../../util/testing/tools/calculator.js";
-import { OpenAIFunctionsAgentOutputParser } from "../openai/output_parser.js";
+import { AgentExecutor } from "../executor.ts";
+import { SerpAPI } from "../../util/testing/tools/serpapi.ts";
+import { Calculator } from "../../util/testing/tools/calculator.ts";
+import { OpenAIFunctionsAgentOutputParser } from "../openai/output_parser.ts";
 
 test("Runnable variant", async () => {
   const tools = [new Calculator(), new SerpAPI()];

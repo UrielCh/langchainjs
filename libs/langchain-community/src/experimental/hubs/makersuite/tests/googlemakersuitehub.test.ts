@@ -3,8 +3,8 @@ import { fileURLToPath } from "node:url";
 import * as path from "path";
 
 import { describe, expect, test } from "@jest/globals";
-import { ChatGooglePaLM } from "../chat_models.js";
-import { MakerSuiteHub, MakerSuitePrompt } from "../googlemakersuitehub.js";
+import { ChatGooglePaLM } from "../chat_models.ts";
+import { MakerSuiteHub, MakerSuitePrompt } from "../googlemakersuitehub.ts";
 
 describe("Google Maker Suite Hub", () => {
   const __filename = fileURLToPath(import.meta.url);

@@ -6,9 +6,9 @@ import type {
   SerializedStuffDocumentsChain,
   SerializedMapReduceDocumentsChain,
   SerializedRefineDocumentsChain,
-} from "./serde.js";
-import { BaseChain, ChainInputs } from "./base.js";
-import { LLMChain } from "./llm_chain.js";
+} from "./serde.ts";
+import { BaseChain, ChainInputs } from "./base.ts";
+import { LLMChain } from "./llm_chain.ts";
 
 /**
  * Interface for the input properties of the StuffDocumentsChain class.

@@ -3,7 +3,7 @@
 import { test, expect } from "@jest/globals";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { SingleStoreVectorStore, SearchStrategy } from "../singlestore.js";
+import { SingleStoreVectorStore, SearchStrategy } from "../singlestore.ts";
 
 class MockEmbeddings extends OpenAIEmbeddings {
   queryIndex: number;

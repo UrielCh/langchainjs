@@ -5,7 +5,7 @@ import type {
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { SaveableVectorStore } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
-import { SynchronousInMemoryDocstore } from "../stores/doc/in_memory.js";
+import { SynchronousInMemoryDocstore } from "../stores/doc/in_memory.ts";
 
 /**
  * Interface for the base configuration of HNSWLib. It includes the space

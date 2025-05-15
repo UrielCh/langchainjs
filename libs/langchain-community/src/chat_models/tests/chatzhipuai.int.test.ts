@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import { SystemMessage, HumanMessage } from "@langchain/core/messages";
-import { ChatZhipuAI } from "../zhipuai.js";
+import { ChatZhipuAI } from "../zhipuai.ts";
 
 interface TestConfig {
   modelName: string | undefined;

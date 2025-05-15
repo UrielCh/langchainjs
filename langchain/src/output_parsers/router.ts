@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { OutputParserException } from "@langchain/core/output_parsers";
-import { JsonMarkdownStructuredOutputParser } from "./structured.js";
+import { JsonMarkdownStructuredOutputParser } from "./structured.ts";
 
 /**
  * Defines the input parameters for the RouterOutputParser class. It can

@@ -1,12 +1,12 @@
 // Default generic "any" values are for backwards compatibility.
 // Replace with "string" when we are comfortable with a breaking change.
 
-import type { InputValues } from "../utils/types/index.js";
+import type { InputValues } from "../utils/types/index.ts";
 import {
   type StringPromptValueInterface,
   StringPromptValue,
-} from "../prompt_values.js";
-import { BasePromptTemplate, type TypedPromptInputValues } from "./base.js";
+} from "../prompt_values.ts";
+import { BasePromptTemplate, type TypedPromptInputValues } from "./base.ts";
 
 /**
  * Base class for string prompt templates. It extends the

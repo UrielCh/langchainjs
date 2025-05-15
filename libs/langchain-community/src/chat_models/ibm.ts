@@ -44,7 +44,7 @@ import {
   TextChatResultMessage,
   TextChatToolCall,
   TextChatUsage,
-} from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.js";
+} from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.ts";
 import { WatsonXAI } from "@ibm-cloud/watsonx-ai";
 import {
   convertLangChainToolCallToOpenAI,
@@ -72,12 +72,12 @@ import {
   WatsonxChatBasicOptions,
   WatsonxDeployedParams,
   WatsonxParams,
-} from "../types/ibm.js";
+} from "../types/ibm.ts";
 import {
   _convertToolCallIdToMistralCompatible,
   authenticateAndSetInstance,
   WatsonxToolsOutputParser,
-} from "../utils/ibm.js";
+} from "../utils/ibm.ts";
 
 export interface WatsonxDeltaStream {
   role?: string;

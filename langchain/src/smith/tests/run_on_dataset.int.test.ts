@@ -5,7 +5,7 @@
 import OpenAI from "openai";
 import wiki from "wikipedia";
 import { Client, Dataset, RunTree, RunTreeConfig } from "langsmith";
-import { DynamicRunEvaluatorParams, RunEvalConfig } from "../config.js";
+import { DynamicRunEvaluatorParams, RunEvalConfig } from "../config.ts";
 
 const oaiClient = new OpenAI();
 

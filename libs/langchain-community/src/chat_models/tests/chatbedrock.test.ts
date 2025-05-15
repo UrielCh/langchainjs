@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 
-import { BedrockChat } from "../bedrock/web.js";
+import { BedrockChat } from "../bedrock/web.ts";
 
 test("Test Bedrock identifying params", async () => {
   const region = "us-west-2";

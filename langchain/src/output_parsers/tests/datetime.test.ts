@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import { OutputParserException } from "@langchain/core/output_parsers";
-import { DatetimeOutputParser } from "../datetime.js";
+import { DatetimeOutputParser } from "../datetime.ts";
 
 test("DatetimeOutputParser", async () => {
   const parser = new DatetimeOutputParser();

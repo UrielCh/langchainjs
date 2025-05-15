@@ -2,8 +2,8 @@ import { z } from "zod";
 
 import { expect, test } from "@jest/globals";
 
-import { OutputParserException } from "../base.js";
-import { StructuredOutputParser } from "../structured.js";
+import { OutputParserException } from "../base.ts";
+import { StructuredOutputParser } from "../structured.ts";
 
 test("StructuredOutputParser.fromNamesAndDescriptions", async () => {
   const parser = StructuredOutputParser.fromNamesAndDescriptions({

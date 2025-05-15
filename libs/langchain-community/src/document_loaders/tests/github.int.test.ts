@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { GithubRepoLoader } from "../web/github.js";
+import { GithubRepoLoader } from "../web/github.ts";
 
 test("Test GithubRepoLoader", async () => {
   const loader = new GithubRepoLoader(

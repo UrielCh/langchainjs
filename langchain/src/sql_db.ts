@@ -10,7 +10,7 @@ import {
   verifyIgnoreTablesExistInDatabase,
   verifyIncludeTablesExistInDatabase,
   verifyListTablesExistInDatabase,
-} from "./util/sql_utils.js";
+} from "./util/sql_utils.ts";
 
 export type { SqlDatabaseDataSourceParams, SqlDatabaseOptionsParams };
 

@@ -6,7 +6,7 @@ import {
   StoredMessage,
   mapStoredMessagesToChatMessages,
 } from "@langchain/core/messages";
-import PostgresEngine from "./engine.js";
+import PostgresEngine from "./engine.ts";
 
 export interface PostgresChatMessageHistoryInput {
   engine: PostgresEngine;

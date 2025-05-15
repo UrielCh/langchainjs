@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 import { DataAPIClient, Db } from "@datastax/astra-db-ts";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
-import { AstraDBChatMessageHistory } from "../message/astradb.js";
+import { AstraDBChatMessageHistory } from "../message/astradb.ts";
 
 let db: Db;
 

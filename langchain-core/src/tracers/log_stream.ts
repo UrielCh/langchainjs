@@ -1,18 +1,18 @@
 import {
   applyPatch,
   type Operation as JSONPatchOperation,
-} from "../utils/fast-json-patch/index.js";
-import { BaseTracer, type Run } from "./base.js";
+} from "../utils/fast-json-patch/index.ts";
+import { BaseTracer, type Run } from "./base.ts";
 import {
   BaseCallbackHandler,
   BaseCallbackHandlerInput,
   CallbackHandlerPrefersStreaming,
   HandleLLMNewTokenCallbackFields,
-} from "../callbacks/base.js";
-import { IterableReadableStream } from "../utils/stream.js";
-import { ChatGenerationChunk, GenerationChunk } from "../outputs.js";
-import { AIMessageChunk } from "../messages/ai.js";
-import type { StreamEvent, StreamEventData } from "./event_stream.js";
+} from "../callbacks/base.ts";
+import { IterableReadableStream } from "../utils/stream.ts";
+import { ChatGenerationChunk, GenerationChunk } from "../outputs.ts";
+import { AIMessageChunk } from "../messages/ai.ts";
+import type { StreamEvent, StreamEventData } from "./event_stream.ts";
 
 export type { StreamEvent, StreamEventData };
 

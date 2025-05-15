@@ -2,7 +2,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { BaseClient } from "@xata.io/client";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
-import { XataChatMessageHistory } from "../message/xata.js";
+import { XataChatMessageHistory } from "../message/xata.ts";
 
 describe("XataChatMessageHistory", () => {
   const randomSessionId = (): string =>

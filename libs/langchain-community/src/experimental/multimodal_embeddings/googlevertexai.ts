@@ -5,11 +5,11 @@ import {
   GoogleVertexAIBaseLLMInput,
   GoogleVertexAIBasePrediction,
   GoogleVertexAILLMPredictions,
-} from "../../types/googlevertexai-types.js";
+} from "../../types/googlevertexai-types.ts";
 import {
   GoogleVertexAILLMConnection,
   GoogleVertexAILLMResponse,
-} from "../../utils/googlevertexai-connection.js";
+} from "../../utils/googlevertexai-connection.ts";
 
 /**
  * Parameters for the GoogleVertexAIMultimodalEmbeddings class, extending

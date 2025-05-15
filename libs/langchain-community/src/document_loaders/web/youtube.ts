@@ -1,4 +1,4 @@
-import { Innertube } from "youtubei.js";
+import { Innertube } from "youtubei.ts";
 import { Document } from "@langchain/core/documents";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 

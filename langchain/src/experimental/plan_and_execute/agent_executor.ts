@@ -2,7 +2,7 @@ import type { BaseLanguageModelInterface } from "@langchain/core/language_models
 import { ChainValues } from "@langchain/core/utils/types";
 import { Tool, DynamicStructuredTool } from "@langchain/core/tools";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "../../chains/base.js";
+import { BaseChain, ChainInputs } from "../../chains/base.ts";
 import {
   BasePlanner,
   BaseStepContainer,
@@ -10,17 +10,17 @@ import {
   ListStepContainer,
   LLMPlanner,
   ChainStepExecutor,
-} from "./base.js";
-import { AgentExecutor } from "../../agents/executor.js";
+} from "./base.ts";
+import { AgentExecutor } from "../../agents/executor.ts";
 import {
   DEFAULT_STEP_EXECUTOR_HUMAN_CHAT_MESSAGE_TEMPLATE,
   getPlannerChatPrompt,
-} from "./prompt.js";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { PlanOutputParser } from "./outputParser.js";
-import { ChatAgent } from "../../agents/chat/index.js";
-import { StructuredChatAgent } from "../../agents/index.js";
-import { SerializedLLMChain } from "../../chains/serde.js";
+} from "./prompt.ts";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { PlanOutputParser } from "./outputParser.ts";
+import { ChatAgent } from "../../agents/chat/index.ts";
+import { StructuredChatAgent } from "../../agents/index.ts";
+import { SerializedLLMChain } from "../../chains/serde.ts";
 
 /**
  * A utility function to distiguish a dynamicstructuredtool over other tools.

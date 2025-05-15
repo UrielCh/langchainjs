@@ -5,7 +5,7 @@ import { MongoClient } from "mongodb";
 import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
 
-import { AzureCosmosDBMongoDBVectorStore } from "../azure_cosmosdb_mongodb.js";
+import { AzureCosmosDBMongoDBVectorStore } from "../azure_cosmosdb_mongodb.ts";
 
 const DATABASE_NAME = "langchain";
 const COLLECTION_NAME = "test";

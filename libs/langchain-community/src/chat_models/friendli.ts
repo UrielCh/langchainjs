@@ -21,7 +21,7 @@ import {
   ChatResult,
 } from "@langchain/core/outputs";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.js";
+import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.ts";
 
 /**
  * Type representing the role of a message in the Friendli chat model.

@@ -4,7 +4,7 @@ import { expect, test } from "@jest/globals";
 import { BedrockRuntimeClient } from "@aws-sdk/client-bedrock-runtime";
 
 // import { MemoryVectorStore } from "langchain/vectorstores/memory";
-import { BedrockEmbeddings } from "../embeddings.js";
+import { BedrockEmbeddings } from "../embeddings.ts";
 
 const getClient = () => {
   if (

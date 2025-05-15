@@ -1,17 +1,17 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { ToolInterface } from "@langchain/core/tools";
 import { PromptTemplate, renderTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { Optional } from "../../types/type-utils.js";
-import { Agent, AgentArgs, OutputParserArgs } from "../agent.js";
-import { deserializeHelper } from "../helpers.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { Optional } from "../../types/type-utils.ts";
+import { Agent, AgentArgs, OutputParserArgs } from "../agent.ts";
+import { deserializeHelper } from "../helpers.ts";
 import {
   AgentInput,
   SerializedFromLLMAndTools,
   SerializedZeroShotAgent,
-} from "../types.js";
-import { ZeroShotAgentOutputParser } from "./outputParser.js";
-import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.js";
+} from "../types.ts";
+import { ZeroShotAgentOutputParser } from "./outputParser.ts";
+import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.ts";
 
 /**
  * Interface for creating a prompt for the ZeroShotAgent.

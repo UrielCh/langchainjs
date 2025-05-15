@@ -1,17 +1,17 @@
-export { BaseChain, type ChainInputs } from "./base.js";
-export { LLMChain, type LLMChainInput } from "./llm_chain.js";
+export { BaseChain, type ChainInputs } from "./base.ts";
+export { LLMChain, type LLMChainInput } from "./llm_chain.ts";
 export {
   APIChain,
   type APIChainInput,
   type APIChainOptions,
-} from "./api/api_chain.js";
-export { ConversationChain } from "./conversation.js";
+} from "./api/api_chain.ts";
+export { ConversationChain } from "./conversation.ts";
 export {
   SequentialChain,
   type SequentialChainInput,
   SimpleSequentialChain,
   type SimpleSequentialChainInput,
-} from "./sequential_chain.js";
+} from "./sequential_chain.ts";
 export {
   StuffDocumentsChain,
   type StuffDocumentsChainInput,
@@ -19,16 +19,16 @@ export {
   type MapReduceDocumentsChainInput,
   RefineDocumentsChain,
   type RefineDocumentsChainInput,
-} from "./combine_docs_chain.js";
+} from "./combine_docs_chain.ts";
 export {
   ChatVectorDBQAChain,
   type ChatVectorDBQAChainInput,
-} from "./chat_vector_db_chain.js";
+} from "./chat_vector_db_chain.ts";
 export {
   AnalyzeDocumentChain,
   type AnalyzeDocumentChainInput,
-} from "./analyze_documents_chain.js";
-export { VectorDBQAChain, type VectorDBQAChainInput } from "./vector_db_qa.js";
+} from "./analyze_documents_chain.ts";
+export { VectorDBQAChain, type VectorDBQAChainInput } from "./vector_db_qa.ts";
 export {
   loadQAChain,
   type QAChainParams,
@@ -38,27 +38,27 @@ export {
   type MapReduceQAChainParams,
   loadQARefineChain,
   type RefineQAChainParams,
-} from "./question_answering/load.js";
+} from "./question_answering/load.ts";
 export {
   loadSummarizationChain,
   type SummarizationChainParams,
-} from "./summarization/load.js";
+} from "./summarization/load.ts";
 export {
   ConversationalRetrievalQAChain,
   type ConversationalRetrievalQAChainInput,
-} from "./conversational_retrieval_chain.js";
+} from "./conversational_retrieval_chain.ts";
 export {
   RetrievalQAChain,
   type RetrievalQAChainInput,
-} from "./retrieval_qa.js";
+} from "./retrieval_qa.ts";
 export {
   type ConstitutionalChainInput,
   ConstitutionalChain,
-} from "./constitutional_ai/constitutional_chain.js";
+} from "./constitutional_ai/constitutional_chain.ts";
 export {
   ConstitutionalPrinciple,
   PRINCIPLES,
-} from "./constitutional_ai/constitutional_principle.js";
+} from "./constitutional_ai/constitutional_principle.ts";
 export type {
   SerializedLLMChain,
   SerializedSequentialChain,
@@ -71,32 +71,32 @@ export type {
   SerializedStuffDocumentsChain,
   SerializedVectorDBQAChain,
   SerializedRefineDocumentsChain,
-} from "./serde.js";
-export { OpenAIModerationChain } from "./openai_moderation.js";
+} from "./serde.ts";
+export { OpenAIModerationChain } from "./openai_moderation.ts";
 export {
   MultiRouteChain,
   type MultiRouteChainInput,
   RouterChain,
-} from "./router/multi_route.js";
+} from "./router/multi_route.ts";
 export {
   LLMRouterChain,
   type LLMRouterChainInput,
   type RouterOutputSchema,
-} from "./router/llm_router.js";
-export { MultiPromptChain } from "./router/multi_prompt.js";
-export { MultiRetrievalQAChain } from "./router/multi_retrieval_qa.js";
-export { TransformChain, type TransformChainFields } from "./transform.js";
+} from "./router/llm_router.ts";
+export { MultiPromptChain } from "./router/multi_prompt.ts";
+export { MultiRetrievalQAChain } from "./router/multi_retrieval_qa.ts";
+export { TransformChain, type TransformChainFields } from "./transform.ts";
 export {
   createExtractionChain,
   createExtractionChainFromZod,
-} from "./openai_functions/extraction.js";
+} from "./openai_functions/extraction.ts";
 export {
   type TaggingChainOptions,
   createTaggingChain,
   createTaggingChainFromZod,
-} from "./openai_functions/tagging.js";
+} from "./openai_functions/tagging.ts";
 export {
   type OpenAPIChainOptions,
   createOpenAPIChain,
   convertOpenAPISpecToOpenAIFunctions,
-} from "./openai_functions/openapi.js";
+} from "./openai_functions/openapi.ts";

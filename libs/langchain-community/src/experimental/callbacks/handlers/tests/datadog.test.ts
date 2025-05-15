@@ -7,7 +7,7 @@ import {
   DatadogLLMObsRequestBody,
   DatadogLLMObsSpan,
   DatadogLLMObsTracer,
-} from "../datadog.js";
+} from "../datadog.ts";
 
 const _DATE = 1620000000000;
 const _END_DATE = _DATE + 1000;

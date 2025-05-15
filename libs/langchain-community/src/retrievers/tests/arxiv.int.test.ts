@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { ArxivRetriever } from "../arxiv.js";
+import { ArxivRetriever } from "../arxiv.ts";
 
 test("ArxivRetriever fetching document summaries test", async () => {
   // Sample integration test for ArxivRetriever using the "machine learning" query

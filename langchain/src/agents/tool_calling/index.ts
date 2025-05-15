@@ -6,12 +6,12 @@ import {
   ToolDefinition,
 } from "@langchain/core/language_models/base";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
-import { AgentRunnableSequence } from "../agent.js";
+import { AgentRunnableSequence } from "../agent.ts";
 import {
   ToolCallingAgentOutputParser,
   ToolsAgentStep,
-} from "./output_parser.js";
-import { formatToToolMessages } from "../format_scratchpad/tool_calling.js";
+} from "./output_parser.ts";
+import { formatToToolMessages } from "../format_scratchpad/tool_calling.ts";
 
 function _isBaseChatModel(x: LanguageModelLike): x is BaseChatModel {
   const model = x as BaseChatModel;

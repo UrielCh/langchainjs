@@ -7,9 +7,9 @@ import {
   CallbackManagerForChainRun,
   Callbacks,
 } from "@langchain/core/callbacks/manager";
-import { TimeWeightedVectorStoreRetriever } from "../../retrievers/time_weighted.js";
-import { BaseChain } from "../../chains/base.js";
-import { LLMChain } from "../../chains/llm_chain.js";
+import { TimeWeightedVectorStoreRetriever } from "../../retrievers/time_weighted.ts";
+import { BaseChain } from "../../chains/base.ts";
+import { LLMChain } from "../../chains/llm_chain.ts";
 
 export type GenerativeAgentMemoryConfig = {
   reflectionThreshold?: number;

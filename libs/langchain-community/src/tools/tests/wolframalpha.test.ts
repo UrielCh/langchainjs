@@ -1,5 +1,5 @@
 import { jest, afterEach, beforeEach, describe, expect } from "@jest/globals";
-import { WolframAlphaTool } from "../wolframalpha.js";
+import { WolframAlphaTool } from "../wolframalpha.ts";
 
 const MOCK_APP_ID = "[MOCK_APP_ID]";
 const QUERY_1 = "What is 2 + 2?";

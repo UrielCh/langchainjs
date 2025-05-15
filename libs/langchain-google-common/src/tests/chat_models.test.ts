@@ -15,14 +15,14 @@ import { CallbackHandlerMethods } from "@langchain/core/callbacks/base";
 import { Serialized } from "@langchain/core/load/serializable";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
-import { ChatGoogleBase, ChatGoogleBaseInput } from "../chat_models.js";
+import { ChatGoogleBase, ChatGoogleBaseInput } from "../chat_models.ts";
 import {
   authOptions,
   MockClient,
   MockClientAuthInfo,
   MockClientError,
   mockId,
-} from "./mock.js";
+} from "./mock.ts";
 import {
   AnthropicAPIConfig,
   GeminiTool,
@@ -30,17 +30,17 @@ import {
   GoogleAISafetyCategory,
   GoogleAISafetyHandler,
   GoogleAISafetyThreshold,
-} from "../types.js";
-import { GoogleAbstractedClient } from "../auth.js";
-import { GoogleAISafetyError } from "../utils/safety.js";
+} from "../types.ts";
+import { GoogleAbstractedClient } from "../auth.ts";
+import { GoogleAISafetyError } from "../utils/safety.ts";
 import {
   BackedBlobStore,
   MediaBlob,
   MediaManager,
   ReadThroughBlobStore,
-} from "../experimental/utils/media_core.js";
-import { removeAdditionalProperties } from "../utils/zod_to_gemini_parameters.js";
-import { MessageGeminiSafetyHandler } from "../utils/index.js";
+} from "../experimental/utils/media_core.ts";
+import { removeAdditionalProperties } from "../utils/zod_to_gemini_parameters.ts";
+import { MessageGeminiSafetyHandler } from "../utils/index.ts";
 
 export class ChatGoogle extends ChatGoogleBase<MockClientAuthInfo> {
   constructor(fields?: ChatGoogleBaseInput<MockClientAuthInfo>) {

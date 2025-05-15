@@ -3,4 +3,4 @@ export {
   type RemoteRetrieverParams,
   type RemoteRetrieverAuth,
   type RemoteRetrieverValues,
-} from "./base.js";
+} from "./base.ts";

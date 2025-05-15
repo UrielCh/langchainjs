@@ -13,16 +13,16 @@ import {
   HumanMessagePromptTemplate,
 } from "@langchain/core/prompts";
 import { CallbackManager } from "@langchain/core/callbacks/manager";
-import { LLMChain } from "../../chains/llm_chain.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
 import {
   AgentArgs,
   AgentRunnableSequence,
   BaseSingleActionAgent,
-} from "../agent.js";
-import { AGENT_INSTRUCTIONS } from "./prompt.js";
-import { XMLAgentOutputParser } from "./output_parser.js";
-import { renderTextDescription } from "../../tools/render.js";
-import { formatXml } from "../format_scratchpad/xml.js";
+} from "../agent.ts";
+import { AGENT_INSTRUCTIONS } from "./prompt.ts";
+import { XMLAgentOutputParser } from "./output_parser.ts";
+import { renderTextDescription } from "../../tools/render.ts";
+import { formatXml } from "../format_scratchpad/xml.ts";
 
 /**
  * Interface for the input to the XMLAgent class.

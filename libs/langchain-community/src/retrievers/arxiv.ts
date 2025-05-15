@@ -4,7 +4,7 @@ import {
   searchArxiv,
   loadDocsFromResults,
   getDocsFromSummaries,
-} from "../utils/arxiv.js";
+} from "../utils/arxiv.ts";
 
 export type ArxivRetrieverOptions = {
   getFullDocuments?: boolean;

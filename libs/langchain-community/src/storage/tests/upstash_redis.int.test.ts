@@ -2,7 +2,7 @@
 
 import { test } from "@jest/globals";
 import { Redis as UpstashRedis } from "@upstash/redis";
-import { UpstashRedisStore } from "../upstash_redis.js";
+import { UpstashRedisStore } from "../upstash_redis.ts";
 
 const getClient = () => {
   if (

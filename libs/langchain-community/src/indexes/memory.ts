@@ -1,4 +1,4 @@
-import { ListKeyOptions, RecordManager, UpdateOptions } from "./base.js";
+import { ListKeyOptions, RecordManager, UpdateOptions } from "./base.ts";
 
 interface MemoryRecord {
   updatedAt: number;

@@ -1,7 +1,7 @@
 import type { BasePromptValue } from "@langchain/core/prompt_values";
 import Anthropic from "@anthropic-ai/sdk";
 
-import { _convertMessagesToAnthropicPayload } from "./message_inputs.js";
+import { _convertMessagesToAnthropicPayload } from "./message_inputs.ts";
 
 /**
  * Convert a formatted LangChain prompt (e.g. pulled from the hub) into

@@ -14,9 +14,9 @@ import {
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import { concat } from "@langchain/core/utils/stream";
-import { ChatBedrockConverse } from "../chat_models.js";
-import { concatenateLangchainReasoningBlocks } from "../common.js";
-import { MessageContentReasoningBlockReasoningText } from "../types.js";
+import { ChatBedrockConverse } from "../chat_models.ts";
+import { concatenateLangchainReasoningBlocks } from "../common.ts";
+import { MessageContentReasoningBlockReasoningText } from "../types.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

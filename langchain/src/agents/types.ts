@@ -3,8 +3,8 @@ import { BaseOutputParser } from "@langchain/core/output_parsers";
 import type { AgentAction, AgentFinish } from "@langchain/core/agents";
 import type { BaseMessage } from "@langchain/core/messages";
 import type { ChainValues } from "@langchain/core/utils/types";
-import { SerializedLLMChain } from "../chains/serde.js";
-import { LLMChain } from "../chains/llm_chain.js";
+import { SerializedLLMChain } from "../chains/serde.ts";
+import { LLMChain } from "../chains/llm_chain.ts";
 
 /**
  * Interface defining the input for creating an agent. It includes the

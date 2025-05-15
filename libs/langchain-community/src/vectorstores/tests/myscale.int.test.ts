@@ -4,7 +4,7 @@ import { test, expect } from "@jest/globals";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
 
-import { MyScaleStore } from "../myscale.js";
+import { MyScaleStore } from "../myscale.ts";
 
 test.skip("MyScaleStore.fromText", async () => {
   const vectorStore = await MyScaleStore.fromTexts(

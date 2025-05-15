@@ -1,5 +1,5 @@
 import { Pinecone } from "@pinecone-database/pinecone";
-import { getPineconeClient } from "../client.js";
+import { getPineconeClient } from "../client.ts";
 
 describe("Tests for getPineconeClient", () => {
   test("Happy path for getPineconeClient with and without `config` obj passed", async () => {

@@ -4,8 +4,8 @@ import { test, jest, expect } from "@jest/globals";
 import S3Client from "@aws-sdk/client-s3";
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { S3Loader } from "../web/s3.js";
-import { UnstructuredLoader } from "../fs/unstructured.js";
+import { S3Loader } from "../web/s3.ts";
+import { UnstructuredLoader } from "../fs/unstructured.ts";
 
 const fsMock = {
   ...fs,

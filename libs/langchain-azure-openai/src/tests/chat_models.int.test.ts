@@ -18,7 +18,7 @@ import { NewTokenIndices } from "@langchain/core/callbacks/base";
 import { InMemoryCache } from "@langchain/core/caches";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { OpenAIKeyCredential } from "@azure/openai";
-import { AzureChatOpenAI } from "../chat_models.js";
+import { AzureChatOpenAI } from "../chat_models.ts";
 
 test("Test ChatOpenAI", async () => {
   const chat = new AzureChatOpenAI({

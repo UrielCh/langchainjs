@@ -1,6 +1,6 @@
 import { describe, test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
-import { GoogleCloudStorageDocstore } from "../gcs.js";
+import { GoogleCloudStorageDocstore } from "../gcs.ts";
 
 describe.skip("GoogleCloudStorageDocstore", () => {
   const bucket = "INSERT_BUCKET_HERE";

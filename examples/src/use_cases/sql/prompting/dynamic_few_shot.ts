@@ -3,8 +3,8 @@ import { SemanticSimilarityExampleSelector } from "@langchain/core/example_selec
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { FewShotPromptTemplate, PromptTemplate } from "@langchain/core/prompts";
 import { createSqlQueryChain } from "langchain/chains/sql_db";
-import { examples } from "./examples.js";
-import { db } from "../db.js";
+import { examples } from "./examples.ts";
+import { db } from "../db.ts";
 
 const exampleSelector = await SemanticSimilarityExampleSelector.fromExamples<
   typeof MemoryVectorStore

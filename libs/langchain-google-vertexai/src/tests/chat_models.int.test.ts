@@ -39,8 +39,8 @@ import {
   GoogleRequestLogger,
   GoogleRequestRecorder,
 } from "@langchain/google-common";
-import { AnthropicAPIConfig, GeminiTool } from "../types.js";
-import { ChatVertexAI } from "../chat_models.js";
+import { AnthropicAPIConfig, GeminiTool } from "../types.ts";
+import { ChatVertexAI } from "../chat_models.ts";
 
 const weatherTool = tool((_) => "no-op", {
   name: "get_weather",

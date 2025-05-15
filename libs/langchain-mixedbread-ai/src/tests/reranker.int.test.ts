@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { Document } from "@langchain/core/documents";
-import { MixedbreadAIReranker } from "../reranker.js";
+import { MixedbreadAIReranker } from "../reranker.ts";
 
 const query = "What is the capital of France?";
 

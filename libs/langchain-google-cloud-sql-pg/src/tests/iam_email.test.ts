@@ -1,5 +1,5 @@
 import { GoogleAuth } from "google-auth-library";
-import { getIAMPrincipalEmail } from "../utils/utils.js";
+import { getIAMPrincipalEmail } from "../utils/utils.ts";
 
 // Google Cloud Test only
 describe("Getting IAM Principal Email", () => {

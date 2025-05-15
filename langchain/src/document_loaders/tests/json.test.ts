@@ -2,7 +2,7 @@ import * as url from "node:url";
 import * as path from "node:path";
 import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
-import { JSONLoader } from "../fs/json.js";
+import { JSONLoader } from "../fs/json.ts";
 
 test("Test JSON loader", async () => {
   const filePath = path.resolve(

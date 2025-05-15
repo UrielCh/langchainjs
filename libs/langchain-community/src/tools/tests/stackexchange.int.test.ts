@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { StackExchangeAPI } from "../stackexchange.js";
+import { StackExchangeAPI } from "../stackexchange.ts";
 
 test("StackAPITool returns a string for valid query", async () => {
   const tool = new StackExchangeAPI();

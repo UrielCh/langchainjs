@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { FireworksEmbeddings } from "../fireworks.js";
+import { FireworksEmbeddings } from "../fireworks.ts";
 
 test.skip("Test FireworksEmbeddings.embedQuery", async () => {
   const embeddings = new FireworksEmbeddings();

@@ -1,12 +1,12 @@
 import { Client } from "langsmith";
 import { test } from "@jest/globals";
-import { LangChainTracer } from "../../tracers/tracer_langchain.js";
+import { LangChainTracer } from "../../tracers/tracer_langchain.ts";
 import {
   BaseOutputParser,
   FormatInstructionsOptions,
-} from "../../output_parsers/base.js";
-import { FakeChatModel } from "../../utils/testing/index.js";
-import { getEnvironmentVariable } from "../../utils/env.js";
+} from "../../output_parsers/base.ts";
+import { FakeChatModel } from "../../utils/testing/index.ts";
+import { getEnvironmentVariable } from "../../utils/env.ts";
 
 class FakeDateOutputParser extends BaseOutputParser<Date> {
   lc_namespace = ["langchain_core", "output_parsers", "testing"];

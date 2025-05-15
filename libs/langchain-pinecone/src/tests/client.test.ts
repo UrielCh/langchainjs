@@ -1,4 +1,4 @@
-import { getPineconeClient } from "../client.js";
+import { getPineconeClient } from "../client.ts";
 
 describe("Tests for getPineconeClient", () => {
   test("Confirm getPineconeClient throws error when PINECONE_API_KEY is not set", async () => {

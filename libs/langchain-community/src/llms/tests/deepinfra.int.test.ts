@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { DeepInfraLLM } from "../deepinfra.js";
+import { DeepInfraLLM } from "../deepinfra.ts";
 
 test("Test DeepInfra", async () => {
   const model = new DeepInfraLLM({ maxTokens: 20 });

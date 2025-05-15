@@ -1,4 +1,4 @@
-import { Metadata } from "@opensearch-project/opensearch/api/types.js";
+import { Metadata } from "@opensearch-project/opensearch/api/types.ts";
 import { DataSource, DataSourceOptions, EntitySchema } from "typeorm";
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { VectorStore } from "@langchain/core/vectorstores";

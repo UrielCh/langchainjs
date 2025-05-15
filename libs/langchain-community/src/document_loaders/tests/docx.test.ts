@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import * as url from "node:url";
 import * as path from "node:path";
-import { DocxLoader } from "../fs/docx.js";
+import { DocxLoader } from "../fs/docx.ts";
 
 test("Test Word doc loader from .docx file", async () => {
   const filePath = path.resolve(

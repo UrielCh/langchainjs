@@ -1,6 +1,6 @@
 import { test, expect, jest, describe } from "@jest/globals";
-import { TavilyExtract } from "../tavily-extract.js";
-import { TavilyExtractAPIWrapper, TavilyExtractResponse } from "../utils.js";
+import { TavilyExtract } from "../tavily-extract.ts";
+import { TavilyExtractAPIWrapper, TavilyExtractResponse } from "../utils.ts";
 
 /**
  * A test implementation of TavilyExtractAPIWrapper that doesn't need API keys

@@ -5,8 +5,8 @@ import {
 
 import type { BaseChatModelParams } from "@langchain/core/language_models/chat_models";
 
-import { BaseBedrockInput } from "../../utils/bedrock/index.js";
-import { BedrockChat as BaseBedrockChat } from "./web.js";
+import { BaseBedrockInput } from "../../utils/bedrock/index.ts";
+import { BedrockChat as BaseBedrockChat } from "./web.ts";
 
 export interface BedrockChatFields
   extends Partial<BaseBedrockInput>,
@@ -380,7 +380,7 @@ export class BedrockChat extends BaseBedrockChat {
 export {
   convertMessagesToPromptAnthropic,
   convertMessagesToPrompt,
-} from "./web.js";
+} from "./web.ts";
 
 /**
  * @deprecated Use `BedrockChat` instead.

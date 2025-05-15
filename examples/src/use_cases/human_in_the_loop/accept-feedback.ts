@@ -1,6 +1,6 @@
 import * as readline from "readline";
 import { JsonOutputToolsParser } from "@langchain/core/output_parsers/openai_tools";
-import { callToolList, model } from "./helpers.js";
+import { callToolList, model } from "./helpers.ts";
 
 // Use readline to ask the user for approval
 function askQuestion(question: string): Promise<string> {

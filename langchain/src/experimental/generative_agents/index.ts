@@ -1,2 +1,2 @@
-export { GenerativeAgentMemory } from "./generative_agent_memory.js";
-export { GenerativeAgent } from "./generative_agent.js";
+export { GenerativeAgentMemory } from "./generative_agent_memory.ts";
+export { GenerativeAgent } from "./generative_agent.ts";

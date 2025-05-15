@@ -1,10 +1,10 @@
 import { expect, test } from "@jest/globals";
 import process from "process";
 import { OpenAI } from "@langchain/openai";
-import { SerpAPI } from "../../../util/testing/tools/serpapi.js";
-import { Calculator } from "../../../util/testing/tools/calculator.js";
-import { initializeAgentExecutorWithOptions } from "../../../agents/index.js";
-import { loadEvaluator } from "../../loader.js";
+import { SerpAPI } from "../../../util/testing/tools/serpapi.ts";
+import { Calculator } from "../../../util/testing/tools/calculator.ts";
+import { initializeAgentExecutorWithOptions } from "../../../agents/index.ts";
+import { loadEvaluator } from "../../loader.ts";
 
 test("Test TrajectoryEvalChain", async () => {
   const model = new OpenAI({ temperature: 0 });

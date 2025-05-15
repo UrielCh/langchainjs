@@ -1,12 +1,12 @@
-import type { Embeddings } from "../embeddings.js";
+import type { Embeddings } from "../embeddings.ts";
 import type {
   VectorStoreInterface,
   VectorStoreRetrieverInterface,
   VectorStore,
-} from "../vectorstores.js";
-import type { Example } from "../prompts/base.js";
-import { Document } from "../documents/document.js";
-import { BaseExampleSelector } from "./base.js";
+} from "../vectorstores.ts";
+import type { Example } from "../prompts/base.ts";
+import { Document } from "../documents/document.ts";
+import { BaseExampleSelector } from "./base.ts";
 
 function sortedValues<T>(values: Record<string, T>): T[] {
   return Object.keys(values)

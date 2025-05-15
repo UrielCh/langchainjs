@@ -5,7 +5,7 @@ import {
   DynamicStructuredTool,
   DynamicStructuredToolInput,
 } from "@langchain/core/tools";
-import { formatDocumentsAsString } from "../../../util/document.js";
+import { formatDocumentsAsString } from "../../../util/document.ts";
 
 /** @deprecated Use "langchain/tools/retriever" instead. */
 export function createRetrieverTool(

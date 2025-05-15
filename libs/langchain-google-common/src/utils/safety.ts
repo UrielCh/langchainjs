@@ -1,4 +1,4 @@
-import { GoogleLLMResponse } from "../types.js";
+import { GoogleLLMResponse } from "../types.ts";
 
 export class GoogleAISafetyError extends Error {
   response: GoogleLLMResponse;

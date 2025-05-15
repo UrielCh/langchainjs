@@ -1,5 +1,5 @@
 import { FewShotPromptTemplate, PromptTemplate } from "@langchain/core/prompts";
-import { examples } from "./examples.js";
+import { examples } from "./examples.ts";
 
 const examplePrompt = PromptTemplate.fromTemplate(
   `User input: {input}\nSQL Query: {query}`

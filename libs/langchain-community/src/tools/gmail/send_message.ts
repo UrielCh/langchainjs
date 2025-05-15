@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { GmailBaseTool, GmailBaseToolParams } from "./base.js";
-import { GET_MESSAGE_DESCRIPTION } from "./descriptions.js";
+import { GmailBaseTool, GmailBaseToolParams } from "./base.ts";
+import { GET_MESSAGE_DESCRIPTION } from "./descriptions.ts";
 
 export class GmailSendMessage extends GmailBaseTool {
   name = "gmail_send_message";

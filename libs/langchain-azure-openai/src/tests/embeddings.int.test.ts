@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { ClientSecretCredential, TokenCredential } from "@azure/identity";
 import { OpenAIKeyCredential } from "@azure/openai";
-import { AzureOpenAIEmbeddings } from "../embeddings.js";
+import { AzureOpenAIEmbeddings } from "../embeddings.ts";
 
 test("Test OpenAIEmbeddings.embedQuery", async () => {
   const embeddings = new AzureOpenAIEmbeddings();

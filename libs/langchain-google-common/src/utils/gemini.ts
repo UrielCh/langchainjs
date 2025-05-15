@@ -47,9 +47,9 @@ import type {
   GeminiLogprobsResult,
   GeminiLogprobsResultCandidate,
   GeminiLogprobsTopCandidate,
-} from "../types.js";
-import { GoogleAISafetyError } from "./safety.js";
-import { MediaBlob } from "../experimental/utils/media_core.js";
+} from "../types.ts";
+import { GoogleAISafetyError } from "./safety.ts";
+import { MediaBlob } from "../experimental/utils/media_core.ts";
 import {
   GeminiFunctionDeclaration,
   GeminiGenerationConfig,
@@ -59,8 +59,8 @@ import {
   GoogleAIModelRequestParams,
   GoogleAIToolType,
   GeminiSearchToolAttributes,
-} from "../types.js";
-import { schemaToGeminiParameters } from "./zod_to_gemini_parameters.js";
+} from "../types.ts";
+import { schemaToGeminiParameters } from "./zod_to_gemini_parameters.ts";
 
 export interface FunctionCall {
   name: string;

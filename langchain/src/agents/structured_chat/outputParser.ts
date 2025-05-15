@@ -3,12 +3,12 @@ import { Callbacks } from "@langchain/core/callbacks/manager";
 import { AgentAction, AgentFinish } from "@langchain/core/agents";
 import { OutputParserException } from "@langchain/core/output_parsers";
 import { renderTemplate } from "@langchain/core/prompts";
-import { AgentActionOutputParser } from "../types.js";
+import { AgentActionOutputParser } from "../types.ts";
 import {
   AGENT_ACTION_FORMAT_INSTRUCTIONS,
   FORMAT_INSTRUCTIONS,
-} from "./prompt.js";
-import { OutputFixingParser } from "../../output_parsers/fix.js";
+} from "./prompt.ts";
+import { OutputFixingParser } from "../../output_parsers/fix.ts";
 
 /**
  * A class that provides a custom implementation for parsing the output of

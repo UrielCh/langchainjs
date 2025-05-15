@@ -9,14 +9,14 @@ import {
   RunnablePassthrough,
   RunnableSequence,
   RunnableWithMessageHistory,
-} from "../index.js";
+} from "../index.ts";
 import {
   FakeChatMessageHistory,
   FakeListChatModel,
-} from "../../utils/testing/index.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
-import { Document } from "../../documents/document.js";
-import { ChatPromptTemplate } from "../../prompts/chat.js";
+} from "../../utils/testing/index.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
+import { Document } from "../../documents/document.ts";
+import { ChatPromptTemplate } from "../../prompts/chat.ts";
 
 const chatModel = new FakeListChatModel({ responses: ["hey"], sleep: 500 });
 

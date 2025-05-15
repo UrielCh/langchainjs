@@ -3,7 +3,7 @@ import {
   Callbacks,
 } from "@langchain/core/callbacks/manager";
 import { ChainValues } from "@langchain/core/utils/types";
-import { ChainInputs, BaseChain } from "./base.js";
+import { ChainInputs, BaseChain } from "./base.ts";
 
 /**
  * Interface that extends the `ChainInputs` interface and defines the

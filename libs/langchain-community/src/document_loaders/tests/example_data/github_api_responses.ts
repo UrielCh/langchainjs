@@ -1,4 +1,4 @@
-import { GithubFile } from "../../web/github.js";
+import { GithubFile } from "../../web/github.ts";
 
 export const GithubLoaderApis = {
   getRepoFiles: {

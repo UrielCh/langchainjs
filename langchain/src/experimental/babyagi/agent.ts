@@ -3,12 +3,12 @@ import type { VectorStoreInterface } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
 import { ChainValues } from "@langchain/core/utils/types";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { BaseChain, ChainInputs } from "../../chains/base.js";
-import { SerializedBaseChain } from "../../chains/serde.js";
-import { Optional } from "../../types/type-utils.js";
-import { TaskCreationChain } from "./task_creation.js";
-import { TaskExecutionChain } from "./task_execution.js";
-import { TaskPrioritizationChain } from "./task_prioritization.js";
+import { BaseChain, ChainInputs } from "../../chains/base.ts";
+import { SerializedBaseChain } from "../../chains/serde.ts";
+import { Optional } from "../../types/type-utils.ts";
+import { TaskCreationChain } from "./task_creation.ts";
+import { TaskExecutionChain } from "./task_execution.ts";
+import { TaskPrioritizationChain } from "./task_prioritization.ts";
 
 /**
  * Interface defining the structure of a task. A task has a `taskID` and a

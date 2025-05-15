@@ -34,17 +34,17 @@ import {
   GoogleAIAPI,
   GoogleAIAPIParams,
   GoogleSearchToolSetting,
-} from "./types.js";
+} from "./types.ts";
 import {
   convertToGeminiTools,
   copyAIModelParams,
   copyAndValidateModelParamsInto,
-} from "./utils/common.js";
-import { AbstractGoogleLLMConnection } from "./connection.js";
-import { DefaultGeminiSafetyHandler, getGeminiAPI } from "./utils/gemini.js";
-import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.js";
-import { JsonStream } from "./utils/stream.js";
-import { ensureParams } from "./utils/failed_handler.js";
+} from "./utils/common.ts";
+import { AbstractGoogleLLMConnection } from "./connection.ts";
+import { DefaultGeminiSafetyHandler, getGeminiAPI } from "./utils/gemini.ts";
+import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.ts";
+import { JsonStream } from "./utils/stream.ts";
+import { ensureParams } from "./utils/failed_handler.ts";
 import type {
   GoogleBaseLLMInput,
   GoogleAISafetyHandler,
@@ -54,8 +54,8 @@ import type {
   GoogleAIToolType,
   GeminiAPIConfig,
   GoogleAIModelModality,
-} from "./types.js";
-import { schemaToGeminiParameters } from "./utils/zod_to_gemini_parameters.js";
+} from "./types.ts";
+import { schemaToGeminiParameters } from "./utils/zod_to_gemini_parameters.ts";
 
 export class ChatConnection<AuthOptions> extends AbstractGoogleLLMConnection<
   BaseMessage[],

@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { Cohere } from "../cohere.js";
+import { Cohere } from "../cohere.ts";
 
 test("Test Cohere", async () => {
   const model = new Cohere({ maxTokens: 20 });

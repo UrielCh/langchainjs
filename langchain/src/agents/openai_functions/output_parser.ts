@@ -3,7 +3,7 @@ import { AgentAction, AgentFinish } from "@langchain/core/agents";
 import { BaseMessage, isBaseMessage } from "@langchain/core/messages";
 import { ChatGeneration } from "@langchain/core/outputs";
 import { OutputParserException } from "@langchain/core/output_parsers";
-import { AgentActionOutputParser } from "../types.js";
+import { AgentActionOutputParser } from "../types.ts";
 
 /**
  * Type that represents an agent action with an optional message log.

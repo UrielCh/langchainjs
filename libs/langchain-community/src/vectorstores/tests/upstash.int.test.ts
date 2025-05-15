@@ -6,8 +6,8 @@ import {
   FakeEmbeddings,
 } from "@langchain/core/utils/testing";
 import { EmbeddingsInterface } from "@langchain/core/embeddings";
-import { UpstashVectorStore } from "../upstash.js";
-import { sleep } from "../../utils/time.js";
+import { UpstashVectorStore } from "../upstash.ts";
+import { sleep } from "../../utils/time.ts";
 
 describe("UpstashVectorStore", () => {
   let store: UpstashVectorStore;

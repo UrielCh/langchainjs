@@ -1,4 +1,4 @@
-import { getEnvironmentVariable } from "./env.js";
+import { getEnvironmentVariable } from "./env.ts";
 
 export function logVersion010MigrationWarning({
   oldEntrypointName,

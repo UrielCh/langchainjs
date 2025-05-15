@@ -1,18 +1,18 @@
 import { deepCompareStrict } from "@cfworker/json-schema";
-import { BaseOutputParser } from "./base.js";
+import { BaseOutputParser } from "./base.ts";
 import {
   type BaseMessage,
   isBaseMessage,
   isBaseMessageChunk,
-} from "../messages/base.js";
-import { convertToChunk } from "../messages/utils.js";
-import type { BaseCallbackConfig } from "../callbacks/manager.js";
+} from "../messages/base.ts";
+import { convertToChunk } from "../messages/utils.ts";
+import type { BaseCallbackConfig } from "../callbacks/manager.ts";
 import {
   type Generation,
   type ChatGeneration,
   GenerationChunk,
   ChatGenerationChunk,
-} from "../outputs.js";
+} from "../outputs.ts";
 
 /**
  * Class to parse the output of an LLM call that also allows streaming inputs.

@@ -9,7 +9,7 @@ import {
   UnstructuredDirectoryLoader,
   UnstructuredLoader,
   UnknownHandling,
-} from "../fs/unstructured.js";
+} from "../fs/unstructured.ts";
 
 test.skip("Test Unstructured base loader", async () => {
   const filePath = path.resolve(

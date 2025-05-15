@@ -3,7 +3,7 @@
 import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { FaissStore } from "../faiss.js";
+import { FaissStore } from "../faiss.ts";
 
 test.skip("Test FaissStore.fromTexts + addVectors", async () => {
   const vectorStore = await FaissStore.fromTexts(

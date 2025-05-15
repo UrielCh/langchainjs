@@ -1,1 +1,1 @@
-export * from "./criteria.js";
+export * from "./criteria.ts";

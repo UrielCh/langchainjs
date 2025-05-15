@@ -4,7 +4,7 @@ import { test } from "@jest/globals";
 import * as fs from "node:fs";
 import * as path from "node:path";
 import * as os from "node:os";
-import { LocalFileStore } from "../file_system.js";
+import { LocalFileStore } from "../file_system.ts";
 
 describe("LocalFileStore", () => {
   const keys = ["key1", "key2"];

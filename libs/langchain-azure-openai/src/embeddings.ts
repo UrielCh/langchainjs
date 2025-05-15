@@ -12,8 +12,8 @@ import {
 } from "@azure/core-auth";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { chunkArray } from "@langchain/core/utils/chunk_array";
-import { AzureOpenAIInput, AzureOpenAIEmbeddingsParams } from "./types.js";
-import { USER_AGENT_PREFIX } from "./constants.js";
+import { AzureOpenAIInput, AzureOpenAIEmbeddingsParams } from "./types.ts";
+import { USER_AGENT_PREFIX } from "./constants.ts";
 
 /** @deprecated Import from "@langchain/openai" instead. */
 export class AzureOpenAIEmbeddings

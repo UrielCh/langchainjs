@@ -8,7 +8,7 @@ import {
   BlobStoreGoogleCloudStorageBase,
   BlobStoreGoogleCloudStorageBaseParams,
 } from "@langchain/google-common/experimental/media";
-import { WebGoogleAuth, WebGoogleAuthOptions } from "./auth.js";
+import { WebGoogleAuth, WebGoogleAuthOptions } from "./auth.ts";
 
 export interface BlobStoreGoogleCloudStorageParams
   extends BlobStoreGoogleCloudStorageBaseParams<WebGoogleAuthOptions> {}

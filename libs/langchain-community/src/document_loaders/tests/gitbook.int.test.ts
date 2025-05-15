@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { GitbookLoader } from "../web/gitbook.js";
+import { GitbookLoader } from "../web/gitbook.ts";
 
 test("Test GitbookLoader", async () => {
   const loader = new GitbookLoader(

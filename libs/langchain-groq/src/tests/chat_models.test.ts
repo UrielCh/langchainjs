@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
-import { ChatGroq } from "../chat_models.js";
+import { ChatGroq } from "../chat_models.ts";
 
 test("Serialization", () => {
   const model = new ChatGroq({

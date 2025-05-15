@@ -2,7 +2,7 @@
 import { test, expect } from "@jest/globals";
 import { ChatModelUnitTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { ChatDeepSeek, ChatDeepSeekCallOptions } from "../chat_models.js";
+import { ChatDeepSeek, ChatDeepSeekCallOptions } from "../chat_models.ts";
 
 class ChatDeepSeekStandardUnitTests extends ChatModelUnitTests<
   ChatDeepSeekCallOptions,

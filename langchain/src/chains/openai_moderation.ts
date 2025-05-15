@@ -5,7 +5,7 @@ import {
   AsyncCallerParams,
 } from "@langchain/core/utils/async_caller";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { BaseChain, ChainInputs } from "./base.js";
+import { BaseChain, ChainInputs } from "./base.ts";
 
 /**
  * Interface for the input parameters of the OpenAIModerationChain class.

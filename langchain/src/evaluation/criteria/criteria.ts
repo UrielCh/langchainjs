@@ -14,10 +14,10 @@ import {
   LLMStringEvaluator,
   StringEvaluatorArgs,
   type ExtractLLMCallOptions,
-} from "../base.js";
+} from "../base.ts";
 
-import { CRITERIA_PROMPT, PROMPT_WITH_REFERENCES } from "./prompt.js";
-import { ConstitutionalPrinciple } from "../../chains/constitutional_ai/constitutional_principle.js";
+import { CRITERIA_PROMPT, PROMPT_WITH_REFERENCES } from "./prompt.ts";
+import { ConstitutionalPrinciple } from "../../chains/constitutional_ai/constitutional_principle.ts";
 
 /**
  * A Criteria to evaluate.

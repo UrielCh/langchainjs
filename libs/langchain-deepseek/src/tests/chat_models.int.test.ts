@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { test, expect } from "@jest/globals";
-import { ChatDeepSeek } from "../chat_models.js";
+import { ChatDeepSeek } from "../chat_models.ts";
 
 test("Can send deepseek-reasoner requests", async () => {
   const llm = new ChatDeepSeek({

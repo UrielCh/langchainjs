@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { checkBrokenLinks } from "../check_broken_links.js";
+import { checkBrokenLinks } from "../check_broken_links.ts";
 
 test("Can load mdx file and find broken links", async () => {
   const pathToMdxFiles = "./src/tests/__mdx__/";

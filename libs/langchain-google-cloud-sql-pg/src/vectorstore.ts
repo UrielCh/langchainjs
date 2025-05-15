@@ -12,9 +12,9 @@ import {
   DEFAULT_INDEX_NAME_SUFFIX,
   DistanceStrategy,
   QueryOptions,
-} from "./indexes.js";
-import PostgresEngine from "./engine.js";
-import { customZip } from "./utils/utils.js";
+} from "./indexes.ts";
+import PostgresEngine from "./engine.ts";
+import { customZip } from "./utils/utils.ts";
 
 export interface PostgresVectorStoreArgs {
   schemaName?: string;

@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { DeepInfraEmbeddings } from "../deepinfra.js";
+import { DeepInfraEmbeddings } from "../deepinfra.ts";
 
 test("Test DeepInfraEmbeddings.embedQuery", async () => {
   const embeddings = new DeepInfraEmbeddings();

@@ -6,7 +6,7 @@ import { OpenAIEmbeddings } from "@langchain/openai";
 import { createClient } from "@libsql/client";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
 import fs from "node:fs";
-import { LibSQLVectorStore, LibSQLVectorStoreArgs } from "../libsql.js";
+import { LibSQLVectorStore, LibSQLVectorStoreArgs } from "../libsql.ts";
 
 test("can create and query (cloud)", async () => {
   const client = createClient({

@@ -1,4 +1,4 @@
-import { GRAMMAR } from "./grammar/parser_grammar.js";
+import { GRAMMAR } from "./grammar/parser_grammar.ts";
 
 /**
  * Abstract class for handling nodes in an expression language. Subclasses

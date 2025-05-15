@@ -3,7 +3,7 @@
 
 import { test } from "@jest/globals";
 import { createClient } from "@vercel/kv";
-import { VercelKVStore } from "../vercel_kv.js";
+import { VercelKVStore } from "../vercel_kv.ts";
 
 const getClient = () => {
   if (!process.env.VERCEL_KV_API_URL || !process.env.VERCEL_KV_API_TOKEN) {

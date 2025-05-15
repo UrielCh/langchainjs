@@ -37,13 +37,13 @@ import { JsonOutputKeyToolsParser } from "@langchain/core/output_parsers/openai_
 import type { BaseLLMOutputParser } from "@langchain/core/output_parsers";
 import { JsonSchema7ObjectType, zodToJsonSchema } from "zod-to-json-schema";
 import { z } from "zod";
-import { ChatAnthropic, type AnthropicInput } from "../chat_models.js";
+import { ChatAnthropic, type AnthropicInput } from "../chat_models.ts";
 import {
   DEFAULT_TOOL_SYSTEM_PROMPT,
   ToolInvocation,
   formatAsXMLRepresentation,
   fixArrayXMLParameters,
-} from "./utils/tool_calling.js";
+} from "./utils/tool_calling.ts";
 
 export interface ChatAnthropicToolsCallOptions
   extends BaseLanguageModelCallOptions {

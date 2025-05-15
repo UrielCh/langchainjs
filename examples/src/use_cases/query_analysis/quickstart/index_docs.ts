@@ -1,7 +1,7 @@
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Chroma } from "@langchain/community/vectorstores/chroma";
-import { getDocs } from "./docs.js";
+import { getDocs } from "./docs.ts";
 
 const docs = await getDocs();
 const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 2000 });

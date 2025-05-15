@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { BaiduQianfanEmbeddings } from "../embeddings.js";
+import { BaiduQianfanEmbeddings } from "../embeddings.ts";
 
 test("embedQuery", async () => {
   const embeddings = new BaiduQianfanEmbeddings();

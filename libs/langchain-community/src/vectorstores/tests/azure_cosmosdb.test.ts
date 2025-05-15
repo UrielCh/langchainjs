@@ -2,7 +2,7 @@
 import { jest, test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { AzureCosmosDBVectorStore } from "../azure_cosmosdb.js";
+import { AzureCosmosDBVectorStore } from "../azure_cosmosdb.ts";
 
 // Mock mongodb client
 const createMockClient = () => ({

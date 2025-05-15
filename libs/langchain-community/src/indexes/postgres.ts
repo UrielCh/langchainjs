@@ -3,7 +3,7 @@ import {
   ListKeyOptions,
   RecordManagerInterface,
   UpdateOptions,
-} from "./base.js";
+} from "./base.ts";
 
 export type PostgresRecordManagerOptions = {
   postgresConnectionOptions?: PoolConfig;

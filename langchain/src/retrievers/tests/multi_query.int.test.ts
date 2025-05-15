@@ -1,8 +1,8 @@
 import { expect, test } from "@jest/globals";
 import { CohereEmbeddings } from "@langchain/cohere";
 import { ChatOpenAI } from "@langchain/openai";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { MultiQueryRetriever } from "../multi_query.js";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { MultiQueryRetriever } from "../multi_query.ts";
 
 test("Should work with a question input", async () => {
   const vectorstore = await MemoryVectorStore.fromTexts(

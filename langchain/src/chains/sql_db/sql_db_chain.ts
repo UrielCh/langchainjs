@@ -20,11 +20,11 @@ import {
   DEFAULT_SQL_DATABASE_PROMPT,
   SQL_PROMPTS_MAP,
   SqlDialect,
-} from "./sql_db_prompt.js";
-import { BaseChain, ChainInputs } from "../base.js";
-import { LLMChain } from "../llm_chain.js";
-import type { SqlDatabase } from "../../sql_db.js";
-import { getPromptTemplateFromDataSource } from "../../util/sql_utils.js";
+} from "./sql_db_prompt.ts";
+import { BaseChain, ChainInputs } from "../base.ts";
+import { LLMChain } from "../llm_chain.ts";
+import type { SqlDatabase } from "../../sql_db.ts";
+import { getPromptTemplateFromDataSource } from "../../util/sql_utils.ts";
 
 /**
  * Interface that extends the ChainInputs interface and defines additional

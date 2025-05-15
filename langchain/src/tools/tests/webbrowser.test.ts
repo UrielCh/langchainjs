@@ -1,6 +1,6 @@
 import { test, expect, describe } from "@jest/globals";
 import { readFileSync } from "fs";
-import { getText, parseInputs } from "../webbrowser.js";
+import { getText, parseInputs } from "../webbrowser.ts";
 
 describe("webbrowser Test suite", () => {
   const html = readFileSync("./src/tools/fixtures/wordoftheday.html", "utf8");

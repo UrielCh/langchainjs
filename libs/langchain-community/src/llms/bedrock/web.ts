@@ -14,8 +14,8 @@ import {
   BaseBedrockInput,
   BedrockLLMInputOutputAdapter,
   type CredentialType,
-} from "../../utils/bedrock/index.js";
-import type { SerializedFields } from "../../load/map_keys.js";
+} from "../../utils/bedrock/index.ts";
+import type { SerializedFields } from "../../load/map_keys.ts";
 
 const AWS_REGIONS = [
   "us",

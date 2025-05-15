@@ -2,12 +2,12 @@ import { type ClientOptions, OpenAIClient } from "@langchain/openai";
 import { StructuredTool } from "@langchain/core/tools";
 import { Runnable, RunnableConfig } from "@langchain/core/runnables";
 import { formatToOpenAIAssistantTool } from "@langchain/openai";
-import { sleep } from "../../util/time.js";
+import { sleep } from "../../util/time.ts";
 import type {
   OpenAIAssistantFinish,
   OpenAIAssistantAction,
   OpenAIToolType,
-} from "./schema.js";
+} from "./schema.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ThreadMessage = any;

@@ -1,1 +1,1 @@
-export * from "./text_splitter.js";
+export * from "./text_splitter.ts";

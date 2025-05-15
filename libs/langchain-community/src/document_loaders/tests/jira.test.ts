@@ -9,7 +9,7 @@ import {
   JiraProject,
   JiraStatus,
   JiraStatusCategory,
-} from "../web/jira.js";
+} from "../web/jira.ts";
 
 describe("JiraDocumentConverter Unit Tests", () => {
   function getConverter() {

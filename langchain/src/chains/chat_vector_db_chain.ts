@@ -3,10 +3,10 @@ import type { VectorStoreInterface } from "@langchain/core/vectorstores";
 import { ChainValues } from "@langchain/core/utils/types";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { SerializedChatVectorDBQAChain } from "./serde.js";
-import { BaseChain, ChainInputs } from "./base.js";
-import { LLMChain } from "./llm_chain.js";
-import { loadQAStuffChain } from "./question_answering/load.js";
+import { SerializedChatVectorDBQAChain } from "./serde.ts";
+import { BaseChain, ChainInputs } from "./base.ts";
+import { LLMChain } from "./llm_chain.ts";
+import { loadQAStuffChain } from "./question_answering/load.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type LoadValues = Record<string, any>;

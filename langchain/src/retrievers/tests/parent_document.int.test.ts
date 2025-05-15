@@ -1,12 +1,12 @@
 import { expect, test } from "@jest/globals";
 import { OpenAIEmbeddings } from "@langchain/openai";
-import { InMemoryDocstore } from "../../stores/doc/in_memory.js";
-import { TextLoader } from "../../document_loaders/fs/text.js";
-import { InMemoryStore } from "../../storage/in_memory.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { ParentDocumentRetriever } from "../parent_document.js";
-import { RecursiveCharacterTextSplitter } from "../../text_splitter.js";
-import { ScoreThresholdRetriever } from "../score_threshold.js";
+import { InMemoryDocstore } from "../../stores/doc/in_memory.ts";
+import { TextLoader } from "../../document_loaders/fs/text.ts";
+import { InMemoryStore } from "../../storage/in_memory.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { ParentDocumentRetriever } from "../parent_document.ts";
+import { RecursiveCharacterTextSplitter } from "../../text_splitter.ts";
+import { ScoreThresholdRetriever } from "../score_threshold.ts";
 
 test("Should return the full document if an unsplit parent document has been added", async () => {
   const vectorstore = new MemoryVectorStore(new OpenAIEmbeddings());

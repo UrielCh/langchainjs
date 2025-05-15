@@ -2,20 +2,20 @@ import { z } from "zod";
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import type { BaseRetrieverInterface } from "@langchain/core/retrievers";
 import { interpolateFString, PromptTemplate } from "@langchain/core/prompts";
-import { MultiRouteChain, MultiRouteChainInput } from "./multi_route.js";
-import { BaseChain } from "../../chains/base.js";
-import { LLMRouterChain } from "./llm_router.js";
+import { MultiRouteChain, MultiRouteChainInput } from "./multi_route.ts";
+import { BaseChain } from "../../chains/base.ts";
+import { LLMRouterChain } from "./llm_router.ts";
 import {
   ConversationChain,
   DEFAULT_TEMPLATE,
-} from "../../chains/conversation.js";
-import { STRUCTURED_MULTI_RETRIEVAL_ROUTER_TEMPLATE } from "./multi_retrieval_prompt.js";
-import { zipEntries } from "./utils.js";
+} from "../../chains/conversation.ts";
+import { STRUCTURED_MULTI_RETRIEVAL_ROUTER_TEMPLATE } from "./multi_retrieval_prompt.ts";
+import { zipEntries } from "./utils.ts";
 import {
   RetrievalQAChain,
   RetrievalQAChainInput,
-} from "../../chains/retrieval_qa.js";
-import { RouterOutputParser } from "../../output_parsers/router.js";
+} from "../../chains/retrieval_qa.ts";
+import { RouterOutputParser } from "../../output_parsers/router.ts";
 
 /**
  * A type that represents the default values for the MultiRetrievalQAChain

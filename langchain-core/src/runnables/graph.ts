@@ -5,9 +5,9 @@ import type {
   RunnableIOSchema,
   Node,
   Edge,
-} from "./types.js";
-import { isRunnableInterface } from "./utils.js";
-import { drawMermaid, drawMermaidPng } from "./graph_mermaid.js";
+} from "./types.ts";
+import { isRunnableInterface } from "./utils.ts";
+import { drawMermaid, drawMermaidPng } from "./graph_mermaid.ts";
 
 export { Node, Edge };
 

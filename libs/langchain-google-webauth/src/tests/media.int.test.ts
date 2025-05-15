@@ -6,7 +6,7 @@ import {
   BlobStoreAIStudioFile,
   BlobStoreGoogleCloudStorage,
   BlobStoreGoogleCloudStorageParams,
-} from "../media.js";
+} from "../media.ts";
 
 describe("Google Webauth GCS store", () => {
   test("save text no-metadata", async () => {

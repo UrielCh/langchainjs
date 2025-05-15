@@ -8,7 +8,7 @@ import {
   DatabaseObjectResponse,
   NotionAPILoader,
   PageObjectResponse,
-} from "../web/notionapi.js";
+} from "../web/notionapi.ts";
 
 test("Properties Parser", async () => {
   const loader = new NotionAPILoader({

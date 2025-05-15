@@ -1,5 +1,5 @@
 import * as yaml from "yaml";
-import { extname } from "./extname.js";
+import { extname } from "./extname.ts";
 
 export const loadFileContents = (contents: string, format: string) => {
   switch (format) {

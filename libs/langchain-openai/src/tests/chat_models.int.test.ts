@@ -25,7 +25,7 @@ import {
   ChatCompletionChunk,
   ChatCompletionMessage,
 } from "openai/resources/index.mjs";
-import { ChatOpenAI } from "../chat_models.js";
+import { ChatOpenAI } from "../chat_models.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

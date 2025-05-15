@@ -14,7 +14,7 @@ import { z } from "zod";
 import { ChatGeneration } from "@langchain/core/outputs";
 import { AIMessageChunk } from "@langchain/core/messages";
 import { ToolCall } from "@langchain/core/messages/tool";
-import { WatsonxAuth, WatsonxInit } from "../types/ibm.js";
+import { WatsonxAuth, WatsonxInit } from "../types/ibm.ts";
 
 export const authenticateAndSetInstance = ({
   watsonxAIApikey,

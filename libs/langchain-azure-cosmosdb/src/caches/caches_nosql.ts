@@ -13,7 +13,7 @@ import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import {
   AzureCosmosDBNoSQLConfig,
   AzureCosmosDBNoSQLVectorStore,
-} from "../azure_cosmosdb_nosql.js";
+} from "../azure_cosmosdb_nosql.ts";
 
 const USER_AGENT_SUFFIX = "langchainjs-cdbnosql-semanticcache-javascript";
 const DEFAULT_CONTAINER_NAME = "semanticCacheContainer";

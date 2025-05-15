@@ -9,7 +9,7 @@ import {
   type VectaraSummary,
   type VectaraFilter,
   DEFAULT_FILTER,
-} from "../vectorstores/vectara.js";
+} from "../vectorstores/vectara.ts";
 
 export interface VectaraRetrieverInput extends BaseRetrieverInput {
   vectara: VectaraStore;

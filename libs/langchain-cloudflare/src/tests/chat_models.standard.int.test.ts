@@ -5,7 +5,7 @@ import { AIMessageChunk } from "@langchain/core/messages";
 import {
   ChatCloudflareWorkersAI,
   ChatCloudflareWorkersAICallOptions,
-} from "../chat_models.js";
+} from "../chat_models.ts";
 
 class ChatCloudflareWorkersAIStandardIntegrationTests extends ChatModelIntegrationTests<
   ChatCloudflareWorkersAICallOptions,

@@ -6,12 +6,12 @@ import {
   ListTablesSqlTool,
   QueryCheckerTool,
   QuerySqlTool,
-} from "../../../tools/sql.js";
-import { SQL_PREFIX, SQL_SUFFIX } from "./prompt.js";
-import { LLMChain } from "../../../chains/llm_chain.js";
-import { ZeroShotAgent, ZeroShotCreatePromptArgs } from "../../mrkl/index.js";
-import { AgentExecutor } from "../../executor.js";
-import { SqlDatabase } from "../../../sql_db.js";
+} from "../../../tools/sql.ts";
+import { SQL_PREFIX, SQL_SUFFIX } from "./prompt.ts";
+import { LLMChain } from "../../../chains/llm_chain.ts";
+import { ZeroShotAgent, ZeroShotCreatePromptArgs } from "../../mrkl/index.ts";
+import { AgentExecutor } from "../../executor.ts";
+import { SqlDatabase } from "../../../sql_db.ts";
 
 /**
  * Interface that extends ZeroShotCreatePromptArgs and adds an optional

@@ -7,7 +7,7 @@ import {
   GeminiFunctionSchema,
   GeminiJsonSchema,
   GeminiJsonSchemaDirty,
-} from "../types.js";
+} from "../types.ts";
 
 export function removeAdditionalProperties(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -1,10 +1,10 @@
 /* eslint-disable no-process-env */
 import { expect, test } from "@jest/globals";
 import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai";
-import { ConversationalRetrievalQAChain } from "../../chains/conversational_retrieval_chain.js";
-import { BufferMemory } from "../../memory/buffer_memory.js";
-import { MemoryVectorStore } from "../../vectorstores/memory.js";
-import { ScoreThresholdRetriever } from "../score_threshold.js";
+import { ConversationalRetrievalQAChain } from "../../chains/conversational_retrieval_chain.ts";
+import { BufferMemory } from "../../memory/buffer_memory.ts";
+import { MemoryVectorStore } from "../../vectorstores/memory.ts";
+import { ScoreThresholdRetriever } from "../score_threshold.ts";
 
 test("ConversationalRetrievalQAChain.fromLLM should use its vector store recursively until it gets all the similar results with the minimum similarity score provided", async () => {
   const vectorStore = await MemoryVectorStore.fromTexts(

@@ -13,9 +13,9 @@ import {
   isOpenAITool,
   ToolDefinition,
 } from "@langchain/core/language_models/base";
-import { convertToGenerativeAITools } from "./common.js";
-import { GoogleGenerativeAIToolType } from "../types.js";
-import { removeAdditionalProperties } from "./zod_to_genai_parameters.js";
+import { convertToGenerativeAITools } from "./common.ts";
+import { GoogleGenerativeAIToolType } from "../types.ts";
+import { removeAdditionalProperties } from "./zod_to_genai_parameters.ts";
 
 export function convertToolsToGenAI(
   tools: GoogleGenerativeAIToolType[],

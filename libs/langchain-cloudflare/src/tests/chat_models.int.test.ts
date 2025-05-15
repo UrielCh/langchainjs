@@ -10,7 +10,7 @@ import {
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
-import { ChatCloudflareWorkersAI } from "../chat_models.js";
+import { ChatCloudflareWorkersAI } from "../chat_models.ts";
 
 // Save the original value of the 'LANGCHAIN_CALLBACKS_BACKGROUND' environment variable
 const originalBackground = process.env.LANGCHAIN_CALLBACKS_BACKGROUND;

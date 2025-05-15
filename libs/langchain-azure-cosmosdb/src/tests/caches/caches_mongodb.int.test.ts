@@ -3,11 +3,11 @@
 /* eslint-disable no-process-env */
 import { ChatOpenAI, OpenAIEmbeddings } from "@langchain/openai";
 import { MongoClient } from "mongodb";
-import { AzureCosmosDBMongoDBSemanticCache } from "../../caches/caches_mongodb.js";
+import { AzureCosmosDBMongoDBSemanticCache } from "../../caches/caches_mongodb.ts";
 import {
   AzureCosmosDBMongoDBIndexOptions,
   AzureCosmosDBMongoDBSimilarityType,
-} from "../../azure_cosmosdb_mongodb.js";
+} from "../../azure_cosmosdb_mongodb.ts";
 
 const DATABASE_NAME = "langchain";
 const COLLECTION_NAME = "test";

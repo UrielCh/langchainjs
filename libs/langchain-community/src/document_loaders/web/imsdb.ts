@@ -1,5 +1,5 @@
 import { Document } from "@langchain/core/documents";
-import { CheerioWebBaseLoader } from "./cheerio.js";
+import { CheerioWebBaseLoader } from "./cheerio.ts";
 
 /**
  * A class that extends the CheerioWebBaseLoader class. It represents a

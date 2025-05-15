@@ -6,7 +6,7 @@ import {
   GeminiGroundingChunk,
   GeminiGroundingMetadata,
   GeminiGroundingSupport,
-} from "./types.js";
+} from "./types.ts";
 
 type Generations = Generation[] | ChatGeneration[];
 

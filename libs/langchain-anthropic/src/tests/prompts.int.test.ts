@@ -1,7 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
-import { convertPromptToAnthropic } from "../utils/prompts.js";
+import { convertPromptToAnthropic } from "../utils/prompts.ts";
 
 test("Convert hub prompt to Anthropic payload and invoke", async () => {
   const prompt = ChatPromptTemplate.fromMessages([

@@ -2,7 +2,7 @@
 import { test } from "@jest/globals";
 import { ChatModelIntegrationTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { ChatOpenAI, ChatOpenAICallOptions } from "../chat_models.js";
+import { ChatOpenAI, ChatOpenAICallOptions } from "../chat_models.ts";
 
 class ChatOpenAIResponsesStandardIntegrationTests extends ChatModelIntegrationTests<
   ChatOpenAICallOptions,

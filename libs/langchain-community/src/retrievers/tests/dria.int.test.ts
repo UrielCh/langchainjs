@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { DriaRetriever } from "../dria.js";
+import { DriaRetriever } from "../dria.ts";
 
 test.skip("DriaRetriever", async () => {
   // contract of TypeScript Handbook v4.9 uploaded to Dria

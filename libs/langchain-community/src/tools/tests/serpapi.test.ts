@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { SerpAPI } from "../serpapi.js";
+import { SerpAPI } from "../serpapi.ts";
 
 describe("serp api test suite", () => {
   class SerpApiUrlTester extends SerpAPI {

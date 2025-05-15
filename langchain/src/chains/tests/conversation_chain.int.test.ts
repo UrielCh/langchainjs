@@ -1,6 +1,6 @@
 import { test } from "@jest/globals";
 import { OpenAI } from "@langchain/openai";
-import { ConversationChain } from "../conversation.js";
+import { ConversationChain } from "../conversation.ts";
 
 test("Test ConversationChain", async () => {
   const model = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

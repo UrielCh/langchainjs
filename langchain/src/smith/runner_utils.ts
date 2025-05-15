@@ -26,9 +26,9 @@ import {
 import { EvaluationResult, RunEvaluator } from "langsmith/evaluation";
 import { DataType } from "langsmith/schemas";
 import type { TraceableFunction } from "langsmith/singletons/traceable";
-import { LLMStringEvaluator } from "../evaluation/base.js";
-import { loadEvaluator } from "../evaluation/loader.js";
-import { EvaluatorType } from "../evaluation/types.js";
+import { LLMStringEvaluator } from "../evaluation/base.ts";
+import { loadEvaluator } from "../evaluation/loader.ts";
+import { EvaluatorType } from "../evaluation/types.ts";
 import {
   isOffTheShelfEvaluator,
   type DynamicRunEvaluatorParams,
@@ -37,9 +37,9 @@ import {
   type RunEvalConfig,
   type RunEvaluatorLike,
   isCustomEvaluator,
-} from "./config.js";
-import { randomName } from "./name_generation.js";
-import { ProgressBar } from "./progress.js";
+} from "./config.ts";
+import { randomName } from "./name_generation.ts";
+import { ProgressBar } from "./progress.ts";
 
 export type ChainOrFactory =
   | Runnable

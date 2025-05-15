@@ -5,7 +5,7 @@
 // import { SystemMessagePromptTemplate, HumanMessagePromptTemplate, MessagesPlaceholder, ChatPromptTemplate } from "@langchain/core/prompts";
 // import { DynamicStructuredTool } from "@langchain/core/tools";
 // import { z } from "zod";
-// import { ChatMistralAI } from "../chat_models.js";
+// import { ChatMistralAI } from "../chat_models.ts";
 // import { AgentExecutor, createOpenAIToolsAgent, createToolCallingAgent } from "langchain/agents";
 
 // const tool = new TavilySearchResults({ maxResults: 1 });

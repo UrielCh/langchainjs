@@ -14,7 +14,7 @@ import {
   HumanMessage,
   SystemMessage,
 } from "@langchain/core/messages";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface defining the structure of the input data for the ZepMemory

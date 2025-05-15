@@ -1,6 +1,6 @@
 import { test } from "@jest/globals";
-import { HTTPClient } from "@mistralai/mistralai/lib/http.js";
-import { MistralAIEmbeddings } from "../embeddings.js";
+import { HTTPClient } from "@mistralai/mistralai/lib/http.ts";
+import { MistralAIEmbeddings } from "../embeddings.ts";
 
 test("Test MistralAIEmbeddings can embed query", async () => {
   const model = new MistralAIEmbeddings();

@@ -6,13 +6,13 @@ import {
 import { chunkArray } from "@langchain/core/utils/chunk_array";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
-import { GoogleAIConnection } from "./connection.js";
-import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.js";
+import { GoogleAIConnection } from "./connection.ts";
+import { ApiKeyGoogleAuth, GoogleAbstractedClient } from "./auth.ts";
 import {
   GoogleAIModelRequestParams,
   GoogleConnectionParams,
   GoogleResponse,
-} from "./types.js";
+} from "./types.ts";
 
 class EmbeddingsConnection<
   CallOptions extends AsyncCallerCallOptions,

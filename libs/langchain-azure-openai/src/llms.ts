@@ -21,8 +21,8 @@ import {
   TokenCredential,
   isTokenCredential,
 } from "@azure/core-auth";
-import { AzureOpenAIInput, OpenAICallOptions, OpenAIInput } from "./types.js";
-import { USER_AGENT_PREFIX } from "./constants.js";
+import { AzureOpenAIInput, OpenAICallOptions, OpenAIInput } from "./types.ts";
+import { USER_AGENT_PREFIX } from "./constants.ts";
 
 /**
  * Interface for tracking token usage in OpenAI calls.

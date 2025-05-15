@@ -3,8 +3,8 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings, OpenAI } from "@langchain/openai";
 import { AttributeInfo } from "langchain/chains/query_constructor";
 import { SelfQueryRetriever } from "langchain/retrievers/self_query";
-import { Chroma } from "../../vectorstores/chroma.js";
-import { ChromaTranslator } from "../chroma.js";
+import { Chroma } from "../../vectorstores/chroma.ts";
+import { ChromaTranslator } from "../chroma.ts";
 
 test.skip("Chroma Store Self Query Retriever Test", async () => {
   const docs = [

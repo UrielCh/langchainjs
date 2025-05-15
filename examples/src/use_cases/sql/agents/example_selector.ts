@@ -12,7 +12,7 @@ import { SqlToolkit } from "langchain/agents/toolkits/sql";
 import { SqlDatabase } from "langchain/sql_db";
 import { DataSource } from "typeorm";
 import { AgentExecutor, createOpenAIToolsAgent } from "langchain/agents";
-import { examples } from "./examples.js";
+import { examples } from "./examples.ts";
 
 const exampleSelector = await SemanticSimilarityExampleSelector.fromExamples(
   examples,

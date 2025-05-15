@@ -1,7 +1,7 @@
 import "web-streams-polyfill/polyfill";
 import { test, expect } from "@jest/globals";
-import { FakeStreamingLLM } from "../testing/index.js";
-import { StringOutputParser } from "../../output_parsers/string.js";
+import { FakeStreamingLLM } from "../testing/index.ts";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 
 test("Stream the entire way through", async () => {
   const llm = new FakeStreamingLLM({});

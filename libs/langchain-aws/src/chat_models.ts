@@ -46,12 +46,12 @@ import {
   handleConverseStreamMetadata,
   handleConverseStreamContentBlockStart,
   BedrockConverseToolChoice,
-} from "./common.js";
+} from "./common.ts";
 import {
   ChatBedrockConverseToolType,
   ConverseCommandParams,
   CredentialType,
-} from "./types.js";
+} from "./types.ts";
 
 /**
  * Inputs for ChatBedrockConverse.

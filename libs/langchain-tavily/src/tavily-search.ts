@@ -1,7 +1,7 @@
 import { CallbackManagerForToolRun } from "@langchain/core/callbacks/manager";
 import { StructuredTool, ToolParams } from "@langchain/core/tools";
 import { z } from "zod";
-import { TavilySearchAPIWrapper, type TavilySearchResponse } from "./utils.js";
+import { TavilySearchAPIWrapper, type TavilySearchResponse } from "./utils.ts";
 
 export type SearchDepth = "basic" | "advanced";
 export type TimeRange = "day" | "week" | "month" | "year";

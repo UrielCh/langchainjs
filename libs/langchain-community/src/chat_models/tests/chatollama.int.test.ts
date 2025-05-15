@@ -8,7 +8,7 @@ import {
   BytesOutputParser,
   StringOutputParser,
 } from "@langchain/core/output_parsers";
-import { ChatOllama } from "../ollama.js";
+import { ChatOllama } from "../ollama.ts";
 
 test.skip("test call", async () => {
   const ollama = new ChatOllama({});

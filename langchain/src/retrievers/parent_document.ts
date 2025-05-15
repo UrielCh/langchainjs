@@ -5,15 +5,15 @@ import {
   type VectorStoreRetrieverInterface,
 } from "@langchain/core/vectorstores";
 import { Document } from "@langchain/core/documents";
-import type { BaseDocumentCompressor } from "./document_compressors/index.js";
+import type { BaseDocumentCompressor } from "./document_compressors/index.ts";
 import {
   TextSplitter,
   TextSplitterChunkHeaderOptions,
-} from "../text_splitter.js";
+} from "../text_splitter.ts";
 import {
   MultiVectorRetriever,
   type MultiVectorRetrieverInput,
-} from "./multi_vector.js";
+} from "./multi_vector.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type SubDocs = Document<Record<string, any>>[];

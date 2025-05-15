@@ -1,1 +1,1 @@
-export { createStuffDocumentsChain } from "./stuff.js";
+export { createStuffDocumentsChain } from "./stuff.ts";

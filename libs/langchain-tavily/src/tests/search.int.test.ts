@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { TavilySearch } from "../tavily-search.js";
+import { TavilySearch } from "../tavily-search.ts";
 
 test("TavilySearch can perform a search given a string query", async () => {
   const tavilySearchTool = new TavilySearch();

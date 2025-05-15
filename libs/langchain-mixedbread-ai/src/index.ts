@@ -1,2 +1,2 @@
-export * from "./embeddings.js";
-export * from "./reranker.js";
+export * from "./embeddings.ts";
+export * from "./reranker.ts";

@@ -1,4 +1,4 @@
-import { Document } from "../documents/document.js";
+import { Document } from "../documents/document.ts";
 import {
   Comparator,
   Comparators,
@@ -7,9 +7,9 @@ import {
   Operator,
   Operators,
   StructuredQuery,
-} from "./ir.js";
-import { BaseTranslator } from "./base.js";
-import { castValue, isFilterEmpty } from "./utils.js";
+} from "./ir.ts";
+import { BaseTranslator } from "./base.ts";
+import { castValue, isFilterEmpty } from "./utils.ts";
 
 /**
  * A type alias for an object that maps comparison operators to string or

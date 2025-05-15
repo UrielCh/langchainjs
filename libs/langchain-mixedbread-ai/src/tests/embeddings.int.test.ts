@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { MixedbreadAIEmbeddings } from "../embeddings.js";
+import { MixedbreadAIEmbeddings } from "../embeddings.ts";
 
 test("Test MixedbreadAIEmbeddings.embedQuery", async () => {
   const mxbai = new MixedbreadAIEmbeddings();

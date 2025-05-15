@@ -11,7 +11,7 @@ import {
   GoogleAIFileManager,
   GoogleAICacheManager,
 } from "@google/generative-ai/server";
-import { ChatGoogleGenerativeAI } from "../chat_models.js";
+import { ChatGoogleGenerativeAI } from "../chat_models.ts";
 
 const model = new ChatGoogleGenerativeAI({
   model: "gemini-2.0-flash",

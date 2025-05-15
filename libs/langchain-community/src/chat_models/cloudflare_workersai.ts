@@ -12,8 +12,8 @@ import { ChatGenerationChunk } from "@langchain/core/outputs";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 
-import type { CloudflareWorkersAIInput } from "../llms/cloudflare_workersai.js";
-import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.js";
+import type { CloudflareWorkersAIInput } from "../llms/cloudflare_workersai.ts";
+import { convertEventStreamToIterableReadableDataStream } from "../utils/event_source_parse.ts";
 
 /**
  * @deprecated Install and import from "@langchain/cloudflare" instead.

@@ -2,7 +2,7 @@
 import { jest, test, expect } from "@jest/globals";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 
-import { TigrisVectorStore } from "../tigris.js";
+import { TigrisVectorStore } from "../tigris.ts";
 
 test("TigrisVectorStore with external ids", async () => {
   const client = {

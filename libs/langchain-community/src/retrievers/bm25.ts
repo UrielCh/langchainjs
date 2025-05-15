@@ -1,7 +1,7 @@
 import { BaseRetriever, BaseRetrieverInput } from "@langchain/core/retrievers";
 import { Document } from "@langchain/core/documents";
 
-import { BM25 } from "../utils/@furkantoprak/bm25/BM25.js";
+import { BM25 } from "../utils/@furkantoprak/bm25/BM25.ts";
 
 export type BM25RetrieverOptions = {
   docs: Document[];

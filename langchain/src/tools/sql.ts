@@ -2,9 +2,9 @@ import type { BaseLanguageModelInterface } from "@langchain/core/language_models
 import { OpenAI } from "@langchain/openai";
 import { Tool } from "@langchain/core/tools";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { LLMChain } from "../chains/llm_chain.js";
-import type { SqlDatabase } from "../sql_db.js";
-import { SqlTable } from "../util/sql_utils.js";
+import { LLMChain } from "../chains/llm_chain.ts";
+import type { SqlDatabase } from "../sql_db.ts";
+import { SqlTable } from "../util/sql_utils.ts";
 
 /**
  * Interface for SQL tools. It has a `db` property which is a SQL

@@ -18,7 +18,7 @@ import {
   createOllamaGenerateStream,
   type OllamaInput,
   type OllamaMessage,
-} from "../utils/ollama.js";
+} from "../utils/ollama.ts";
 
 /**
  * @deprecated Deprecated in favor of the `@langchain/ollama` package. Import from `@langchain/ollama` instead.

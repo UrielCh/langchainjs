@@ -7,7 +7,7 @@ import {
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
 import { concat } from "@langchain/core/utils/stream";
-import { ChatOllama } from "../chat_models.js";
+import { ChatOllama } from "../chat_models.ts";
 
 const messageHistory = [
   new HumanMessage("What's the weather like today in Paris?"),

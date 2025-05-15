@@ -5,8 +5,8 @@ import { Document } from "@langchain/core/documents";
 import {
   loadQAMapReduceChain,
   loadQARefineChain,
-} from "../question_answering/load.js";
-import { createStuffDocumentsChain } from "../combine_documents/stuff.js";
+} from "../question_answering/load.ts";
+import { createStuffDocumentsChain } from "../combine_documents/stuff.ts";
 
 test("Test StuffDocumentsChain", async () => {
   const llm = new OpenAI({ modelName: "gpt-3.5-turbo-instruct" });

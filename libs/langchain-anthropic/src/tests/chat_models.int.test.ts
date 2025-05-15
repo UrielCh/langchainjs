@@ -22,8 +22,8 @@ import { CallbackManager } from "@langchain/core/callbacks/manager";
 import { concat } from "@langchain/core/utils/stream";
 import { AnthropicVertex } from "@anthropic-ai/vertex-sdk";
 import { BaseLanguageModelInput } from "@langchain/core/language_models/base";
-import { ChatAnthropic } from "../chat_models.js";
-import { AnthropicMessageResponse } from "../types.js";
+import { ChatAnthropic } from "../chat_models.ts";
+import { AnthropicMessageResponse } from "../types.ts";
 
 async function invoke(
   chat: ChatAnthropic,

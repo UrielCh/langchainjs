@@ -10,13 +10,13 @@ import {
   AsyncCallerParams,
 } from "@langchain/core/utils/async_caller";
 
-import { GoogleVertexAIConnection } from "../utils/googlevertexai-connection.js";
-import { Docstore } from "../stores/doc/base.js";
+import { GoogleVertexAIConnection } from "../utils/googlevertexai-connection.ts";
+import { Docstore } from "../stores/doc/base.ts";
 import {
   GoogleVertexAIConnectionParams,
   GoogleResponse,
   GoogleAbstractedClientOpsMethod,
-} from "../types/googlevertexai-types.js";
+} from "../types/googlevertexai-types.ts";
 
 /**
  * Allows us to create IdDocument classes that contain the ID.

@@ -14,7 +14,7 @@ import {
   mapChatMessagesToStoredMessages,
   mapStoredMessagesToChatMessages,
 } from "@langchain/core/messages";
-import { ensureCacheExists } from "../../utils/momento.js";
+import { ensureCacheExists } from "../../utils/momento.ts";
 
 /**
  * The settings to instantiate the Momento chat message history.

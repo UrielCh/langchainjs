@@ -4,7 +4,7 @@ import {
 } from "@testcontainers/mariadb";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { type Pool, PoolConfig } from "mariadb";
-import { MariaDBStore, MariaDBStoreArgs } from "../mariadb.js";
+import { MariaDBStore, MariaDBStoreArgs } from "../mariadb.ts";
 
 const isFullyQualifiedTableExists = async (
   pool: Pool,

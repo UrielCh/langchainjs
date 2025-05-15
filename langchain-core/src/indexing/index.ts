@@ -1,2 +1,2 @@
-export * from "./record_manager.js";
-export * from "./base.js";
+export * from "./record_manager.ts";
+export * from "./base.ts";

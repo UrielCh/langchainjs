@@ -7,7 +7,7 @@ import {
 } from "@langchain/core/messages";
 import { z } from "zod";
 import { DynamicStructuredTool } from "@langchain/core/tools";
-import { ChatCohere } from "../chat_models.js";
+import { ChatCohere } from "../chat_models.ts";
 
 test("ChatCohere can invoke", async () => {
   const model = new ChatCohere();

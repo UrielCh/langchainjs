@@ -6,8 +6,8 @@ import {
   QuerySqlTool,
   ListTablesSqlTool,
   QueryCheckerTool,
-} from "../../tools/sql.js";
-import { SqlDatabase } from "../../sql_db.js";
+} from "../../tools/sql.ts";
+import { SqlDatabase } from "../../sql_db.ts";
 
 const previousEnv = process.env;
 

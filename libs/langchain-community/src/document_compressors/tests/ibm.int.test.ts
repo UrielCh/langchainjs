@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { Document } from "@langchain/core/documents";
-import { WatsonxRerank } from "../ibm.js";
+import { WatsonxRerank } from "../ibm.ts";
 
 const query = "What is the capital of the United States?";
 const docs = [

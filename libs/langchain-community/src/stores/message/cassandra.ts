@@ -10,7 +10,7 @@ import {
   Column,
   CassandraTable,
   CassandraClientArgs,
-} from "../../utils/cassandra.js";
+} from "../../utils/cassandra.ts";
 
 export interface CassandraChatMessageHistoryOptions
   extends CassandraClientArgs {

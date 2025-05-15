@@ -16,7 +16,7 @@ import {
   RunnableSequence,
   RunnableLike,
 } from "@langchain/core/runnables";
-import { LLMChain } from "../chains/llm_chain.js";
+import { LLMChain } from "../chains/llm_chain.ts";
 import type {
   AgentActionOutputParser,
   AgentInput,
@@ -24,7 +24,7 @@ import type {
   RunnableSingleActionAgentInput,
   SerializedAgent,
   StoppingMethod,
-} from "./types.js";
+} from "./types.ts";
 
 /**
  * Record type for arguments passed to output parsers.

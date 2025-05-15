@@ -1,5 +1,5 @@
 import { describe, expect } from "@jest/globals";
-import { GoogleRoutesAPI } from "../google_routes.js";
+import { GoogleRoutesAPI } from "../google_routes.ts";
 
 describe.skip("GooglePlacesAPI", () => {
   test("should be setup with correct parameters", async () => {

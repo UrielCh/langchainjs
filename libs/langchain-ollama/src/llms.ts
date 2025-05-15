@@ -4,7 +4,7 @@ import { GenerationChunk } from "@langchain/core/outputs";
 import type { StringWithAutocomplete } from "@langchain/core/utils/types";
 import { LLM, type BaseLLMParams } from "@langchain/core/language_models/llms";
 import { Ollama as OllamaClient } from "ollama/browser";
-import { OllamaCamelCaseOptions } from "./types.js";
+import { OllamaCamelCaseOptions } from "./types.ts";
 
 export interface OllamaCallOptions extends BaseLanguageModelCallOptions {
   images?: string[];

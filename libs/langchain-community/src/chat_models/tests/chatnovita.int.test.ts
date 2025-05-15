@@ -7,7 +7,7 @@ import {
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
-import { ChatNovitaAI } from "../novita.js";
+import { ChatNovitaAI } from "../novita.ts";
 
 describe("ChatNovitaAI", () => {
   test("invoke", async () => {

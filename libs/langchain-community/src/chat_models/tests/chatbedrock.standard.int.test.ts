@@ -3,7 +3,7 @@ import { test, expect } from "@jest/globals";
 import { ChatModelIntegrationTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
 import { BaseChatModelCallOptions } from "@langchain/core/language_models/chat_models";
-import { BedrockChat } from "../bedrock/index.js";
+import { BedrockChat } from "../bedrock/index.ts";
 
 class BedrockChatStandardIntegrationTests extends ChatModelIntegrationTests<
   BaseChatModelCallOptions,

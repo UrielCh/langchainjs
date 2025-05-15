@@ -1,3 +1,3 @@
-export { GoogleCalendarCreateTool } from "./create.js";
-export { GoogleCalendarViewTool } from "./view.js";
-export type { GoogleCalendarAgentParams } from "./base.js";
+export { GoogleCalendarCreateTool } from "./create.ts";
+export { GoogleCalendarViewTool } from "./view.ts";
+export type { GoogleCalendarAgentParams } from "./base.ts";

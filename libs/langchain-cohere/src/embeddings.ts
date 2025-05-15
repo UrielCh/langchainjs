@@ -2,7 +2,7 @@ import { CohereClient } from "cohere-ai";
 
 import { Embeddings, EmbeddingsParams } from "@langchain/core/embeddings";
 import { chunkArray } from "@langchain/core/utils/chunk_array";
-import { CohereClientOptions, getCohereClient } from "./client.js";
+import { CohereClientOptions, getCohereClient } from "./client.ts";
 
 /**
  * Interface that extends EmbeddingsParams and defines additional

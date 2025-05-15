@@ -10,7 +10,7 @@ import {
 import { formatToOpenAITool } from "@langchain/openai";
 import { StructuredTool } from "@langchain/core/tools";
 import { z } from "zod";
-import { ChatTogetherAI } from "../togetherai.js";
+import { ChatTogetherAI } from "../togetherai.ts";
 
 describe("ChatTogetherAI", () => {
   test("invoke", async () => {

@@ -1,5 +1,5 @@
 import { DynamicTool, DynamicToolInput } from "@langchain/core/tools";
-import { BaseChain } from "../chains/base.js";
+import { BaseChain } from "../chains/base.ts";
 
 /**
  * @deprecated Wrap in a DynamicTool instead.

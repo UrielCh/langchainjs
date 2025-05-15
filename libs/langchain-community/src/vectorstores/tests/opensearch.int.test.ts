@@ -3,7 +3,7 @@ import { test, expect } from "@jest/globals";
 import { Client } from "@opensearch-project/opensearch";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { OpenSearchVectorStore } from "../opensearch.js";
+import { OpenSearchVectorStore } from "../opensearch.ts";
 
 test.skip("OpenSearchVectorStore integration", async () => {
   if (!process.env.OPENSEARCH_URL) {

@@ -7,13 +7,13 @@ import * as path from "path";
 import { describe, test } from "@jest/globals";
 import { HumanMessage } from "@langchain/core/messages";
 import { AsyncCaller } from "@langchain/core/utils/async_caller";
-import { ChatGooglePaLM } from "../chat_models.js";
-import { GooglePaLM } from "../llms.js";
+import { ChatGooglePaLM } from "../chat_models.ts";
+import { GooglePaLM } from "../llms.ts";
 import {
   DriveFileReadConnection,
   MakerSuiteHub,
   MakerSuitePrompt,
-} from "../googlemakersuitehub.js";
+} from "../googlemakersuitehub.ts";
 
 describe.skip("Google Maker Suite Hub Integration", () => {
   describe("Prompt", () => {

@@ -9,18 +9,18 @@ import {
   BlobStore,
   BlobStoreOptions,
   MediaBlobData,
-} from "./utils/media_core.js";
+} from "./utils/media_core.ts";
 import {
   GoogleConnectionParams,
   GoogleRawResponse,
   GoogleResponse,
-} from "../types.js";
-import { GoogleHostConnection, GoogleRawConnection } from "../connection.js";
+} from "../types.ts";
+import { GoogleHostConnection, GoogleRawConnection } from "../connection.ts";
 import {
   ApiKeyGoogleAuth,
   GoogleAbstractedClient,
   GoogleAbstractedClientOpsMethod,
-} from "../auth.js";
+} from "../auth.ts";
 
 export interface GoogleUploadConnectionParams<AuthOptions>
   extends GoogleConnectionParams<AuthOptions> {}

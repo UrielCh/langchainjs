@@ -4,7 +4,7 @@ import type { InputValues } from "@langchain/core/utils/types";
 import {
   CustomFormatPromptTemplate,
   CustomFormatPromptTemplateInput,
-} from "./custom_format.js";
+} from "./custom_format.ts";
 
 export const parseHandlebars = (template: string): ParsedFStringNode[] => {
   const parsed: ParsedFStringNode[] = [];

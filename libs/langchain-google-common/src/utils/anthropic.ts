@@ -64,7 +64,7 @@ import {
   GoogleAIModelRequestParams,
   GoogleAIToolType,
   GoogleLLMResponse,
-} from "../types.js";
+} from "../types.ts";
 
 export function getAnthropicAPI(config?: AnthropicAPIConfig): GoogleAIAPI {
   function partToString(part: AnthropicContent): string {

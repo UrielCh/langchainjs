@@ -1,5 +1,5 @@
-import { Serializable } from "./load/serializable.js";
-import { type BaseMessage, HumanMessage, AIMessage } from "./messages/index.js";
+import { Serializable } from "./load/serializable.ts";
+import { type BaseMessage, HumanMessage, AIMessage } from "./messages/index.ts";
 
 // TODO: Combine into one class for 0.2
 

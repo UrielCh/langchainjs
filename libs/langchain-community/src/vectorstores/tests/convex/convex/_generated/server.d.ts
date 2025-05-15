@@ -20,7 +20,7 @@ import {
   GenericDatabaseReader,
   GenericDatabaseWriter,
 } from "convex/server";
-import type { DataModel } from "./dataModel.js";
+import type { DataModel } from "./dataModel.ts";
 
 /**
  * Define a query in this Convex app's public API.

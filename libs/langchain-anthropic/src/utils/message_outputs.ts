@@ -9,8 +9,8 @@ import {
 } from "@langchain/core/messages";
 import type { ToolCallChunk } from "@langchain/core/messages/tool";
 import { ChatGeneration } from "@langchain/core/outputs";
-import { AnthropicMessageResponse } from "../types.js";
-import { extractToolCalls } from "../output_parsers.js";
+import { AnthropicMessageResponse } from "../types.ts";
+import { extractToolCalls } from "../output_parsers.ts";
 
 export function _makeMessageChunkFromAnthropicEvent(
   data: Anthropic.Messages.RawMessageStreamEvent,

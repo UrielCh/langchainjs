@@ -6,7 +6,7 @@ import * as os from "node:os";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
 
-import { HNSWLib } from "../hnswlib.js";
+import { HNSWLib } from "../hnswlib.ts";
 
 test("Test HNSWLib.fromTexts", async () => {
   const vectorStore = await HNSWLib.fromTexts(

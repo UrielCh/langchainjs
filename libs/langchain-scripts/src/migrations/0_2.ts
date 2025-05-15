@@ -4,7 +4,7 @@ import path from "node:path";
 import {
   type DeprecatedEntrypoint,
   importMap as importMapArr,
-} from "../_data/importMap.js";
+} from "../_data/importMap.ts";
 
 const DEPRECATED_AND_DELETED_IMPORTS = [
   "PromptLayerOpenAI",

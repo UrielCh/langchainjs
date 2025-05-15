@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { Replicate } from "../replicate.js";
+import { Replicate } from "../replicate.ts";
 
 // Test skipped because Replicate appears to be timing out often when called
 test.skip("Test Replicate", async () => {

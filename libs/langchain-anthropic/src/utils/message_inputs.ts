@@ -30,7 +30,7 @@ import {
   AnthropicThinkingBlockParam,
   AnthropicRedactedThinkingBlockParam,
   isAnthropicImageBlockParam,
-} from "../types.js";
+} from "../types.ts";
 
 function _formatImage(imageUrl: string) {
   const parsed = parseBase64DataUrl({ dataUrl: imageUrl });

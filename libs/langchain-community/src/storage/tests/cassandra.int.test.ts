@@ -2,8 +2,8 @@
 // Hangs when run with other tests, uncomment for development
 
 // import { test, expect, describe } from "@jest/globals";
-// import { CassandraClientFactory } from "../../utils/cassandra.js";
-// import { CassandraKVStore } from "../cassandra.js";
+// import { CassandraClientFactory } from "../../utils/cassandra.ts";
+// import { CassandraKVStore } from "../cassandra.ts";
 
 test("Empty test to prevent runner from complaining", async () => {});
 

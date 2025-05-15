@@ -1,7 +1,7 @@
-import { insecureHash } from "../utils/hash.js";
-import type { Generation, ChatGeneration } from "../outputs.js";
-import { mapStoredMessageToChatMessage } from "../messages/utils.js";
-import { type StoredGeneration } from "../messages/base.js";
+import { insecureHash } from "../utils/hash.ts";
+import type { Generation, ChatGeneration } from "../outputs.ts";
+import { mapStoredMessageToChatMessage } from "../messages/utils.ts";
+import { type StoredGeneration } from "../messages/base.ts";
 
 /**
  * This cache key should be consistent across all versions of LangChain.

@@ -1,11 +1,11 @@
-import { concat } from "../utils/stream.js";
+import { concat } from "../utils/stream.ts";
 import {
   Runnable,
   RunnableAssign,
   RunnableMap,
   RunnableMapLike,
-} from "./base.js";
-import { ensureConfig, type RunnableConfig } from "./config.js";
+} from "./base.ts";
+import { ensureConfig, type RunnableConfig } from "./config.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type RunnablePassthroughFunc<RunInput = any> =

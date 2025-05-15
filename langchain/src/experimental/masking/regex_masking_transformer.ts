@@ -1,5 +1,5 @@
-import { MaskingTransformer } from "./transformer.js";
-import type { HashFunction, MaskingPattern } from "./types.js";
+import { MaskingTransformer } from "./transformer.ts";
+import type { HashFunction, MaskingPattern } from "./types.ts";
 /**
  * RegexMaskingTransformer class for masking and rehydrating messages with Regex.
  */

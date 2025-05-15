@@ -2,9 +2,9 @@ import type { BaseLanguageModelInterface } from "@langchain/core/language_models
 import { ChainValues } from "@langchain/core/utils/types";
 import { BasePromptTemplate } from "@langchain/core/prompts";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { RouterChain } from "./multi_route.js";
-import { ChainInputs } from "../../chains/base.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { RouterChain } from "./multi_route.ts";
+import { ChainInputs } from "../../chains/base.ts";
 
 /**
  * A type that represents the output schema of a router chain. It defines

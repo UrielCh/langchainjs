@@ -1,5 +1,5 @@
 /* eslint-disable no-process-env */
-import { AzureChatOpenAI } from "../../azure/chat_models.js";
+import { AzureChatOpenAI } from "../../azure/chat_models.ts";
 
 beforeEach(() => {
   delete process.env.OPENAI_API_KEY;

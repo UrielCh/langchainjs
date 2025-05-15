@@ -1,1 +1,1 @@
-export * from "./vectorstores.js";
+export * from "./vectorstores.ts";

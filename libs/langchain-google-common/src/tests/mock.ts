@@ -3,9 +3,9 @@ import {
   ensureAuthOptionScopes,
   GoogleAbstractedClient,
   GoogleAbstractedClientOps,
-} from "../auth.js";
-import { JsonStream } from "../utils/stream.js";
-import { GoogleAIBaseLLMInput } from "../types.js";
+} from "../auth.ts";
+import { JsonStream } from "../utils/stream.ts";
+import { GoogleAIBaseLLMInput } from "../types.ts";
 
 export function mockId(): string {
   return `mock-id-${Date.now()}`;

@@ -1,10 +1,10 @@
 import { test } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai";
-import { AttributeInfo } from "../../../chains/query_constructor/index.js";
-import { SelfQueryRetriever } from "../index.js";
-import { FunctionalTranslator } from "../functional.js";
-import { MemoryVectorStore } from "../../../vectorstores/memory.js";
+import { AttributeInfo } from "../../../chains/query_constructor/index.ts";
+import { SelfQueryRetriever } from "../index.ts";
+import { FunctionalTranslator } from "../functional.ts";
+import { MemoryVectorStore } from "../../../vectorstores/memory.ts";
 
 test("Memory Vector Store Self Query Retriever Test", async () => {
   const docs = [

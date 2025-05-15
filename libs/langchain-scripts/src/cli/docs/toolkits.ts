@@ -5,8 +5,8 @@ import {
   getUserInput,
   greenText,
   redBackground,
-} from "../utils/get-input.js";
-import { fetchURLStatus } from "../utils/fetch-url-status.js";
+} from "../utils/get-input.ts";
+import { fetchURLStatus } from "../utils/fetch-url-status.ts";
 import {
   SIDEBAR_LABEL_PLACEHOLDER,
   MODULE_NAME_PLACEHOLDER,
@@ -15,7 +15,7 @@ import {
   PYTHON_DOC_URL_PLACEHOLDER,
   API_REF_MODULE_PLACEHOLDER,
   PY_SUPPORT_PLACEHOLDER,
-} from "../constants.js";
+} from "../constants.ts";
 
 const TEMPLATE_PATH = path.resolve("./src/cli/docs/templates/toolkits.ipynb");
 const INTEGRATIONS_DOCS_PATH = path.resolve(

@@ -3,7 +3,7 @@ import pg, { PoolConfig } from "pg";
 import {
   PostgresRecordManager,
   PostgresRecordManagerOptions,
-} from "../postgres.js";
+} from "../postgres.ts";
 
 describe.skip("PostgresRecordManager", () => {
   const tableName = "upsertion_record";

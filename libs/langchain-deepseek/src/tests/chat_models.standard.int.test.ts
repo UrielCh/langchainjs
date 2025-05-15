@@ -6,7 +6,7 @@ import { AIMessageChunk } from "@langchain/core/messages";
 // import { join } from "path";
 // import { concat } from "@langchain/core/utils/stream";
 // import { BaseLanguageModelInput } from "@langchain/core/language_models/base";
-import { ChatDeepSeek, ChatDeepSeekCallOptions } from "../chat_models.js";
+import { ChatDeepSeek, ChatDeepSeekCallOptions } from "../chat_models.ts";
 
 // const REPO_ROOT_DIR = process.cwd();
 

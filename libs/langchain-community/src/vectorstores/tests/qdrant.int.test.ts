@@ -5,8 +5,8 @@ import { QdrantClient } from "@qdrant/js-client-rest";
 import { faker } from "@faker-js/faker";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { QdrantVectorStore } from "../qdrant.js";
-import { OllamaEmbeddings } from "../../embeddings/ollama.js";
+import { QdrantVectorStore } from "../qdrant.ts";
+import { OllamaEmbeddings } from "../../embeddings/ollama.ts";
 
 describe.skip("QdrantVectorStore testcase", () => {
   test("base usage", async () => {

@@ -2,7 +2,7 @@ import {
   BaseOutputParser,
   OutputParserException,
 } from "@langchain/core/output_parsers";
-import type { SerializedFields } from "../load/map_keys.js";
+import type { SerializedFields } from "../load/map_keys.ts";
 
 export interface RegExpFields {
   pattern: string;

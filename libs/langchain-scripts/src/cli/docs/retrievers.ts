@@ -5,8 +5,8 @@ import {
   getUserInput,
   greenText,
   redBackground,
-} from "../utils/get-input.js";
-import { fetchURLStatus } from "../utils/fetch-url-status.js";
+} from "../utils/get-input.ts";
+import { fetchURLStatus } from "../utils/fetch-url-status.ts";
 import {
   PACKAGE_NAME_PLACEHOLDER,
   MODULE_NAME_PLACEHOLDER,
@@ -15,7 +15,7 @@ import {
   PY_SUPPORT_PLACEHOLDER,
   API_REF_MODULE_PLACEHOLDER,
   PYTHON_DOC_URL_PLACEHOLDER,
-} from "../constants.js";
+} from "../constants.ts";
 
 const HAS_CLOUD_OFFERING_PLACEHOLDER = "__has_cloud_offering__";
 const CAN_SELF_HOST_PLACEHOLDER = "__can_self_host__";

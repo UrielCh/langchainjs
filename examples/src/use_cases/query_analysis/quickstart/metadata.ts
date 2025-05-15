@@ -1,4 +1,4 @@
-import { getDocs } from "./docs.js";
+import { getDocs } from "./docs.ts";
 
 const docs = await getDocs();
 

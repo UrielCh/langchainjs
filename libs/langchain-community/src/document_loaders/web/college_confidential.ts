@@ -1,5 +1,5 @@
 import { Document } from "@langchain/core/documents";
-import { CheerioWebBaseLoader } from "./cheerio.js";
+import { CheerioWebBaseLoader } from "./cheerio.ts";
 
 /**
  * A document loader specifically designed for loading documents from the

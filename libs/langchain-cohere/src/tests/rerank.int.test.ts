@@ -1,6 +1,6 @@
 /* eslint-disable no-process-env */
 import { Document } from "@langchain/core/documents";
-import { CohereRerank } from "../rerank.js";
+import { CohereRerank } from "../rerank.ts";
 
 const query = "What is the capital of France?";
 

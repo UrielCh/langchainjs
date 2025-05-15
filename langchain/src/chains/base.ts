@@ -12,7 +12,7 @@ import {
   BaseLangChain,
   BaseLangChainParams,
 } from "@langchain/core/language_models/base";
-import { SerializedBaseChain } from "./serde.js";
+import { SerializedBaseChain } from "./serde.ts";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type LoadValues = Record<string, any>;

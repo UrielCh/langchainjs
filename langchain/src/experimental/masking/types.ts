@@ -1,4 +1,4 @@
-import { MaskingTransformer } from "./transformer.js";
+import { MaskingTransformer } from "./transformer.ts";
 /**
  * Configuration type for MaskingParser.
  */

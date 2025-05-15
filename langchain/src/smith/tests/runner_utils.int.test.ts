@@ -13,9 +13,9 @@ import {
 import { ChatResult } from "@langchain/core/outputs";
 import { RunnableConfig, RunnableLambda } from "@langchain/core/runnables";
 import { DataType, KVMap } from "langsmith/schemas";
-import { RunEvalConfig } from "../config.js";
-import { randomName } from "../name_generation.js";
-import { EvalResults, runOnDataset } from "../runner_utils.js";
+import { RunEvalConfig } from "../config.ts";
+import { randomName } from "../name_generation.ts";
+import { EvalResults, runOnDataset } from "../runner_utils.ts";
 
 const answers: { [question: string]: string } = {
   "What's the capital of California?": "Sacramento",

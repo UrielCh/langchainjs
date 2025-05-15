@@ -5,7 +5,7 @@ import {
   mergeContent,
   _mergeDicts,
   type MessageType,
-} from "./base.js";
+} from "./base.ts";
 
 export interface FunctionMessageFieldsWithName extends BaseMessageFields {
   name: string;

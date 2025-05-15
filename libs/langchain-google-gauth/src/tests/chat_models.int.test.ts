@@ -22,9 +22,9 @@ import {
 } from "@langchain/google-common/experimental/utils/media_core";
 import { GoogleCloudStorageUri } from "@langchain/google-common/experimental/media";
 import { InMemoryStore } from "@langchain/core/stores";
-import { GeminiTool } from "../types.js";
-import { ChatGoogle } from "../chat_models.js";
-import { BlobStoreGoogleCloudStorage } from "../media.js";
+import { GeminiTool } from "../types.ts";
+import { ChatGoogle } from "../chat_models.ts";
+import { BlobStoreGoogleCloudStorage } from "../media.ts";
 
 describe("GAuth Chat", () => {
   test("invoke", async () => {

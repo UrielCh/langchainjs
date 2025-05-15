@@ -5,7 +5,7 @@ import {
 } from "@google-cloud/cloud-sql-connector";
 import { GoogleAuth } from "google-auth-library";
 import knex from "knex";
-import { getIAMPrincipalEmail } from "./utils/utils.js";
+import { getIAMPrincipalEmail } from "./utils/utils.ts";
 
 export interface PostgresEngineArgs {
   ipType?: IpAddressTypes;

@@ -4,7 +4,7 @@ import { expect, test } from "@jest/globals";
 import {
   SageMakerEndpoint,
   SageMakerLLMContentHandler,
-} from "../sagemaker_endpoint.js";
+} from "../sagemaker_endpoint.ts";
 
 // yarn test:single /{path_to}/langchain/src/llms/tests/sagemaker.int.test.ts
 describe.skip("Test SageMaker LLM", () => {

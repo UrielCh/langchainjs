@@ -4,8 +4,8 @@ import { test, expect } from "@jest/globals";
 import { promisify } from "util";
 import { randomUUID } from "crypto";
 
-import { ZepRetriever } from "../zep.js";
-import { ZepMemory } from "../../memory/zep.js";
+import { ZepRetriever } from "../zep.ts";
+import { ZepMemory } from "../../memory/zep.ts";
 
 const baseURL = process.env.ZEP_API_URL || "http://localhost:8000";
 

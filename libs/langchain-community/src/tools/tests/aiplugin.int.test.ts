@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { AIPluginTool } from "../aiplugin.js";
+import { AIPluginTool } from "../aiplugin.ts";
 
 test("AIPluginTool", async () => {
   const tool = await AIPluginTool.fromPluginUrl(

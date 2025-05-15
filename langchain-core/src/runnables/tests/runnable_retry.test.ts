@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { test, expect } from "@jest/globals";
-import { RunnableLambda } from "../base.js";
+import { RunnableLambda } from "../base.ts";
 
 test("RunnableRetry invoke", async () => {
   let attemptCount = 0;

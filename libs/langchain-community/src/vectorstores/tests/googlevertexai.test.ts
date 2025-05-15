@@ -3,8 +3,8 @@
 import { beforeEach, expect, test } from "@jest/globals";
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { SyntheticEmbeddings } from "@langchain/core/utils/testing";
-import { InMemoryDocstore } from "../../stores/doc/in_memory.js";
-import { MatchingEngineArgs, MatchingEngine } from "../googlevertexai.js";
+import { InMemoryDocstore } from "../../stores/doc/in_memory.ts";
+import { MatchingEngineArgs, MatchingEngine } from "../googlevertexai.ts";
 
 describe("Vertex AI matching", () => {
   let embeddings: EmbeddingsInterface;

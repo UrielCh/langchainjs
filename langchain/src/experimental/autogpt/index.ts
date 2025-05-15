@@ -1,7 +1,7 @@
-export { AutoGPTPrompt, type AutoGPTPromptInput } from "./prompt.js";
+export { AutoGPTPrompt, type AutoGPTPromptInput } from "./prompt.ts";
 
-export { AutoGPTOutputParser, preprocessJsonInput } from "./output_parser.js";
+export { AutoGPTOutputParser, preprocessJsonInput } from "./output_parser.ts";
 
-export { AutoGPT, type AutoGPTInput } from "./agent.js";
+export { AutoGPT, type AutoGPTInput } from "./agent.ts";
 
-export type { AutoGPTAction } from "./schema.js";
+export type { AutoGPTAction } from "./schema.ts";

@@ -2,7 +2,7 @@
 import { jest, test, expect } from "@jest/globals";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 
-import { QdrantVectorStore } from "../vectorstores.js";
+import { QdrantVectorStore } from "../vectorstores.ts";
 
 test("QdrantVectorStore works", async () => {
   const client = {

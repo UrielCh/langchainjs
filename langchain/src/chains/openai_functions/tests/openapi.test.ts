@@ -8,8 +8,8 @@ import {
   JsonSchema7ArrayType,
   JsonSchema7Type,
 } from "zod-to-json-schema";
-import { OpenAPISpec } from "../../../util/openapi.js";
-import { convertOpenAPISchemaToJSONSchema } from "../openapi.js";
+import { OpenAPISpec } from "../../../util/openapi.ts";
+import { convertOpenAPISchemaToJSONSchema } from "../openapi.ts";
 
 test("Test convert OpenAPI params to JSON Schema", async () => {
   const spec = new OpenAPISpec({

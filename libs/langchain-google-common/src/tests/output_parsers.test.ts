@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { test } from "@jest/globals";
-import { MockClientAuthInfo, mockId } from "./mock.js";
-import { ChatGoogle } from "./chat_models.test.js";
+import { MockClientAuthInfo, mockId } from "./mock.ts";
+import { ChatGoogle } from "./chat_models.test.ts";
 import {
   MarkdownGoogleSearchOutputParser,
   SimpleGoogleSearchOutputParser,
-} from "../output_parsers.js";
+} from "../output_parsers.ts";
 
 describe("GoogleSearchOutputParsers", () => {
   test("Simple", async () => {

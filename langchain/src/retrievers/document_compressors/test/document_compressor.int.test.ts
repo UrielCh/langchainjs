@@ -1,9 +1,9 @@
 import { test, expect } from "@jest/globals";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { RecursiveCharacterTextSplitter } from "../../../text_splitter.js";
-import { EmbeddingsFilter } from "../embeddings_filter.js";
-import { DocumentCompressorPipeline } from "../index.js";
+import { RecursiveCharacterTextSplitter } from "../../../text_splitter.ts";
+import { EmbeddingsFilter } from "../embeddings_filter.ts";
+import { DocumentCompressorPipeline } from "../index.ts";
 
 test("Test DocumentCompressorPipeline", async () => {
   const embeddings = new OpenAIEmbeddings();

@@ -1,10 +1,10 @@
 import {
   BaseCumulativeTransformOutputParser,
   BaseCumulativeTransformOutputParserInput,
-} from "./transform.js";
-import { Operation, compare } from "../utils/json_patch.js";
-import { sax } from "../utils/sax-js/sax.js";
-import { ChatGeneration, Generation } from "../outputs.js";
+} from "./transform.ts";
+import { Operation, compare } from "../utils/json_patch.ts";
+import { sax } from "../utils/sax-js/sax.ts";
+import { ChatGeneration, Generation } from "../outputs.ts";
 
 export const XML_FORMAT_INSTRUCTIONS = `The output should be formatted as a XML file.
 1. Output should conform to the tags below. 

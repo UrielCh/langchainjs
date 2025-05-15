@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { OllamaEmbeddings } from "../embeddings.js";
+import { OllamaEmbeddings } from "../embeddings.ts";
 
 test("Test OllamaEmbeddings.embedQuery", async () => {
   const embeddings = new OllamaEmbeddings();

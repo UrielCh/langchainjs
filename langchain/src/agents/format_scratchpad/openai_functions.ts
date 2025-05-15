@@ -6,7 +6,7 @@ import {
 } from "@langchain/core/messages";
 import type { AgentStep } from "@langchain/core/agents";
 import { renderTemplate } from "@langchain/core/prompts";
-import { TEMPLATE_TOOL_RESPONSE } from "../chat_convo/prompt.js";
+import { TEMPLATE_TOOL_RESPONSE } from "../chat_convo/prompt.ts";
 
 /**
  * Format a list of AgentSteps into a list of BaseMessage instances for

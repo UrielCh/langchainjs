@@ -9,7 +9,7 @@ import {
   HumanMessagePromptTemplate,
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
-import { ChatFireworks } from "../fireworks.js";
+import { ChatFireworks } from "../fireworks.ts";
 
 describe.skip("ChatFireworks", () => {
   test("call", async () => {

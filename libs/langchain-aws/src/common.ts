@@ -49,7 +49,7 @@ import {
   MessageContentReasoningBlockReasoningText,
   MessageContentReasoningBlockReasoningTextPartial,
   MessageContentReasoningBlockRedacted,
-} from "./types.js";
+} from "./types.ts";
 
 const standardContentBlockConverter: StandardContentBlockConverter<{
   text: ContentBlock.TextMember;

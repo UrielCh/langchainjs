@@ -10,8 +10,8 @@ import { getBufferString } from "@langchain/core/messages";
 import {
   BaseChatMemory,
   BaseChatMemoryInput,
-} from "../../../memory/chat_memory.js";
-import { _formatIntermediateSteps } from "../../openai_functions/index.js";
+} from "../../../memory/chat_memory.ts";
+import { _formatIntermediateSteps } from "../../openai_functions/index.ts";
 
 /**
  * Type definition for the fields required to initialize an instance of

@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import { Embeddings } from "@langchain/core/embeddings";
-import { CacheBackedEmbeddings } from "../cache_backed.js";
-import { InMemoryStore } from "../../storage/in_memory.js";
+import { CacheBackedEmbeddings } from "../cache_backed.ts";
+import { InMemoryStore } from "../../storage/in_memory.ts";
 
 class RandomEmbeddings extends Embeddings {
   async embedDocuments(documents: string[]): Promise<number[][]> {

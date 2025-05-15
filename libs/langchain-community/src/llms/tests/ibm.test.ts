@@ -1,9 +1,9 @@
 /* eslint-disable no-process-env */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import WatsonxAiMlVml_v1 from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.js";
-import { WatsonxLLM, WatsonxInputLLM, WatsonxLLMConstructor } from "../ibm.js";
-import { authenticateAndSetInstance } from "../../utils/ibm.js";
-import { WatsonxEmbeddings } from "../../embeddings/ibm.js";
+import WatsonxAiMlVml_v1 from "@ibm-cloud/watsonx-ai/dist/watsonx-ai-ml/vml_v1.ts";
+import { WatsonxLLM, WatsonxInputLLM, WatsonxLLMConstructor } from "../ibm.ts";
+import { authenticateAndSetInstance } from "../../utils/ibm.ts";
+import { WatsonxEmbeddings } from "../../embeddings/ibm.ts";
 
 const fakeAuthProp = {
   watsonxAIAuthType: "iam",

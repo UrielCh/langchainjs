@@ -8,21 +8,21 @@ import {
 import { ChainValues } from "@langchain/core/utils/types";
 import { StringOutputParser } from "@langchain/core/output_parsers";
 import { CallbackManagerForChainRun } from "@langchain/core/callbacks/manager";
-import { JsonOutputFunctionsParser } from "../../../output_parsers/openai_functions.js";
-import { BaseChain, ChainInputs } from "../../../chains/base.js";
+import { JsonOutputFunctionsParser } from "../../../output_parsers/openai_functions.ts";
+import { BaseChain, ChainInputs } from "../../../chains/base.ts";
 import {
   GetPredictionViolationsResponse,
   MessageChunkResult,
   PREDICTION_VIOLATIONS_FUNCTION,
   PREDICT_NEXT_USER_MESSAGE_FUNCTION,
   PredictNextUserMessageResponse,
-} from "./types.js";
+} from "./types.ts";
 import {
   GENERATE_FACTS_PROMPT,
   GENERATE_REVISED_PREDICTION_PROMPT,
   PREDICTION_VIOLATIONS_PROMPT,
   PREDICT_NEXT_USER_MESSAGE_PROMPT,
-} from "./violation_of_expectations_prompt.js";
+} from "./violation_of_expectations_prompt.ts";
 
 /**
  * Interface for the input parameters of the ViolationOfExpectationsChain class.

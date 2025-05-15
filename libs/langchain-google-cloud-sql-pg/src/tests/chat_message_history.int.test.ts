@@ -5,8 +5,8 @@ import {
   PostgreSqlContainer,
   StartedPostgreSqlContainer,
 } from "@testcontainers/postgresql";
-import PostgresEngine from "../engine.js";
-import { PostgresChatMessageHistory } from "../chat_message_history.js";
+import PostgresEngine from "../engine.ts";
+import { PostgresChatMessageHistory } from "../chat_message_history.ts";
 
 const CHAT_MSG_TABLE = "test_message_table";
 const CHAT_MSG_TABLE_ERR = "test_message_table_err";

@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { YandexGPTEmbeddings } from "../embeddings.js";
+import { YandexGPTEmbeddings } from "../embeddings.ts";
 
 test("Test YandexGPTEmbeddings.embedQuery", async () => {
   const embeddings = new YandexGPTEmbeddings({

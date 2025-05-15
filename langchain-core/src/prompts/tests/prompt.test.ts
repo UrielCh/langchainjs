@@ -1,6 +1,6 @@
 import { expect, test } from "@jest/globals";
-import { PromptTemplate } from "../prompt.js";
-import { Document } from "../../documents/document.js";
+import { PromptTemplate } from "../prompt.ts";
+import { Document } from "../../documents/document.ts";
 
 test("Test using partial", async () => {
   const prompt = new PromptTemplate({

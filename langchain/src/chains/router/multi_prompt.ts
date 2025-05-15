@@ -1,14 +1,14 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { z } from "zod";
 import { interpolateFString, PromptTemplate } from "@langchain/core/prompts";
-import { MultiRouteChain, MultiRouteChainInput } from "./multi_route.js";
-import { STRUCTURED_MULTI_PROMPT_ROUTER_TEMPLATE } from "./multi_prompt_prompt.js";
-import { BaseChain } from "../../chains/base.js";
-import { LLMChain, LLMChainInput } from "../../chains/llm_chain.js";
-import { LLMRouterChain } from "./llm_router.js";
-import { ConversationChain } from "../../chains/conversation.js";
-import { zipEntries } from "./utils.js";
-import { RouterOutputParser } from "../../output_parsers/router.js";
+import { MultiRouteChain, MultiRouteChainInput } from "./multi_route.ts";
+import { STRUCTURED_MULTI_PROMPT_ROUTER_TEMPLATE } from "./multi_prompt_prompt.ts";
+import { BaseChain } from "../../chains/base.ts";
+import { LLMChain, LLMChainInput } from "../../chains/llm_chain.ts";
+import { LLMRouterChain } from "./llm_router.ts";
+import { ConversationChain } from "../../chains/conversation.ts";
+import { zipEntries } from "./utils.ts";
+import { RouterOutputParser } from "../../output_parsers/router.ts";
 
 /**
  * A class that represents a multi-prompt chain in the LangChain

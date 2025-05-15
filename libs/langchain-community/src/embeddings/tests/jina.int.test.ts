@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { JinaEmbeddings } from "../jina.js";
+import { JinaEmbeddings } from "../jina.ts";
 
 test("Test JinaEmbeddings.embedQuery", async () => {
   const embeddings = new JinaEmbeddings();

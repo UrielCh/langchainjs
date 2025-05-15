@@ -3,7 +3,7 @@ import {
   JsonListKeysTool,
   JsonSpec,
   JsonGetValueTool,
-} from "../../tools/json.js";
+} from "../../tools/json.ts";
 
 test("JsonListKeysTool", async () => {
   const jsonSpec = new JsonSpec({

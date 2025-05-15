@@ -6,7 +6,7 @@ import {
   ChatGroq,
   ChatGroqCallOptions,
   ChatGroqInput,
-} from "../chat_models.js";
+} from "../chat_models.ts";
 
 class ChatGroqStandardIntegrationTests extends ChatModelIntegrationTests<
   ChatGroqCallOptions,

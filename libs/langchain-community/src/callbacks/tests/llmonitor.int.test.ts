@@ -3,7 +3,7 @@ import { test } from "@jest/globals";
 import { ChatOpenAI } from "@langchain/openai";
 import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 
-import { LLMonitorHandler } from "../handlers/llmonitor.js";
+import { LLMonitorHandler } from "../handlers/llmonitor.ts";
 
 test.skip("Test traced chat call with tags", async () => {
   const chat = new ChatOpenAI({

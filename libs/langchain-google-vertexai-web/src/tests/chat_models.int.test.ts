@@ -13,7 +13,7 @@ import {
 import { BaseLanguageModelInput } from "@langchain/core/language_models/base";
 import { ChatPromptValue } from "@langchain/core/prompt_values";
 import { StructuredTool } from "@langchain/core/tools";
-import { ChatVertexAI } from "../chat_models.js";
+import { ChatVertexAI } from "../chat_models.ts";
 
 class WeatherTool extends StructuredTool {
   schema = z.object({

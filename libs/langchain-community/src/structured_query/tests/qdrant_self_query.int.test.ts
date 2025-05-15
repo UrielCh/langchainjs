@@ -4,8 +4,8 @@ import { OpenAIEmbeddings, OpenAI } from "@langchain/openai";
 import { AttributeInfo } from "langchain/chains/query_constructor";
 import { SelfQueryRetriever } from "langchain/retrievers/self_query";
 import { QdrantClient } from "@qdrant/js-client-rest";
-import { QdrantVectorStore } from "../../vectorstores/qdrant.js";
-import { QdrantTranslator } from "../qdrant.js";
+import { QdrantVectorStore } from "../../vectorstores/qdrant.ts";
+import { QdrantTranslator } from "../qdrant.ts";
 
 test("Qdrant Vector Store Self Query Retriever Test", async () => {
   const docs = [

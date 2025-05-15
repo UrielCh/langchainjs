@@ -7,8 +7,8 @@ import {
   PromptTemplate,
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
-import { LLMChain } from "../../chains/index.js";
-import { StructuredOutputParser } from "../structured.js";
+import { LLMChain } from "../../chains/index.ts";
+import { StructuredOutputParser } from "../structured.ts";
 
 test("StructuredOutputParser deals special chars in prompt with llm model", async () => {
   const model = new OpenAI({

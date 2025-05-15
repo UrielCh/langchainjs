@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { YoutubeLoader } from "../web/youtube.js";
+import { YoutubeLoader } from "../web/youtube.ts";
 
 test("Test Youtube loader", async () => {
   const videoUrl = "https://www.youtube.com/watch?v=FZhbJZEgKQ4";

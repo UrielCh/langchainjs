@@ -7,8 +7,8 @@ import {
   ChatWatsonxInput,
   WatsonxCallOptionsChat,
   WatsonxCallParams,
-} from "../ibm.js";
-import { WatsonxAuth } from "../../types/ibm.js";
+} from "../ibm.ts";
+import { WatsonxAuth } from "../../types/ibm.ts";
 
 class ChatWatsonxStandardIntegrationTests extends ChatModelIntegrationTests<
   WatsonxCallOptionsChat,

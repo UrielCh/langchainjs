@@ -14,10 +14,10 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import {
   RecursiveCharacterTextSplitter,
   TextSplitter,
-} from "../text_splitter.js";
-import { MemoryVectorStore } from "../vectorstores/memory.js";
-import fetchAdapter from "../util/axios-fetch-adapter.js";
-import { formatDocumentsAsString } from "../util/document.js";
+} from "../text_splitter.ts";
+import { MemoryVectorStore } from "../vectorstores/memory.ts";
+import fetchAdapter from "../util/axios-fetch-adapter.ts";
+import { formatDocumentsAsString } from "../util/document.ts";
 
 export const parseInputs = (inputs: string): [string, string] => {
   const [baseUrl, task] = inputs.split(",").map((input) => {

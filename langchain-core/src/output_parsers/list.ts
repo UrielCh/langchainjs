@@ -1,6 +1,6 @@
-import { BaseMessage } from "../messages/index.js";
-import { OutputParserException } from "./base.js";
-import { BaseTransformOutputParser } from "./transform.js";
+import { BaseMessage } from "../messages/index.ts";
+import { OutputParserException } from "./base.ts";
+import { BaseTransformOutputParser } from "./transform.ts";
 
 /**
  * Class to parse the output of an LLM call to a list.

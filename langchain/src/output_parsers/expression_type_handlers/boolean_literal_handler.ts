@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { BooleanLiteralType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { BooleanLiteralType } from "./types.ts";
 
 /**
  * Handler for boolean literal nodes in the abstract syntax tree (AST).

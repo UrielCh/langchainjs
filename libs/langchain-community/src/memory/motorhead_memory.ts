@@ -10,7 +10,7 @@ import {
   AsyncCaller,
   AsyncCallerParams,
 } from "@langchain/core/utils/async_caller";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface for the structure of a memory message in the Motorhead

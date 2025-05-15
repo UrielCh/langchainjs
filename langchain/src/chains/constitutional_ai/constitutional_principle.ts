@@ -1,4 +1,4 @@
-import { SerializedConstitutionalPrinciple } from "../serde.js";
+import { SerializedConstitutionalPrinciple } from "../serde.ts";
 
 /**
  * Class representing a constitutional principle with critique request,

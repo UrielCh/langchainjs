@@ -11,8 +11,8 @@ import * as uuid from "uuid";
 
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { sleep } from "../../utils/time.js";
-import { MomentoVectorIndex } from "../momento_vector_index.js";
+import { sleep } from "../../utils/time.ts";
+import { MomentoVectorIndex } from "../momento_vector_index.ts";
 
 async function withVectorStore(
   block: (vectorStore: MomentoVectorIndex) => Promise<void>

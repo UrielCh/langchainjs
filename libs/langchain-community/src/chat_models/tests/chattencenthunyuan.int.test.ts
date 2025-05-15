@@ -4,7 +4,7 @@ import {
   SystemMessage,
   HumanMessage,
 } from "@langchain/core/messages";
-import { ChatTencentHunyuan } from "../tencent_hunyuan/index.js";
+import { ChatTencentHunyuan } from "../tencent_hunyuan/index.ts";
 
 interface TestConfig {
   model: string | undefined;

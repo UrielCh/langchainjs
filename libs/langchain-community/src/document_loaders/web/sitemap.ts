@@ -1,6 +1,6 @@
 import { Document, DocumentInterface } from "@langchain/core/documents";
 import { chunkArray } from "@langchain/core/utils/chunk_array";
-import { CheerioWebBaseLoader, CheerioWebBaseLoaderParams } from "./cheerio.js";
+import { CheerioWebBaseLoader, CheerioWebBaseLoaderParams } from "./cheerio.ts";
 
 /**
  * Interface representing the parameters for initializing a SitemapLoader.

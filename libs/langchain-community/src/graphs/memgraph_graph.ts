@@ -1,4 +1,4 @@
-import { Neo4jGraph } from "./neo4j_graph.js";
+import { Neo4jGraph } from "./neo4j_graph.ts";
 
 interface MemgraphGraphConfig {
   url: string;

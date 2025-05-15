@@ -1,6 +1,6 @@
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 import { Embeddings, type EmbeddingsParams } from "@langchain/core/embeddings";
-import { sign } from "../../utils/tencent_hunyuan/common.js";
+import { sign } from "../../utils/tencent_hunyuan/common.ts";
 
 /**
  * Interface that extends EmbeddingsParams and defines additional

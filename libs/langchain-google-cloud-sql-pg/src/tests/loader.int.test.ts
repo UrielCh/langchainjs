@@ -3,8 +3,8 @@ import {
   PostgreSqlContainer,
   StartedPostgreSqlContainer,
 } from "@testcontainers/postgresql";
-import { PostgresLoader, PostgresLoaderOptions } from "../loader.js";
-import PostgresEngine from "../engine.js";
+import { PostgresLoader, PostgresLoaderOptions } from "../loader.ts";
+import PostgresEngine from "../engine.ts";
 
 const SCHEMA_NAME = "public";
 const CUSTOM_TABLE = "test_table_custom";

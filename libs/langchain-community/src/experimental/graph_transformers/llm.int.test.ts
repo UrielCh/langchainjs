@@ -1,7 +1,7 @@
 import { ChatOpenAI } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { LLMGraphTransformer } from "./llm.js";
-import { GraphDocument, Node, Relationship } from "../../graphs/document.js";
+import { LLMGraphTransformer } from "./llm.ts";
+import { GraphDocument, Node, Relationship } from "../../graphs/document.ts";
 
 test.skip("convertToGraphDocuments", async () => {
   const model = new ChatOpenAI({

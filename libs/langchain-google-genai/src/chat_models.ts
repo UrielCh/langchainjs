@@ -45,15 +45,15 @@ import {
 import {
   schemaToGenerativeAIParameters,
   removeAdditionalProperties,
-} from "./utils/zod_to_genai_parameters.js";
+} from "./utils/zod_to_genai_parameters.ts";
 import {
   convertBaseMessagesToContent,
   convertResponseContentToChatGenerationChunk,
   mapGenerateContentResultToChatResult,
-} from "./utils/common.js";
-import { GoogleGenerativeAIToolsOutputParser } from "./output_parsers.js";
-import { GoogleGenerativeAIToolType } from "./types.js";
-import { convertToolsToGenAI } from "./utils/tools.js";
+} from "./utils/common.ts";
+import { GoogleGenerativeAIToolsOutputParser } from "./output_parsers.ts";
+import { GoogleGenerativeAIToolType } from "./types.ts";
+import { convertToolsToGenAI } from "./utils/tools.ts";
 
 interface TokenUsage {
   completionTokens?: number;

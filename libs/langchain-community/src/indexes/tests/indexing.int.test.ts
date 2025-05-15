@@ -3,9 +3,9 @@ import { FakeEmbeddings } from "@langchain/core/utils/testing";
 import { index } from "@langchain/core/indexing";
 import { BaseDocumentLoader } from "@langchain/core/document_loaders/base";
 
-import { InMemoryRecordManager } from "../memory.js";
-import { PGVectorStore } from "../../vectorstores/pgvector.js";
-import { sleep } from "../../utils/time.js";
+import { InMemoryRecordManager } from "../memory.ts";
+import { PGVectorStore } from "../../vectorstores/pgvector.ts";
+import { sleep } from "../../utils/time.ts";
 
 class MockLoader extends BaseDocumentLoader {
   constructor(public docs: Document[]) {

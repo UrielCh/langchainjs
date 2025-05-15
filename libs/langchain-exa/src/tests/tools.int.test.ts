@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import Exa from "exa-js";
-import { ExaFindSimilarResults, ExaSearchResults } from "../tools.js";
+import { ExaFindSimilarResults, ExaSearchResults } from "../tools.ts";
 
 test("ExaSearchResults can perform a search given a string query", async () => {
   const exaTool = new ExaSearchResults<{ text: true }>({

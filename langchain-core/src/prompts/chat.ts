@@ -1,7 +1,7 @@
 // Default generic "any" values are for backwards compatibility.
 // Replace with "string" when we are comfortable with a breaking change.
 
-import type { BaseCallbackConfig } from "../callbacks/manager.js";
+import type { BaseCallbackConfig } from "../callbacks/manager.ts";
 import {
   AIMessage,
   HumanMessage,
@@ -13,34 +13,34 @@ import {
   isBaseMessage,
   MessageContent,
   MessageContentComplex,
-} from "../messages/index.js";
+} from "../messages/index.ts";
 import {
   type ChatPromptValueInterface,
   ChatPromptValue,
-} from "../prompt_values.js";
-import type { InputValues, PartialValues } from "../utils/types/index.js";
-import { Runnable } from "../runnables/base.js";
-import { BaseStringPromptTemplate } from "./string.js";
+} from "../prompt_values.ts";
+import type { InputValues, PartialValues } from "../utils/types/index.ts";
+import { Runnable } from "../runnables/base.ts";
+import { BaseStringPromptTemplate } from "./string.ts";
 import {
   BasePromptTemplate,
   type BasePromptTemplateInput,
   type TypedPromptInputValues,
-} from "./base.js";
+} from "./base.ts";
 import {
   PromptTemplate,
   type ParamsFromFString,
   PromptTemplateInput,
   ExtractedFStringParams,
-} from "./prompt.js";
-import { ImagePromptTemplate } from "./image.js";
+} from "./prompt.ts";
+import { ImagePromptTemplate } from "./image.ts";
 import {
   ParsedTemplateNode,
   TemplateFormat,
   parseFString,
   parseMustache,
-} from "./template.js";
-import { addLangChainErrorFields } from "../errors/index.js";
-import { DictPromptTemplate } from "./dict.js";
+} from "./template.ts";
+import { addLangChainErrorFields } from "../errors/index.ts";
+import { DictPromptTemplate } from "./dict.ts";
 
 /**
  * Abstract class that serves as a base for creating message prompt

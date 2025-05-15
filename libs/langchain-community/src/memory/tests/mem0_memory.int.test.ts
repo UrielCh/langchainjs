@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { test, expect } from "@jest/globals";
 import { randomUUID } from "crypto";
-import { Mem0Memory } from "../mem0.js";
+import { Mem0Memory } from "../mem0.ts";
 
 const sessionId = randomUUID(); // This should be unique for each user or each user's session.
 

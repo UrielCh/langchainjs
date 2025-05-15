@@ -1,5 +1,5 @@
-import { MessageContent } from "../messages/index.js";
-import type { TemplateFormat } from "./template.js";
+import { MessageContent } from "../messages/index.ts";
+import type { TemplateFormat } from "./template.ts";
 
 /**
  * Represents a serialized version of a prompt template. This type is used

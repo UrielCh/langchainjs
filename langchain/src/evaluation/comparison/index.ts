@@ -1,1 +1,1 @@
-export * from "./pairwise.js";
+export * from "./pairwise.ts";

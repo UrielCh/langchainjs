@@ -3,11 +3,11 @@ import { AgentAction, AgentFinish } from "@langchain/core/agents";
 import { BaseMessage, isBaseMessage } from "@langchain/core/messages";
 import { ChatGeneration } from "@langchain/core/outputs";
 import { OutputParserException } from "@langchain/core/output_parsers";
-import { AgentMultiActionOutputParser } from "../types.js";
+import { AgentMultiActionOutputParser } from "../types.ts";
 import {
   ToolsAgentAction,
   ToolsAgentStep,
-} from "../tool_calling/output_parser.js";
+} from "../tool_calling/output_parser.ts";
 
 export type { ToolsAgentAction, ToolsAgentStep };
 

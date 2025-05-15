@@ -15,7 +15,7 @@ import {
   isInteger,
   unescapePathComponent,
   hasUndefined,
-} from "./helpers.js";
+} from "./helpers.ts";
 
 export const JsonPatchError = PatchError;
 export const deepClone = _deepClone;

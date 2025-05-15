@@ -1,5 +1,5 @@
 import { describe, expect, test, jest } from "@jest/globals";
-import { SQLiteRecordManager } from "../sqlite.js";
+import { SQLiteRecordManager } from "../sqlite.ts";
 
 describe("SQLiteRecordManager", () => {
   const tableName = "upsertion_record";

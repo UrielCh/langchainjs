@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { PropertyAssignmentType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { PropertyAssignmentType } from "./types.ts";
 
 /**
  * Handler for `PropertyAssignment` nodes in an AST. Extends the

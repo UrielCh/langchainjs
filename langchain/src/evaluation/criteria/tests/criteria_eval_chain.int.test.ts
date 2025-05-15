@@ -1,8 +1,8 @@
 import { expect, test } from "@jest/globals";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { ChatOpenAI } from "@langchain/openai";
-import { PRINCIPLES } from "../../../chains/index.js";
-import { loadEvaluator } from "../../loader.js";
+import { PRINCIPLES } from "../../../chains/index.ts";
+import { loadEvaluator } from "../../loader.ts";
 
 test("Test CriteriaEvalChain", async () => {
   const evaluator = await loadEvaluator("criteria", {

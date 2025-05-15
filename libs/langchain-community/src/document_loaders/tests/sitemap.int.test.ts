@@ -1,5 +1,5 @@
 import { test } from "@jest/globals";
-import { SitemapLoader } from "../web/sitemap.js";
+import { SitemapLoader } from "../web/sitemap.ts";
 
 test("SitemapLoader", async () => {
   const regexFailIfNotJsLangChain = /^https:\/\/js\.langchain\.com\//;

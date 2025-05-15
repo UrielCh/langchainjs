@@ -8,14 +8,14 @@ import {
   getPromptInputKey,
 } from "@langchain/core/memory";
 import { getBufferString } from "@langchain/core/messages";
-import { InMemoryEntityStore } from "./stores/entity/in_memory.js";
-import { LLMChain } from "../chains/llm_chain.js";
+import { InMemoryEntityStore } from "./stores/entity/in_memory.ts";
+import { LLMChain } from "../chains/llm_chain.ts";
 import {
   ENTITY_EXTRACTION_PROMPT,
   ENTITY_SUMMARIZATION_PROMPT,
-} from "./prompt.js";
-import { BaseEntityStore } from "./stores/entity/base.js";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+} from "./prompt.ts";
+import { BaseEntityStore } from "./stores/entity/base.ts";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface for the input parameters required by the EntityMemory class.

@@ -2,7 +2,7 @@
 
 import { MongoClient, ObjectId } from "mongodb";
 import { AIMessage, HumanMessage } from "@langchain/core/messages";
-import { MongoDBChatMessageHistory } from "../chat_history.js";
+import { MongoDBChatMessageHistory } from "../chat_history.ts";
 
 afterAll(async () => {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion

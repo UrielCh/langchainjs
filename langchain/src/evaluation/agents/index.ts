@@ -1,1 +1,1 @@
-export * from "./trajectory.js";
+export * from "./trajectory.ts";

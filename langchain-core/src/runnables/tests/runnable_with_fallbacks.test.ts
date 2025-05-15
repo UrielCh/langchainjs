@@ -3,9 +3,9 @@
 /* eslint-disable no-process-env */
 import { test, expect } from "@jest/globals";
 import { AsyncLocalStorage } from "node:async_hooks";
-import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.js";
-import { RunnableLambda } from "../base.js";
-import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.js";
+import { FakeLLM, FakeStreamingLLM } from "../../utils/testing/index.ts";
+import { RunnableLambda } from "../base.ts";
+import { AsyncLocalStorageProviderSingleton } from "../../singletons/index.ts";
 
 test("RunnableWithFallbacks", async () => {
   const llm = new FakeLLM({

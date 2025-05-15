@@ -1,7 +1,7 @@
 /* eslint-disable no-process-env */
 
 import { test } from "@jest/globals";
-import { MemgraphGraph } from "../memgraph_graph.js";
+import { MemgraphGraph } from "../memgraph_graph.ts";
 
 describe.skip("Memgraph Graph Tests", () => {
   const url = process.env.MEMGRAPH_URI as string;

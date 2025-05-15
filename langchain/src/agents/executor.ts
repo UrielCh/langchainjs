@@ -18,8 +18,8 @@ import {
 } from "@langchain/core/callbacks/manager";
 import { OutputParserException } from "@langchain/core/output_parsers";
 import { Serializable } from "@langchain/core/load/serializable";
-import { SerializedLLMChain } from "../chains/serde.js";
-import { StoppingMethod } from "./types.js";
+import { SerializedLLMChain } from "../chains/serde.ts";
+import { StoppingMethod } from "./types.ts";
 import {
   AgentRunnableSequence,
   BaseMultiActionAgent,
@@ -27,8 +27,8 @@ import {
   RunnableMultiActionAgent,
   RunnableSingleActionAgent,
   isRunnableAgent,
-} from "./agent.js";
-import { BaseChain, ChainInputs } from "../chains/base.js";
+} from "./agent.ts";
+import { BaseChain, ChainInputs } from "../chains/base.ts";
 
 interface AgentExecutorIteratorInput {
   agentExecutor: AgentExecutor;

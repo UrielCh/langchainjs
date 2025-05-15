@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import * as url from "node:url";
 import * as path from "node:path";
-import { TextLoader } from "../fs/text.js";
+import { TextLoader } from "../fs/text.ts";
 
 test("Test Text loader from file", async () => {
   const filePath = path.resolve(

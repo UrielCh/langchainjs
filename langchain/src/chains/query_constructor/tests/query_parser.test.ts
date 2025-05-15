@@ -1,12 +1,12 @@
 import { test } from "@jest/globals";
-import { StructuredQueryOutputParser } from "../index.js";
+import { StructuredQueryOutputParser } from "../index.ts";
 import {
   Comparators,
   Comparison,
   Operation,
   Operators,
   StructuredQuery,
-} from "../ir.js";
+} from "../ir.ts";
 
 const correctQuery = new StructuredQuery(
   "teenager love",

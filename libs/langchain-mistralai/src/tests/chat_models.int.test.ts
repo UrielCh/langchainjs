@@ -9,11 +9,11 @@ import {
   SystemMessage,
   ToolMessage,
 } from "@langchain/core/messages";
-import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.js";
-import { HTTPClient } from "@mistralai/mistralai/lib/http.js";
+import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.ts";
+import { HTTPClient } from "@mistralai/mistralai/lib/http.ts";
 import { zodToJsonSchema } from "zod-to-json-schema";
-import { ChatMistralAI } from "../chat_models.js";
-import { _mistralContentChunkToMessageContentComplex } from "../utils.js";
+import { ChatMistralAI } from "../chat_models.ts";
+import { _mistralContentChunkToMessageContentComplex } from "../utils.ts";
 
 test("Test ChatMistralAI can invoke hello", async () => {
   const model = new ChatMistralAI({

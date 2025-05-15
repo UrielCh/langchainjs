@@ -5,9 +5,9 @@ import {
   SystemMessage,
 } from "@langchain/core/messages";
 import { OpenAI } from "@langchain/openai";
-import { BufferMemory } from "../buffer_memory.js";
-import { CombinedMemory } from "../combined_memory.js";
-import { ConversationSummaryMemory } from "../summary.js";
+import { BufferMemory } from "../buffer_memory.ts";
+import { CombinedMemory } from "../combined_memory.ts";
+import { ConversationSummaryMemory } from "../summary.ts";
 
 test("Test combined memory", async () => {
   // buffer memory

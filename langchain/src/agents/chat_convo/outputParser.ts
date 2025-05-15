@@ -5,9 +5,9 @@ import {
   OutputParserException,
 } from "@langchain/core/output_parsers";
 import { renderTemplate } from "@langchain/core/prompts";
-import { AgentActionOutputParser } from "../types.js";
-import { FORMAT_INSTRUCTIONS } from "./prompt.js";
-import { OutputFixingParser } from "../../output_parsers/fix.js";
+import { AgentActionOutputParser } from "../types.ts";
+import { FORMAT_INSTRUCTIONS } from "./prompt.ts";
+import { OutputFixingParser } from "../../output_parsers/fix.ts";
 
 export type ChatConversationalAgentOutputParserFormatInstructionsOptions =
   FormatInstructionsOptions & {

@@ -1,8 +1,8 @@
 import { test } from "@jest/globals";
 import { OpenAIEmbeddings, ChatOpenAI } from "@langchain/openai";
 import { ConsoleCallbackHandler } from "@langchain/core/tracers/console";
-import { MultiRetrievalQAChain } from "../multi_retrieval_qa.js";
-import { MemoryVectorStore } from "../../../vectorstores/memory.js";
+import { MultiRetrievalQAChain } from "../multi_retrieval_qa.ts";
+import { MemoryVectorStore } from "../../../vectorstores/memory.ts";
 
 test("Test MultiPromptChain", async () => {
   const embeddings = new OpenAIEmbeddings();

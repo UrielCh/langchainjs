@@ -16,7 +16,7 @@ import {
   WhereClause,
   CassandraTableArgs,
   CassandraTable,
-} from "../utils/cassandra.js";
+} from "../utils/cassandra.ts";
 
 /**
  * @deprecated

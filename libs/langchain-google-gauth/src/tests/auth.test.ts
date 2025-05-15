@@ -1,6 +1,6 @@
 import { expect, test, describe } from "@jest/globals";
 import { Readable } from "stream";
-import { NodeJsonStream } from "../auth.js";
+import { NodeJsonStream } from "../auth.ts";
 
 describe("NodeJsonStream", () => {
   test("stream", async () => {

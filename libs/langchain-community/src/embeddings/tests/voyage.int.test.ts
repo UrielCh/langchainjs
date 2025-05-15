@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { VoyageEmbeddings } from "../voyage.js";
+import { VoyageEmbeddings } from "../voyage.ts";
 
 test.skip("Test VoyageEmbeddings.embedQuery with input_type", async () => {
   const embeddings = new VoyageEmbeddings({ inputType: "document" });

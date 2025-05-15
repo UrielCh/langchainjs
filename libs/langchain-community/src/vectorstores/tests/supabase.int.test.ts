@@ -5,7 +5,7 @@ import { createClient } from "@supabase/supabase-js";
 
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { Document } from "@langchain/core/documents";
-import { SupabaseVectorStore, SupabaseFilterRPCCall } from "../supabase.js";
+import { SupabaseVectorStore, SupabaseFilterRPCCall } from "../supabase.ts";
 
 test("SupabaseVectorStore with external ids", async () => {
   const client = createClient(

@@ -8,7 +8,7 @@ export {
   type LLMSingleActionAgentInput,
   type OutputParserArgs,
   type AgentRunnableSequence,
-} from "./agent.js";
+} from "./agent.ts";
 export {
   JsonToolkit,
   OpenApiToolkit,
@@ -20,38 +20,38 @@ export {
   createOpenApiAgent,
   createVectorStoreAgent,
   createVectorStoreRouterAgent,
-} from "./toolkits/index.js";
-export { Toolkit } from "./toolkits/base.js";
+} from "./toolkits/index.ts";
+export { Toolkit } from "./toolkits/base.ts";
 export {
   ChatAgent,
   type ChatAgentInput,
   type ChatCreatePromptArgs,
-} from "./chat/index.js";
-export { ChatAgentOutputParser } from "./chat/outputParser.js";
+} from "./chat/index.ts";
+export { ChatAgentOutputParser } from "./chat/outputParser.ts";
 export {
   ChatConversationalAgent,
   type ChatConversationalAgentInput,
   type ChatConversationalCreatePromptArgs,
-} from "./chat_convo/index.js";
+} from "./chat_convo/index.ts";
 export {
   ChatConversationalAgentOutputParser,
   type ChatConversationalAgentOutputParserArgs,
   ChatConversationalAgentOutputParserWithRetries,
   type ChatConversationalAgentOutputParserFormatInstructionsOptions,
-} from "./chat_convo/outputParser.js";
-export { AgentExecutor, type AgentExecutorInput } from "./executor.js";
+} from "./chat_convo/outputParser.ts";
+export { AgentExecutor, type AgentExecutorInput } from "./executor.ts";
 export {
   initializeAgentExecutor,
   initializeAgentExecutorWithOptions,
   type InitializeAgentExecutorOptions,
   type InitializeAgentExecutorOptionsStructured,
-} from "./initialize.js";
+} from "./initialize.ts";
 export {
   ZeroShotAgent,
   type ZeroShotAgentInput,
   type ZeroShotCreatePromptArgs,
-} from "./mrkl/index.js";
-export { ZeroShotAgentOutputParser } from "./mrkl/outputParser.js";
+} from "./mrkl/index.ts";
+export { ZeroShotAgentOutputParser } from "./mrkl/outputParser.ts";
 export {
   AgentActionOutputParser,
   type AgentInput,
@@ -59,44 +59,44 @@ export {
   type SerializedAgentT,
   type SerializedZeroShotAgent,
   type StoppingMethod,
-} from "./types.js";
+} from "./types.ts";
 export {
   StructuredChatAgent,
   type StructuredChatAgentInput,
   type StructuredChatCreatePromptArgs,
   type CreateStructuredChatAgentParams,
   createStructuredChatAgent,
-} from "./structured_chat/index.js";
+} from "./structured_chat/index.ts";
 export {
   StructuredChatOutputParser,
   type StructuredChatOutputParserArgs,
   StructuredChatOutputParserWithRetries,
-} from "./structured_chat/outputParser.js";
+} from "./structured_chat/outputParser.ts";
 export {
   OpenAIAgent,
   type OpenAIAgentInput,
   type OpenAIAgentCreatePromptArgs,
   type CreateOpenAIFunctionsAgentParams,
   createOpenAIFunctionsAgent,
-} from "./openai_functions/index.js";
+} from "./openai_functions/index.ts";
 export {
   type CreateOpenAIToolsAgentParams,
   createOpenAIToolsAgent,
-} from "./openai_tools/index.js";
+} from "./openai_tools/index.ts";
 export {
   type CreateToolCallingAgentParams,
   createToolCallingAgent,
-} from "./tool_calling/index.js";
+} from "./tool_calling/index.ts";
 export {
   XMLAgent,
   type XMLAgentInput,
   type CreateXmlAgentParams,
   createXmlAgent,
-} from "./xml/index.js";
+} from "./xml/index.ts";
 export {
   type CreateReactAgentParams,
   createReactAgent,
-} from "./react/index.js";
+} from "./react/index.ts";
 export type {
   AgentAction,
   AgentFinish,

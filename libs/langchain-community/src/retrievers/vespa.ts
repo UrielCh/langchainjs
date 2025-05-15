@@ -3,7 +3,7 @@ import {
   RemoteRetriever,
   RemoteRetrieverValues,
   RemoteRetrieverParams,
-} from "./remote/base.js";
+} from "./remote/base.ts";
 
 export interface VespaRetrieverParams extends RemoteRetrieverParams {
   /**

@@ -3,7 +3,7 @@ import { Document } from "@langchain/core/documents";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { getEnvironmentVariable } from "@langchain/core/utils/env";
 
-import { TurbopufferVectorStore } from "../turbopuffer.js";
+import { TurbopufferVectorStore } from "../turbopuffer.ts";
 
 beforeEach(async () => {
   const embeddings = new OpenAIEmbeddings();

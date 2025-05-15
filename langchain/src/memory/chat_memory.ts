@@ -6,7 +6,7 @@ import {
   getInputValue,
   getOutputValue,
 } from "@langchain/core/memory";
-import { ChatMessageHistory } from "../stores/message/in_memory.js";
+import { ChatMessageHistory } from "../stores/message/in_memory.ts";
 
 /**
  * Interface for the input parameters of the BaseChatMemory class.

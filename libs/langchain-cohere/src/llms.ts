@@ -3,7 +3,7 @@ import { CohereClient, Cohere as CohereTypes } from "cohere-ai";
 import { LLM, type BaseLLMParams } from "@langchain/core/language_models/llms";
 import { CallbackManagerForLLMRun } from "@langchain/core/callbacks/manager";
 import type { BaseLanguageModelCallOptions } from "@langchain/core/language_models/base";
-import { CohereClientOptions, getCohereClient } from "./client.js";
+import { CohereClientOptions, getCohereClient } from "./client.ts";
 
 /**
  * Interface for the input parameters specific to the Cohere model.

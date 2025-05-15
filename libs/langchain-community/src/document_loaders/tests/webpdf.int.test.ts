@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import * as url from "node:url";
 import * as path from "node:path";
 import * as fs from "node:fs/promises";
-import { WebPDFLoader } from "../web/pdf.js";
+import { WebPDFLoader } from "../web/pdf.ts";
 
 test("Test Web PDF loader from blob", async () => {
   const filePath = path.resolve(

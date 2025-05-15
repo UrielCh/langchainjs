@@ -4,7 +4,7 @@ import hdbClient from "hdb";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
 import { test, expect } from "@jest/globals";
-import { HanaDB, HanaDBArgs } from "../hanavector.js";
+import { HanaDB, HanaDBArgs } from "../hanavector.ts";
 import {
   DOCUMENTS,
   TYPE_1_FILTERING_TEST_CASES,
@@ -13,7 +13,7 @@ import {
   TYPE_4_FILTERING_TEST_CASES,
   TYPE_5_FILTERING_TEST_CASES,
   TYPE_6_FILTERING_TEST_CASES,
-} from "./hanavector.fixtures.js";
+} from "./hanavector.fixtures.ts";
 // Connection parameters
 const connectionParams = {
   host: process.env.HANA_HOST,

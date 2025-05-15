@@ -13,9 +13,9 @@ import type {
   OpenAICallOptions,
   OpenAICoreRequestOptions,
   OpenAIInput,
-} from "./types.js";
-import { OpenAIEndpointConfig, getEndpoint } from "./utils/azure.js";
-import { wrapOpenAIClientError } from "./utils/openai.js";
+} from "./types.ts";
+import { OpenAIEndpointConfig, getEndpoint } from "./utils/azure.ts";
+import { wrapOpenAIClientError } from "./utils/openai.ts";
 
 export type { OpenAICallOptions, OpenAIInput };
 

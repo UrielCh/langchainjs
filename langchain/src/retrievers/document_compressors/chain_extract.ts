@@ -2,9 +2,9 @@ import type { BaseLanguageModelInterface } from "@langchain/core/language_models
 import { type DocumentInterface, Document } from "@langchain/core/documents";
 import { PromptTemplate } from "@langchain/core/prompts";
 import { BaseOutputParser } from "@langchain/core/output_parsers";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { BaseDocumentCompressor } from "./index.js";
-import { PROMPT_TEMPLATE } from "./chain_extract_prompt.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { BaseDocumentCompressor } from "./index.ts";
+import { PROMPT_TEMPLATE } from "./chain_extract_prompt.ts";
 
 function defaultGetInput(
   query: string,

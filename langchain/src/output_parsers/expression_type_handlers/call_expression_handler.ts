@@ -1,5 +1,5 @@
-import { NodeHandler, ASTParser } from "./base.js";
-import { CallExpressionType, MemberExpressionType } from "./types.js";
+import { NodeHandler, ASTParser } from "./base.ts";
+import { CallExpressionType, MemberExpressionType } from "./types.ts";
 
 /**
  * Handles call expressions in the AST parsed by the `ASTParser`. This

@@ -4,8 +4,8 @@ import {
   basePull,
   generateModelImportMap,
   generateOptionalImportMap,
-} from "./base.js";
-import { load } from "../load/index.js";
+} from "./base.ts";
+import { load } from "../load/index.ts";
 
 // TODO: Make this the default, add web entrypoint in next breaking release
 

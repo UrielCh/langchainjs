@@ -1,7 +1,7 @@
 import { expect, test } from "@jest/globals";
 import * as url from "node:url";
 import * as path from "node:path";
-import { PPTXLoader } from "../fs/pptx.js";
+import { PPTXLoader } from "../fs/pptx.ts";
 
 test.skip("Test PowerPoint loader from file", async () => {
   const filePath = path.resolve(

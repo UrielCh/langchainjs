@@ -1,5 +1,5 @@
 // import all entrypoints to test, do not do this in your own app
-import "./entrypoints.js";
+import "./entrypoints.ts";
 
 import "./style.css";
 import typescriptLogo from "./typescript.svg";

@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import { BaseLLM } from "@langchain/core/language_models/llms";
 import { LLMResult } from "@langchain/core/outputs";
-import { MultiPromptChain } from "../multi_prompt.js";
+import { MultiPromptChain } from "../multi_prompt.ts";
 
 let pickedPrompt: string;
 

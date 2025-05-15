@@ -1,6 +1,6 @@
 import { test, expect } from "@jest/globals";
 import { SystemMessage, HumanMessage } from "@langchain/core/messages";
-import { ChatMoonshot } from "../moonshot.js";
+import { ChatMoonshot } from "../moonshot.ts";
 
 interface TestConfig {
   modelName: string | undefined;

@@ -7,7 +7,7 @@ import {
   SystemMessagePromptTemplate,
   HumanMessagePromptTemplate,
 } from "@langchain/core/prompts";
-import { createStructuredOutputChainFromZod } from "../structured_output.js";
+import { createStructuredOutputChainFromZod } from "../structured_output.ts";
 
 test("structured output chain", async () => {
   const chain = createStructuredOutputChainFromZod(

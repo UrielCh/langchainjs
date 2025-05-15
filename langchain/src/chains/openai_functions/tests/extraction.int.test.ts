@@ -2,7 +2,7 @@ import { test, expect } from "@jest/globals";
 import { z } from "zod";
 
 import { ChatOpenAI } from "@langchain/openai";
-import { createExtractionChainFromZod } from "../extraction.js";
+import { createExtractionChainFromZod } from "../extraction.ts";
 
 test("extraction chain", async () => {
   const chain = createExtractionChainFromZod(

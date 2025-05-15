@@ -3,7 +3,7 @@
 import { ConvexVectorStore } from "@langchain/community/vectorstores/convex";
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { v } from "convex/values";
-import { action } from "./_generated/server.js";
+import { action } from "./_generated/server.ts";
 
 export const search = action({
   args: {

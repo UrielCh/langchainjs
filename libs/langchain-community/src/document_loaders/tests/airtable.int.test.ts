@@ -2,7 +2,7 @@
  * NOTE: AIRTABLE_API_TOKEN should be set in environment variables
  */
 import { Document } from "@langchain/core/documents";
-import { AirtableLoader } from "../web/airtable.js";
+import { AirtableLoader } from "../web/airtable.ts";
 
 describe("AirtableLoader Integration Tests", () => {
   // Ensure that the environment variables are set

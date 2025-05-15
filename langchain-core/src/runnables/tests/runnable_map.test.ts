@@ -2,21 +2,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { test, expect } from "@jest/globals";
-import { StringOutputParser } from "../../output_parsers/string.js";
+import { StringOutputParser } from "../../output_parsers/string.ts";
 import {
   ChatPromptTemplate,
   SystemMessagePromptTemplate,
   HumanMessagePromptTemplate,
-} from "../../prompts/chat.js";
-import { concat } from "../../utils/stream.js";
+} from "../../prompts/chat.ts";
+import { concat } from "../../utils/stream.ts";
 import {
   FakeLLM,
   FakeChatModel,
   FakeRetriever,
   FakeStreamingLLM,
-} from "../../utils/testing/index.js";
-import { RunnableSequence, RunnableMap } from "../base.js";
-import { RunnablePassthrough } from "../passthrough.js";
+} from "../../utils/testing/index.ts";
+import { RunnableSequence, RunnableMap } from "../base.ts";
+import { RunnablePassthrough } from "../passthrough.ts";
 
 test("Create a runnable sequence with a runnable map", async () => {
   const promptTemplate = ChatPromptTemplate.fromMessages<{

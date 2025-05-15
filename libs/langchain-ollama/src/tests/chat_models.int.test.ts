@@ -8,7 +8,7 @@ import {
   BytesOutputParser,
   StringOutputParser,
 } from "@langchain/core/output_parsers";
-import { ChatOllama } from "../chat_models.js";
+import { ChatOllama } from "../chat_models.ts";
 
 test("test invoke", async () => {
   const ollama = new ChatOllama({

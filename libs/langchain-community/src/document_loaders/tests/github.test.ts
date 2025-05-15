@@ -1,6 +1,6 @@
 import { jest, test } from "@jest/globals";
-import { GithubFile, GithubRepoLoader } from "../web/github.js";
-import { GithubLoaderApis } from "./example_data/github_api_responses.js";
+import { GithubFile, GithubRepoLoader } from "../web/github.ts";
+import { GithubLoaderApis } from "./example_data/github_api_responses.ts";
 
 describe("GithubRepoLoader recursion", () => {
   let callCount = 0;

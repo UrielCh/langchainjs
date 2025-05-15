@@ -1,5 +1,5 @@
 import { test, describe, expect } from "@jest/globals";
-import { AlephAlpha } from "../aleph_alpha.js";
+import { AlephAlpha } from "../aleph_alpha.ts";
 
 describe("Aleph Alpha", () => {
   test("test call", async () => {

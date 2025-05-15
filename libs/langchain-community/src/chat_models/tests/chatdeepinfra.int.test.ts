@@ -2,7 +2,7 @@ import { test } from "@jest/globals";
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 import { HumanMessage } from "@langchain/core/messages";
-import { ChatDeepInfra } from "../deepinfra.js";
+import { ChatDeepInfra } from "../deepinfra.ts";
 
 describe("ChatDeepInfra", () => {
   test("call", async () => {

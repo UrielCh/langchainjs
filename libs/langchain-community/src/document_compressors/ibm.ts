@@ -2,8 +2,8 @@ import { DocumentInterface } from "@langchain/core/documents";
 import { BaseDocumentCompressor } from "@langchain/core/retrievers/document_compressors";
 import { WatsonXAI } from "@ibm-cloud/watsonx-ai";
 import { AsyncCaller } from "@langchain/core/utils/async_caller";
-import { WatsonxAuth, WatsonxParams } from "../types/ibm.js";
-import { authenticateAndSetInstance } from "../utils/ibm.js";
+import { WatsonxAuth, WatsonxParams } from "../types/ibm.ts";
+import { authenticateAndSetInstance } from "../utils/ibm.ts";
 
 export interface WatsonxInputRerank extends Omit<WatsonxParams, "idOrName"> {
   truncateInputTokens?: number;

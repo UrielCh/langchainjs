@@ -11,8 +11,8 @@ import { z } from "zod";
 import {
   authenticateAndSetInstance,
   jsonSchemaToZod,
-} from "../../utils/ibm.js";
-import { WatsonxAuth, WatsonxInit } from "../../types/ibm.js";
+} from "../../utils/ibm.ts";
+import { WatsonxAuth, WatsonxInit } from "../../types/ibm.ts";
 
 export interface WatsonxToolParams {
   name: string;

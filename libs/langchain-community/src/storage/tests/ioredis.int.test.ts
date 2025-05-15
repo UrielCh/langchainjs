@@ -2,7 +2,7 @@
 
 import { test } from "@jest/globals";
 import { Redis } from "ioredis";
-import { RedisByteStore } from "../ioredis.js";
+import { RedisByteStore } from "../ioredis.ts";
 
 describe("RedisByteStore", () => {
   const client = new Redis({});

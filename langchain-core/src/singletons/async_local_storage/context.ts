@@ -1,9 +1,9 @@
 import { isRunTree, RunTree } from "langsmith/run_trees";
-import { BaseCallbackHandler } from "../../callbacks/base.js";
+import { BaseCallbackHandler } from "../../callbacks/base.ts";
 import {
   _CONTEXT_VARIABLES_KEY,
   getGlobalAsyncLocalStorageInstance,
-} from "./globals.js";
+} from "./globals.ts";
 
 /**
  * Set a context variable. Context variables are scoped to any

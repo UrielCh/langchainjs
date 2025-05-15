@@ -1,5 +1,5 @@
 import type { protos } from "@google-ai/generativelanguage";
-import type { google } from "@google-ai/generativelanguage/build/protos/protos.js";
+import type { google } from "@google-ai/generativelanguage/build/protos/protos.ts";
 import { GoogleAuth, GoogleAuthOptions } from "google-auth-library";
 import type { BaseLanguageModel } from "@langchain/core/language_models/base";
 import { Runnable } from "@langchain/core/runnables";
@@ -9,14 +9,14 @@ import {
   AsyncCallerCallOptions,
 } from "@langchain/core/utils/async_caller";
 
-import { ChatGooglePaLM } from "./chat_models.js";
-import { GooglePaLM } from "./llms.js";
+import { ChatGooglePaLM } from "./chat_models.ts";
+import { GooglePaLM } from "./llms.ts";
 import {
   GoogleAbstractedClientOpsMethod,
   GoogleResponse,
   GoogleVertexAIConnectionParams,
-} from "../../../types/googlevertexai-types.js";
-import { GoogleConnection } from "../../../utils/googlevertexai-connection.js";
+} from "../../../types/googlevertexai-types.ts";
+import { GoogleConnection } from "../../../utils/googlevertexai-connection.ts";
 
 /**
  * Configuration that allows us to load or pull a prompt that has been created

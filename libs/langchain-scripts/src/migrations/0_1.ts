@@ -1,7 +1,7 @@
 import { ImportSpecifier, Project, SourceFile, SyntaxKind } from "ts-morph";
 import { glob } from "glob";
 import path from "node:path";
-import { LangChainConfig } from "../types.js";
+import { LangChainConfig } from "../types.ts";
 
 type ExportedSymbol = { symbol: string; kind: SyntaxKind };
 

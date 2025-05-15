@@ -5,7 +5,7 @@ import {
   BaseCallbackConfig,
   Callbacks,
 } from "@langchain/core/callbacks/manager";
-import { BaseChain, LLMChain, LLMChainInput } from "../chains/index.js";
+import { BaseChain, LLMChain, LLMChainInput } from "../chains/index.ts";
 
 /**
  * Base input for evaluators.

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Cohere, CohereClient } from "cohere-ai";
-import { ToolResult } from "cohere-ai/api/index.js";
+import { ToolResult } from "cohere-ai/api/index.ts";
 import {
   AIMessage,
   type BaseMessage,
@@ -37,7 +37,7 @@ import * as uuid from "uuid";
 import { Runnable } from "@langchain/core/runnables";
 import { isZodSchema } from "@langchain/core/utils/types";
 import { zodToJsonSchema } from "zod-to-json-schema";
-import { CohereClientOptions, getCohereClient } from "./client.js";
+import { CohereClientOptions, getCohereClient } from "./client.ts";
 
 type ChatCohereToolType = BindToolsInput | Cohere.Tool;
 

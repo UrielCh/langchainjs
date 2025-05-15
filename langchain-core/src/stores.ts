@@ -1,4 +1,4 @@
-import { Serializable } from "./load/serializable.js";
+import { Serializable } from "./load/serializable.ts";
 
 /** @deprecated For backwards compatibility only. Remove on next minor version upgrade. */
 export interface BaseStoreInterface<K, V> {

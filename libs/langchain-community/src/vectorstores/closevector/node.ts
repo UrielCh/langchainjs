@@ -8,7 +8,7 @@ import {
 import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { Document } from "@langchain/core/documents";
 
-import { CloseVector } from "./common.js";
+import { CloseVector } from "./common.ts";
 
 /**
  * package closevector-node is largely based on hnswlib.ts in the current folder with the following exceptions:

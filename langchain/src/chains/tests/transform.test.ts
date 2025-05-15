@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import { TransformChain } from "../transform.js";
+import { TransformChain } from "../transform.ts";
 
 test("TransformChain", async () => {
   const chain = new TransformChain({

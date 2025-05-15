@@ -1,6 +1,6 @@
 import { describe, expect, it, jest } from "@jest/globals";
 import { AsyncCaller } from "@langchain/core/utils/async_caller";
-import { GoogleVertexAILLMConnection } from "../googlevertexai-connection.js";
+import { GoogleVertexAILLMConnection } from "../googlevertexai-connection.ts";
 
 describe("GoogleVertexAILLMConnection", () => {
   it("should correctly build the url when useGooglePublishedModel param is not provided", async () => {

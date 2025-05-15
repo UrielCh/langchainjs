@@ -18,19 +18,19 @@ import { AgentStep } from "@langchain/core/agents";
 import { isStructuredTool } from "@langchain/core/utils/function_calling";
 import { JsonSchema7Type, zodToJsonSchema } from "zod-to-json-schema";
 import { isZodSchema } from "@langchain/core/utils/types";
-import { LLMChain } from "../../chains/llm_chain.js";
-import { Optional } from "../../types/type-utils.js";
+import { LLMChain } from "../../chains/llm_chain.ts";
+import { Optional } from "../../types/type-utils.ts";
 import {
   Agent,
   AgentArgs,
   AgentRunnableSequence,
   OutputParserArgs,
-} from "../agent.js";
-import { AgentInput } from "../types.js";
-import { StructuredChatOutputParserWithRetries } from "./outputParser.js";
-import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.js";
-import { renderTextDescriptionAndArgs } from "../../tools/render.js";
-import { formatLogToString } from "../format_scratchpad/log.js";
+} from "../agent.ts";
+import { AgentInput } from "../types.ts";
+import { StructuredChatOutputParserWithRetries } from "./outputParser.ts";
+import { FORMAT_INSTRUCTIONS, PREFIX, SUFFIX } from "./prompt.ts";
+import { renderTextDescriptionAndArgs } from "../../tools/render.ts";
+import { formatLogToString } from "../format_scratchpad/log.ts";
 
 /**
  * Interface for arguments used to create a prompt for a

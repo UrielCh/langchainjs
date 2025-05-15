@@ -4,7 +4,7 @@ import {
   BaseMemory,
   OutputValues,
 } from "@langchain/core/memory";
-import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.js";
+import { BaseChatMemory, BaseChatMemoryInput } from "./chat_memory.ts";
 
 /**
  * Interface that defines the shape of the input object that the

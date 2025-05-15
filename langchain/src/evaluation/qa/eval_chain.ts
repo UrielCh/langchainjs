@@ -1,8 +1,8 @@
 import type { BaseLanguageModelInterface } from "@langchain/core/language_models/base";
 import { ChainValues } from "@langchain/core/utils/types";
 import { PromptTemplate } from "@langchain/core/prompts";
-import { QA_PROMPT } from "./prompt.js";
-import { LLMChain, LLMChainInput } from "../../chains/llm_chain.js";
+import { QA_PROMPT } from "./prompt.ts";
+import { LLMChain, LLMChainInput } from "../../chains/llm_chain.ts";
 
 export interface EvaluateArgs {
   questionKey: string;

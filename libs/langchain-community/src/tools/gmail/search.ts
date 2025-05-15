@@ -1,7 +1,7 @@
 import { gmail_v1 } from "googleapis";
 import { z } from "zod";
-import { GmailBaseTool, GmailBaseToolParams } from "./base.js";
-import { SEARCH_DESCRIPTION } from "./descriptions.js";
+import { GmailBaseTool, GmailBaseToolParams } from "./base.ts";
+import { SEARCH_DESCRIPTION } from "./descriptions.ts";
 
 export class GmailSearch extends GmailBaseTool {
   name = "search_gmail";

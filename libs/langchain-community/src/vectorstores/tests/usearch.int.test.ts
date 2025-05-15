@@ -1,7 +1,7 @@
 import { test, expect } from "@jest/globals";
 import { Document } from "@langchain/core/documents";
 import { FakeEmbeddings } from "@langchain/core/utils/testing";
-import { USearch } from "../usearch.js";
+import { USearch } from "../usearch.ts";
 
 test("Test USearch.fromTexts + addVectors", async () => {
   const vectorStore = await USearch.fromTexts(

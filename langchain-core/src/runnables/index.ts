@@ -17,12 +17,12 @@ export {
   _coerceToRunnable,
   RunnableToolLike,
   type RunnableToolLikeArgs,
-} from "./base.js";
+} from "./base.ts";
 export {
   type RunnableBatchOptions,
   type RunnableInterface,
   type RunnableIOSchema,
-} from "./types.js";
+} from "./types.ts";
 export {
   type RunnableConfig,
   getCallbackManagerForConfig,
@@ -30,11 +30,11 @@ export {
   ensureConfig,
   mergeConfigs,
   pickRunnableConfigKeys,
-} from "./config.js";
-export { RunnablePassthrough } from "./passthrough.js";
-export { type RouterInput, RouterRunnable } from "./router.js";
-export { RunnableBranch, type Branch, type BranchLike } from "./branch.js";
+} from "./config.ts";
+export { RunnablePassthrough } from "./passthrough.ts";
+export { type RouterInput, RouterRunnable } from "./router.ts";
+export { RunnableBranch, type Branch, type BranchLike } from "./branch.ts";
 export {
   type RunnableWithMessageHistoryInputs,
   RunnableWithMessageHistory,
-} from "./history.js";
+} from "./history.ts";

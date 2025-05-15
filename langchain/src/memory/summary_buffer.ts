@@ -7,7 +7,7 @@ import {
 import {
   BaseConversationSummaryMemory,
   BaseConversationSummaryMemoryInput,
-} from "./summary.js";
+} from "./summary.ts";
 
 /**
  * Interface for the input parameters of the

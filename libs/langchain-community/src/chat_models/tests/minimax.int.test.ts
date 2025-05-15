@@ -12,7 +12,7 @@ import {
   PromptTemplate,
   SystemMessagePromptTemplate,
 } from "@langchain/core/prompts";
-import { ChatMinimax } from "../minimax.js";
+import { ChatMinimax } from "../minimax.ts";
 
 test.skip("Test ChatMinimax", async () => {
   const chat = new ChatMinimax({

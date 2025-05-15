@@ -3,7 +3,7 @@
 import { test, expect } from "@jest/globals";
 import { ChatModelIntegrationTests } from "@langchain/standard-tests";
 import { AIMessageChunk } from "@langchain/core/messages";
-import { ChatCerebras, ChatCerebrasCallOptions } from "../chat_models.js";
+import { ChatCerebras, ChatCerebrasCallOptions } from "../chat_models.ts";
 
 class ChatCerebrasStandardIntegrationTests extends ChatModelIntegrationTests<
   ChatCerebrasCallOptions,

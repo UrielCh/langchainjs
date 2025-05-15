@@ -1,10 +1,10 @@
-import type { ChainValues } from "../utils/types/index.js";
-import { type BaseMessage } from "../messages/base.js";
-import { getBufferString } from "../messages/utils.js";
-import type { LLMResult } from "../outputs.js";
-import { getEnvironmentVariable } from "../utils/env.js";
+import type { ChainValues } from "../utils/types/index.ts";
+import { type BaseMessage } from "../messages/base.ts";
+import { getBufferString } from "../messages/utils.ts";
+import type { LLMResult } from "../outputs.ts";
+import { getEnvironmentVariable } from "../utils/env.ts";
 
-import { BaseTracer, type RunType, type Run } from "./base.js";
+import { BaseTracer, type RunType, type Run } from "./base.ts";
 
 export interface BaseRunV1 {
   uuid: string;

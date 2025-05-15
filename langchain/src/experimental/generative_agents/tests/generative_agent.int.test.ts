@@ -1,9 +1,9 @@
 import { test } from "@jest/globals";
 
 import { OpenAI, OpenAIEmbeddings } from "@langchain/openai";
-import { MemoryVectorStore } from "../../../vectorstores/memory.js";
-import { TimeWeightedVectorStoreRetriever } from "../../../retrievers/time_weighted.js";
-import { GenerativeAgentMemory, GenerativeAgent } from "../index.js";
+import { MemoryVectorStore } from "../../../vectorstores/memory.ts";
+import { TimeWeightedVectorStoreRetriever } from "../../../retrievers/time_weighted.ts";
+import { GenerativeAgentMemory, GenerativeAgent } from "../index.ts";
 
 // This takes a very long time, mostly for illustrative purposes
 test.skip(

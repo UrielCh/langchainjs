@@ -5,7 +5,7 @@ import {
   DiscordSendMessagesTool,
   DiscordGetGuildsTool,
   DiscordGetTextChannelsTool,
-} from "../discord.js";
+} from "../discord.ts";
 
 test.skip("DiscordGetMessagesTool", async () => {
   const tool = new DiscordGetMessagesTool();

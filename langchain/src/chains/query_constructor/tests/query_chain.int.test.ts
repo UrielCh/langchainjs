@@ -1,14 +1,14 @@
 import { test } from "@jest/globals";
 import { OpenAI } from "@langchain/openai";
-import { loadQueryConstructorRunnable, AttributeInfo } from "../index.js";
+import { loadQueryConstructorRunnable, AttributeInfo } from "../index.ts";
 import {
   Comparators,
   Comparison,
   Operation,
   Operators,
   StructuredQuery,
-} from "../ir.js";
-import { BasicTranslator } from "../../../retrievers/self_query/base.js";
+} from "../ir.ts";
+import { BasicTranslator } from "../../../retrievers/self_query/base.ts";
 
 test("Query Chain Test", async () => {
   const sq1 = new StructuredQuery(

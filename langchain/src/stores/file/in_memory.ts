@@ -1,4 +1,4 @@
-import { BaseFileStore } from "./base.js";
+import { BaseFileStore } from "./base.ts";
 
 /**
  * Class that provides an in-memory file storage system. It extends the

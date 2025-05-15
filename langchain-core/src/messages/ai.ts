@@ -1,4 +1,4 @@
-import { parsePartialJson } from "../utils/json.js";
+import { parsePartialJson } from "../utils/json.ts";
 import {
   BaseMessage,
   BaseMessageChunk,
@@ -7,13 +7,13 @@ import {
   type MessageType,
   BaseMessageFields,
   _mergeLists,
-} from "./base.js";
+} from "./base.ts";
 import {
   InvalidToolCall,
   ToolCall,
   ToolCallChunk,
   defaultToolCallParser,
-} from "./tool.js";
+} from "./tool.ts";
 
 export type AIMessageFields = BaseMessageFields & {
   tool_calls?: ToolCall[];

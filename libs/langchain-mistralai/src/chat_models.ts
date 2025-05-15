@@ -4,20 +4,20 @@ import {
   ChatCompletionRequest as MistralAIChatCompletionRequest,
   ChatCompletionRequestToolChoice as MistralAIToolChoice,
   Messages as MistralAIMessage,
-} from "@mistralai/mistralai/models/components/chatcompletionrequest.js";
-import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.js";
-import { Tool as MistralAITool } from "@mistralai/mistralai/models/components/tool.js";
-import { ToolCall as MistralAIToolCall } from "@mistralai/mistralai/models/components/toolcall.js";
-import { ChatCompletionStreamRequest as MistralAIChatCompletionStreamRequest } from "@mistralai/mistralai/models/components/chatcompletionstreamrequest.js";
-import { UsageInfo as MistralAITokenUsage } from "@mistralai/mistralai/models/components/usageinfo.js";
-import { CompletionEvent as MistralAIChatCompletionEvent } from "@mistralai/mistralai/models/components/completionevent.js";
-import { ChatCompletionResponse as MistralAIChatCompletionResponse } from "@mistralai/mistralai/models/components/chatcompletionresponse.js";
+} from "@mistralai/mistralai/models/components/chatcompletionrequest.ts";
+import { ContentChunk as MistralAIContentChunk } from "@mistralai/mistralai/models/components/contentchunk.ts";
+import { Tool as MistralAITool } from "@mistralai/mistralai/models/components/tool.ts";
+import { ToolCall as MistralAIToolCall } from "@mistralai/mistralai/models/components/toolcall.ts";
+import { ChatCompletionStreamRequest as MistralAIChatCompletionStreamRequest } from "@mistralai/mistralai/models/components/chatcompletionstreamrequest.ts";
+import { UsageInfo as MistralAITokenUsage } from "@mistralai/mistralai/models/components/usageinfo.ts";
+import { CompletionEvent as MistralAIChatCompletionEvent } from "@mistralai/mistralai/models/components/completionevent.ts";
+import { ChatCompletionResponse as MistralAIChatCompletionResponse } from "@mistralai/mistralai/models/components/chatcompletionresponse.ts";
 import {
   type BeforeRequestHook,
   type RequestErrorHook,
   type ResponseHook,
   HTTPClient as MistralAIHTTPClient,
-} from "@mistralai/mistralai/lib/http.js";
+} from "@mistralai/mistralai/lib/http.ts";
 import {
   BaseMessage,
   MessageType,
@@ -76,7 +76,7 @@ import { ToolCallChunk } from "@langchain/core/messages/tool";
 import {
   _convertToolCallIdToMistralCompatible,
   _mistralContentChunkToMessageContentComplex,
-} from "./utils.js";
+} from "./utils.ts";
 
 interface TokenUsage {
   completionTokens?: number;

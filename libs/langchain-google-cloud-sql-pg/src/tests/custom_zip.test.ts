@@ -1,4 +1,4 @@
-import { customZip } from "../utils/utils.js";
+import { customZip } from "../utils/utils.ts";
 
 describe("Custom zip function", () => {
   test("should return an array of tuples", async () => {
